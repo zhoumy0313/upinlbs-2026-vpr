@@ -1,0 +1,19 @@
+{
+  "format": "ordered_byte_concatenation_of_standard_zip",
+  "zip_sha256": "50527bb46684977bb64e1ac2e102b533aaa217e303a86e0efa3b9f8e0e43b266",
+  "zip_bytes": 79569418,
+  "parts": [
+    {
+      "name": "evidence.zip.part001",
+      "bytes": 50331648,
+      "sha256": "37c2d50f3a2eda0ace40bffd0ea125ba1955959fa40581e1a8a24f71cecec2d5"
+    },
+    {
+      "name": "evidence.zip.part002",
+      "bytes": 29237770,
+      "sha256": "e42eeda5f553c41b82c97a9d1729cb72d9dec99a4c7135ff9f00b17df1900968"
+    }
+  ],
+  "scientific_run": "g7_numerical_inputs_20261010T182039Z_ca8727d7",
+  "scope": "derived numeric scores and evaluation IDs/metadata only; no photos/descriptors/checkpoints"
+}

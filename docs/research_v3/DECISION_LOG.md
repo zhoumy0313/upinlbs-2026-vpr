@@ -18,3 +18,6 @@ The first two G6 sources and PDFs were prepared while G5 real-image timing was r
 
 ## Nonmutating reproducibility adapter (2026-10-10T18:07 UTC)
 New replay_seen.py exposes already-frozen core/datasets/predictions/evaluate into a fresh run without stage/accepted-folder mutations. Its six-policy St Lucia validation replay passed all 30 method/radius groups. This postfreeze adapter adds no model, policy, parameter or independent-data route; every original scientific SHA is checked before loading. The actual G5 worker source snapshot predates this adapter and is unchanged.
+
+## Native source and receipt repairs (2026-10-10T18:24 UTC)
+Native r03 compilation found an unescaped path_offsets underscore. Original failed source/diagnostics are retained; new r03/r04 TeX render it with an escaped underscore and both actual compile calls returned success. Native tool returns JSON text: the first r01/r02 success_confirmed flag had been parsed incorrectly as false; original malformed receipts are preserved in g6_native_receipt_parse_repair_20261010T182507Z_c2c985fd and Git. Corrected receipt flags derive from parsing the saved actual success response, not a new unsupported claim. All source/PDF numerics and frozen scientific files remain unchanged.

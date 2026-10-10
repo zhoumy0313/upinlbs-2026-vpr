@@ -18,11 +18,11 @@
   "novelty_claim_supported": false,
   "new_independent_test_opened": false,
   "latest_run_id": "g5_real_online_20261010T175234Z_dfcec131",
-  "last_pushed_sha": "d3422a34e5895c63932a22dfe7bebddda6f0a21e",
+  "last_pushed_sha": "2259a29715dd4338a0d57caf71d23e515a8b6f2b",
   "formal_submission_ready": false,
   "goal_source_sha256": "e5e81b999f9e364bfcb93c19c16a4a795da255e31509d4a8f0cf0fbfa486fd73",
   "g0_preservation_run": "g0_preserve_20261010T164145Z_7d76bc78",
-  "updated_utc": "2026-10-10T18:20:39.836168+00:00",
+  "updated_utc": "2026-10-10T18:25:59.667089+00:00",
   "g1_run": "g1_diagnostics_20261010T165237Z_f53b505e",
   "H1_gate": true,
   "g2_run": "g2_strong_baselines_20261010T165844Z_6eb1c1b3",
@@ -40,5 +40,6 @@
   "g4_run": "g4_freeze_20261010T175140Z_25a843d3",
   "freeze_directory": "freezes/v3_20261010T175144Z",
   "independent_status": "INDEPENDENT_TEST_UNAVAILABLE",
-  "g5_run": "g5_real_online_20261010T175234Z_dfcec131"
+  "g5_run": "g5_real_online_20261010T175234Z_dfcec131",
+  "g6_figure_run": "g6_scientific_figures_20261010T182558Z_50bc2b03"
 }
