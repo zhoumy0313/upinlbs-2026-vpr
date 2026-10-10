@@ -1,0 +1,31 @@
+{
+  "scientific_G7_checkpoint_sha": "264a4d8aa35d8005d4276c234fb5935e9d3c703c",
+  "preceding_remote_snapshot": "78eb9e45d3bc469630b0c46ad1ea02b318ee151b\trefs/heads/main\n81fbf62dfaf5cdd28a005afbe6853289524b4d4d\trefs/heads/research/temporal-vpr-v2\n264a4d8aa35d8005d4276c234fb5935e9d3c703c\trefs/heads/research/vpr-v3-endpoint-refinement\n",
+  "old_branches_unchanged": true,
+  "all_frozen_scientific_bytes_and_paper_hashes_unchanged": true,
+  "checkpoint_index_sha256": "f64721b409c6806d769b811f9797731781235e79ff06bcce0fbf97f3873b78af",
+  "legacy_archives": [
+    {
+      "path": "artifacts/v3/g0/evidence.zip",
+      "bytes": 554864,
+      "sha256": "9ff52f0e9d6ab13ece271ca403ff75eb7d12538e12abcb58197a36aadbcce034"
+    },
+    {
+      "path": "artifacts/v3/g1/evidence.zip",
+      "bytes": 30294623,
+      "sha256": "66bded6a40a8a8e031de930b64f8d75984a47de949bf3c83a910113c124fed43"
+    }
+  ],
+  "closing_receipts_sha256": "3439a10b5d3c31978407deed19077a6442fc5feb9beece2e7b7fcd6f24402843",
+  "text_members_credential_scanned": 2369,
+  "author_brief_reflow": {
+    "pages": 1,
+    "original_PDF_sha256": "581d0653139134840179a31b886ba0d045dbbb97c090567c1439ea2b1576dd42",
+    "new_PDF_sha256": "bc1cb47084bac91d36c54ca363a379d5e3345a360982c512a4247982f085e62a",
+    "source_md_sha256": "d49a0a01de177bf2ba32f53562b4519160fd43b6b8113e68b228ea15434b5c33",
+    "critical_tokens_unsplit": true,
+    "source_wording_and_numbers_unchanged": true
+  },
+  "current_closing_run": "outputs_v3/g7_closing_receipts_20261010T184014Z_8c462cd5",
+  "pointer_note": "State last_pushed_sha identifies the verified scientific G7 commit. This closing metadata lives in a later normal commit; post-push proof is retained in the local closing run."
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "run_id": "G0_checkpoint_20261010T164156Z_1252af6d",
+    "receipt_sha256": "4aeac082a663c05dd5a2b77de5522e09d426ad672f2e327a4a11f2bed612c963",
+    "commit": "d72996adadf9c89d79452b3bf975462ba05af366",
+    "pushed": true
+  },
+  {
+    "run_id": "G1_checkpoint_20261010T165610Z_b691f6f6",
+    "receipt_sha256": "cf804d58cc69074ff86090bce520e571110c6711cafc3d0b840afda179b84f01",
+    "commit": "32e2ba9e5ad59851d33f83817be9822afbc6200c",
+    "pushed": true
+  },
+  {
+    "run_id": "G1_predeclare_checkpoint_20261010T164801Z_8d8b9f83",
+    "receipt_sha256": "b3d87c1ca40feaf243633aca7d0ddeec6e927025b10e9c47f2e24c098e3cc293",
+    "commit": "3e85c2565a15aeb702d854e632eaa64ecabe3280",
+    "pushed": true
+  },
+  {
+    "run_id": "G2_backup_repaired_checkpoint_20261010T170316Z_8557c3b1",
+    "receipt_sha256": "839e50ac5a245bd12b597b91b8a7870dcce28cf42c81099dfd362b3d68a85516",
+    "commit": "3e9d29eb10eaa5bfd064cd8ccd74353787835467",
+    "pushed": true
+  },
+  {
+    "run_id": "G3_checkpoint_20261010T174434Z_1cf3f2a2",
+    "receipt_sha256": "472c0e0b7b5b831e5b1a227174f77b0cfaef872c114ed576d352aeaa1647803b",
+    "commit": "5e203a167be948df7d6a6501180f996145ffa1c7",
+    "pushed": true
+  },
+  {
+    "run_id": "G4_checkpoint_20261010T175147Z_b3205a1d",
+    "receipt_sha256": "2fb5b4acfb8b44546fe38ce646013cfd4bc1d431469345a02835723f5eb4cfdc",
+    "commit": "d3422a34e5895c63932a22dfe7bebddda6f0a21e",
+    "pushed": true
+  },
+  {
+    "run_id": "G4_preflight_code_checkpoint_20261010T174654Z_c8b39465",
+    "receipt_sha256": "9912e5a5a3c9944397cabb976d3c5857933d722017536f5077ca9c944d37baaf",
+    "commit": "75fd013c05274fcae28f4fc288ce68a31bd342f0",
+    "pushed": true
+  },
+  {
+    "run_id": "G5_checkpoint_20261010T182039Z_bdb3d56d",
+    "receipt_sha256": "007e532b99aaa3dec8465aa4a41ff04996efc662c45992b82dddefdfe92eb9fa",
+    "commit": "2259a29715dd4338a0d57caf71d23e515a8b6f2b",
+    "pushed": true
+  },
+  {
+    "run_id": "G6_checkpoint_20261010T183152Z_f967f7e1",
+    "receipt_sha256": "17248f60268e61c00e8ec1ebe74edeebb60cdfd6646b881090cf551947babac4",
+    "commit": "51be786659b76f82abc2f08449f98fb3810f5339",
+    "pushed": true
+  },
+  {
+    "run_id": "G6_source_versions_checkpoint_20261010T182557Z_f6876f07",
+    "receipt_sha256": "d3526b4448c9756631dae37e3094ed4b535dee290d7ed9011433c275a346b948",
+    "commit": "ed26e11ea5fe8e2df4d05bc103f6671086fae267",
+    "pushed": true
+  },
+  {
+    "run_id": "G7_checkpoint_20261010T183321Z_48ce31d9",
+    "receipt_sha256": "a29b26234ea035163c51b63d689adfbd046caba05a16179c4c2d724d0cd72a44",
+    "commit": "264a4d8aa35d8005d4276c234fb5935e9d3c703c",
+    "pushed": true
+  }
+]
