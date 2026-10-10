@@ -23,7 +23,11 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--manifest",type=Path,required=True)
     parser.add_argument("--run-dir",type=Path,required=True)
+    parser.add_argument("--output-dir",type=Path,
+                        help="Optional fresh directory for a separately recorded timing repeat")
     args=parser.parse_args()
+    output=args.output_dir or args.run_dir
+    if args.output_dir:output.mkdir()
     rows=encoder_records(args.manifest,ROOT,{"validation"})
     selected=[rows[i] for i in np.linspace(0,len(rows)-1,64,dtype=int)]
     device="cuda" if torch.cuda.is_available() else "cpu"
@@ -74,9 +78,9 @@ def main():
             "real_forward_outputs_match_cached_reference":True}
         del encoder
         if device=="cuda":torch.cuda.empty_cache()
-    with (args.run_dir/"dev_latency_per_query.csv").open("x",newline="") as stream:
+    with (output/"dev_latency_per_query.csv").open("x",newline="") as stream:
         writer=csv.DictWriter(stream,fieldnames=list(measurements[0]));writer.writeheader();writer.writerows(measurements)
-    with (args.run_dir/"dev_latency.json").open("x") as stream:json.dump(results,stream,indent=2)
+    with (output/"dev_latency.json").open("x") as stream:json.dump(results,stream,indent=2)
     print(json.dumps(results,indent=2))
 
 
