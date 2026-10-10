@@ -149,5 +149,10 @@ def validation_threshold(scores: ArrayLike, budget: float,
     if n == len(x):
         threshold = float("-inf")
     else:
-        threshold = float(np.sort(x)[-(n + 1)])
+        ordered = np.sort(x)
+        excluded, selected = float(ordered[-(n + 1)]), float(ordered[-n])
+        # Use the interior of an untied quantile interval so scalar/batch
+        # round-off at the observed excluded score cannot flip a decision.
+        # For a tied boundary, retain conservative strict-greater behavior.
+        threshold = excluded + (selected - excluded) / 2 if selected > excluded else excluded
     return max(threshold, 0.0) if positive_only else threshold

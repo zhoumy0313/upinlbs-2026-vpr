@@ -69,3 +69,13 @@ def test_infinite_threshold_json_and_random_stream_are_reproducible():
     assert not mask.any()
     policy.reset();v2,_=policy.decide(x)
     np.testing.assert_array_equal(v,v2)
+
+
+def test_validation_threshold_has_margin_at_untied_cut_and_conservative_ties():
+    from vpr_research.core import validation_threshold
+    values=np.array([.1,.2,.3,.4])
+    threshold=validation_threshold(values,.25,False)
+    assert .3<threshold<.4
+    jitter=np.array([0,0,1e-15,-1e-15])
+    np.testing.assert_array_equal(values>threshold,(values+jitter)>threshold)
+    assert (np.array([.1,.2,.3,.3])>validation_threshold([.1,.2,.3,.3],.25,False)).sum()==0
