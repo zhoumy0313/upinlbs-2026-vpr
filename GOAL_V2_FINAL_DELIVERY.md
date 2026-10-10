@@ -94,3 +94,7 @@ Ubuntu22.04、i7-12700H、约15GiB RAM、RTX3060Laptop6GB、驱动550.107.02、P
 5. 作者最终批准后自行正式投稿、注册付费、签署版权；本Goal没有执行这些动作，没有发送邮件、变更账户或系统驱动。
 
 研究任务已完成；剩余均为人工学术/署名/投稿决定，而非待运行的隐藏实验。证据支持READY_FOR_HUMAN_REVIEW，不支持直接正式提交或正增益创新宣称。
+
+## 已完成的最终远程备份
+
+交付checkpoint `65b1ffc0ab54cc68ebaf970b460bbf606c1d34b2` 已推送并通过真实git ls-remote核验。旧main/tag仍为78eb9e45d3bc469630b0c46ad1ea02b318ee151b。最终完整证据ZIP21,927,711字节，SHA256 `6c1836d85169c6e560ed47ca395aead2eaa342a3c404ec1e1edd4d2251cf9858`，2408成员含1659源快照文件，排除照片/权重/数组/原文正文，ZIP校验及精确候选复制检查通过。该ZIP保存归档生成时的报告版本；本附录与随后远端审计记录另存Git及artifacts/v2/final_backup，未回写ZIP。最末补充审计commit继承该交付checkpoint，最终回复报告它的实际SHA。
