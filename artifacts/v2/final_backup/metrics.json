@@ -1,0 +1,9 @@
+{
+  "remote_refs": {
+    "refs/heads/main": "78eb9e45d3bc469630b0c46ad1ea02b318ee151b",
+    "refs/heads/research/temporal-vpr-v2": "65b1ffc0ab54cc68ebaf970b460bbf606c1d34b2",
+    "refs/tags/vpr-v1-frozen-20261010": "78eb9e45d3bc469630b0c46ad1ea02b318ee151b"
+  },
+  "largest_tracked_file_bytes": 40232320,
+  "final_evidence_zip_sha256": "6c1836d85169c6e560ed47ca395aead2eaa342a3c404ec1e1edd4d2251cf9858"
+}

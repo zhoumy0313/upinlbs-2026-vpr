@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "V2_remote_matches_delivery_checkpoint": true,
+  "old_main_tag_unchanged": true,
+  "all_tracked_files_below_100MiB": true
+}

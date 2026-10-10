@@ -22,7 +22,7 @@
     "Confirm anonymity, paper size, reference page rule and deadline time/timezone in official CMT",
     "Approve all scientific/AI-assisted claims and perform formal submission/payment/signing manually"
   ],
-  "updated_utc": "2026-10-10T15:50:38.393044+00:00",
+  "updated_utc": "2026-10-10T15:53:20.044212+00:00",
   "g1_diagnosis_run": "g1_diagnosis_20261010T131552Z_19ac45fe",
   "g2_search_predeclaration": "outputs_v2/g1_acceptance_20261010T132758Z_bd97657b/config_effective.yaml",
   "g2_baseline_run": "g2_strong_baselines_20261010T133356Z_5d8c3f15",
@@ -51,5 +51,8 @@
   "quality_verdict": "READY_FOR_HUMAN_REVIEW",
   "formal_submission_ready": false,
   "g5_verification_run": "g5_delivery_verification_20261010T154422Z_56bc2592",
-  "g5_delivery_run": "g5_final_delivery_20261010T155038Z_3d2f7c92"
+  "g5_delivery_run": "g5_final_delivery_20261010T155038Z_3d2f7c92",
+  "publication_checkpoint": "65b1ffc0ab54cc68ebaf970b460bbf606c1d34b2",
+  "remote_backup_verified": true,
+  "remote_backup_audit": "g5_remote_backup_audit_20261010T155315Z_79a379fc"
 }
