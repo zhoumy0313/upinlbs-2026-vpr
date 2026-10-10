@@ -1,12 +1,11 @@
-% Standalone development draft, 2026-10-10. Not ready for submission.
-% Final evaluation, full authors, anonymity and page size still need review.
+% Standalone final-experiment working draft, 2026-10-10; human author review pending.
+% Final artifacts independently replayed. PDF export, pages, full authors and conference details need review.
 \documentclass[conference]{IEEEtran}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb}
 \usepackage{booktabs}
 \usepackage{url}
 \newcommand{\ind}{\mathbf{1}}
-\newcommand{\pending}[1]{\textbf{[Pending: #1]}}
 \title{When Is a Second Visual Encoder Worth Calling?\\
 A Budget-Aware Study of Visual Place Recognition}
 \author{\IEEEauthorblockN{Mingyang Zhou}
@@ -15,21 +14,23 @@ A Budget-Aware Study of Visual Place Recognition}
 \begin{document}
 \maketitle
 \begin{abstract}
-\textbf{Development draft; the final abstract will follow held-out evaluation.}
-A second visual encoder can correct retrieval errors but can also damage
-correct predictions. We examine whether estimating correction minus damage
-is more effective than predicting the first encoder's error under an
-invocation budget. Frozen CosPlace descriptors supply five similarity
-statistics to small supervised logistic heads. A selected second encoder
-performs independent global retrieval only after the gate decision.
-On 300 development queries from Nordland-Part-2020, an initial DINOv2 CLS
-model is weaker than CosPlace, and the benefit policy makes no second-stage
-calls. With the sole predeclared EigenPlaces replacement, 25\% invocation
-increases Recall@1 from 71.33\% to 75.67\%, below the same-input error
-predictor's 77.33\%. These findings motivate a prospective comparison of
-routing targets and failure modes rather than a claim that benefit
-prediction is already superior.
-\pending{Final held-out/cross-domain results and supported conclusion.}
+A second visual encoder can correct retrieval errors, damage correct
+matches, or spend computation on queries both models miss. We compare
+predicting correction minus damage with predicting fast-model error,
+using five first-encoder similarity statistics and frozen global
+descriptors. Models and validation thresholds are fixed before evaluating
+650 Nordland holdout queries and 200 Gardens Point night queries.
+With EigenPlaces as the second encoder, a nominal 25\% validation budget
+transfers to 78.92\% invocation on the holdout and 15.50\% externally.
+Holdout Recall@1 falls from CosPlace's 14.15\% to 10.31\%; external
+Recall@1 stays at 34.50\%. With the original, weaker DINOv2 CLS model,
+benefit routing largely avoids harmful holdout calls, whereas error
+prediction damages accuracy. Across 107100 real online query records,
+invocation alone does not determine total latency. These results support
+a limited empirical conclusion: routing targets must account for model
+complementarity, but a small benefit predictor does not guarantee accuracy
+gain or a transferable budget. We report failures, frame-tolerance
+sensitivity and data ambiguity rather than universal superiority.
 \end{abstract}
 \begin{IEEEkeywords}
 visual place recognition, conditional computation, retrieval, evaluation
@@ -53,18 +54,18 @@ receives the second model's whole global ranking, without score fusion,
 temporal matching, local reranking or geometric verification.
 
 Uncertainty estimation and predicting postprocessing effects have prior
-work. Our intended contribution is an auditable empirical comparison
-under the same available information, including a weaker second model,
-a stronger specialist, and actual conditional execution. Development
-results do not establish superiority of the benefit target. Prospective
-evaluation will examine a held-out route block and a different day--night
-collection without selecting models or thresholds from their results.
+work. Our contribution is a constrained empirical comparison under the
+same available information, preserving a weaker second model and the
+single development-selected specialist replacement. We examine three
+failure modes: changed correction/damage opportunities, transfer of
+validation budgets, and discrepancy between invocation and real execution
+cost. Both final datasets use frozen models and thresholds; their results
+do not select another encoder or a revised gate.
 
 \section{Related Work}
 CosPlace~\cite{cosplace} and EigenPlaces~\cite{eigenplaces} provide
 specialist global descriptors. We also examine DINOv2's~\cite{dinov2}
-normalized global CLS output, a general visual representation; this
-adapter is not AnyLoc or SALAD. Our fixed low-resolution condition is
+normalized global CLS output, a general visual representation. Our fixed low-resolution condition is
 not a reproduction of the original papers' benchmark numbers.
 
 Score-based uncertainty, including Statistical Uncertainty
@@ -152,24 +153,27 @@ R@1_{\rm route}-R@1_A=(N_{\rm rescue}-N_{\rm harm})/Q.
 
 \section{Experimental Protocol}
 \subsection{Data and Leakage Control}
-Nordland-Part-2020~\cite{nordland} contains 1750 aligned summer and winter
-frames. All summer frames form the gallery. One-based winter ordinals
+Nordland-Part-2020~\cite{nordland} provides 1750 summer and 1750 winter
+frames with matching numeric IDs; we evaluate this supplied frame alignment. All summer frames form the gallery. One-based winter ordinals
 1--600 train the gate, 701--1000 select validation thresholds, and
-1101--1750 are the planned 650-query holdout. Blocks 601--700 and
+1101--1750 form the 650-query holdout. Blocks 601--700 and
 1001--1100 are unused buffers. Numeric filenames are sorted before
 assigning ordinals; they start at 251, so ordinals differ from raw filename
 numbers. Primary positives are references within five aligned frames;
-radii one and ten are planned sensitivity analyses using unchanged
+radii one and ten are sensitivity analyses using unchanged
 rankings and decisions. This is a fixed-map route-block holdout, not an
 independent unseen route.
 
-The planned external test uses Gardens Point's 200 day-right references
+The external test uses Gardens Point's 200 day-right references
 and 200 night-right queries. Exactly aligned frames are the primary
 positives. The tutorial's soft ground truth is an ambiguity/ignore mask;
 our radius-eight positives are explicitly a custom tolerance analysis.
 Full decoding, ID order, alignment and duplicate hashes were checked.
 Repeated images remain in their original splits; none are removed to
-improve results.
+improve results. In the holdout, 187 queries belong to 79 byte-identical
+groups; 542 unique hashes remain among 650 records. Gardens Point has
+one duplicated night-image pair. These dependencies limit interpretation
+of fine frame-index errors and independent-sample claims.
 
 \subsection{Models and Controls}
 A is CosPlace ResNet18/512. Initial B is DINOv2 ViT-S/14 with a normalized
@@ -193,15 +197,17 @@ $K=1,5,10$, counts queries with a positive in their first $K$ candidates.
 We also report invocation, rescues, harms and signed Recall gain.
 
 \subsection{Actual Runtime}
-The development runtime uses an RTX 3060 Laptop GPU, PyTorch 2.6.0+cu124,
-batch one, twenty warmup queries and three complete validation passes.
+Measurements use an RTX 3060 Laptop GPU, PyTorch 2.6.0+cu124,
+batch one, twenty warmup queries and three complete query passes.
 CUDA is synchronized around each query. Times include warm-file decode,
 RGB, preprocessing, selected encoders, gate and exact retrieval. Model
 loading, gallery building and reference checks are excluded and accounted
-for separately. Cached accuracy simulation is not model latency.
+for separately, using warm-file construction and index setup diagnostics.
+Torch allocator peaks do not measure full-process memory; conditional
+policies retain both encoders. Cached accuracy simulation is not model latency.
 The unlocked GPU clock limits fine timing comparisons.
 
-\section{Development Findings}
+\section{Results}
 \subsection{Complementarity}
 Validation A reaches 71.33\% R@1 and initial DINOv2 51.67\%. B can rescue
 29 errors and damage 88 successes among 300 queries; the diagnostic oracle
@@ -254,31 +260,255 @@ zero-call benefit routing takes 10.19\,ms versus A-only's 7.78\,ms: fewer
 second-model calls do not eliminate selector cost. These sequential laptop
 measurements are not confidence intervals for small timing differences.
 
-\subsection{Held-Out and External Results}
-\pending{Final evaluation has not run. Insert only immutable held-out and
-external accuracy/latency outputs, actual invocation, complete random seeds,
-sensitivity and failure examples.}
-No held-out or Gardens Point retrieval performance is asserted here.
+\subsection{Frozen Final Accuracy}
+Table~\ref{tab:baselines} shows substantial transfer failure. Holdout
+CosPlace R@1 is 14.15\%, EigenPlaces 10.00\%, and DINOv2 3.38\%; the
+specialist that was stronger in development is weaker on this block.
+EigenPlaces offers only 17 rescue versus 44 harm opportunities, with
+541 queries missed by both encoders. Its top-one oracle is 16.77\%.
+Externally, CosPlace/EigenPlaces reach 34.50\%/36.00\%, with 31 rescue
+and 28 harm opportunities; the oracle is 50.00\%. Oracle gaps measure
+available top-one complementarity, not learnable or deployable performance.
+All strategies and seeds are retained in the accompanying artifacts.
 
-\section{Discussion and Next Evaluation}
-Current evidence supports neither universal second-encoder benefit nor
-superiority of the benefit target. The stronger specialist creates more
-rescue opportunities, while error prediction remains competitive. Final
-evaluation must establish transfer and compare actual cost with simply
-using that specialist. Negative transfer will remain part of the study,
-not trigger another model search.
+\begin{table*}[t]
+\caption{Single-encoder final Recall@1/5/10 (\%). All use the same declared 224-pixel adaptation; these are not original-paper benchmark reproductions.}
+\label{tab:baselines}
+\centering
+\begin{tabular}{lrrr rrr}
+\toprule
+&\multicolumn{3}{c}{Nordland, $r=5$}&\multicolumn{3}{c}{Gardens Point, $r=0$}\\
+Encoder & R@1 & R@5 & R@10 & R@1 & R@5 & R@10\\
+\midrule
+CosPlace R18 & 14.15 & 23.54 & 30.62 & 34.50 & 88.50 & 93.50\\
+EigenPlaces R50 & 10.00 & 16.46 & 24.77 & 36.00 & 86.00 & 96.00\\
+DINOv2 ViT-S/14 CLS & 3.38 & 10.46 & 16.77 & 23.50 & 76.00 & 87.50\\
+\bottomrule
+\end{tabular}
+\end{table*}
+\begin{table*}[t]
+\caption{Frozen final evaluation with EigenPlaces as B. Budgets in labels are validation settings; B columns show actual final invocation. Random rows give five-seed means and population SD for R@1. Times are actual full-query means (ms), with unlocked laptop clocks.}
+\label{tab:final}
+\centering
+\begin{tabular}{lrrr rrr}
+\toprule
+&\multicolumn{3}{c}{Nordland holdout ($Q=650$, $r=5$)}&\multicolumn{3}{c}{Gardens Point ($Q=200$, $r=0$)}\\
+Policy & R@1 (\%) & B (\%) & ms & R@1 (\%) & B (\%) & ms\\
+\midrule
+A-only & 14.15 & 0.00 & 7.56 & 34.50 & 0.00 & 5.84\\
+EigenPlaces-only & 10.00 & 100.00 & 10.66 & 36.00 & 100.00 & 8.92\\
+Benefit (10\%) & 12.15 & 40.15 & 15.09 & 34.00 & 9.50 & 7.40\\
+Benefit (25\%) & 10.31 & 78.92 & 13.62 & 34.50 & 15.50 & 7.97\\
+Benefit (50\%) & 10.46 & 82.46 & 14.41 & 36.50 & 29.50 & 9.09\\
+A-error (10\%) & 10.00 & 75.54 & 18.52 & 34.00 & 7.00 & 7.18\\
+A-error (25\%) & 10.46 & 82.00 & 17.86 & 34.00 & 11.00 & 7.55\\
+A-error (50\%) & 10.31 & 84.77 & 14.47 & 34.00 & 18.00 & 8.10\\
+Gap (25\%) & 12.77 & 65.08 & 12.87 & 34.50 & 14.50 & 7.78\\
+Rescue only (25\%) & 10.62 & 80.46 & 18.27 & 34.50 & 10.00 & 7.45\\
+Benefit, no std (25\%) & 10.31 & 78.46 & 18.18 & 36.50 & 23.00 & 8.57\\
+Random, nominal 25\% & $13.32\pm0.37$ & 23.60 & 12.91 & $35.20\pm1.60$ & 25.40 & 8.68\\
+Random, validation-matched & $13.32\pm0.37$ & 23.60 & 13.19 & $35.20\pm1.60$ & 25.40 & 8.63\\
+\bottomrule
+\end{tabular}
+\end{table*}
 
-Limitations include small aligned collections, fixed-route dependence,
-a five-feature linear selector, domain shift, unlocked laptop clocks and
-the missing verified SU comparator. This work does not demonstrate open-set
-rejection, metric pose accuracy, SLAM improvement or robot deployment.
-\pending{Final conclusion and complete author/conference review.}
+\subsection{Budget Drift and Target Choice}
+With frozen EigenPlaces policies, the nominal 25\% benefit setting calls
+B on 78.92\% of holdout queries. Eleven rescues and 36 harms reduce
+R@1 to 10.31\%, below A-only and marginally below error prediction's
+10.46\%. The corresponding error and gap invocation fractions are
+82.00\% and 65.08\%, not equal test costs. We therefore compare the
+observed accuracy--cost points rather than asserting a matched test budget.
+The nominal 10\% and 50\% benefit settings transfer to 40.15\% and
+82.46\% invocation (Table~\ref{tab:final}).
 
-\section*{Draft Disclosure}
-OpenAI Codex assisted coding, source inspection and drafting. Development
-numbers come from logged executable experiments. Human author review of
-interpretation, citations, authorship and the conference's disclosure and
-anonymity policy remains pending.
+In Gardens Point, the nominal 25\% benefit setting instead calls 15.50\%
+of queries. Six rescues and six harms leave R@1 at 34.50\%; error
+prediction calls 11.00\% and reaches 34.00\%. Benefit at nominal 50\%
+reaches 36.50\% with 29.50\% invocation, only one additional correct
+query over B-only. Removing standard deviation also reaches 36.50\%
+at 23.00\% invocation, whereas rescue-only at 25\% reaches 34.50\%.
+The feature and target ablations do not establish a uniform advantage.
+Five-seed nominal-random R@1 is $13.32\pm0.37$\% on the holdout and
+$35.20\pm1.60$\% externally; these are population SDs across seeds,
+not confidence intervals. Validation-matched random and nominal-random
+use the same EigenPlaces validation fraction, but neither enforces the
+learned gate's shifted test fraction.
+
+\subsection{Original Pair and Tolerance Sensitivity}
+The original DINOv2 pair demonstrates a narrower benefit of the target.
+The holdout has eight rescue and 78 harm opportunities. Benefit at nominal
+25\% makes two calls, neither changing correctness, and retains A's
+14.15\% R@1. Error prediction calls 82.00\%, rescues six and damages
+65, reducing R@1 to 5.08\%. Externally, benefit makes 18 calls with five
+rescues and three harms, reaching 35.50\%, versus error's 35.00\%.
+Avoiding calls to a weak model is useful, but preserving A-only accuracy
+does not establish improvement over A or superiority at equal test cost.
+
+Tolerance changes remain separately labeled, using identical frozen
+rankings and masks. At Nordland radii one/ten, A-only R@1 is
+5.08\%/19.69\%, and EigenPlaces benefit-25 is 4.62\%/13.08\%.
+For Gardens Point's custom radius-eight positives, A/EigenPlaces/
+benefit-25/error-25 reach 97.00\%/91.00\%/93.00\%/94.00\%.
+This differs markedly from exact-index results and is not the tutorial's
+soft-ignore evaluation. Fine frame-index performance should not be
+equated with geographic localization. Examples are the first query in
+manifest order of each correctness class, not the most attractive cases;
+their IDs, descriptor samples, scores and rankings are supplied.
+
+\subsection{Real Cost and Replay Checks}
+On the EigenPlaces holdout, A-only has the highest observed R@1 and the
+lowest measured mean, 7.56\,ms; benefit-25 takes 13.62\,ms and B-only
+10.66\,ms. Externally, benefit-25 takes 7.97\,ms versus A-only's
+5.84\,ms and B-only's 8.92\,ms, with the accuracy tradeoff above.
+Benefit-50 exceeds B-only by one correct query but takes 9.09\,ms,
+providing no observed mean-latency saving. Figure~\ref{fig:cost} presents
+actual forwards, not cached descriptor timings. Unlocked clocks and
+sequential policy execution prevent attributing every timing difference
+to the target or claiming stable fine-scale speedups. A reduced number
+of second-model calls alone is not an end-to-end cost guarantee.
+
+Independent replay checks all 85000 final offline rows, 107100 real
+online rows and 510 strategy--radius evaluations. Descriptors are checked
+against model-state and manifest hashes, row IDs, unit norms and array
+hashes. Each timed pass verifies the causal decision and complete ranking
+against its frozen reference outside the timer. No final fitting or
+threshold calibration occurs. Gallery building and warm-file setup costs
+are recorded separately; both models remain resident for conditional
+execution, so invocation reduction is not a model-memory reduction.
+
+\begin{figure*}[t]
+\centering
+\setlength{\unitlength}{1pt}
+\begin{picture}(250,167)
+\linethickness{0.4pt}
+\put(36,29){\line(1,0){188}}
+\put(36,29){\line(0,1){107}}
+\put(130,154){\makebox(0,0){\small Nordland holdout}}
+\put(130,5){\makebox(0,0){\scriptsize Mean latency (ms)}}
+\put(25,146){\makebox(0,0)[l]{\scriptsize R@1 (\%)}}
+\put(36.00,26){\line(0,1){3}}
+\put(36.00,18){\makebox(0,0){\scriptsize 6.5}}
+\put(98.67,26){\line(0,1){3}}
+\put(98.67,18){\makebox(0,0){\scriptsize 10.8}}
+\put(161.33,26){\line(0,1){3}}
+\put(161.33,18){\makebox(0,0){\scriptsize 15.2}}
+\put(224.00,26){\line(0,1){3}}
+\put(224.00,18){\makebox(0,0){\scriptsize 19.6}}
+\put(33,29.00){\line(1,0){3}}
+\put(29,29.00){\makebox(0,0)[r]{\scriptsize 9.0}}
+\put(33,64.67){\line(1,0){3}}
+\put(29,64.67){\makebox(0,0)[r]{\scriptsize 11.1}}
+\put(33,100.33){\line(1,0){3}}
+\put(29,100.33){\makebox(0,0)[r]{\scriptsize 13.1}}
+\put(33,136.00){\line(1,0){3}}
+\put(29,136.00){\makebox(0,0)[r]{\scriptsize 15.2}}
+\put(51.67,118.61){\makebox(0,0){$\star$}}
+\put(96.04,46.39){\makebox(0,0){$+$}}
+\put(159.33,83.84){\circle*{3}}
+\put(138.29,51.74){\circle*{3}}
+\put(149.63,54.41){\circle*{3}}
+\put(208.33,46.39){\makebox(0,0){$\square$}}
+\put(198.92,54.41){\makebox(0,0){$\square$}}
+\put(150.45,51.74){\makebox(0,0){$\square$}}
+\put(127.59,94.54){\makebox(0,0){$\triangle$}}
+\put(123.30,107.91){\makebox(0,0){\tiny $\times$}}
+\put(128.97,110.59){\makebox(0,0){\tiny $\times$}}
+\put(134.38,105.24){\makebox(0,0){\tiny $\times$}}
+\put(129.35,91.86){\makebox(0,0){\tiny $\times$}}
+\put(125.08,105.24){\makebox(0,0){\tiny $\times$}}
+\put(124.83,107.91){\makebox(0,0){\tiny $\times$}}
+\put(130.82,110.59){\makebox(0,0){\tiny $\times$}}
+\put(138.97,105.24){\makebox(0,0){\tiny $\times$}}
+\put(135.15,91.86){\makebox(0,0){\tiny $\times$}}
+\put(130.99,105.24){\makebox(0,0){\tiny $\times$}}
+\end{picture}
+\begin{picture}(250,167)
+\linethickness{0.4pt}
+\put(36,29){\line(1,0){188}}
+\put(36,29){\line(0,1){107}}
+\put(130,154){\makebox(0,0){\small Gardens Point}}
+\put(130,5){\makebox(0,0){\scriptsize Mean latency (ms)}}
+\put(25,146){\makebox(0,0)[l]{\scriptsize R@1 (\%)}}
+\put(36.00,26){\line(0,1){3}}
+\put(36.00,18){\makebox(0,0){\scriptsize 4.8}}
+\put(98.67,26){\line(0,1){3}}
+\put(98.67,18){\makebox(0,0){\scriptsize 6.6}}
+\put(161.33,26){\line(0,1){3}}
+\put(161.33,18){\makebox(0,0){\scriptsize 8.3}}
+\put(224.00,26){\line(0,1){3}}
+\put(224.00,18){\makebox(0,0){\scriptsize 10.1}}
+\put(33,29.00){\line(1,0){3}}
+\put(29,29.00){\makebox(0,0)[r]{\scriptsize 32.0}}
+\put(33,64.67){\line(1,0){3}}
+\put(29,64.67){\makebox(0,0)[r]{\scriptsize 34.0}}
+\put(33,100.33){\line(1,0){3}}
+\put(29,100.33){\makebox(0,0)[r]{\scriptsize 36.0}}
+\put(33,136.00){\line(1,0){3}}
+\put(29,136.00){\makebox(0,0)[r]{\scriptsize 38.0}}
+\put(71.81,73.58){\makebox(0,0){$\star$}}
+\put(182.02,100.33){\makebox(0,0){$+$}}
+\put(127.56,64.67){\circle*{3}}
+\put(147.91,73.58){\circle*{3}}
+\put(188.19,109.25){\circle*{3}}
+\put(119.82,64.67){\makebox(0,0){$\square$}}
+\put(133.03,64.67){\makebox(0,0){$\square$}}
+\put(152.73,64.67){\makebox(0,0){$\square$}}
+\put(141.16,73.58){\makebox(0,0){$\triangle$}}
+\put(176.87,82.50){\makebox(0,0){\tiny $\times$}}
+\put(177.47,64.67){\makebox(0,0){\tiny $\times$}}
+\put(178.19,118.17){\makebox(0,0){\tiny $\times$}}
+\put(169.72,46.83){\makebox(0,0){\tiny $\times$}}
+\put(165.30,118.17){\makebox(0,0){\tiny $\times$}}
+\put(172.78,82.50){\makebox(0,0){\tiny $\times$}}
+\put(175.33,64.67){\makebox(0,0){\tiny $\times$}}
+\put(179.03,118.17){\makebox(0,0){\tiny $\times$}}
+\put(164.73,46.83){\makebox(0,0){\tiny $\times$}}
+\put(166.84,118.17){\makebox(0,0){\tiny $\times$}}
+\end{picture}
+\caption{Real execution of the EigenPlaces pair: star A-only, plus B-only, filled circles benefit and squares A-error at nominal 10/25/50\%, triangle gap at 25\%, and crosses all five seeds for each random control at 25\%. Each point is measured; unmeasured policies are not interpolated. Actual calls appear in Table~\ref{tab:final}.}
+\label{fig:cost}
+\end{figure*}
+
+\section{Discussion}
+The benefit target separates two risks that A-error prediction conflates,
+but the estimate is useful only if those conditional relationships transfer.
+EigenPlaces rescue prevalence changes from 51/300 validation queries to
+17/650 holdout queries, while harm opportunities remain material.
+A-only score distributions also change: the median top1--top2 gap falls
+from 0.01477 to 0.00500, and median top-ten standard deviation from
+0.02477 to 0.00230. Similar top-one scores can coexist with poor
+frame-index correctness. These are descriptive associations, not causal
+proof that any single statistic explains the failure.
+
+Repeated and visually similar station frames constrain the information
+available to image-only retrieval. Exact Gardens Point frames penalize
+nearby references that may depict similar places. We retain all queries
+and report the predeclared tolerances rather than widening the primary
+criterion after seeing results. Small fixed-route datasets, correlated
+frames, low-resolution adaptation, linear gates and unlocked laptop clocks
+limit generalization. The missing verified SU implementation limits the
+uncertainty comparison. We introduce neither correction/damage labels
+nor a universally better algorithm, and make no open-set, metric-pose,
+SLAM or robot-deployment claim.
+
+\section{Conclusion}
+In this frozen-encoder study, predicting net correction can avoid damaging
+calls to a weak second model, but neither reliable accuracy gain nor
+validation-budget transfer follows. A development-selected specialist
+does not preserve its advantage on a held-out route block. Reporting actual
+invocation, signed corrections and real latency exposes these failures
+more clearly than invocation budgets or validation Recall alone.
+The results motivate testing complementarity and budget transfer before
+deploying conditional retrieval; they do not establish universal benefit.
+
+\section*{Acknowledgment}
+OpenAI Codex was used to draft text in the introduction, related work,
+method, protocol, results and discussion, and to implement evaluation,
+verification and visualization scripts. Numerical values come from the
+logged executable experiments and replay checks. This working draft still
+requires human author review of interpretation, citations, authorship and
+the conference's disclosure and anonymity requirements.
 
 % Inline bibliography supports the standalone native editor/compiler.
 \begin{thebibliography}{8}
