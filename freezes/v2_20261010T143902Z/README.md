@@ -1,0 +1,1 @@
+Immutable pre-test protocol. Do not modify. Full code/config snapshots and small trained SMR classifier with MIT source notice included. Dataset photos, external pretrained checkpoints and descriptor arrays stay local by exact SHA and source/download recipes. No independent retrieval performance was opened at creation.

@@ -1,0 +1,398 @@
+{
+  "protocol": "one independent evaluation; empirical track A; no post-test tuning",
+  "radius_m": [
+    25,
+    10,
+    50
+  ],
+  "common_startup_exclusion_per_traversal": 8,
+  "GT": "Euclidean UTM zone56J, distance <= radius, closed-set only; GPS offline only",
+  "no_positive_queries_reported": true,
+  "all_queries_still_advance_history": true,
+  "ordering": "source pano_id traversal/frame ascending; reference gallery one traversal",
+  "velocity_is_index_step_not_meters": true,
+  "rounding": "np.rint ties-even; whole path invalid if any index out of gallery",
+  "gallery_sampling": "README nominal5m; actual audited median adjacent GPS steps gallery11.4176m/query11.9630m; source-frame gaps irregular. Documentation-vs-observation discrepancy disclosed, no resampling.",
+  "query_accuracy_batch_size": 1,
+  "gallery_batch_size": 16,
+  "image_size_hw": [
+    224,
+    224
+  ],
+  "seed": 0,
+  "descriptor_tolerance": 1e-05,
+  "score_tolerance": 1e-05,
+  "rank_mismatches_disclosed_not_hidden": true,
+  "repetitions_for_latency": 3,
+  "warmup_images": 20,
+  "batch_size_for_latency": 1,
+  "CUDA_sync": true,
+  "clocks_locked": false,
+  "software_versions": {
+    "python": "3.10.12",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "sklearn": "1.7.2",
+    "imblearn": "0.14.0",
+    "joblib": "1.6.0",
+    "Pillow": "12.3.0",
+    "torch": "2.6.0+cu124",
+    "torchvision": "0.21.0+cu124",
+    "CUDA": "12.4"
+  },
+  "latency_methods": [
+    "A-only",
+    "B-only",
+    "DINOv2-only",
+    "RRF_k60",
+    "AB_fixed_0.75",
+    "fixed_T_best",
+    "fixed_blend_best",
+    "adaptive_full",
+    "SMR_first_filter_adapted"
+  ],
+  "sensitivity_not_selection": true,
+  "contiguous_block_size": 100,
+  "independent_test_opened": false,
+  "illustrative_examples_selection": "First chronological common query in fixed rescue/harm/bothwrong/adaptive-loses-fixed categories; unavailable cases explicit. Photos local only.",
+  "development_protocol": {
+    "dataset": "Nordland-Part-2020",
+    "train_ordinal": [
+      1,
+      600
+    ],
+    "validation_ordinal": [
+      701,
+      1000
+    ],
+    "gallery_ordinal": [
+      1,
+      1750
+    ],
+    "positive_absolute_ordinal_difference": 5,
+    "old_seen_holdout": [
+      1101,
+      1750
+    ],
+    "old_seen_Gardens_Point": "night_right; post_hoc only",
+    "independent_is_relative_to_our_method_tuning": true,
+    "upstream_encoder_pretraining_overlap_not_audited": true
+  },
+  "methods": [
+    {
+      "name": "A-only",
+      "kind": "single",
+      "encoder": "cosplace"
+    },
+    {
+      "name": "B-only",
+      "kind": "single",
+      "encoder": "eigenplaces"
+    },
+    {
+      "name": "DINOv2-only",
+      "kind": "single",
+      "encoder": "dinov2"
+    },
+    {
+      "name": "RRF_k60",
+      "kind": "rrf",
+      "k": 60
+    },
+    {
+      "name": "AB_fixed_0.25",
+      "kind": "fusion",
+      "B_weight": 0.25
+    },
+    {
+      "name": "AB_fixed_0.5",
+      "kind": "fusion",
+      "B_weight": 0.5
+    },
+    {
+      "name": "AB_fixed_0.75",
+      "kind": "fusion",
+      "B_weight": 0.75
+    },
+    {
+      "name": "fixed_T_best",
+      "kind": "temporal",
+      "length": 9,
+      "velocities": [
+        1.2
+      ],
+      "weight": 1
+    },
+    {
+      "name": "fixed_blend_best",
+      "kind": "temporal",
+      "length": 9,
+      "velocities": [
+        1.2
+      ],
+      "weight": 0.75
+    },
+    {
+      "name": "full_velocity_T_L3",
+      "kind": "temporal",
+      "length": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ],
+      "weight": 1
+    },
+    {
+      "name": "full_velocity_T_L5",
+      "kind": "temporal",
+      "length": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ],
+      "weight": 1
+    },
+    {
+      "name": "full_velocity_T_L9",
+      "kind": "temporal",
+      "length": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ],
+      "weight": 1
+    },
+    {
+      "name": "shuffled_L9",
+      "kind": "temporal",
+      "length": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ],
+      "weight": 1,
+      "shuffled": true,
+      "seed": 0
+    },
+    {
+      "name": "velocity08_L9",
+      "kind": "temporal",
+      "length": 9,
+      "velocities": [
+        0.8
+      ],
+      "weight": 1
+    },
+    {
+      "name": "velocity10_L9",
+      "kind": "temporal",
+      "length": 9,
+      "velocities": [
+        1.0
+      ],
+      "weight": 1
+    },
+    {
+      "name": "reverse_velocity_L9",
+      "kind": "temporal",
+      "length": 9,
+      "velocities": [
+        -1.2
+      ],
+      "weight": 1
+    },
+    {
+      "name": "adaptive_full",
+      "kind": "adaptive",
+      "length": 9,
+      "velocities": [
+        1.2
+      ],
+      "scales": {
+        "A_gap_median": 0.021545156781904273,
+        "T_gap_median": 0.018370866637548056,
+        "fit_role": "Nordland train only, without labels",
+        "training_valid_queries": 592
+      },
+      "candidate_count": 50
+    },
+    {
+      "name": "remove_continuity",
+      "kind": "adaptive",
+      "length": 9,
+      "velocities": [
+        1.2
+      ],
+      "scales": {
+        "A_gap_median": 0.021545156781904273,
+        "T_gap_median": 0.018370866637548056,
+        "fit_role": "Nordland train only, without labels",
+        "training_valid_queries": 592
+      },
+      "candidate_count": 50,
+      "ablation": "remove_continuity"
+    },
+    {
+      "name": "remove_ambiguity",
+      "kind": "adaptive",
+      "length": 9,
+      "velocities": [
+        1.2
+      ],
+      "scales": {
+        "A_gap_median": 0.021545156781904273,
+        "T_gap_median": 0.018370866637548056,
+        "fit_role": "Nordland train only, without labels",
+        "training_valid_queries": 592
+      },
+      "candidate_count": 50,
+      "ablation": "remove_ambiguity"
+    },
+    {
+      "name": "remove_agreement",
+      "kind": "adaptive",
+      "length": 9,
+      "velocities": [
+        1.2
+      ],
+      "scales": {
+        "A_gap_median": 0.021545156781904273,
+        "T_gap_median": 0.018370866637548056,
+        "fit_role": "Nordland train only, without labels",
+        "training_valid_queries": 592
+      },
+      "candidate_count": 50,
+      "ablation": "remove_agreement"
+    },
+    {
+      "name": "fixed_lambda1_Top50",
+      "kind": "adaptive",
+      "length": 9,
+      "velocities": [
+        1.2
+      ],
+      "scales": {
+        "A_gap_median": 0.021545156781904273,
+        "T_gap_median": 0.018370866637548056,
+        "fit_role": "Nordland train only, without labels",
+        "training_valid_queries": 592
+      },
+      "candidate_count": 50,
+      "fixed_weight": 1.0
+    },
+    {
+      "name": "fixed_lambda05_Top50",
+      "kind": "adaptive",
+      "length": 9,
+      "velocities": [
+        1.2
+      ],
+      "scales": {
+        "A_gap_median": 0.021545156781904273,
+        "T_gap_median": 0.018370866637548056,
+        "fit_role": "Nordland train only, without labels",
+        "training_valid_queries": 592
+      },
+      "candidate_count": 50,
+      "fixed_weight": 0.5
+    },
+    {
+      "name": "replace_adaptive_with_G2_fixed_lambda",
+      "kind": "adaptive",
+      "length": 9,
+      "velocities": [
+        1.2
+      ],
+      "scales": {
+        "A_gap_median": 0.021545156781904273,
+        "T_gap_median": 0.018370866637548056,
+        "fit_role": "Nordland train only, without labels",
+        "training_valid_queries": 592
+      },
+      "candidate_count": 50,
+      "fixed_weight": 0.75
+    },
+    {
+      "name": "SMR_first_filter_adapted",
+      "kind": "smr",
+      "length": 9
+    }
+  ],
+  "created_utc": "2026-10-10T14:39:03.023773+00:00",
+  "source_commit": "ae41a7c038e2da9ba83fc878fe428a49e332859d",
+  "data_audit": "outputs_v2/g4_independent_data_audit_20261010T135919Z_432bb768",
+  "gallery_build": "outputs_v2/g4_gallery_build_20261010T143440Z_d261503e",
+  "SMR_pipeline": "freezes/v2_20261010T143902Z/smr_pipeline.pkl",
+  "device": "cuda",
+  "file_sha256": {
+    "experiments/temporal_vpr/archive_checkpoint.py": "33ae59733509d18ec07a1fbdfb5bace0c1936a33ef5bef2cf08d3ec5c5b98831",
+    "experiments/temporal_vpr/run_g1.py": "c188afa155655017e7efa458288c3f98805c65eb58a0d7278968749b90a15aed",
+    "experiments/temporal_vpr/setup_smr_environment.py": "bcbf548c5b98ce1e637058f07d05f724ecf0aa343b270c6601eae798466398ef",
+    "experiments/temporal_vpr/g2_replay_check.py": "2a79574d7210e52e7a60756065f5608a2bb25750455cd86153bde776c60dbc65",
+    "experiments/temporal_vpr/prepare_independent.py": "c8b2b27c132339ad7115eebbabf09e53d5027120012b621cda42512fa8cd44a6",
+    "experiments/temporal_vpr/finish_g3.py": "808387158e09659aa0ae45eb68f07351365c348e1a34999d11e342832a5348f1",
+    "experiments/temporal_vpr/plot_g2.py": "fe2cb199986f2039363beb9fae6c68e08a2e9437a4df35bf0a75b54125f19871",
+    "experiments/temporal_vpr/runtime.py": "45d9c206c3e632d4a9a856b3e3be70e08fe348b843a375aa526e90de8f10312f",
+    "experiments/temporal_vpr/finish_g0.py": "4058bad7ec20fcb406527bdd4ed215ea39a1c26d3ebadf8b573941a3206e2902",
+    "experiments/temporal_vpr/make_examples_v2.py": "5f166561efc37dc5a5ff3c3be310755bd1db1b89cf25c1f745bc348ddf4f4fb5",
+    "experiments/temporal_vpr/run_g3.py": "b998c9aae0b660f5737a45232503d8904b08ce6caffd73cb9492fb3e0c674833",
+    "experiments/temporal_vpr/method_suite.py": "302089b7560e6f7ad0801bd9ed0000f9e718bcf21c49fd8ad05a3957c796cdee",
+    "experiments/temporal_vpr/__init__.py": "2110b18f86dffa31d400176f26017fa7280d8f4ab89b87312f4d4e9362e9027b",
+    "experiments/temporal_vpr/fetch_sources.py": "e5c2c9faf045fe46a352cf24c9615f10036df760b5a9306861a9a7cee0232fcf",
+    "experiments/temporal_vpr/finish_g2.py": "ddfcc59e610a20af98ba58b16d24591e268427cfab0849f6ef17e2dffd722ba3",
+    "experiments/temporal_vpr/bootstrap_g0.py": "3f13fee063573b632e460d1d8533875d44e7c991564bebb78dc495cb5d8ec5da",
+    "experiments/temporal_vpr/benchmark_independent.py": "5cf06ee65a5999c18b3a9ef9774f0d253c475ad13c48914e2b6710a183f8a0e4",
+    "experiments/temporal_vpr/run_smr.py": "de79e38ac6a4d254858d02eaa4615f062daf3073a0985c919c21990a6c6d0d27",
+    "experiments/temporal_vpr/finish_g1.py": "1a273f1442fca44f0cc9621afcca2706016339974fd2ae9366ffa4fe63d62f4c",
+    "experiments/temporal_vpr/build_independent_gallery.py": "d7e4c636a897c0c59589ef8bfbe07f15aca649097931f36b50d9e2c563fde0b5",
+    "experiments/temporal_vpr/validate_independent_geo.py": "3fd01598e870e18696297d284a40f1242ac34273e9fb8ff8b1f5d1f0d68003ac",
+    "experiments/temporal_vpr/plot_g4.py": "c87e1355445f25a7b531aeff3d289f0ff4909c87aaf8e937ee003b27c8aa5a75",
+    "experiments/temporal_vpr/diagnostics.py": "76c43efd1e2c5728e53e69903ba6c71a0f99fbade3bc7abc1d7022f46b3d21a6",
+    "experiments/temporal_vpr/plot_helpers.py": "cbd549fc29e66e7cfe0de8da62d9d12af44b3b6e0305f722b6bbf33bf7cc11ea",
+    "experiments/temporal_vpr/finish_g4.py": "2906dbd11a2a7728bd65a4c712e0105655efb06a4771d90e7e0d29fb4940694f",
+    "experiments/temporal_vpr/causal.py": "d086a96d494e549cfaf73d7258b21b97340c4bac612ed30c7cf083444d82c021",
+    "experiments/temporal_vpr/create_freeze_v2.py": "a4d4e6525ad9435b79071a3a6b4eec16ed6548d603595240079e6936cebce962",
+    "experiments/temporal_vpr/adaptive.py": "491716a4f52f03d0beff0c3d1b267f73ca23ce73efff5518fa61341c5707f524",
+    "experiments/temporal_vpr/smr_adapter.py": "77852498e88fe2e28e4486cccce18b3fb929caf8a57b671871da8b71ee3a358e",
+    "experiments/temporal_vpr/probe_independent_metadata.py": "a7461169534e04ac464913303c466aa65d4c2f6e6cca7ca8c622648454915589",
+    "experiments/temporal_vpr/run_g2.py": "392c3dbe79629e0e75125763e068ecb59859d5337e94eb11e4c2659b641ac8a6",
+    "experiments/temporal_vpr/preflight_method_suite.py": "85e1152330570707e699eef9ffe92c6a3affd64f6b55ddc92f3f21168258fc1f",
+    "experiments/temporal_vpr/evaluate_independent.py": "acee6cfcf1777380dcca24d473561f756c01983da68f30c38c9803c1c42cfae8",
+    "experiments/temporal_vpr/tests/test_independent_protocol.py": "0f28e74f56c5a55baa3e68736a261c524551b42e01f76e31a7491579e0da8fc0",
+    "experiments/temporal_vpr/tests/test_diagnostics.py": "00c41db792e5060ab795ae23886625b2de5df2d2114827155854cf3954ccecb0",
+    "experiments/temporal_vpr/tests/test_adaptive.py": "a9c43b9d6ee855caf7aee0edf72b70740bf3d7a418dd2c34df63994e7aa68bd4",
+    "experiments/temporal_vpr/tests/test_causal.py": "3b536ca92332554c23a3a64e0e4ac57dd658aeff12f48ca3f4c4ceffdcd6be93",
+    "experiments/temporal_vpr/tests/test_runtime.py": "58700d19ea81ec4bf256e41cea9fcfbb996d4265d135248be43d1a0af9fbe847",
+    "experiments/temporal_vpr/tests/test_sources.py": "7a3ee93d0131031b2c867704a963fe7dfd957ca789742058c528fc1a627e38ea",
+    "experiments/temporal_vpr/tests/test_plot_helpers.py": "4f4eb777ba7c8f4e8e03dc30d575e5a7b81c835f323f2f0bceeb9a74288a8349",
+    "experiments/temporal_vpr/tests/test_smr_source.py": "02fc2758fbb5889ce49a22772941682a0ca3f1d8a95948adef60c25c3adfe7cd",
+    "configs/v2/smr_adaptation_predeclaration.json": "16b9047c63d7bff9df122e904a627d100d5308463039f7f31e6d32695f436f67",
+    "configs/v2/literature_supplement.json": "de9936d945f52a24e2006d54ad6cfc6be86eb9d95cd6c9e761cbbc1cc8365254",
+    "configs/v2/g3_adaptive_predeclaration.json": "ee833c19a7a1db4d039cbc7a51fc6e6192a7edf0540376212cbe313b7d37611e",
+    "configs/model_sources.json": "009208e30241baeb229220d7d1f04c81be4238f808ac912e9151d45f4330ca31",
+    "src/vpr_research/encoders/frozen.py": "09812cf25f08235ae10575c8a6ba00317e0a12c7abf063b3ba041fc0a96cca3c",
+    "data/manifests/p1_20261010_132030_nordland_manifest_v2.json": "7b3fdbda860f9ce3b980f5d675a69c2a2d50a552aca1d8df85e7bbe5c356ce5a",
+    "outputs_v2/g4_independent_data_audit_20261010T135919Z_432bb768/manifest.json": "19d50d1584e16860408b0b434d6dd78b5bdbabd0c9dfc30108994b04eb409eba",
+    "outputs_v2/g4_independent_data_audit_20261010T135919Z_432bb768/metrics.json": "e8dda23734d075e5b033fbc9f5ead432725563deb1c86943b9c81327b5365716",
+    "outputs_v2/g4_gallery_build_20261010T143440Z_d261503e/gallery_identities.json": "45e282b11292c34244c8a4ce7c875136315662c7ae4877d7f157312e4fdbc4b4",
+    "outputs_v2/g4_development_factory_preflight_20261010T142000Z_fd5c6510/checks.json": "38d2bc53a85d8c5fa76a5c8dba5ecbd28e8cce1ff7ed396adeeec7c7341e2c6b",
+    "outputs_v2/g4_development_factory_preflight_20261010T142000Z_fd5c6510/metrics.json": "d4d1f7ce9992982ac029012af407cdae4acd1cd25e84e71820c58031e9cd248f",
+    "outputs_v2/g4_GPS_UTM_crosscheck_20261010T142532Z_0670ee7a/metrics.json": "9343bb92cb3c378d0ac7e97732396bedbb0d60e067f5d084cdf717e6dae8d167",
+    "outputs_v2/g4_GPS_UTM_crosscheck_20261010T142532Z_0670ee7a/checks.json": "2b490e6d998b489a48f179a508c52798ff446edc434b5e33e2bfafd762c73e58",
+    "outputs_v2/g3_adaptive_development_20261010T134356Z_93dbfee7/train_gap_scales.json": "21a7caa40018f159512730edbef22766d707fb1e99cad03bfa9322232b3fe271",
+    "outputs_v2/g3_adaptive_development_20261010T134356Z_93dbfee7/metrics.json": "4bca20f1d533b7946fcb0a01096a3944a6c3ff21cdf478948cbedec4ff0fa615",
+    "outputs_v2/g3_smr_adaptation_20261010T135720Z_bcbbf327/metrics.json": "edb61dddbfda7a4011977b5f1ec906c8144573a73c13d13a75bfdffad3dc24ee",
+    "outputs_v2/g3_smr_adaptation_20261010T135720Z_bcbbf327/smr_pipeline.pkl": "9bf4056605f17d62f4eb55f6ff8ddc78897d99b213d6024768cf7ef31e69600e",
+    "freezes/v2_20261010T143902Z/smr_pipeline.pkl": "9bf4056605f17d62f4eb55f6ff8ddc78897d99b213d6024768cf7ef31e69600e",
+    "outputs_v2/g4_gallery_build_20261010T143440Z_d261503e/cosplace_gallery.npy": "bb6b49ac147a3755827083a24986660fa0bdb51655cc8ed20f33cd90d621faa6",
+    "outputs_v2/g4_gallery_build_20261010T143440Z_d261503e/eigenplaces_gallery.npy": "b373fb45f0514d2999dbd38a7b821fb339ecef9cee4de147ab5de9daecc19782",
+    "outputs_v2/g4_gallery_build_20261010T143440Z_d261503e/dinov2_gallery.npy": "2fd68c635b3e886a42c7d4fb0bc8f07c236ce2172922caeba6d30c1850398a34",
+    "weights/p0_torch/hub/checkpoints/ResNet18_512_cosplace.pth": "db09310a175e325fe25e7a460b41886ab9357b19c41d370a9ed3ed81bc9abf9f",
+    "weights/p0_torch/hub/checkpoints/dinov2_vits14_pretrain.pth": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+    "weights/p0_torch/hub/checkpoints/ResNet50_512_eigenplaces.pth": "886a2fbd910e961d02e5c74ccc5e11cc1fe9a049a4fe290b9514878c691ce491"
+  }
+}

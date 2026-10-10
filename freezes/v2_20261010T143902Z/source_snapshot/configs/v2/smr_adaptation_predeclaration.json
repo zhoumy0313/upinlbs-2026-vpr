@@ -1,0 +1,19 @@
+{
+  "name": "SMR official-feature/MLP adaptation, first filter",
+  "source_commit": "82c88c90377110ce7a3340872f3e1179c3f2d396",
+  "source_functions_unchanged": ["get_diagonals", "extract_features_with_ranks", "generate_labels", "mlp_train", "max_normalise", "transform_matrices", "transform_matrices_with_window", "compute_dist_matrix_seqslam"],
+  "model": "CosPlace existing frozen 224x224 adaptation",
+  "training_queries": "Nordland train 1-600 only, full 1750 reference gallery",
+  "validation_queries": "Nordland validation 701-1000 only",
+  "sequence_length": 9,
+  "sequence_velocity": 1.0,
+  "features": "official four ratios, topN=1, epsilon=1e-6, group window=2",
+  "ground_truth": "existing +/-5 ordinal frames for training labels only",
+  "fit": "unchanged official mlp_train, SMOTE random_state42 and source-default MLP/5fold CV; CV is diagnostic, no test tuning",
+  "inference": "trust all predicted classes as original 100% operating point, fixed confidence cutoff 0; abstain for class 1 or 3",
+  "closed_set_recall": "all common queries remain denominator; abstentions count as misses; never delete rejected queries",
+  "startup": "fall back to A until nine frames; reset each split/traversal",
+  "changes_from_paper": ["one encoder training rather than seven", "our existing low-resolution encoders and split", "full gallery rather than square geographically cropped training gallery", "our unchanged GT radius", "Nordland-only transfer rather than refitting on independent dataset", "confidence cutoff0 avoids noncausal whole-test confidence order statistic"],
+  "not_claimed": "official benchmark result or full end-to-end published reproduction; match restoration not implemented",
+  "performance_has_been_opened": false
+}

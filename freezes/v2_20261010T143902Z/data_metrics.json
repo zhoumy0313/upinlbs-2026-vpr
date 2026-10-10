@@ -1,0 +1,58 @@
+{
+  "role": "metadata audit only; no retrieval performance",
+  "gallery_images": 1549,
+  "queries": 1464,
+  "trajectories": [
+    {
+      "role": "gallery",
+      "traversal": "100909_0845",
+      "images": 1549,
+      "source_frame_min": 0,
+      "source_frame_max": 21015,
+      "source_frame_gap_min": 6,
+      "source_frame_gap_median": 13.0,
+      "source_frame_gap_max": 345,
+      "coordinate_step_median": 11.41759211445174,
+      "coordinate_step_max": 17.697598707211814,
+      "stationary_steps": 0
+    },
+    {
+      "role": "independent_query",
+      "traversal": "210809_1210",
+      "images": 1464,
+      "source_frame_min": 0,
+      "source_frame_max": 18032,
+      "source_frame_gap_min": 5,
+      "source_frame_gap_median": 12.0,
+      "source_frame_gap_max": 149,
+      "coordinate_step_median": 11.962963679884188,
+      "coordinate_step_max": 20.15432955956318,
+      "stationary_steps": 0
+    }
+  ],
+  "ground_truth_audit": {
+    "10": {
+      "total_queries": 1464,
+      "with_positive": 1464,
+      "without_positive": 0,
+      "excluded_query_ids": []
+    },
+    "25": {
+      "total_queries": 1464,
+      "with_positive": 1464,
+      "without_positive": 0,
+      "excluded_query_ids": []
+    },
+    "50": {
+      "total_queries": 1464,
+      "with_positive": 1464,
+      "without_positive": 0,
+      "excluded_query_ids": []
+    }
+  },
+  "exact_duplicate_groups": [],
+  "actual_bytes": 123494841,
+  "citation_and_permissions_readme": "St Lucia is collected by driving a car with a for-\nward facing camera around the riverside suburb of St Lucia,\nBrisbane. Of the nine drives, we use the first and the last\none as database and queries. Given the high density of the\nimages (extracted from videos), we select only one frame\nevery 5 meters\n\nMichael Milford and G. Wyeth. Mapping a suburb with a sin-\ngle camera using a biologically inspired slam system. IEEE\nTransactions on Robotics, 24:1038–1053, 2008\n",
+  "image_redistribution": false,
+  "known_sampling_limit": "Ordered source frame IDs retained, not uniformly sampled video. Velocity is index step, not physical speed. Gaps and geographic steps disclosed."
+}
