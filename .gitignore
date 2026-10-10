@@ -31,3 +31,13 @@ paper/*.out
 paper/*.fls
 paper/*.fdb_latexmk
 paper/*.synctex.gz
+
+# V2 append-only local experiments; small public evidence has a separate directory.
+outputs_v2/
+!artifacts/v2/**/*.zip
+paper/revisions/**/*.aux
+paper/revisions/**/*.log
+paper/revisions/**/*.out
+paper/revisions/**/*.fls
+paper/revisions/**/*.fdb_latexmk
+paper/revisions/**/*.synctex.gz

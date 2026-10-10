@@ -1,0 +1,11 @@
+{
+  "baseline_sha": "78eb9e45d3bc469630b0c46ad1ea02b318ee151b",
+  "files": {
+    "paper/main.tex": "e6194a581902680e499e3784a3dcdbb03c68a696b0498f0a73e5935069c15f94",
+    "paper/main.pdf": "e693b054abaa6ba0b274f362c9ab051ed7186cd1d3123b8ef51bd6138a50dd12",
+    "paper/references.bib": "9ce1d1135f417e677238c0a6c3af1590baa4f05ff66916023682cec4a8a575e3"
+  },
+  "created_utc": "2026-10-10T13:09:54.024520+00:00",
+  "source_role": "immutable V1 snapshot",
+  "pdf_pages": 5
+}

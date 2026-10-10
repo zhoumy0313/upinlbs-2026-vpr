@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "regression": {
+    "tests": 34,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "all_original_scientific_files_and_outputs_unchanged": true,
+  "allowed_v2_append_only_gitignore_change": true,
+  "main_unchanged": true,
+  "old_pdf_pages": 5,
+  "independent_test_opened": false,
+  "bootstrap_failure_retained": true
+}

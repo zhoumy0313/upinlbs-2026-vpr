@@ -1,0 +1,33 @@
+{
+  "goal_id": "VPR-GOAL-V2",
+  "recorded_utc": "2026-10-10T13:09:54.447232+00:00",
+  "baseline_branch": "main",
+  "baseline_sha": "78eb9e45d3bc469630b0c46ad1ea02b318ee151b",
+  "working_branch": "research/temporal-vpr-v2",
+  "initial_git_status": "?? docs/GOAL_V2_TEMPORAL_VPR.md",
+  "remote": "origin\tgit@github.com:zhoumy0313/upinlbs-2026-vpr.git (fetch)\norigin\tgit@github.com:zhoumy0313/upinlbs-2026-vpr.git (push)",
+  "original_goal_file": "docs/GOAL_V2_TEMPORAL_VPR.md",
+  "original_goal_sha256": "ae2a15b22d1e7914ef4084e179ee3b4a48333ab000e9de79b7855a62beb57f70",
+  "preserved_hashes": {
+    "paper/main.tex": "e6194a581902680e499e3784a3dcdbb03c68a696b0498f0a73e5935069c15f94",
+    "paper/main.pdf": "e693b054abaa6ba0b274f362c9ab051ed7186cd1d3123b8ef51bd6138a50dd12",
+    "paper/references.bib": "9ce1d1135f417e677238c0a6c3af1590baa4f05ff66916023682cec4a8a575e3",
+    "configs/protocol.yaml": "4524aeeac3e3b41d07f39e9b4097d86081b5d772a5e21a384ff1291983190a4b",
+    "artifacts/evidence/execution_evidence_20261010.zip": "aa00e62b92414f3d6ce2889cf6aea07c029c777d2aaec14819bc5b891cf7b1c3"
+  },
+  "full_inventory_path": "outputs_v2/g0_preserve_20261010T130954Z_842e31e4/v1_full_file_inventory.json",
+  "full_inventory_sha256": "eff8e810d9f2e8d8ff50526ccaed4e16afd55a8257ae303653dec6d2db32d9e7",
+  "old_conclusions": {
+    "nordland_queries": 650,
+    "nordland_cosplace_correct": 92,
+    "nordland_eigenplaces_correct": 65,
+    "nordland_gate25_correct": 67,
+    "gardens_queries": 200,
+    "gardens_cosplace_correct": 69,
+    "gardens_eigenplaces_correct": 72,
+    "gardens_gate25_correct": 69
+  },
+  "old_conclusions_source": "docs/P4_FINAL_EXPERIMENT_REPORT.md",
+  "history_tag": "vpr-v1-frozen-20261010",
+  "main_must_remain": "78eb9e45d3bc469630b0c46ad1ea02b318ee151b"
+}
