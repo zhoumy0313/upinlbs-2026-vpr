@@ -1,0 +1,238 @@
+[
+  {
+    "table": "main",
+    "method": "A",
+    "label": "CosPlace A",
+    "source_row": "CosPlace A & 621 & 94.66 & 97.71 & 71.92\\\\",
+    "tokens": [
+      "621",
+      "94.66",
+      "97.71",
+      "71.92"
+    ]
+  },
+  {
+    "table": "main",
+    "method": "B",
+    "label": "EigenPlaces B",
+    "source_row": "EigenPlaces B & 635 & 96.80 & 99.24 & 84.59\\\\",
+    "tokens": [
+      "635",
+      "96.80",
+      "99.24",
+      "84.59"
+    ]
+  },
+  {
+    "table": "main",
+    "method": "DINOv2",
+    "label": "DINOv2",
+    "source_row": "DINOv2 & 229 & 34.91 & 42.07 & 52.05\\\\",
+    "tokens": [
+      "229",
+      "34.91",
+      "42.07",
+      "52.05"
+    ]
+  },
+  {
+    "table": "main",
+    "method": "RRF_k60",
+    "label": "RRF",
+    "source_row": "RRF & 630 & 96.04 & 99.09 & 83.22\\\\",
+    "tokens": [
+      "630",
+      "96.04",
+      "99.09",
+      "83.22"
+    ]
+  },
+  {
+    "table": "main",
+    "method": "AB_0.75",
+    "label": "A+B, B weight .75",
+    "source_row": "A+B, B weight .75 & 639 & 97.41 & 99.70 & 85.62\\\\",
+    "tokens": [
+      "639",
+      "97.41",
+      "99.70",
+      "85.62"
+    ]
+  },
+  {
+    "table": "main",
+    "method": "fixed_L9",
+    "label": "Fixed L9, v1.2",
+    "source_row": "Fixed L9, v1.2 & 495 & 75.46 & 98.93 & 99.66\\\\",
+    "tokens": [
+      "495",
+      "75.46",
+      "98.93",
+      "99.66"
+    ]
+  },
+  {
+    "table": "main",
+    "method": "full_L3",
+    "label": "Full-velocity L3",
+    "source_row": "Full-velocity L3 & 641 & 97.71 & 100.00 & 84.59\\\\",
+    "tokens": [
+      "641",
+      "97.71",
+      "100.00",
+      "84.59"
+    ]
+  },
+  {
+    "table": "main",
+    "method": "full_L5",
+    "label": "Full-velocity L5",
+    "source_row": "Full-velocity L5 & 638 & 97.26 & 100.00 & 89.73\\\\",
+    "tokens": [
+      "638",
+      "97.26",
+      "100.00",
+      "89.73"
+    ]
+  },
+  {
+    "table": "main",
+    "method": "full_L9",
+    "label": "Full-velocity L9",
+    "source_row": "Full-velocity L9 & 626 & 95.43 & 99.85 & 97.26\\\\",
+    "tokens": [
+      "626",
+      "95.43",
+      "99.85",
+      "97.26"
+    ]
+  },
+  {
+    "table": "main",
+    "method": "global_fixed_L9_blend_0.75",
+    "label": "Global L9 blend .75",
+    "source_row": "Global L9 blend .75 & 593 & 90.40 & 99.70 & 98.97\\\\",
+    "tokens": [
+      "593",
+      "90.40",
+      "99.70",
+      "98.97"
+    ]
+  },
+  {
+    "table": "main",
+    "method": "R1_full_L3_H1_r1",
+    "label": "Local visual R1",
+    "source_row": "Local visual R1 & 636 & 96.95 & 100.00 & 84.59\\\\",
+    "tokens": [
+      "636",
+      "96.95",
+      "100.00",
+      "84.59"
+    ]
+  },
+  {
+    "table": "main",
+    "method": "R2_full_L3_H3_r1_g0.75",
+    "label": "Local fixed blend R2",
+    "source_row": "Local fixed blend R2 & 644 & 98.17 & 100.00 & 82.53\\\\",
+    "tokens": [
+      "644",
+      "98.17",
+      "100.00",
+      "82.53"
+    ]
+  },
+  {
+    "table": "main",
+    "method": "P_fixed_L9_H3_r1_e0.06",
+    "label": "Support candidate P",
+    "source_row": "Support candidate P & 598 & 91.16 & 99.54 & 97.60\\\\",
+    "tokens": [
+      "598",
+      "91.16",
+      "99.54",
+      "97.60"
+    ]
+  },
+  {
+    "table": "ablation",
+    "method": "P_fixed_L9_H1_r1_e0",
+    "label": "$H1,r1,\\varepsilon0$",
+    "source_row": "$H1,r1,\\varepsilon0$ & 495 & 649\\\\",
+    "tokens": [
+      "495",
+      "649"
+    ]
+  },
+  {
+    "table": "ablation",
+    "method": "P_fixed_L9_H1_r1_e0.01",
+    "label": "$H1,r1,\\varepsilon0.01$",
+    "source_row": "$H1,r1,\\varepsilon0.01$ & 502 & 648\\\\",
+    "tokens": [
+      "502",
+      "648"
+    ]
+  },
+  {
+    "table": "ablation",
+    "method": "P_fixed_L9_H1_r1_e0.03",
+    "label": "$H1,r1,\\varepsilon0.03$",
+    "source_row": "$H1,r1,\\varepsilon0.03$ & 526 & 649\\\\",
+    "tokens": [
+      "526",
+      "649"
+    ]
+  },
+  {
+    "table": "ablation",
+    "method": "P_fixed_L9_H1_r1_e0.06",
+    "label": "$H1,r1,\\varepsilon0.06$",
+    "source_row": "$H1,r1,\\varepsilon0.06$ & 564 & 651\\\\",
+    "tokens": [
+      "564",
+      "651"
+    ]
+  },
+  {
+    "table": "ablation",
+    "method": "P_fixed_L9_H3_r8_e0.06",
+    "label": "$H3,r8,\\varepsilon.06$",
+    "source_row": "$H3,r8,\\varepsilon.06$ & 598 & 653\\\\",
+    "tokens": [
+      "598",
+      "653"
+    ]
+  },
+  {
+    "table": "ablation",
+    "method": "R1_fixed_L9_H3_r1",
+    "label": "P pool, no support",
+    "source_row": "P pool, no support & 631 & 655\\\\",
+    "tokens": [
+      "631",
+      "655"
+    ]
+  },
+  {
+    "table": "ablation",
+    "method": "R2_fixed_L9_H3_r1_g0.5",
+    "label": "P pool, fixed blend .5",
+    "source_row": "P pool, fixed blend .5 & 630 & 655\\\\",
+    "tokens": [
+      "630",
+      "655"
+    ]
+  },
+  {
+    "table": "ablation",
+    "method": "R2_fixed_L9_H3_r1_g1.0",
+    "label": "P pool, fixed blend 1",
+    "source_row": "P pool, fixed blend 1 & 495 & 649\\\\",
+    "tokens": [
+      "495",
+      "649"
+    ]
+  }
+]
