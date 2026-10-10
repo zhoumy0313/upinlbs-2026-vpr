@@ -7,6 +7,7 @@ from pathlib import Path
 import subprocess
 import sys
 import uuid
+import traceback
 
 def utc_now():
     return datetime.now(timezone.utc).isoformat()
@@ -38,22 +39,30 @@ class Run:
         self.path.mkdir(parents=True, exist_ok=False)
         (self.path / 'figures').mkdir()
         source_files=sorted((self.root/'experiments/temporal_vpr').rglob('*.py'))
+        source_files+=sorted((self.root/'experiments/paper_v2').rglob('*.py'))
         for source in source_files:
             snapshot=self.path/'source_snapshot'/source.relative_to(self.root)
             snapshot.parent.mkdir(parents=True,exist_ok=True)
             snapshot.write_bytes(source.read_bytes())
         self.commands = []
+        state_path=self.root/'docs/goals/GOAL_V2_STATE.json'
+        opened=json.loads(state_path.read_text()).get('new_independent_test_has_been_opened',False) if state_path.exists() else False
         self.write('run_manifest.json', dict(run_id=self.id, task=task, started_utc=utc_now(),
             git_sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=self.root,text=True).strip(),
-            source_sha256={p.relative_to(self.root).as_posix():digest(p) for p in
-                sorted((self.root/'experiments/temporal_vpr').rglob('*.py'))},
-            independent_performance_opened=False, config_sha256=hashlib.sha256(
+            source_sha256={p.relative_to(self.root).as_posix():digest(p) for p in source_files},
+            independent_performance_opened=opened, config_sha256=hashlib.sha256(
                 json.dumps(config,sort_keys=True,allow_nan=False).encode()).hexdigest()))
         self.write('config_effective.yaml', config) # JSON is a valid YAML subset.
         self.write('inputs.json', inputs)
         self.write('argv.json', dict(entrypoint_argv=sys.argv,commands=[], cwd=str(self.root), environment_overrides={}))
         for filename in ['commands.jsonl','stdout.log','stderr.log']:
             (self.path/filename).touch(exist_ok=False)
+        previous_hook=sys.__excepthook__
+        def record_failure(kind,error,tb):
+            with (self.path/'stderr.log').open('a') as log:traceback.print_exception(kind,error,tb,file=log)
+            self.event('uncaught_entrypoint_exception',dict(type=kind.__name__,message=str(error),exit_code=1))
+            previous_hook(kind,error,tb)
+        sys.excepthook=record_failure
 
     def write(self, filename, value):
         destination = self.path / filename

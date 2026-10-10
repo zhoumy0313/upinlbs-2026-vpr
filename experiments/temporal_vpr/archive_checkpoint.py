@@ -27,6 +27,7 @@ def checkpoint(stage):
     run.command(['git','add','AGENTS_V2.md','docs/goals','docs/research_v2','configs/v2','experiments/temporal_vpr','artifacts/v2','paper/revisions'] if (ROOT/'paper/revisions').exists() else
                 ['git','add','AGENTS_V2.md','docs/goals','docs/research_v2','configs/v2','experiments/temporal_vpr','artifacts/v2'])
     if (ROOT/'freezes').exists():run.command(['git','add','freezes'])
+    if (ROOT/'experiments/paper_v2').exists():run.command(['git','add','experiments/paper_v2'])
     files=subprocess.check_output(['git','diff','--cached','--name-only','-z'],cwd=ROOT).split(b'\0')
     for name in files:
         if name:

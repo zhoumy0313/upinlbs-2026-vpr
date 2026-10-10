@@ -12,12 +12,12 @@
     "G4": "in_progress",
     "G5": "pending"
   },
-  "latest_run_id": "g3_acceptance_20261010T140208Z_5ab06d53",
+  "latest_run_id": "g4_gallery_build_20261010T143440Z_d261503e",
   "selected_research_track": "A_empirical",
   "new_independent_test_has_been_opened": false,
   "paper_revision": "v1_preserved",
   "human_action_required": [],
-  "updated_utc": "2026-10-10T14:02:12.222078+00:00",
+  "updated_utc": "2026-10-10T14:35:28.761961+00:00",
   "g1_diagnosis_run": "g1_diagnosis_20261010T131552Z_19ac45fe",
   "g2_search_predeclaration": "outputs_v2/g1_acceptance_20261010T132758Z_bd97657b/config_effective.yaml",
   "g2_baseline_run": "g2_strong_baselines_20261010T133356Z_5d8c3f15",
@@ -29,5 +29,9 @@
     "weight": 1
   },
   "g3_adaptive_run": "g3_adaptive_development_20261010T134356Z_93dbfee7",
-  "g3_smr_run": "g3_smr_adaptation_20261010T135720Z_bcbbf327"
+  "g3_smr_run": "g3_smr_adaptation_20261010T135720Z_bcbbf327",
+  "g4_factory_preflight_run": "g4_development_factory_preflight_20261010T142000Z_fd5c6510",
+  "g4_geo_audit_run": "g4_GPS_UTM_crosscheck_20261010T142532Z_0670ee7a",
+  "g4_audit_run": "g4_independent_data_audit_20261010T135919Z_432bb768",
+  "g4_gallery_run": "g4_gallery_build_20261010T143440Z_d261503e"
 }
