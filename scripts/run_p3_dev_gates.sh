@@ -6,7 +6,7 @@ cd "$ROOT"
 P3_SECOND="${1:-eigenplaces}"
 case "$P3_SECOND" in dinov2|eigenplaces) ;; *) exit 2 ;; esac
 P3_RUN="$(mktemp -d "$ROOT/outputs/p3_${P3_SECOND}_$(date +%Y%m%d_%H%M%S)_XXXXXX")"
-P3_MANIFEST="$ROOT/data/manifests/nordland_manifest_v2.json"
+P3_MANIFEST="$ROOT/data/manifests/p1_20261010_132030_nordland_manifest_v2.json"
 export PYTHONPATH= PYTHONNOUSERSITE=1
 export TORCH_HOME="$ROOT/weights/p0_torch"
 export OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4
