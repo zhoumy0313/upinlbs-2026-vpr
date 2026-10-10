@@ -1,0 +1,14 @@
+{
+  "format": "ordered_byte_concatenation_of_standard_zip",
+  "zip_sha256": "50e24dfbb7aa70cc5c8c9793105e812e3ffa73ce7a1b04ba452a1309548abdf4",
+  "zip_bytes": 287946,
+  "parts": [
+    {
+      "name": "evidence.zip",
+      "bytes": 287946,
+      "sha256": "50e24dfbb7aa70cc5c8c9793105e812e3ffa73ce7a1b04ba452a1309548abdf4"
+    }
+  ],
+  "scientific_run": "g4_freeze_20261010T175140Z_25a843d3",
+  "source_SHA256SUMS": "0f947cc0dad00be3002a476545b265d32c232cc1ff05920592ce00acf751a12e"
+}

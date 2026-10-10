@@ -1,0 +1,271 @@
+{
+  "goal_id": "VPR-GOAL-V3",
+  "freeze_timestamp_utc": "2026-10-10T17:51:46.974514+00:00",
+  "source_git_commit": "75fd013c05274fcae28f4fc288ce68a31bd342f0",
+  "science_file_sha256": {
+    "experiments/endpoint_vpr/run_g1.py": "4efdb8fb3debc274d1c9c7f332afe0506ef2aab67fa088da171b9fc4e255574e",
+    "experiments/endpoint_vpr/datasets.py": "a88b708110b0b62f858d87e3ae9ace76e5a34aaa6d2c2ac690e4c1bc6b084a50",
+    "experiments/endpoint_vpr/reassemble.py": "9f7c378aa807025bc3406de7190b5a0ecbd44ab2da993174d0626cef6536419b",
+    "experiments/endpoint_vpr/runtime.py": "705d04b02f24fe4d624a58d7ff0ed663b24b63da90f05fd487ae7119e88c9276",
+    "experiments/endpoint_vpr/driver.py": "7673ab011f45da4b1b80349d1283164a2606fad2a79a1e8d270f765731be6db8",
+    "experiments/endpoint_vpr/run_g4.py": "9ca62e37023a077e80b615c6a3f57eedd4d7fa060fed65f8c01b7b41abc3bdfa",
+    "experiments/endpoint_vpr/run_g3.py": "5e7e9030f01cba198121dce435a518e427920afa616d8b62cb4cd2d50aa2b9d6",
+    "experiments/endpoint_vpr/evaluate.py": "7a0768fce74dc647918be65b53868aa76b59d6eee58d99e2e39256f1cd16a0b0",
+    "experiments/endpoint_vpr/audit_results.py": "9f308e2bcff6e61c0d77b79e4484cabf612df5b04a6338b77e262534d6ad8529",
+    "experiments/endpoint_vpr/core.py": "e8b929388e88a010964d1e63f6ea0cf34820e4a596d4219d322c9646a3a200a7",
+    "experiments/endpoint_vpr/baselines.py": "5c33bd5ce3b19716111adae107ac458fe5e2688687425e29fbbf28e8afc560b8",
+    "experiments/endpoint_vpr/run_g5.py": "40d920542c1bdd66b3fe805bc23710989750f28342b00a4dfc2aa8745a9f5135",
+    "experiments/endpoint_vpr/finish_g6.py": "0a1af28056ab8053707846fb996a00e36a8ec5925251e44b43fddf9ce8619abe",
+    "experiments/endpoint_vpr/ci_build.py": "bb9b79b6294989ef53393ac1e95b86ae322d46eeedd14b136377d1759528f642",
+    "experiments/endpoint_vpr/run_g0.py": "1c185ddbbffa595e15cd977d442e9e2473095294d744cc64d9ba647757754d99",
+    "experiments/endpoint_vpr/diagnostics.py": "da75d63ef669d584a5a483d886959fd96431563957e929ed6e341493e301dbc2",
+    "experiments/endpoint_vpr/build_paper.py": "8111d0f6c588a5157efc3772e6ca6b908158c44be9ebd2b594ef4bb61b6373e4",
+    "experiments/endpoint_vpr/retry_public_source.py": "574ee5b284cd151502df4b482446a3e92cabd9b40467305d4c3a0410ce995db9",
+    "experiments/endpoint_vpr/generate_figures.py": "ff2d9be39f3019ec59c6185ecdd3a32059f9c71ddd33da7cb68b71d6067da447",
+    "experiments/endpoint_vpr/paper_template.tex": "aa6142b16d9b48a294b8a1c0ce5046faa9466dbaf180768a28a1bb7cad424c6c",
+    "experiments/endpoint_vpr/online.py": "c2d28c2aa8e4cc6d99d032c96abc32cb362caa28ad530a48fe762f674bd9deb3",
+    "experiments/endpoint_vpr/run_g2.py": "2dcba26223558669fe35349e2826b38ee385258772dac56606828d1191a09460",
+    "experiments/endpoint_vpr/source_audit.py": "e13c8bbd3ffbb9d35fb7e699f1e984ea97bc6fa9da7e43a2da93bb48e780916c",
+    "experiments/endpoint_vpr/new_data_preflight.py": "04ca8dd054591323720554ef9de775d5dcdf6398a9a6f884d4dca6ebc5248f4b",
+    "experiments/endpoint_vpr/final_delivery.py": "b286e0cbf2d6513a449144455518fda13051e80262589ceb4958514c1ffc7365",
+    "experiments/endpoint_vpr/tests/test_endpoint_core.py": "264c89b1c7c37afbce26f15a29810f65352525d735a235c956c1388b0ae452a3",
+    "configs/v3/dataset_selection.json": "2ce1e2cda911c9c00e79d3b3099a516f88af61362a74b7357869c7df67c32553",
+    "configs/v3/v3_protocol_proposed.yaml": "82a180e412ddc893afbb89c03716564328232023f61196c6d1cbe80efac5882f",
+    "configs/v3/v3_dataset_selection.yaml": "81933a9d486dcca7f35941f1bd6c1dd4b1f087d55d93029557943900d3ad3590",
+    "configs/v3/v3_selected_methods.json": "055b7c2b696b86625eb5e60e2055e64d5afd6a5c2523a498c12e63ddac6c2267",
+    "configs/v3/v3_search_grid.yaml": "ca0b53b3d31de719e5fb28f939491d0741bee69f897a9b98c28e44dfbb4a3088",
+    "src/vpr_research/encoders/frozen.py": "09812cf25f08235ae10575c8a6ba00317e0a12c7abf063b3ba041fc0a96cca3c",
+    "outputs_v2/g4_independent_data_audit_20261010T135919Z_432bb768/manifest.json": "19d50d1584e16860408b0b434d6dd78b5bdbabd0c9dfc30108994b04eb409eba",
+    "outputs_v2/g4_independent_evaluation_20261010T143959Z_73e61bb4/score_identities.json": "1fb43d42e17a1beafb8e08d009676aa29e3b0a3819002bb13452fbad462be051"
+  },
+  "methods": [
+    {
+      "name": "A",
+      "kind": "single",
+      "encoder": "cosplace"
+    },
+    {
+      "name": "B",
+      "kind": "single",
+      "encoder": "eigenplaces"
+    },
+    {
+      "name": "DINOv2",
+      "kind": "single",
+      "encoder": "dinov2"
+    },
+    {
+      "name": "RRF_k60",
+      "kind": "rrf"
+    },
+    {
+      "name": "AB_0.25",
+      "kind": "AB",
+      "weight": 0.25
+    },
+    {
+      "name": "AB_0.5",
+      "kind": "AB",
+      "weight": 0.5
+    },
+    {
+      "name": "AB_0.75",
+      "kind": "AB",
+      "weight": 0.75
+    },
+    {
+      "name": "fixed_L9",
+      "kind": "temporal",
+      "backend": "fixed_L9"
+    },
+    {
+      "name": "full_L3",
+      "kind": "temporal",
+      "backend": "full_L3"
+    },
+    {
+      "name": "full_L5",
+      "kind": "temporal",
+      "backend": "full_L5"
+    },
+    {
+      "name": "full_L9",
+      "kind": "temporal",
+      "backend": "full_L9"
+    },
+    {
+      "name": "global_fixed_L9_blend_0.25",
+      "kind": "global_blend",
+      "backend": "fixed_L9",
+      "weight": 0.25
+    },
+    {
+      "name": "global_fixed_L9_blend_0.5",
+      "kind": "global_blend",
+      "backend": "fixed_L9",
+      "weight": 0.5
+    },
+    {
+      "name": "global_fixed_L9_blend_0.75",
+      "kind": "global_blend",
+      "backend": "fixed_L9",
+      "weight": 0.75
+    },
+    {
+      "name": "shuffled_full_L9_seed0",
+      "kind": "control",
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ],
+      "shuffled": true
+    },
+    {
+      "name": "reversed_fixed_L9",
+      "kind": "control",
+      "L": 9,
+      "velocities": [
+        -1.2
+      ],
+      "shuffled": false
+    },
+    {
+      "name": "P_fixed_L9_H3_r1_e0.06",
+      "kind": "P",
+      "backend": "fixed_L9",
+      "H": 3,
+      "r": 1,
+      "epsilon": 0.06
+    },
+    {
+      "name": "R1_full_L3_H1_r1",
+      "kind": "R1",
+      "backend": "full_L3",
+      "H": 1,
+      "r": 1
+    },
+    {
+      "name": "R2_full_L3_H3_r1_g0.75",
+      "kind": "R2",
+      "backend": "full_L3",
+      "H": 3,
+      "r": 1,
+      "gamma": 0.75
+    },
+    {
+      "name": "P_epsilon_zero",
+      "kind": "P",
+      "backend": "fixed_L9",
+      "H": 3,
+      "r": 1,
+      "epsilon": 0
+    },
+    {
+      "name": "R1_same_P_pool",
+      "kind": "R1",
+      "backend": "fixed_L9",
+      "H": 3,
+      "r": 1
+    },
+    {
+      "name": "R3_same_P_radius",
+      "kind": "R1",
+      "backend": "fixed_L9",
+      "H": 1,
+      "r": 1
+    }
+  ],
+  "selection": {
+    "selected": {
+      "P": {
+        "name": "P_fixed_L9_H3_r1_e0.06",
+        "kind": "P",
+        "backend": "fixed_L9",
+        "H": 3,
+        "r": 1,
+        "epsilon": 0.06
+      },
+      "R1": {
+        "name": "R1_full_L3_H1_r1",
+        "kind": "R1",
+        "backend": "full_L3",
+        "H": 1,
+        "r": 1
+      },
+      "R2": {
+        "name": "R2_full_L3_H3_r1_g0.75",
+        "kind": "R2",
+        "backend": "full_L3",
+        "H": 3,
+        "r": 1,
+        "gamma": 0.75
+      }
+    },
+    "strongest_fixed": {
+      "name": "full_L3",
+      "kind": "temporal",
+      "backend": "full_L3"
+    },
+    "strongest_non_P": {
+      "name": "R2_full_L3_H3_r1_g0.75",
+      "kind": "R2",
+      "backend": "full_L3",
+      "H": 3,
+      "r": 1,
+      "gamma": 0.75
+    },
+    "P_strict_correct": 598,
+    "strong_strict_correct": 644,
+    "common_queries": 656,
+    "net_over_strong": -46,
+    "wide_nondegradation": false,
+    "Nordland_loss_vs_L9": 6,
+    "quantitative_gate_passed": false,
+    "novelty_claim_supported": false,
+    "outcome": "C",
+    "independent_test_not_opened": true,
+    "selected_utc": "2026-10-10T17:35:26.883673+00:00",
+    "decision": "failed_candidate_empirical_audit_no_extra_module"
+  },
+  "seen_data": [
+    "Nordland",
+    "St_Lucia",
+    "Gardens_Point"
+  ],
+  "independent_dataset": null,
+  "independent_data_status": "INDEPENDENT_TEST_UNAVAILABLE",
+  "independent_performance_not_opened": true,
+  "manifest_sha256": "42ffaed4622b2235ea4d7554873f86d7496817a82ff44e9d735678a7803fb507",
+  "model_identity_sha256": "b2f7ed2271d7f1f89485900c7dca909022741f1a2b6fec40b609cd42f9ecad0c",
+  "primary": "St_Lucia_seen_10m",
+  "auxiliary": "25m",
+  "sensitivity": [
+    5,
+    15,
+    50
+  ],
+  "startup": 8,
+  "common_mask": "radius-specific_no-positive_exclusion_shared_all_methods_then_first8_exclusion",
+  "timing": {
+    "warm": 20,
+    "full_passes": 3,
+    "batch_size": 1,
+    "device": "cuda",
+    "CUDA_synchronized": true,
+    "includes": [
+      "decode",
+      "preprocess",
+      "encoding",
+      "CPU_transfer",
+      "similarity",
+      "history",
+      "complete_ranking"
+    ],
+    "clock_locked": false
+  },
+  "descriptor_atol": 2e-05,
+  "score_atol": 2e-05,
+  "novelty_claim_supported": false
+}
