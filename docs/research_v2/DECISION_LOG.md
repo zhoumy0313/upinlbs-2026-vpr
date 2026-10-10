@@ -15,3 +15,5 @@
 2026-10-10T15:07:33.405738+00:00: immutable v2_20261010T143902Z, G4 Outcome B. No test tuning/correction; retain negative hypotheses. Auto-advance empirical G5.
 
 2026-10-10T15:10:21.038554+00:00: overallOutcomeC after reading all prescribed radii; primary25m labelB stays in raw evaluator. This is conservative interpretation, no source/config/prediction changes, no choice of favorable test parameters.
+
+2026-10-10T15:50:38.392939+00:00: G5 passed, overallC unchanged. Publish only empirical review candidate v2_r04 after exact-source six-page/number/font/visual checks. No new method/radius selection; no formal submission.

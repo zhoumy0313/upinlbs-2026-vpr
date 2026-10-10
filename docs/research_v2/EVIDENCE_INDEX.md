@@ -9,3 +9,5 @@ G2: artifacts/v2/g2/metrics.json, per_query.csv, fixed_temporal_grid.*, figure_p
 G3: artifacts/v2/g3/metrics.json (combined), evidence.zip contains both raw per-query files and failed environment logs, SHA256SUMS; local SMR pkl SHA 9bf4056605f17d62f4eb55f6ff8ddc78897d99b213d6024768cf7ef31e69600e.
 
 G4: artifacts/v2/g4 combined metadata/accuracy/latency metrics, per_query.csv, contiguous_blocks.csv, figure_points.csv, public evidence ZIP/SHA; immutable freezes/v2_20261010T143902Z. Raw/model descriptor arrays local by SHA.
+
+G5 all source/CSV/claim maps paper/revisions; native tool receipts, exact-source CI38064036912/38064652244, g5_delivery_verification_20261010T154422Z_56bc2592 local verification, visual_review.json. Final complete text/source_snapshot archive artifacts/v2/final/evidence.zip, ACTUAL_COMMANDS.jsonl, RUN_REGISTER.json and SHA256SUMS. V1 old evidence unchanged.

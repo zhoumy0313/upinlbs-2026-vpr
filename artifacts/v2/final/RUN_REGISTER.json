@@ -1,0 +1,345 @@
+[
+  {
+    "run": "G3_checkpoint_20261010T140222Z_eae514c9",
+    "task": "G3_checkpoint",
+    "started_utc": "2026-10-10T14:02:22.241556+00:00",
+    "git_sha": "4376dcd6e976927f9967f7e3456dd79911850734",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "G4_checkpoint_20261010T151730Z_36b92dc4",
+    "task": "G4_checkpoint",
+    "started_utc": "2026-10-10T15:17:30.530261+00:00",
+    "git_sha": "cdcb31c8bb9a3865c562fd15552b2ff1e7d380b1",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "G4_pretest_code_checkpoint_20261010T143857Z_74e10f1f",
+    "task": "G4_pretest_code_checkpoint",
+    "started_utc": "2026-10-10T14:38:57.691412+00:00",
+    "git_sha": "8db67b06cfb0a2a9e957682a27ba0d619602259d",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "G5_AI_policy_revision_checkpoint_20261010T154145Z_fa7fb67f",
+    "task": "G5_AI_policy_revision_checkpoint",
+    "started_utc": "2026-10-10T15:41:45.170951+00:00",
+    "git_sha": "2b86ec4c48b4557a790c06c3e4e7ab40982fc2ad",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "G5_sources_checkpoint_20261010T153225Z_29a3fa9c",
+    "task": "G5_sources_checkpoint",
+    "started_utc": "2026-10-10T15:32:25.319556+00:00",
+    "git_sha": "5b1e3ab04ce4cb9afd2f1940b2f456d8ee20db65",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g0_checkpoint_20261010T131318Z_c6f540ef",
+    "task": "g0_checkpoint",
+    "started_utc": "2026-10-10T13:13:18.670441+00:00",
+    "git_sha": "78eb9e45d3bc469630b0c46ad1ea02b318ee151b",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g0_preserve_20261010T130954Z_842e31e4",
+    "task": "G0 preserve V1",
+    "started_utc": "2026-10-10T13:09:54.009035+00:00",
+    "git_sha": "78eb9e45d3bc469630b0c46ad1ea02b318ee151b",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g0_regression_20261010T131233Z_697c38c9",
+    "task": "g0_regression",
+    "started_utc": "2026-10-10T13:12:33.869348+00:00",
+    "git_sha": "78eb9e45d3bc469630b0c46ad1ea02b318ee151b",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g1_acceptance_20261010T132758Z_bd97657b",
+    "task": "g1_acceptance",
+    "started_utc": "2026-10-10T13:27:58.139342+00:00",
+    "git_sha": "f8f239513e719edd40aeea3258b701e788793c54",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g1_checkpoint_20261010T132904Z_22aaca75",
+    "task": "g1_checkpoint",
+    "started_utc": "2026-10-10T13:29:04.981617+00:00",
+    "git_sha": "f8f239513e719edd40aeea3258b701e788793c54",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g1_diagnosis_20261010T131552Z_19ac45fe",
+    "task": "g1_diagnosis",
+    "started_utc": "2026-10-10T13:15:52.554269+00:00",
+    "git_sha": "f8f239513e719edd40aeea3258b701e788793c54",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g1_independent_metadata_20261010T132115Z_756b6ce2",
+    "task": "g1_independent_metadata",
+    "started_utc": "2026-10-10T13:21:15.791747+00:00",
+    "git_sha": "f8f239513e719edd40aeea3258b701e788793c54",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g1_primary_sources_20261010T131731Z_5b3e0873",
+    "task": "g1_primary_sources",
+    "started_utc": "2026-10-10T13:17:31.776634+00:00",
+    "git_sha": "f8f239513e719edd40aeea3258b701e788793c54",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g1_primary_sources_20261010T132412Z_cb7d6364",
+    "task": "g1_primary_sources",
+    "started_utc": "2026-10-10T13:24:12.604108+00:00",
+    "git_sha": "f8f239513e719edd40aeea3258b701e788793c54",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g2_acceptance_20261010T133813Z_d6200bfc",
+    "task": "g2_acceptance",
+    "started_utc": "2026-10-10T13:38:13.276396+00:00",
+    "git_sha": "505af8fcd9d9ed49f8c47bd35f49e070d820cea6",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g2_checkpoint_20261010T133951Z_6d185a19",
+    "task": "g2_checkpoint",
+    "started_utc": "2026-10-10T13:39:51.621001+00:00",
+    "git_sha": "505af8fcd9d9ed49f8c47bd35f49e070d820cea6",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g2_strong_baselines_20261010T133213Z_67e310b2",
+    "task": "g2_strong_baselines",
+    "started_utc": "2026-10-10T13:32:13.940216+00:00",
+    "git_sha": "505af8fcd9d9ed49f8c47bd35f49e070d820cea6",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g2_strong_baselines_20261010T133356Z_5d8c3f15",
+    "task": "g2_strong_baselines",
+    "started_utc": "2026-10-10T13:33:56.346043+00:00",
+    "git_sha": "505af8fcd9d9ed49f8c47bd35f49e070d820cea6",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g3_acceptance_20261010T140208Z_5ab06d53",
+    "task": "g3_acceptance",
+    "started_utc": "2026-10-10T14:02:08.546978+00:00",
+    "git_sha": "4376dcd6e976927f9967f7e3456dd79911850734",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g3_adaptive_development_20261010T134356Z_93dbfee7",
+    "task": "g3_adaptive_development",
+    "started_utc": "2026-10-10T13:43:56.374326+00:00",
+    "git_sha": "4376dcd6e976927f9967f7e3456dd79911850734",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g3_smr_adaptation_20261010T135720Z_bcbbf327",
+    "task": "g3_smr_adaptation",
+    "started_utc": "2026-10-10T13:57:20.891231+00:00",
+    "git_sha": "4376dcd6e976927f9967f7e3456dd79911850734",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g3_smr_environment_20261010T134726Z_0b25b487",
+    "task": "g3_smr_environment",
+    "started_utc": "2026-10-10T13:47:26.285219+00:00",
+    "git_sha": "4376dcd6e976927f9967f7e3456dd79911850734",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g3_smr_environment_20261010T134813Z_21769c7f",
+    "task": "g3_smr_environment",
+    "started_utc": "2026-10-10T13:48:13.447173+00:00",
+    "git_sha": "4376dcd6e976927f9967f7e3456dd79911850734",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g4_GPS_UTM_crosscheck_20261010T142532Z_0670ee7a",
+    "task": "g4_GPS_UTM_crosscheck",
+    "started_utc": "2026-10-10T14:25:32.446383+00:00",
+    "git_sha": "8db67b06cfb0a2a9e957682a27ba0d619602259d",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g4_acceptance_20261010T150725Z_c4fe2906",
+    "task": "g4_acceptance",
+    "started_utc": "2026-10-10T15:07:25.632880+00:00",
+    "git_sha": "cdcb31c8bb9a3865c562fd15552b2ff1e7d380b1",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g4_development_factory_preflight_20261010T141857Z_79affaf6",
+    "task": "g4_development_factory_preflight",
+    "started_utc": "2026-10-10T14:18:57.151019+00:00",
+    "git_sha": "8db67b06cfb0a2a9e957682a27ba0d619602259d",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g4_development_factory_preflight_20261010T142000Z_fd5c6510",
+    "task": "g4_development_factory_preflight",
+    "started_utc": "2026-10-10T14:20:00.026129+00:00",
+    "git_sha": "8db67b06cfb0a2a9e957682a27ba0d619602259d",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g4_freeze_audit_20261010T143853Z_da6d9d05",
+    "task": "g4_freeze_audit",
+    "started_utc": "2026-10-10T14:38:53.897697+00:00",
+    "git_sha": "8db67b06cfb0a2a9e957682a27ba0d619602259d",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g4_gallery_build_20261010T143323Z_6817cb40",
+    "task": "g4_gallery_build",
+    "started_utc": "2026-10-10T14:33:23.964309+00:00",
+    "git_sha": "8db67b06cfb0a2a9e957682a27ba0d619602259d",
+    "status": "failure recorded"
+  },
+  {
+    "run": "g4_gallery_build_20261010T143440Z_d261503e",
+    "task": "g4_gallery_build",
+    "started_utc": "2026-10-10T14:34:40.319534+00:00",
+    "git_sha": "8db67b06cfb0a2a9e957682a27ba0d619602259d",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g4_independent_data_audit_20261010T135919Z_432bb768",
+    "task": "g4_independent_data_audit",
+    "started_utc": "2026-10-10T13:59:19.309291+00:00",
+    "git_sha": "4376dcd6e976927f9967f7e3456dd79911850734",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g4_independent_evaluation_20261010T143959Z_73e61bb4",
+    "task": "g4_independent_evaluation",
+    "started_utc": "2026-10-10T14:39:59.006920+00:00",
+    "git_sha": "cdcb31c8bb9a3865c562fd15552b2ff1e7d380b1",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g4_real_online_latency_20261010T144339Z_bb8f86bb",
+    "task": "g4_real_online_latency",
+    "started_utc": "2026-10-10T14:43:39.688432+00:00",
+    "git_sha": "cdcb31c8bb9a3865c562fd15552b2ff1e7d380b1",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g4_transfer_sensitivity_audit_20261010T151020Z_c0f74699",
+    "task": "g4_transfer_sensitivity_audit",
+    "started_utc": "2026-10-10T15:10:20.417183+00:00",
+    "git_sha": "cdcb31c8bb9a3865c562fd15552b2ff1e7d380b1",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g5_delivery_verification_20261010T153852Z_e145a8e9",
+    "task": "g5_delivery_verification",
+    "started_utc": "2026-10-10T15:38:52.367904+00:00",
+    "git_sha": "2b86ec4c48b4557a790c06c3e4e7ab40982fc2ad",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g5_delivery_verification_20261010T154422Z_56bc2592",
+    "task": "g5_delivery_verification",
+    "started_utc": "2026-10-10T15:44:22.352000+00:00",
+    "git_sha": "95c4e5a7a61bbaa068cb6ba93e87b2c8d9efdceb",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g5_final_delivery_20261010T155038Z_3d2f7c92",
+    "task": "g5_final_delivery",
+    "started_utc": "2026-10-10T15:50:38.234474+00:00",
+    "git_sha": "95c4e5a7a61bbaa068cb6ba93e87b2c8d9efdceb",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g5_independent_numeric_audit_20261010T153529Z_72fdd85d",
+    "task": "g5_independent_numeric_audit",
+    "started_utc": "2026-10-10T15:35:29.104497+00:00",
+    "git_sha": "0f36c98c08ac7dd8360eb36806d9e876690af31d",
+    "status": "failure recorded"
+  },
+  {
+    "run": "g5_independent_numeric_audit_20261010T153550Z_e31c5c83",
+    "task": "g5_independent_numeric_audit",
+    "started_utc": "2026-10-10T15:35:50.398213+00:00",
+    "git_sha": "0f36c98c08ac7dd8360eb36806d9e876690af31d",
+    "status": "failure recorded"
+  },
+  {
+    "run": "g5_independent_numeric_audit_20261010T153706Z_edd2b3c0",
+    "task": "g5_independent_numeric_audit",
+    "started_utc": "2026-10-10T15:37:06.372455+00:00",
+    "git_sha": "2b86ec4c48b4557a790c06c3e4e7ab40982fc2ad",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g5_independent_numeric_audit_20261010T153856Z_5310d03c",
+    "task": "g5_independent_numeric_audit",
+    "started_utc": "2026-10-10T15:38:56.039007+00:00",
+    "git_sha": "2b86ec4c48b4557a790c06c3e4e7ab40982fc2ad",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g5_independent_numeric_audit_20261010T154426Z_4335d6d7",
+    "task": "g5_independent_numeric_audit",
+    "started_utc": "2026-10-10T15:44:26.006924+00:00",
+    "git_sha": "95c4e5a7a61bbaa068cb6ba93e87b2c8d9efdceb",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g5_manuscript_empirical_20261010T153151Z_85e70ff6",
+    "task": "g5_manuscript_empirical",
+    "started_utc": "2026-10-10T15:31:51.292117+00:00",
+    "git_sha": "5b1e3ab04ce4cb9afd2f1940b2f456d8ee20db65",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g5_manuscript_r01_20261010T152322Z_ad9cece8",
+    "task": "g5_manuscript_r01",
+    "started_utc": "2026-10-10T15:23:22.971843+00:00",
+    "git_sha": "5b1e3ab04ce4cb9afd2f1940b2f456d8ee20db65",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g5_manuscript_r02_20261010T153151Z_31a6b5a4",
+    "task": "g5_manuscript_r02",
+    "started_utc": "2026-10-10T15:31:51.164245+00:00",
+    "git_sha": "5b1e3ab04ce4cb9afd2f1940b2f456d8ee20db65",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g5_manuscript_r03_20261010T153151Z_e356f28d",
+    "task": "g5_manuscript_r03",
+    "started_utc": "2026-10-10T15:31:51.228158+00:00",
+    "git_sha": "5b1e3ab04ce4cb9afd2f1940b2f456d8ee20db65",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g5_manuscript_r04_20261010T154145Z_ddc2f632",
+    "task": "g5_manuscript_r04",
+    "started_utc": "2026-10-10T15:41:45.113340+00:00",
+    "git_sha": "2b86ec4c48b4557a790c06c3e4e7ab40982fc2ad",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g5_native_compilation_20261010T153403Z_b87b1e11",
+    "task": "g5_native_compilation",
+    "started_utc": "2026-10-10T15:34:03.020075+00:00",
+    "git_sha": "0f36c98c08ac7dd8360eb36806d9e876690af31d",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  },
+  {
+    "run": "g5_primary_metadata_audit_20261010T142147Z_4fd4c182",
+    "task": "g5_primary_metadata_audit",
+    "started_utc": "2026-10-10T14:21:47.101221+00:00",
+    "git_sha": "8db67b06cfb0a2a9e957682a27ba0d619602259d",
+    "status": "see checks/metrics; not inferred from exit0 alone"
+  }
+]

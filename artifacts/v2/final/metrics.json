@@ -1,0 +1,73 @@
+{
+  "outcome": "C",
+  "primary25m_raw_label": "B",
+  "quality": "READY_FOR_HUMAN_REVIEW",
+  "formal_submission_ready": false,
+  "versions": [
+    {
+      "revision": "v2_r01",
+      "pages": 6,
+      "pdf_sha256": "1f9334ae91e0516581a17d6917b44b1730dcd066f479104847eb6206be0bd703",
+      "tex_sha256": "a4893d019177e243634c4d93cc9458982ac7b213e2e88e057b97dc7d4c52fe39",
+      "font_count": 17,
+      "all_fonts_embedded": true,
+      "no_Type3": true,
+      "PDF_numeric_table_cells": 110,
+      "PDF_abstract_percentages": 7,
+      "visual_inspection_pending": true
+    },
+    {
+      "revision": "v2_r02",
+      "pages": 6,
+      "pdf_sha256": "9f58a8d391c0549640df2611b4c8a1d67b7c1be9b3fbb8a5322bd49aa20e8347",
+      "tex_sha256": "868e43bd1f7e08c2be298aaa7fb5e963459a0eb0522342102d7189d588a40e04",
+      "font_count": 17,
+      "all_fonts_embedded": true,
+      "no_Type3": true,
+      "PDF_numeric_table_cells": 110,
+      "PDF_abstract_percentages": 7,
+      "visual_inspection_pending": true
+    },
+    {
+      "revision": "v2_r03",
+      "pages": 6,
+      "pdf_sha256": "9516f39362e9b315f97faaf86366abab92481af96f5ba8f0217471527a3ae597",
+      "tex_sha256": "1235fd8b538120f42526cc718d648b03973c64705b75b1a7c7917be2e7f71f66",
+      "font_count": 17,
+      "all_fonts_embedded": true,
+      "no_Type3": true,
+      "PDF_numeric_table_cells": 110,
+      "PDF_abstract_percentages": 7,
+      "visual_inspection_pending": true
+    },
+    {
+      "revision": "v2_empirical_findings",
+      "pages": 6,
+      "pdf_sha256": "fa7705085d865214d51802eccc5fcea5986faef9bfd98355e7f082f541c57ead",
+      "tex_sha256": "8736cdd0a80b6f1152072a59954be09dd42e384d9f66ca3a82c2e397c39fb96c",
+      "font_count": 17,
+      "all_fonts_embedded": true,
+      "no_Type3": true,
+      "PDF_numeric_table_cells": 110,
+      "PDF_abstract_percentages": 7,
+      "visual_inspection_pending": true
+    },
+    {
+      "revision": "v2_r04",
+      "pages": 6,
+      "pdf_sha256": "ed82fee673aba1889bd17feccab05299c3e801be936a99765ce640d654d4ec4b",
+      "tex_sha256": "95c4c39202fbabdfa472802ef4b2120f3a31fff1ca009a34dc7d87cdaacae380",
+      "font_count": 17,
+      "all_fonts_embedded": true,
+      "no_Type3": true,
+      "PDF_numeric_table_cells": 110,
+      "PDF_abstract_percentages": 7,
+      "visual_inspection_pending": true
+    }
+  ],
+  "tests": 60,
+  "old_files_verified": 1470,
+  "frozen_inputs_verified": 65,
+  "actual_commands": 141,
+  "run_register": 49
+}
