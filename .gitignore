@@ -41,3 +41,10 @@ paper/revisions/**/*.out
 paper/revisions/**/*.fls
 paper/revisions/**/*.fdb_latexmk
 paper/revisions/**/*.synctex.gz
+
+# V3 append-only local scientific evidence.
+outputs_v3/
+!artifacts/v3/**/*.zip
+paper/revisions/v3_*/**/*.aux
+paper/revisions/v3_*/**/*.log
+paper/revisions/v3_*/**/*.out
