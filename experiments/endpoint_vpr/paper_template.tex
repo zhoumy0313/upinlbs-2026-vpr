@@ -1,0 +1,117 @@
+% V3 @@REVISION@@; working research draft, evidence-linked, human review required.
+\documentclass[conference]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,booktabs,url,tikz,pgfplots}
+\pgfplotsset{compat=1.18}
+\title{Endpoint Drift and Evaluation Sensitivity in Causal Visual Place Recognition: A Reproducible Study}
+\author{\IEEEauthorblockN{Mingyang Zhou}\IEEEauthorblockA{University of Chinese Academy of Sciences\\\textit{Additional authors and correspondence pending}}}
+\begin{document}\maketitle
+\begin{abstract}
+Sequence matching can improve visual place recognition while displacing its selected reference endpoint under a strict geographic matching threshold. We examine whether current-frame visual evidence can refine a coarse causal sequence prediction without adding an encoder. On already seen St Lucia data, a radius-four reference neighborhood covers @@ORACLE@@ of @@ERRORS@@ errors made by a fixed nine-image trajectory at a 10 m threshold. This is a diagnostic upper bound, not algorithm recall. We execute a bounded comparison of fixed temporal, encoder-fusion, naive local and score-support-constrained policies. On @@NVAL@@ seen validation queries, the selected constrained candidate retrieves @@PCORRECT@@ correctly at 10 m; the strongest non-candidate control retrieves @@BCORRECT@@. All configurations and unfavorable results are retained. @@ABSTRACT_COST@@ New geographic validation could not be completed through the audited public sources, so the evidence does not establish an independently supported method contribution. The study separates candidate availability, baseline strength, label sensitivity and actual image-pipeline cost.
+\end{abstract}
+\begin{IEEEkeywords}visual place recognition, causal sequence matching, endpoint refinement, baseline comparison, reproducibility\end{IEEEkeywords}
+
+\section{Introduction}
+Visual place recognition (VPR) retrieves a reference image depicting a previously visited place~\cite{tutorial}. A global image descriptor provides an economical ranking, but appearance ambiguity can leave the best single-image match incorrect. A sequence of past observations can support a coherent reference trajectory. This motivates temporal matching, provided that past evidence does not erase current-frame discrimination between nearby places.
+
+The evaluation protocol determines what constitutes a successful endpoint. A prediction can identify the correct route vicinity yet fail a tighter geographic threshold. Reference-index velocity also depends on image sampling, rather than physical speed. These distinctions become important when a long sequence selected on an ordinally aligned railway transfers to an irregularly sampled urban reference route with loops and geographic labels.
+
+Our earlier frozen experiments found that a nine-image fixed trajectory performs strongly on Nordland, but short-window controls outperform it under strict St Lucia labels. These observations are already known: this study treats both datasets as seen development data. It does not rebrand the previous external test as independent because a new paper or new split is used.
+
+We ask whether a coarse temporal endpoint usually has a valid neighboring reference, whether a simple current-frame reorder already extracts that opportunity, and whether an explicit temporal-support constraint adds value beyond strong fixed choices. We predeclare finite grids, common masks and a continuation rule before the new development outputs. The contribution offered here is an empirical mechanism and protocol audit. Sequence reasoning, local reranking and confidence-based trust are established; we claim neither their invention nor a new representation network.
+
+\section{Related Work}
+CosPlace~\cite{cosplace}, EigenPlaces~\cite{eigenplaces} and DINOv2~\cite{dinov2} supply frozen descriptors in our compact configurations. Their original best benchmark settings are not reproduced by this low-resolution experiment. The UPINLBS ResNet--Sinkhorn work~\cite{sameconference} addresses indoor global descriptors; only its publisher metadata was accessible, restricting detailed novelty comparison.
+
+SeqSLAM~\cite{seqslam} and OpenSeqSLAM2.0~\cite{openseq} establish sequence trajectory reasoning and speed hypotheses. Our past-and-current cosine average is a disclosed descriptor-score adaptation, rather than an official reproduction of their grayscale normalization. Delta Descriptors~\cite{delta} transform temporal changes; their centered observation convention differs from our causal endpoint.
+
+STA-VPR~\cite{sta} aligns CNN feature strips spatially and relaxes temporal alignment endpoints through local matching DTW. AdaptSeqVPR~\cite{adapt} describes variable sequence steps and a trained candidate discriminator in its publisher abstract; full text and official executable code were not verified. Thus, variable speed and flexible endpoints cannot be claimed as new ideas here. SMR~\cite{smr} learns when sequence matching helps or harms; its preserved earlier code adaptation is separate from the present untrained local-score candidate.
+
+Local-image reranking~\cite{match} and similarity-distribution uncertainty~\cite{doubt} further constrain novelty. RRF~\cite{rrf} is a mature ranking fusion control. Our candidate's particular support inequality is tested against naive local visual and fixed local/global blending. A new combination of established operations, or improvement over an unfavorable long-window baseline, is insufficient evidence of a method contribution.
+
+\section{Causal Endpoint Policies}
+For image $I$, frozen encoder $f$ outputs unit descriptor $z(I)$. Current cosine scores are $S_t(j)=z(q_t)^\top z(d_j)$. A single-frame rank sorts $S_t$ stably in canonical gallery order. The causal coarse score is
+\begin{equation}
+T_t(j)=\max_{v\in\mathcal V}\frac{1}{L}\sum_{\ell=0}^{L-1} S_{t-\ell}\big(j-\operatorname{rint}(v\ell)\big).
+\end{equation}
+Only current and past query scores are used; $\operatorname{rint}$ rounds ties to even. Invalid or traversal-crossing reference paths have score $-\infty$. History resets at each split and query traversal. Before a complete window, the current visual rank is used.
+
+Stable Top-$H$ distinct valid endpoints define $\mathcal C_t(H,r)$, the union of their bounded same-traversal reference-index neighborhoods, without nonmaximum suppression. Overlapping indices are deduplicated. We consistently remove indices with nonfinite $T_t$ from all local policies. This boundary convention is explicit: even an arbitrarily large support tolerance cannot restore a reference excluded by an invalid path. The radius counts reference images, not metres. Empty candidates or startup fall back to the visual ranking.
+
+R0 sorts $T_t$. R1 sorts current $S_t$ inside $\mathcal C_t$; R3 is its $H=1$ alias. R2 sorts $(1-\gamma)(S_t+1)/2+\gamma(T_t+1)/2$ inside the same pool. The candidate P constrains admissibility:
+\begin{equation}
+\mathcal A_t=\{j\in\mathcal C_t:T_t(j)\ge \max_k T_t(k)-\varepsilon\}.
+\end{equation}
+It ranks $\mathcal A_t$ by current $S_t$, then appends every remaining reference in original visual order. R1/R2 use the same completion convention. All methods produce a full permutation with no duplicate or missing reference. At $\varepsilon=0$, maximum-$T$ ties are resolved by $S$; once $\varepsilon$ exceeds all finite candidate gaps, P equals R1. Neither $\gamma$ nor $\varepsilon$ is a probability or physical distance.
+
+\begin{figure}[t]\centering
+\begin{tikzpicture}[scale=.70,transform shape,every node/.style={draw,rounded corners,align=center,font=\small,minimum height=.7cm}]
+\node (im) at (0,0) {Current image};\node (enc) at (3,0) {Frozen encoder\\unit descriptor};\node (sim) at (6,0) {Gallery cosine\\$S_t$};
+\node (hist) at (6,-1.4) {Past/current scores\\causal $T_t$};\node (pool) at (3,-1.4) {Top-$H$ + radius $r$\\support $\varepsilon$};\node (rank) at (0,-1.4) {Stable visual rank\\reference IDs};
+\draw[->] (im)--(enc);\draw[->] (enc)--(sim);\draw[->] (sim)--(hist);\draw[->] (hist)--(pool);\draw[->] (pool)--(rank);
+\end{tikzpicture}
+\caption{Image input to reference ranking. Query coordinates, labels and future images are absent. Geographic truth is used only after predictions for evaluation.}\label{fig:pipeline}
+\end{figure}
+
+\section{Protocol and Reproducibility}
+\subsection{Seen Data and Ground Truth}
+Nordland-Part-2020~\cite{nordland} provides 1750 summer references and aligned winter queries. Original training ordinals 1--600 and validation 701--1000 remain seen; main positives are within five reference ordinals. This is an index convention, not geographic distance. All validation methods exclude the first eight queries after history reset, giving 292 common queries.
+
+St Lucia~\cite{stlucia}, in the source-pinned formatted benchmark~\cite{benchmark}, contains 1549 references and 1464 ordered queries. Its earlier results are already seen. V3 uses zero-based queries [0,700) for development, an unused [700,800) buffer, and [800,1464) for validation; common denominators are 692 and 656 after independent split resets. Whole-stream diagnostic comparisons have 1456 common queries. This conditional development selection is not a prospective blind test.
+
+Euclidean UTM label distance defines 10 m primary and 25 m auxiliary positives; 5/15/50 m are declared sensitivities. At each radius every method shares the same no-positive exclusion and startup mask; no-positive counts and full-stream behavior are retained. Radius-dependent exclusions must be considered when comparing thresholds. Coordinates enter offline evaluation only. Reprojection of rounded St Lucia labels differs by up to 1.48305 m; a $\pm2$ m threshold band is recorded. This reprojection check establishes rounding consistency, not a bound on physical GPS sensor error, which is not surveyed here. Retrieval success is not estimated pose error or a 6DoF RMSE.
+
+@@PROTOCOL_EXTRA@@
+
+\subsection{Finite Search and Strong Controls}
+All models use RGB ImageNet normalization and a bilinear antialiased 224-square tensor warp. CosPlace ResNet18/512, EigenPlaces ResNet50/512 and DINOv2 ViT-S14 CLS/384 are existing source/checkpoint-fingerprinted frozen encoders. No encoder or new classifier is trained.
+
+Required temporal controls include $L9,v=1.2$ and full $\mathcal V=\{.8,1,1.2\}$ at $L=3,5,9$, alongside current-frame/global fixed blending, three A+B weights, RRF and shuffled/reversed histories. With ties-to-even rounding, all three $L3$ velocity hypotheses yield offsets $[0,1,2]$; their identical paths preclude attributing an $L3$ gain to distinct speed adaptation.
+
+The declared local grid is $H\in\{1,3\},r\in\{1,2,4,8\}$, $\gamma\in\{0,.25,.5,.75,1\}$ and $\varepsilon\in\{0,.01,.03,.06\}$. R1/R2 use all four temporal backends, totaling 32 and 160 configurations. P has 32 configurations on the original L9 backbone; this budget restriction precedes outputs. Selection is lexicographic seen-validation 10 m, then 25 m, then Nordland validation, then deterministic smaller parameters. P must exceed the strongest reasonable non-P control by at least two strict correct queries without auxiliary loss or more than one Nordland loss versus fixed L9. This is a continuation rule, not a significance test. No further module is added after candidate failure.
+
+@@COST_SECTION@@
+
+\section{Results and Mechanism Audit}
+\subsection{Candidate Availability versus Algorithm Value}
+On 1456 seen St Lucia diagnostic queries at 10 m, fixed L9 has 372 errors. Its $H1,r4$ neighborhood covers 369 of these; equal-size seed-zero uniform reference candidates cover six. The oracle fraction 99.19\% describes available positives, not a realizable policy. Of the paired A/T outcomes, 347 visual successes become temporal errors and 47 visual errors are rescued. The 25 m comparison changes to 20 harms and 34 rescues. These observations require matched thresholds and do not prove geometric localization accuracy.
+
+@@RESULT_INTERPRETATION@@ Table~\ref{tab:main} uses the declared seen-validation splits. A strong short-window or local-blend control must be compared before interpreting an improvement over the original L9. All configuration-level and per-query evidence, including unsuccessful candidates, remains available.
+
+\begin{table*}[t]\centering\small
+\caption{Already seen development validation, not independent testing. St Lucia has 656 queries at 10/25 m; Nordland has 292 at ordinal tolerance five. R1/R2/P use deterministic development-selected settings; percentages are derived from correct counts. @@TABLE_COST_CAPTION@@}\label{tab:main}
+\begin{tabular}{lrrrr@@TABLE_COST_COLUMNS@@}\toprule
+Method & SL10 correct & SL10 \% & SL25 \% & Nordland \% @@TABLE_COST_HEADER@@\\\midrule
+@@MAIN_TABLE@@
+\bottomrule\end{tabular}\end{table*}
+
+\begin{table}[t]\centering\small
+\caption{Prescribed support/local ablations on seen St Lucia validation (656 common queries). Every value refers to a complete frozen ranking. Full 224-configuration grid is archived.}\label{tab:ablation}
+\begin{tabular}{lrr}\toprule
+Policy & 10m correct & 25m correct\\\midrule
+@@ABLATION_TABLE@@
+\bottomrule\end{tabular}\end{table}
+
+@@CASES_FIGURE@@
+
+\subsection{Cases, Sensitivity and Boundary Failure}
+Eight real cases follow the declared first-two-in-traversal-order rule for repairable drift, unavailable H1-neighborhood truth, visual success harmed by sequence matching, and multiwindow disagreement. Query 16 illustrates nearby endpoint drift: visual/L3 reference distance is 6.9 m versus 21.8 m for fixed L9. Queries 9 and 10 expose the finite-path boundary: valid sequence indices can exclude early nearby references, while other loops provide competing reference identities. A reference-index difference is therefore not geographic error, especially with route revisits.
+
+The initial case audit used H3 for its unavailable-neighborhood category, found no matching query, and explicitly flagged fallback examples. A preserved supplement applies the specified Top1-centered H1 condition and verifies the named categories. This correction affects interpretation, not scores, parameters or prediction selection. Photographs are available locally through their image IDs/rebuild script; uncertain redistribution rights prevent including them in this public draft. Numeric case panels preserve the actual failure evidence.
+
+@@RESULTS_EXTRA@@
+
+\section{Discussion and Conclusion}
+A broad candidate oracle establishes that local reference availability is often sufficient; it does not establish that temporal support filtering beats current-frame ranking or a short fixed window. Our bounded implementation tests that distinction against mature controls, with complete causal rankings and exact query ledgers. The strongest fixed or simple local method, rather than a weak historical method, sets the incremental contribution bar.
+
+All accuracy evidence is development or descriptive seen-data evidence. Oxford RobotCar's official RTK source~\cite{robotcar} is promising, but camera downloads require registration. The SFU Mountain source~\cite{sfu} supplies licensed ordered images and manual place correspondences; necessary official archives failed normal public HTTP/HTTPS access in our bounded audit. SFU's approximate annotation spacing and GPS accuracy would not validate strict 10 m geographic improvement even if those bundles became available. No new independent image performance is reported, and no alternative is selected using model scores.
+
+Consequently, this is a working empirical draft, not an independently validated new-method submission. Correlated video frames, rounded geographic labels, reference loops, one limited P backbone grid, unavailable external data and partial related-paper access restrict the conclusion. Actual evidence and prior manuscripts are preserved for human review. Further external validation would require a fresh metadata audit and prospective freeze, rather than retuning on an opened test.
+
+\section*{Acknowledgment}
+OpenAI ChatGPT/Codex assisted with the V3 implementation, experimental execution and analysis, figures, and drafting/editing of the abstract and Sections I--VI. Human authors must review all claims, citations and AI-assisted content and remain responsible for the manuscript. Author list/order, correspondence, affiliation wording and funding require human confirmation; no submission or copyright action has been performed.
+
+\begin{thebibliography}{20}
+@@BIBLIOGRAPHY@@
+\end{thebibliography}
+\end{document}

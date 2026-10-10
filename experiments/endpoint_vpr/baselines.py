@@ -31,8 +31,8 @@ class Strategy:
     def step(self,scores):
         s=np.asarray(scores['cosplace']);t=s;warm=False
         if self.temporal:t,warm=self.temporal.step(s,self.traversals)
-        return self._rank_current(scores,t,warm)
-    def _rank_current(self,scores,t,warm):
+        return self._rank_current(scores,t,warm,self.temporal.last_trace if self.temporal else [])
+    def _rank_current(self,scores,t,warm,path_trace=None):
         x=self.spec;s=np.asarray(scores['cosplace']);meta=dict(candidates=[],eligible=[],fallback_reason='')
         if self.kind=='single':values=scores[x['encoder']];result=rank(values)
         elif self.kind=='rrf':values=rrf(s,scores['eigenplaces']);result=rank(values)
@@ -41,7 +41,7 @@ class Strategy:
         elif self.kind=='global_blend':w=x['weight'];values=(1-w)*(s+1)/2+w*(t+1)/2;result=rank(values)
         else:
             result,meta=refine(s,t,self.traversals,kind=self.kind,H=x['H'],r=x['r'],epsilon=x.get('epsilon',0),gamma=x.get('gamma',0),warm=warm);values=s
-        meta.update(warmup=warm,T_top3=rank(t)[:3].tolist(),T_top3_scores=[float(t[j]) for j in rank(t)[:3]],top10_scores=[float(values[j]) if np.isfinite(values[j]) else None for j in result[:10]],score_semantics='current_S_for_local_ranked_methods_otherwise_method_score',temporal_best_score=float(np.max(t)),path_offsets=np.rint(np.array(self.temporal.velocities[0])*np.arange(self.temporal.L)).astype(int).tolist() if self.temporal else [])
+        meta.update(winning_paths=path_trace or [],warmup=warm,T_top3=rank(t)[:3].tolist(),T_top3_scores=[float(t[j]) for j in rank(t)[:3]],top10_scores=[float(values[j]) if np.isfinite(values[j]) else None for j in result[:10]],score_semantics='current_S_for_local_ranked_methods_otherwise_method_score',temporal_best_score=float(np.max(t)),path_offsets=np.rint(np.array(self.temporal.velocities[0])*np.arange(self.temporal.L)).astype(int).tolist() if self.temporal else [])
         return result,meta
 
 def predictions(d,spec):
@@ -49,7 +49,9 @@ def predictions(d,spec):
     cache=d.setdefault('_temporal_cache',{})
     key=spec.get('backend') if spec['kind']!='control' else spec['name']
     if m.temporal and key not in cache:
-        cache[key]=[m.temporal.step(row,tr) for row in d['scores']['cosplace']]
+        cache[key]=[]
+        for row in d['scores']['cosplace']:
+            t,warm=m.temporal.step(row,tr);cache[key].append((t,warm,m.temporal.last_trace))
     for i in range(len(d['q'])):
         scores={k:v[i] for k,v in d['scores'].items()}
         o,meta=m._rank_current(scores,*cache[key][i]) if m.temporal else m.step(scores)

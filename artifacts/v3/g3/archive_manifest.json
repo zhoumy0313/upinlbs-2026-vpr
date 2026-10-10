@@ -1,0 +1,14 @@
+{
+  "format": "ordered_byte_concatenation_of_standard_zip",
+  "zip_sha256": "fa182ad8db59bed5d1d5ab78883b2cfe780d3810ff7ba1b7bd8e2a3e60b28f7b",
+  "zip_bytes": 31822032,
+  "parts": [
+    {
+      "name": "evidence.zip",
+      "bytes": 31822032,
+      "sha256": "fa182ad8db59bed5d1d5ab78883b2cfe780d3810ff7ba1b7bd8e2a3e60b28f7b"
+    }
+  ],
+  "scientific_run": "g3_bounded_grid_20261010T170333Z_939efa9e",
+  "source_SHA256SUMS": "12865c63fd63648ddd6c1a771ad751b668e8763093d26cdf61643b5666f5ba8a"
+}

@@ -34,22 +34,23 @@ class Temporal:
     def __init__(self,L=9,velocities=(1.2,),shuffled=False):
         if L<1 or int(L)!=L or not velocities or not np.isfinite(velocities).all():raise ValueError('Invalid temporal settings')
         self.L=L;self.velocities=tuple(velocities);self.shuffled=shuffled;self.reset()
-    def reset(self):self.history=deque(maxlen=self.L);self.rng=np.random.default_rng(0)
+    def reset(self):self.history=deque(maxlen=self.L);self.rng=np.random.default_rng(0);self.last_trace=[]
     def step(self,s,traversals):
         s=np.asarray(s,float)
         if s.ndim!=1 or not np.isfinite(s).all() or len(s)!=len(traversals):raise ValueError('Finite aligned scores required')
         if self.history and self.history[-1].shape!=s.shape:raise ValueError('Gallery changed without reset')
         self.history.append(s.copy());warm=len(self.history)<self.L
-        if warm:return s.copy(),True
+        if warm:self.last_trace=[];return s.copy(),True
         h=np.stack(self.history)
         if self.shuffled and self.L>2:h[:-1]=h[:-1][self.rng.permutation(self.L-1)]
-        n=len(s);j=np.arange(n);best=np.full(n,-np.inf);tr=np.asarray(traversals)
-        for v in self.velocities:
+        n=len(s);j=np.arange(n);best=np.full(n,-np.inf);best_v=np.full(n,-1,dtype=int);tr=np.asarray(traversals)
+        for velocity_index,v in enumerate(self.velocities):
             offsets=np.rint(float(v)*np.arange(self.L)).astype(int);valid=np.ones(n,bool);total=np.zeros(n)
             for lag,o in enumerate(offsets):
                 ix=j-o;inside=(ix>=0)&(ix<n);clipped=ix.clip(0,n-1)
                 inside &= tr[clipped]==tr;valid &= inside;total[inside]+=h[-1-lag,ix[inside]]
-            values=np.full(n,-np.inf);values[valid]=total[valid]/self.L;best=np.maximum(best,values)
+            values=np.full(n,-np.inf);values[valid]=total[valid]/self.L;take=values>best;best_v[take]=velocity_index;best=np.maximum(best,values)
+        self.last_trace=[dict(endpoint=int(j),velocity=float(self.velocities[best_v[j]]),offsets=np.rint(float(self.velocities[best_v[j]])*np.arange(self.L)).astype(int).tolist(),mean_score=float(best[j])) for j in rank(best)[:3] if best_v[j]>=0]
         return best,False
 
 def rrf(a,b,k=60):

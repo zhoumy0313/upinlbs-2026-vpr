@@ -22,7 +22,8 @@ class Run:
         self.path=ROOT/'outputs_v3'/self.id;self.path.mkdir(parents=True,exist_ok=False);(self.path/'figures').mkdir()
         self.write('run_meta.json',dict(run_id=self.id,stage=stage,purpose=purpose,started_utc=utc(),git_sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),entrypoint_argv=sys.argv))
         self.write('config_effective.yaml',config);self.write('input_manifest.json',inputs or {})
-        for p in sorted((ROOT/'experiments/endpoint_vpr').rglob('*.py')):
+        for p in sorted((ROOT/'experiments/endpoint_vpr').rglob('*')):
+            if not p.is_file() or p.suffix not in ['.py','.tex','.txt']:continue
             t=self.path/'source_snapshot'/p.relative_to(ROOT);t.parent.mkdir(parents=True,exist_ok=True);t.write_bytes(p.read_bytes())
         for n in ['stdout.log','stderr.log','command_log.jsonl','failures.md']:(self.path/n).touch(exist_ok=False)
         def hook(kind,error,tb):
@@ -47,7 +48,7 @@ class Run:
             if not allow_failure:raise subprocess.CalledProcessError(p.returncode,argv)
         return p.returncode
     def finish(self,metrics,checks):
-        self.event('entrypoint_complete',dict(argv=sys.argv,actual_exit_code=0))
+        self.event('scientific_artifacts_sealed',dict(argv=sys.argv,whole_process_exit_code='recorded_by_outer_driver_or_tool_receipt'))
         self.write('raw_metrics.json',metrics);self.write('acceptance.json',checks)
         if not (self.path/'per_query.csv').exists():(self.path/'per_query.csv').write_text('run_id,status\n'+self.id+','+('pass' if checks.get('passed') else 'not_passed')+'\n')
         self.write('completion.json',dict(ended_utc=utc(),checks=checks))

@@ -1,0 +1,998 @@
+{
+  "real_case_count": 8,
+  "all_categories_have_actual_matches": true,
+  "cases": [
+    {
+      "category": "repairable_H1_r4",
+      "category_matches": true,
+      "available": 369,
+      "query_index": 8,
+      "query": {
+        "image_id": "st_lucia:independent_query:@0500273.42@6957730.69@56@J@-27.50408@0153.00276@210809_1210_00206@@@@@@@@.jpg",
+        "role": "independent_query",
+        "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/queries/@0500273.42@6957730.69@56@J@-27.50408@0153.00276@210809_1210_00206@@@@@@@@.jpg",
+        "sha256": "15bb823372421000fa8a271c9e9fa3536ed7899d7e35f6fb042c1415414b648f",
+        "width": 640,
+        "height": 480,
+        "easting": 500273.42,
+        "northing": 6957730.69,
+        "zone": "56J",
+        "latitude": -27.50408,
+        "longitude": 153.00276,
+        "traversal": "210809_1210",
+        "source_frame": 206,
+        "timestamp_field": ""
+      },
+      "predictions": {
+        "A": {
+          "index": 7,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500276.38@6957733.46@56@J@-27.50405@0153.00279@100909_0845_00485@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500276.38@6957733.46@56@J@-27.50405@0153.00279@100909_0845_00485@@@@@@@@.jpg",
+            "sha256": "aedce95527912d2c18f58f9f107e3ef92aa0c4fad75d0707b5d0666e46aa38e7",
+            "width": 640,
+            "height": 480,
+            "easting": 500276.38,
+            "northing": 6957733.46,
+            "zone": "56J",
+            "latitude": -27.50405,
+            "longitude": 153.00279,
+            "traversal": "100909_0845",
+            "source_frame": 485,
+            "timestamp_field": ""
+          },
+          "distance_m": 4.053948692034407
+        },
+        "fixed_L9": {
+          "index": 1062,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500284.29@6957736.60@56@J@-27.50403@0153.00287@100909_0845_14989@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500284.29@6957736.60@56@J@-27.50403@0153.00287@100909_0845_14989@@@@@@@@.jpg",
+            "sha256": "e841e0603dac9b74a31dafd54163c4bf6be540fbec97d1748f126bb0c7f56c56",
+            "width": 640,
+            "height": 480,
+            "easting": 500284.29,
+            "northing": 6957736.6,
+            "zone": "56J",
+            "latitude": -27.50403,
+            "longitude": 153.00287,
+            "traversal": "100909_0845",
+            "source_frame": 14989,
+            "timestamp_field": ""
+          },
+          "distance_m": 12.372752320751104
+        },
+        "full_L3": {
+          "index": 7,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500276.38@6957733.46@56@J@-27.50405@0153.00279@100909_0845_00485@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500276.38@6957733.46@56@J@-27.50405@0153.00279@100909_0845_00485@@@@@@@@.jpg",
+            "sha256": "aedce95527912d2c18f58f9f107e3ef92aa0c4fad75d0707b5d0666e46aa38e7",
+            "width": 640,
+            "height": 480,
+            "easting": 500276.38,
+            "northing": 6957733.46,
+            "zone": "56J",
+            "latitude": -27.50405,
+            "longitude": 153.00279,
+            "traversal": "100909_0845",
+            "source_frame": 485,
+            "timestamp_field": ""
+          },
+          "distance_m": 4.053948692034407
+        },
+        "full_L5": {
+          "index": 7,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500276.38@6957733.46@56@J@-27.50405@0153.00279@100909_0845_00485@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500276.38@6957733.46@56@J@-27.50405@0153.00279@100909_0845_00485@@@@@@@@.jpg",
+            "sha256": "aedce95527912d2c18f58f9f107e3ef92aa0c4fad75d0707b5d0666e46aa38e7",
+            "width": 640,
+            "height": 480,
+            "easting": 500276.38,
+            "northing": 6957733.46,
+            "zone": "56J",
+            "latitude": -27.50405,
+            "longitude": 153.00279,
+            "traversal": "100909_0845",
+            "source_frame": 485,
+            "timestamp_field": ""
+          },
+          "distance_m": 4.053948692034407
+        },
+        "full_L9": {
+          "index": 6,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500267.00@6957729.22@56@J@-27.50409@0153.00270@100909_0845_00472@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500267.00@6957729.22@56@J@-27.50409@0153.00270@100909_0845_00472@@@@@@@@.jpg",
+            "sha256": "bf489462de78d37d82189ae423ca2a14885e5cb392a6c436d3ab95f1a9586dc7",
+            "width": 640,
+            "height": 480,
+            "easting": 500267.0,
+            "northing": 6957729.22,
+            "zone": "56J",
+            "latitude": -27.50409,
+            "longitude": 153.0027,
+            "traversal": "100909_0845",
+            "source_frame": 472,
+            "timestamp_field": ""
+          },
+          "distance_m": 6.586144547590962
+        }
+      }
+    },
+    {
+      "category": "repairable_H1_r4",
+      "category_matches": true,
+      "available": 369,
+      "query_index": 16,
+      "query": {
+        "image_id": "st_lucia:independent_query:@0500387.99@6957754.50@56@J@-27.50387@0153.00392@210809_1210_00307@@@@@@@@.jpg",
+        "role": "independent_query",
+        "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/queries/@0500387.99@6957754.50@56@J@-27.50387@0153.00392@210809_1210_00307@@@@@@@@.jpg",
+        "sha256": "0bf1213ae88499e4b1e5756feff9819079617dd84f60f36226a10a53fecd071c",
+        "width": 640,
+        "height": 480,
+        "easting": 500387.99,
+        "northing": 6957754.5,
+        "zone": "56J",
+        "latitude": -27.50387,
+        "longitude": 153.00392,
+        "traversal": "210809_1210",
+        "source_frame": 307,
+        "timestamp_field": ""
+      },
+      "predictions": {
+        "A": {
+          "index": 289,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500394.08@6957757.64@56@J@-27.50384@0153.00399@100909_0845_04335@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500394.08@6957757.64@56@J@-27.50384@0153.00399@100909_0845_04335@@@@@@@@.jpg",
+            "sha256": "b6bb72dc9da6046d2be133a53fb0f6c931944e7663f1b901613dab4e23f20584",
+            "width": 640,
+            "height": 480,
+            "easting": 500394.08,
+            "northing": 6957757.64,
+            "zone": "56J",
+            "latitude": -27.50384,
+            "longitude": 153.00399,
+            "traversal": "100909_0845",
+            "source_frame": 4335,
+            "timestamp_field": ""
+          },
+          "distance_m": 6.851839169026547
+        },
+        "fixed_L9": {
+          "index": 290,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500408.57@6957761.70@56@J@-27.50380@0153.00413@100909_0845_04352@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500408.57@6957761.70@56@J@-27.50380@0153.00413@100909_0845_04352@@@@@@@@.jpg",
+            "sha256": "aee320e2effd67e8e98898f0dca2cc8a071bbda139a437326015e600db187769",
+            "width": 640,
+            "height": 480,
+            "easting": 500408.57,
+            "northing": 6957761.7,
+            "zone": "56J",
+            "latitude": -27.5038,
+            "longitude": 153.00413,
+            "traversal": "100909_0845",
+            "source_frame": 4352,
+            "timestamp_field": ""
+          },
+          "distance_m": 21.803128216000406
+        },
+        "full_L3": {
+          "index": 289,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500394.08@6957757.64@56@J@-27.50384@0153.00399@100909_0845_04335@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500394.08@6957757.64@56@J@-27.50384@0153.00399@100909_0845_04335@@@@@@@@.jpg",
+            "sha256": "b6bb72dc9da6046d2be133a53fb0f6c931944e7663f1b901613dab4e23f20584",
+            "width": 640,
+            "height": 480,
+            "easting": 500394.08,
+            "northing": 6957757.64,
+            "zone": "56J",
+            "latitude": -27.50384,
+            "longitude": 153.00399,
+            "traversal": "100909_0845",
+            "source_frame": 4335,
+            "timestamp_field": ""
+          },
+          "distance_m": 6.851839169026547
+        },
+        "full_L5": {
+          "index": 289,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500394.08@6957757.64@56@J@-27.50384@0153.00399@100909_0845_04335@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500394.08@6957757.64@56@J@-27.50384@0153.00399@100909_0845_04335@@@@@@@@.jpg",
+            "sha256": "b6bb72dc9da6046d2be133a53fb0f6c931944e7663f1b901613dab4e23f20584",
+            "width": 640,
+            "height": 480,
+            "easting": 500394.08,
+            "northing": 6957757.64,
+            "zone": "56J",
+            "latitude": -27.50384,
+            "longitude": 153.00399,
+            "traversal": "100909_0845",
+            "source_frame": 4335,
+            "timestamp_field": ""
+          },
+          "distance_m": 6.851839169026547
+        },
+        "full_L9": {
+          "index": 289,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500394.08@6957757.64@56@J@-27.50384@0153.00399@100909_0845_04335@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500394.08@6957757.64@56@J@-27.50384@0153.00399@100909_0845_04335@@@@@@@@.jpg",
+            "sha256": "b6bb72dc9da6046d2be133a53fb0f6c931944e7663f1b901613dab4e23f20584",
+            "width": 640,
+            "height": 480,
+            "easting": 500394.08,
+            "northing": 6957757.64,
+            "zone": "56J",
+            "latitude": -27.50384,
+            "longitude": 153.00399,
+            "traversal": "100909_0845",
+            "source_frame": 4335,
+            "timestamp_field": ""
+          },
+          "distance_m": 6.851839169026547
+        }
+      }
+    },
+    {
+      "category": "unrepairable_H1_r16",
+      "category_matches": true,
+      "available": 3,
+      "query_index": 9,
+      "query": {
+        "image_id": "st_lucia:independent_query:@0500285.60@6957734.94@56@J@-27.50404@0153.00289@210809_1210_00218@@@@@@@@.jpg",
+        "role": "independent_query",
+        "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/queries/@0500285.60@6957734.94@56@J@-27.50404@0153.00289@210809_1210_00218@@@@@@@@.jpg",
+        "sha256": "5069e14125d0d91404e603033c2c21f7fda3354e137966117575a7d21398a971",
+        "width": 640,
+        "height": 480,
+        "easting": 500285.6,
+        "northing": 6957734.94,
+        "zone": "56J",
+        "latitude": -27.50404,
+        "longitude": 153.00289,
+        "traversal": "210809_1210",
+        "source_frame": 218,
+        "timestamp_field": ""
+      },
+      "predictions": {
+        "A": {
+          "index": 520,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500287.74@6957736.60@56@J@-27.50403@0153.00291@100909_0845_07716@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500287.74@6957736.60@56@J@-27.50403@0153.00291@100909_0845_07716@@@@@@@@.jpg",
+            "sha256": "f8bf591a18c221af37dd83cbc0fd62e84f666f0c3ee56023b89defad3ae5061f",
+            "width": 640,
+            "height": 480,
+            "easting": 500287.74,
+            "northing": 6957736.6,
+            "zone": "56J",
+            "latitude": -27.50403,
+            "longitude": 153.00291,
+            "traversal": "100909_0845",
+            "source_frame": 7716,
+            "timestamp_field": ""
+          },
+          "distance_m": 2.7083574353217337
+        },
+        "fixed_L9": {
+          "index": 10,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500309.47@6957743.06@56@J@-27.50397@0153.00313@100909_0845_00526@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500309.47@6957743.06@56@J@-27.50397@0153.00313@100909_0845_00526@@@@@@@@.jpg",
+            "sha256": "2d9bc932896114a5b9fdc92d787b33621e7c671fc12a751030a2b0918506b993",
+            "width": 640,
+            "height": 480,
+            "easting": 500309.47,
+            "northing": 6957743.06,
+            "zone": "56J",
+            "latitude": -27.50397,
+            "longitude": 153.00313,
+            "traversal": "100909_0845",
+            "source_frame": 526,
+            "timestamp_field": ""
+          },
+          "distance_m": 25.213315926043286
+        },
+        "full_L3": {
+          "index": 8,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500286.59@6957737.15@56@J@-27.50402@0153.00290@100909_0845_00496@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500286.59@6957737.15@56@J@-27.50402@0153.00290@100909_0845_00496@@@@@@@@.jpg",
+            "sha256": "813e1ca76deb52b0d7d6c0fa2f55181ee823b79efa47f4f2b3a22df049dabe04",
+            "width": 640,
+            "height": 480,
+            "easting": 500286.59,
+            "northing": 6957737.15,
+            "zone": "56J",
+            "latitude": -27.50402,
+            "longitude": 153.0029,
+            "traversal": "100909_0845",
+            "source_frame": 496,
+            "timestamp_field": ""
+          },
+          "distance_m": 2.4216110339879426
+        },
+        "full_L5": {
+          "index": 8,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500286.59@6957737.15@56@J@-27.50402@0153.00290@100909_0845_00496@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500286.59@6957737.15@56@J@-27.50402@0153.00290@100909_0845_00496@@@@@@@@.jpg",
+            "sha256": "813e1ca76deb52b0d7d6c0fa2f55181ee823b79efa47f4f2b3a22df049dabe04",
+            "width": 640,
+            "height": 480,
+            "easting": 500286.59,
+            "northing": 6957737.15,
+            "zone": "56J",
+            "latitude": -27.50402,
+            "longitude": 153.0029,
+            "traversal": "100909_0845",
+            "source_frame": 496,
+            "timestamp_field": ""
+          },
+          "distance_m": 2.4216110339879426
+        },
+        "full_L9": {
+          "index": 8,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500286.59@6957737.15@56@J@-27.50402@0153.00290@100909_0845_00496@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500286.59@6957737.15@56@J@-27.50402@0153.00290@100909_0845_00496@@@@@@@@.jpg",
+            "sha256": "813e1ca76deb52b0d7d6c0fa2f55181ee823b79efa47f4f2b3a22df049dabe04",
+            "width": 640,
+            "height": 480,
+            "easting": 500286.59,
+            "northing": 6957737.15,
+            "zone": "56J",
+            "latitude": -27.50402,
+            "longitude": 153.0029,
+            "traversal": "100909_0845",
+            "source_frame": 496,
+            "timestamp_field": ""
+          },
+          "distance_m": 2.4216110339879426
+        }
+      }
+    },
+    {
+      "category": "unrepairable_H1_r16",
+      "category_matches": true,
+      "available": 3,
+      "query_index": 10,
+      "query": {
+        "image_id": "st_lucia:independent_query:@0500298.77@6957738.63@56@J@-27.50401@0153.00302@210809_1210_00231@@@@@@@@.jpg",
+        "role": "independent_query",
+        "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/queries/@0500298.77@6957738.63@56@J@-27.50401@0153.00302@210809_1210_00231@@@@@@@@.jpg",
+        "sha256": "2636acb65f6c08a49098c5095f6361b1ddfe7ac4f1ee01e1e826f6b1be4c16d4",
+        "width": 640,
+        "height": 480,
+        "easting": 500298.77,
+        "northing": 6957738.63,
+        "zone": "56J",
+        "latitude": -27.50401,
+        "longitude": 153.00302,
+        "traversal": "210809_1210",
+        "source_frame": 231,
+        "timestamp_field": ""
+      },
+      "predictions": {
+        "A": {
+          "index": 1063,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500299.92@6957741.40@56@J@-27.50398@0153.00303@100909_0845_15002@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500299.92@6957741.40@56@J@-27.50398@0153.00303@100909_0845_15002@@@@@@@@.jpg",
+            "sha256": "3baf161eaa4057735d3dfbc2731d6f806e7e2758fff8c6b400a38645318d0c88",
+            "width": 640,
+            "height": 480,
+            "easting": 500299.92,
+            "northing": 6957741.4,
+            "zone": "56J",
+            "latitude": -27.50398,
+            "longitude": 153.00303,
+            "traversal": "100909_0845",
+            "source_frame": 15002,
+            "timestamp_field": ""
+          },
+          "distance_m": 2.9992332357792097
+        },
+        "fixed_L9": {
+          "index": 10,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500309.47@6957743.06@56@J@-27.50397@0153.00313@100909_0845_00526@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500309.47@6957743.06@56@J@-27.50397@0153.00313@100909_0845_00526@@@@@@@@.jpg",
+            "sha256": "2d9bc932896114a5b9fdc92d787b33621e7c671fc12a751030a2b0918506b993",
+            "width": 640,
+            "height": 480,
+            "easting": 500309.47,
+            "northing": 6957743.06,
+            "zone": "56J",
+            "latitude": -27.50397,
+            "longitude": 153.00313,
+            "traversal": "100909_0845",
+            "source_frame": 526,
+            "timestamp_field": ""
+          },
+          "distance_m": 11.580798763313478
+        },
+        "full_L3": {
+          "index": 9,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500297.62@6957740.48@56@J@-27.50399@0153.00301@100909_0845_00511@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500297.62@6957740.48@56@J@-27.50399@0153.00301@100909_0845_00511@@@@@@@@.jpg",
+            "sha256": "293213049228aadbeaa34b3b96e2d4397404c512a555d1db5ece6cd530b06651",
+            "width": 640,
+            "height": 480,
+            "easting": 500297.62,
+            "northing": 6957740.48,
+            "zone": "56J",
+            "latitude": -27.50399,
+            "longitude": 153.00301,
+            "traversal": "100909_0845",
+            "source_frame": 511,
+            "timestamp_field": ""
+          },
+          "distance_m": 2.1783020915660636
+        },
+        "full_L5": {
+          "index": 9,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500297.62@6957740.48@56@J@-27.50399@0153.00301@100909_0845_00511@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500297.62@6957740.48@56@J@-27.50399@0153.00301@100909_0845_00511@@@@@@@@.jpg",
+            "sha256": "293213049228aadbeaa34b3b96e2d4397404c512a555d1db5ece6cd530b06651",
+            "width": 640,
+            "height": 480,
+            "easting": 500297.62,
+            "northing": 6957740.48,
+            "zone": "56J",
+            "latitude": -27.50399,
+            "longitude": 153.00301,
+            "traversal": "100909_0845",
+            "source_frame": 511,
+            "timestamp_field": ""
+          },
+          "distance_m": 2.1783020915660636
+        },
+        "full_L9": {
+          "index": 9,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500297.62@6957740.48@56@J@-27.50399@0153.00301@100909_0845_00511@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500297.62@6957740.48@56@J@-27.50399@0153.00301@100909_0845_00511@@@@@@@@.jpg",
+            "sha256": "293213049228aadbeaa34b3b96e2d4397404c512a555d1db5ece6cd530b06651",
+            "width": 640,
+            "height": 480,
+            "easting": 500297.62,
+            "northing": 6957740.48,
+            "zone": "56J",
+            "latitude": -27.50399,
+            "longitude": 153.00301,
+            "traversal": "100909_0845",
+            "source_frame": 511,
+            "timestamp_field": ""
+          },
+          "distance_m": 2.1783020915660636
+        }
+      }
+    },
+    {
+      "category": "A_correct_T_wrong",
+      "category_matches": true,
+      "available": 347,
+      "query_index": 17,
+      "query": {
+        "image_id": "st_lucia:independent_query:@0500402.48@6957758.56@56@J@-27.50383@0153.00407@210809_1210_00319@@@@@@@@.jpg",
+        "role": "independent_query",
+        "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/queries/@0500402.48@6957758.56@56@J@-27.50383@0153.00407@210809_1210_00319@@@@@@@@.jpg",
+        "sha256": "f8d5e98575b32ba630d094f5f5ee675601531f313e1c9418bb9d0bdd0e24a3bf",
+        "width": 640,
+        "height": 480,
+        "easting": 500402.48,
+        "northing": 6957758.56,
+        "zone": "56J",
+        "latitude": -27.50383,
+        "longitude": 153.00407,
+        "traversal": "210809_1210",
+        "source_frame": 319,
+        "timestamp_field": ""
+      },
+      "predictions": {
+        "A": {
+          "index": 290,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500408.57@6957761.70@56@J@-27.50380@0153.00413@100909_0845_04352@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500408.57@6957761.70@56@J@-27.50380@0153.00413@100909_0845_04352@@@@@@@@.jpg",
+            "sha256": "aee320e2effd67e8e98898f0dca2cc8a071bbda139a437326015e600db187769",
+            "width": 640,
+            "height": 480,
+            "easting": 500408.57,
+            "northing": 6957761.7,
+            "zone": "56J",
+            "latitude": -27.5038,
+            "longitude": 153.00413,
+            "traversal": "100909_0845",
+            "source_frame": 4352,
+            "timestamp_field": ""
+          },
+          "distance_m": 6.8518391694533465
+        },
+        "fixed_L9": {
+          "index": 291,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500422.89@6957767.79@56@J@-27.50375@0153.00428@100909_0845_04367@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500422.89@6957767.79@56@J@-27.50375@0153.00428@100909_0845_04367@@@@@@@@.jpg",
+            "sha256": "35e75273e620b02c72dd8de4479e3182f5a36dd47d21d967681ee79554f281e8",
+            "width": 640,
+            "height": 480,
+            "easting": 500422.89,
+            "northing": 6957767.79,
+            "zone": "56J",
+            "latitude": -27.50375,
+            "longitude": 153.00428,
+            "traversal": "100909_0845",
+            "source_frame": 4367,
+            "timestamp_field": ""
+          },
+          "distance_m": 22.400022321631354
+        },
+        "full_L3": {
+          "index": 290,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500408.57@6957761.70@56@J@-27.50380@0153.00413@100909_0845_04352@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500408.57@6957761.70@56@J@-27.50380@0153.00413@100909_0845_04352@@@@@@@@.jpg",
+            "sha256": "aee320e2effd67e8e98898f0dca2cc8a071bbda139a437326015e600db187769",
+            "width": 640,
+            "height": 480,
+            "easting": 500408.57,
+            "northing": 6957761.7,
+            "zone": "56J",
+            "latitude": -27.5038,
+            "longitude": 153.00413,
+            "traversal": "100909_0845",
+            "source_frame": 4352,
+            "timestamp_field": ""
+          },
+          "distance_m": 6.8518391694533465
+        },
+        "full_L5": {
+          "index": 290,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500408.57@6957761.70@56@J@-27.50380@0153.00413@100909_0845_04352@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500408.57@6957761.70@56@J@-27.50380@0153.00413@100909_0845_04352@@@@@@@@.jpg",
+            "sha256": "aee320e2effd67e8e98898f0dca2cc8a071bbda139a437326015e600db187769",
+            "width": 640,
+            "height": 480,
+            "easting": 500408.57,
+            "northing": 6957761.7,
+            "zone": "56J",
+            "latitude": -27.5038,
+            "longitude": 153.00413,
+            "traversal": "100909_0845",
+            "source_frame": 4352,
+            "timestamp_field": ""
+          },
+          "distance_m": 6.8518391694533465
+        },
+        "full_L9": {
+          "index": 290,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500408.57@6957761.70@56@J@-27.50380@0153.00413@100909_0845_04352@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500408.57@6957761.70@56@J@-27.50380@0153.00413@100909_0845_04352@@@@@@@@.jpg",
+            "sha256": "aee320e2effd67e8e98898f0dca2cc8a071bbda139a437326015e600db187769",
+            "width": 640,
+            "height": 480,
+            "easting": 500408.57,
+            "northing": 6957761.7,
+            "zone": "56J",
+            "latitude": -27.5038,
+            "longitude": 153.00413,
+            "traversal": "100909_0845",
+            "source_frame": 4352,
+            "timestamp_field": ""
+          },
+          "distance_m": 6.8518391694533465
+        }
+      }
+    },
+    {
+      "category": "A_correct_T_wrong",
+      "category_matches": true,
+      "available": 347,
+      "query_index": 18,
+      "query": {
+        "image_id": "st_lucia:independent_query:@0500416.80@6957764.47@56@J@-27.50378@0153.00421@210809_1210_00334@@@@@@@@.jpg",
+        "role": "independent_query",
+        "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/queries/@0500416.80@6957764.47@56@J@-27.50378@0153.00421@210809_1210_00334@@@@@@@@.jpg",
+        "sha256": "5e356b2edaad98d556ae7155ad6c6013c3a889d972350e882f5e2195f2b6e20f",
+        "width": 640,
+        "height": 480,
+        "easting": 500416.8,
+        "northing": 6957764.47,
+        "zone": "56J",
+        "latitude": -27.50378,
+        "longitude": 153.00421,
+        "traversal": "210809_1210",
+        "source_frame": 334,
+        "timestamp_field": ""
+      },
+      "predictions": {
+        "A": {
+          "index": 291,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500422.89@6957767.79@56@J@-27.50375@0153.00428@100909_0845_04367@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500422.89@6957767.79@56@J@-27.50375@0153.00428@100909_0845_04367@@@@@@@@.jpg",
+            "sha256": "35e75273e620b02c72dd8de4479e3182f5a36dd47d21d967681ee79554f281e8",
+            "width": 640,
+            "height": 480,
+            "easting": 500422.89,
+            "northing": 6957767.79,
+            "zone": "56J",
+            "latitude": -27.50375,
+            "longitude": 153.00428,
+            "traversal": "100909_0845",
+            "source_frame": 4367,
+            "timestamp_field": ""
+          },
+          "distance_m": 6.936173296731478
+        },
+        "fixed_L9": {
+          "index": 19,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500426.35@6957770.75@56@J@-27.50372@0153.00431@100909_0845_00646@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500426.35@6957770.75@56@J@-27.50372@0153.00431@100909_0845_00646@@@@@@@@.jpg",
+            "sha256": "48b676c677517bda6bfc7258d69b2f1e226010991f11990ba1110b55d2ab52ec",
+            "width": 640,
+            "height": 480,
+            "easting": 500426.35,
+            "northing": 6957770.75,
+            "zone": "56J",
+            "latitude": -27.50372,
+            "longitude": 153.00431,
+            "traversal": "100909_0845",
+            "source_frame": 646,
+            "timestamp_field": ""
+          },
+          "distance_m": 11.429825020666454
+        },
+        "full_L3": {
+          "index": 291,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500422.89@6957767.79@56@J@-27.50375@0153.00428@100909_0845_04367@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500422.89@6957767.79@56@J@-27.50375@0153.00428@100909_0845_04367@@@@@@@@.jpg",
+            "sha256": "35e75273e620b02c72dd8de4479e3182f5a36dd47d21d967681ee79554f281e8",
+            "width": 640,
+            "height": 480,
+            "easting": 500422.89,
+            "northing": 6957767.79,
+            "zone": "56J",
+            "latitude": -27.50375,
+            "longitude": 153.00428,
+            "traversal": "100909_0845",
+            "source_frame": 4367,
+            "timestamp_field": ""
+          },
+          "distance_m": 6.936173296731478
+        },
+        "full_L5": {
+          "index": 291,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500422.89@6957767.79@56@J@-27.50375@0153.00428@100909_0845_04367@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500422.89@6957767.79@56@J@-27.50375@0153.00428@100909_0845_04367@@@@@@@@.jpg",
+            "sha256": "35e75273e620b02c72dd8de4479e3182f5a36dd47d21d967681ee79554f281e8",
+            "width": 640,
+            "height": 480,
+            "easting": 500422.89,
+            "northing": 6957767.79,
+            "zone": "56J",
+            "latitude": -27.50375,
+            "longitude": 153.00428,
+            "traversal": "100909_0845",
+            "source_frame": 4367,
+            "timestamp_field": ""
+          },
+          "distance_m": 6.936173296731478
+        },
+        "full_L9": {
+          "index": 291,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500422.89@6957767.79@56@J@-27.50375@0153.00428@100909_0845_04367@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500422.89@6957767.79@56@J@-27.50375@0153.00428@100909_0845_04367@@@@@@@@.jpg",
+            "sha256": "35e75273e620b02c72dd8de4479e3182f5a36dd47d21d967681ee79554f281e8",
+            "width": 640,
+            "height": 480,
+            "easting": 500422.89,
+            "northing": 6957767.79,
+            "zone": "56J",
+            "latitude": -27.50375,
+            "longitude": 153.00428,
+            "traversal": "100909_0845",
+            "source_frame": 4367,
+            "timestamp_field": ""
+          },
+          "distance_m": 6.936173296731478
+        }
+      }
+    },
+    {
+      "category": "multiwindow_disagreement",
+      "category_matches": true,
+      "available": 535,
+      "query_index": 11,
+      "query": {
+        "image_id": "st_lucia:independent_query:@0500312.93@6957741.77@56@J@-27.50398@0153.00316@210809_1210_00243@@@@@@@@.jpg",
+        "role": "independent_query",
+        "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/queries/@0500312.93@6957741.77@56@J@-27.50398@0153.00316@210809_1210_00243@@@@@@@@.jpg",
+        "sha256": "8021a0179d2ba89a47824fdd348afd6782e9b4018cb31211a2b32581fdd0e71c",
+        "width": 640,
+        "height": 480,
+        "easting": 500312.93,
+        "northing": 6957741.77,
+        "zone": "56J",
+        "latitude": -27.50398,
+        "longitude": 153.00316,
+        "traversal": "210809_1210",
+        "source_frame": 243,
+        "timestamp_field": ""
+      },
+      "predictions": {
+        "A": {
+          "index": 1064,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500316.39@6957745.09@56@J@-27.50395@0153.00320@100909_0845_15017@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500316.39@6957745.09@56@J@-27.50395@0153.00320@100909_0845_15017@@@@@@@@.jpg",
+            "sha256": "67d39905c8d8b730a476a95dd67b1a7b441148c60939f510fd1f15e9e0068d9e",
+            "width": 640,
+            "height": 480,
+            "easting": 500316.39,
+            "northing": 6957745.09,
+            "zone": "56J",
+            "latitude": -27.50395,
+            "longitude": 153.0032,
+            "traversal": "100909_0845",
+            "source_frame": 15017,
+            "timestamp_field": ""
+          },
+          "distance_m": 4.795205939490387
+        },
+        "fixed_L9": {
+          "index": 11,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500322.15@6957745.46@56@J@-27.50395@0153.00326@100909_0845_00539@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500322.15@6957745.46@56@J@-27.50395@0153.00326@100909_0845_00539@@@@@@@@.jpg",
+            "sha256": "cdd6efa267adbfa2237ea3e2e332661814926a31e63bdfd7c288ea4a70a54bfc",
+            "width": 640,
+            "height": 480,
+            "easting": 500322.15,
+            "northing": 6957745.46,
+            "zone": "56J",
+            "latitude": -27.50395,
+            "longitude": 153.00326,
+            "traversal": "100909_0845",
+            "source_frame": 539,
+            "timestamp_field": ""
+          },
+          "distance_m": 9.93098685950104
+        },
+        "full_L3": {
+          "index": 522,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500319.68@6957744.54@56@J@-27.50396@0153.00323@100909_0845_07734@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500319.68@6957744.54@56@J@-27.50396@0153.00323@100909_0845_07734@@@@@@@@.jpg",
+            "sha256": "8d44d55a0e93dc583f64f0f1c526367c86423f28f9658375dade02de533faf48",
+            "width": 640,
+            "height": 480,
+            "easting": 500319.68,
+            "northing": 6957744.54,
+            "zone": "56J",
+            "latitude": -27.50396,
+            "longitude": 153.00323,
+            "traversal": "100909_0845",
+            "source_frame": 7734,
+            "timestamp_field": ""
+          },
+          "distance_m": 7.296259315750979
+        },
+        "full_L5": {
+          "index": 10,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500309.47@6957743.06@56@J@-27.50397@0153.00313@100909_0845_00526@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500309.47@6957743.06@56@J@-27.50397@0153.00313@100909_0845_00526@@@@@@@@.jpg",
+            "sha256": "2d9bc932896114a5b9fdc92d787b33621e7c671fc12a751030a2b0918506b993",
+            "width": 640,
+            "height": 480,
+            "easting": 500309.47,
+            "northing": 6957743.06,
+            "zone": "56J",
+            "latitude": -27.50397,
+            "longitude": 153.00313,
+            "traversal": "100909_0845",
+            "source_frame": 526,
+            "timestamp_field": ""
+          },
+          "distance_m": 3.6926548715309315
+        },
+        "full_L9": {
+          "index": 10,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500309.47@6957743.06@56@J@-27.50397@0153.00313@100909_0845_00526@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500309.47@6957743.06@56@J@-27.50397@0153.00313@100909_0845_00526@@@@@@@@.jpg",
+            "sha256": "2d9bc932896114a5b9fdc92d787b33621e7c671fc12a751030a2b0918506b993",
+            "width": 640,
+            "height": 480,
+            "easting": 500309.47,
+            "northing": 6957743.06,
+            "zone": "56J",
+            "latitude": -27.50397,
+            "longitude": 153.00313,
+            "traversal": "100909_0845",
+            "source_frame": 526,
+            "timestamp_field": ""
+          },
+          "distance_m": 3.6926548715309315
+        }
+      }
+    },
+    {
+      "category": "multiwindow_disagreement",
+      "category_matches": true,
+      "available": 535,
+      "query_index": 12,
+      "query": {
+        "image_id": "st_lucia:independent_query:@0500327.41@6957744.35@56@J@-27.50396@0153.00331@210809_1210_00257@@@@@@@@.jpg",
+        "role": "independent_query",
+        "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/queries/@0500327.41@6957744.35@56@J@-27.50396@0153.00331@210809_1210_00257@@@@@@@@.jpg",
+        "sha256": "7ae2069b5726eb98a39fad1538af3f242f7648b4e37036ec5a28175062f8933e",
+        "width": 640,
+        "height": 480,
+        "easting": 500327.41,
+        "northing": 6957744.35,
+        "zone": "56J",
+        "latitude": -27.50396,
+        "longitude": 153.00331,
+        "traversal": "210809_1210",
+        "source_frame": 257,
+        "timestamp_field": ""
+      },
+      "predictions": {
+        "A": {
+          "index": 285,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500331.86@6957746.38@56@J@-27.50394@0153.00336@100909_0845_04281@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500331.86@6957746.38@56@J@-27.50394@0153.00336@100909_0845_04281@@@@@@@@.jpg",
+            "sha256": "ceef4ee5638af8d05ac60bb277b73fa17b305a0ba8436f5fdafb493238c2e7f3",
+            "width": 640,
+            "height": 480,
+            "easting": 500331.86,
+            "northing": 6957746.38,
+            "zone": "56J",
+            "latitude": -27.50394,
+            "longitude": 153.00336,
+            "traversal": "100909_0845",
+            "source_frame": 4281,
+            "timestamp_field": ""
+          },
+          "distance_m": 4.891155282871557
+        },
+        "fixed_L9": {
+          "index": 12,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500335.32@6957747.67@56@J@-27.50393@0153.00339@100909_0845_00551@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500335.32@6957747.67@56@J@-27.50393@0153.00339@100909_0845_00551@@@@@@@@.jpg",
+            "sha256": "5187142bbaf671045c23206e54868cfd610d222697772361f557d0cb3cef2019",
+            "width": 640,
+            "height": 480,
+            "easting": 500335.32,
+            "northing": 6957747.67,
+            "zone": "56J",
+            "latitude": -27.50393,
+            "longitude": 153.00339,
+            "traversal": "100909_0845",
+            "source_frame": 551,
+            "timestamp_field": ""
+          },
+          "distance_m": 8.578490543358695
+        },
+        "full_L3": {
+          "index": 285,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500331.86@6957746.38@56@J@-27.50394@0153.00336@100909_0845_04281@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500331.86@6957746.38@56@J@-27.50394@0153.00336@100909_0845_04281@@@@@@@@.jpg",
+            "sha256": "ceef4ee5638af8d05ac60bb277b73fa17b305a0ba8436f5fdafb493238c2e7f3",
+            "width": 640,
+            "height": 480,
+            "easting": 500331.86,
+            "northing": 6957746.38,
+            "zone": "56J",
+            "latitude": -27.50394,
+            "longitude": 153.00336,
+            "traversal": "100909_0845",
+            "source_frame": 4281,
+            "timestamp_field": ""
+          },
+          "distance_m": 4.891155282871557
+        },
+        "full_L5": {
+          "index": 285,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500331.86@6957746.38@56@J@-27.50394@0153.00336@100909_0845_04281@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500331.86@6957746.38@56@J@-27.50394@0153.00336@100909_0845_04281@@@@@@@@.jpg",
+            "sha256": "ceef4ee5638af8d05ac60bb277b73fa17b305a0ba8436f5fdafb493238c2e7f3",
+            "width": 640,
+            "height": 480,
+            "easting": 500331.86,
+            "northing": 6957746.38,
+            "zone": "56J",
+            "latitude": -27.50394,
+            "longitude": 153.00336,
+            "traversal": "100909_0845",
+            "source_frame": 4281,
+            "timestamp_field": ""
+          },
+          "distance_m": 4.891155282871557
+        },
+        "full_L9": {
+          "index": 11,
+          "gallery": {
+            "image_id": "st_lucia:gallery:@0500322.15@6957745.46@56@J@-27.50395@0153.00326@100909_0845_00539@@@@@@@@.jpg",
+            "role": "gallery",
+            "relative_path": "data/raw/g4_independent_data_audit_20261010T135919Z_432bb768/images/test/database/@0500322.15@6957745.46@56@J@-27.50395@0153.00326@100909_0845_00539@@@@@@@@.jpg",
+            "sha256": "cdd6efa267adbfa2237ea3e2e332661814926a31e63bdfd7c288ea4a70a54bfc",
+            "width": 640,
+            "height": 480,
+            "easting": 500322.15,
+            "northing": 6957745.46,
+            "zone": "56J",
+            "latitude": -27.50395,
+            "longitude": 153.00326,
+            "traversal": "100909_0845",
+            "source_frame": 539,
+            "timestamp_field": ""
+          },
+          "distance_m": 5.3758441197852775
+        }
+      }
+    }
+  ]
+}

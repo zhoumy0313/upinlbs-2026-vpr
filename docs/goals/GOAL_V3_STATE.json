@@ -3,12 +3,12 @@
   "base_branch": "research/temporal-vpr-v2",
   "base_sha": "81fbf62dfaf5cdd28a005afbe6853289524b4d4d",
   "working_branch": "research/vpr-v3-endpoint-refinement",
-  "current_stage": "G3",
+  "current_stage": "G4",
   "stages": {
     "G0": "passed",
     "G1": "passed",
     "G2": "passed",
-    "G3": "pending",
+    "G3": "scientifically_negative",
     "G4": "pending",
     "G5": "pending",
     "G6": "pending",
@@ -17,13 +17,24 @@
   "research_track": "endpoint_support_constraint",
   "novelty_claim_supported": false,
   "new_independent_test_opened": false,
-  "latest_run_id": "g2_strong_baselines_20261010T165844Z_6eb1c1b3",
-  "last_pushed_sha": "32e2ba9e5ad59851d33f83817be9822afbc6200c",
+  "latest_run_id": "g3_bounded_grid_20261010T170333Z_939efa9e",
+  "last_pushed_sha": "3e9d29eb10eaa5bfd064cd8ccd74353787835467",
   "formal_submission_ready": false,
   "goal_source_sha256": "e5e81b999f9e364bfcb93c19c16a4a795da255e31509d4a8f0cf0fbfa486fd73",
   "g0_preservation_run": "g0_preserve_20261010T164145Z_7d76bc78",
-  "updated_utc": "2026-10-10T17:00:52.397763+00:00",
+  "updated_utc": "2026-10-10T17:44:34.153959+00:00",
   "g1_run": "g1_diagnostics_20261010T165237Z_f53b505e",
   "H1_gate": true,
-  "g2_run": "g2_strong_baselines_20261010T165844Z_6eb1c1b3"
+  "g2_run": "g2_strong_baselines_20261010T165844Z_6eb1c1b3",
+  "g1_case_audit_run": "g1_case_audit_20261010T170505Z_f3faea2a",
+  "g3_run": "g3_bounded_grid_20261010T170333Z_939efa9e",
+  "selected_candidate": {
+    "name": "P_fixed_L9_H3_r1_e0.06",
+    "kind": "P",
+    "backend": "fixed_L9",
+    "H": 3,
+    "r": 1,
+    "epsilon": 0.06
+  },
+  "research_outcome": "C"
 }

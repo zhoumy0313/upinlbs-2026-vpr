@@ -59,3 +59,24 @@ def test_gt_interface_and_all_ranking():
 
 def test_manual_metrics_and_thresholds_never_change_rank():
  s=np.array([.2,.9,.6]);r=rank(s);distance=np.array([20,11,9]);assert not (distance[r[:1]]<=10).any();assert (distance[r[:2]]<=10).any();assert (distance[r[:1]]<=25).any();assert np.array_equal(r,rank(s))
+
+def test_no_positive_common_mask_and_geographic_thresholds():
+ from experiments.endpoint_vpr.evaluate import evaluate
+ from experiments.endpoint_vpr.baselines import predictions
+ scores=np.tile(np.arange(12)/12,(14,1));distance=np.full((14,12),100.);distance[:,11]=9.;distance[8,:]=100.
+ d=dict(dataset='synthetic_not_real',split='validation',scores={'cosplace':scores,'eigenplaces':scores,'dinov2':scores},q=[dict(image_id=f'q{i}') for i in range(14)],g=[dict(image_id=f'g{i}',traversal='a') for i in range(12)],distance=distance,radii=[10,25],unit='metres',primary=10)
+ specs=[dict(name='A',kind='single',encoder='cosplace'),dict(name='P',kind='P',backend='fixed_L9',H=1,r=1,epsilon=.01)]
+ ms=[]
+ for spec in specs:
+  pred,meta=predictions(d,spec);m,rows=evaluate(d,spec,pred,meta);ms.append(m);assert m[0]['queries']==5;assert m[0]['no_positive']==1;assert rows[8]['common_valid']==0
+ assert ms[0][0]['queries']==ms[1][0]['queries']
+
+def test_gt_payload_ignored_and_canonical_reorder_preserves_strategy():
+ s=np.linspace(.1,.9,15);tr=['a']*15;spec=dict(name='P',kind='P',backend='fixed_L9',H=3,r=2,epsilon=.03);m=Strategy(spec,tr);n=Strategy(spec,tr)
+ for i in range(12):
+  p,_=m.step({'cosplace':s,'query_GPS':[1,2],'GT_correct':True});q,_=n.step({'cosplace':s,'query_GPS':[9,8],'GT_correct':False});assert np.array_equal(p,q)
+ perm=np.random.default_rng(4).permutation(15);ids=[f'g{i}' for i in range(15)];canonical=align_by_ids(s[perm][None,:],['q'],[ids[i] for i in perm],['q'],ids)[0];np.testing.assert_array_equal(s,canonical)
+
+@pytest.mark.parametrize('kwargs',[{'H':0},{'r':-1},{'H':1.5}])
+def test_bad_candidate_parameters(kwargs):
+ with pytest.raises(ValueError):candidates([.1,.2],kwargs.get('H',1),kwargs.get('r',1),['a','a'])

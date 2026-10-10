@@ -1,0 +1,4 @@
+# G1 case audit
+The initial H3/r16 visualization category had no matching queries and explicitly saved category_matches=false. It must not be cited as a true negative. H1/r16, the Top1-centered neighborhood required for the drift analysis, has three genuinely uncovered errors. This supplement uses the originally declared first-two-in-order rule for four categories; all eight now satisfy their named category. Original run/figure remains preserved, no algorithm or threshold changed. Actual case IDs, hashes and distances accompany the supplement. Photos remain local and are not redistributed. Next: continue the predeclared grid, with no independent predictions opened.
+
+Run g1_case_audit_20261010T170505Z_f3faea2a; archive SHA a42083eb7abb11baa5ad8fee557e9bee751b299087ce72a44470ab2e46037160; ordered parts and exact hashes in archive_manifest.json. Exact commands/exits/logs in archive. Checkpoint follows; push receipt is separate.

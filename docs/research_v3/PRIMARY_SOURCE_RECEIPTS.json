@@ -1,0 +1,58 @@
+{
+  "sources": [
+    {
+      "name": "STA_method",
+      "url": "https://arxiv.org/html/2103.13580v2",
+      "status": 200,
+      "bytes": 206823,
+      "sha256": "94ef88f339fcb49622e6a41609537d1bd1f49919199b7867f2ba30daebf5c836",
+      "seconds": 5.816543772001751
+    },
+    {
+      "name": "STA_official_source",
+      "url": "https://raw.githubusercontent.com/Lu-Feng/STA-VPR/main/STAVPR_nonumba.py",
+      "status": 200,
+      "bytes": 7051,
+      "sha256": "bbb7c848dda224e51c1831865cf2eaff6b8ebc833a365e455caededce794ea35",
+      "seconds": 0.6104505750045064
+    },
+    {
+      "name": "AdaptSeq_publisher",
+      "url": "https://ieeexplore.ieee.org/document/10341533/",
+      "status": 202,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 5.2954774779937
+    },
+    {
+      "name": "AdaptSeq_crossref",
+      "url": "https://api.crossref.org/works/10.1109/IROS55552.2023.10341533",
+      "status": 200,
+      "bytes": 5236,
+      "sha256": "b7049462f2971f676df7213d1301d31518bf0ab6df590ccc9cde489c745c297e",
+      "seconds": 4.041601418997743
+    },
+    {
+      "name": "SFU_primary_paper",
+      "url": "https://autonomy.cs.sfu.ca/sfu-mountain-dataset/paper.pdf",
+      "error": "ChunkedEncodingError: ('Connection broken: IncompleteRead(4487360 bytes read, 567481 more expected)', IncompleteRead(4487360 bytes read, 567481 more expected))",
+      "seconds": 4.824581191998732
+    },
+    {
+      "name": "conference",
+      "url": "https://upinlbs2026.com/",
+      "error": "ChunkedEncodingError: ('Connection broken: IncompleteRead(360086 bytes read, 1199225 more expected)', IncompleteRead(360086 bytes read, 1199225 more expected))",
+      "seconds": 5.991904793998401
+    },
+    {
+      "name": "IEEE_AI",
+      "url": "https://open.ieee.org/author-guidelines-for-artificial-intelligence-ai-generated-text/",
+      "status": 403,
+      "bytes": 1084,
+      "sha256": "9690f7eaec6a308ed69129b3fd4ecd27f18d1fde763c0fab078ab3ce0de26dbe",
+      "seconds": 3.055495268999948
+    }
+  ],
+  "old_primary_evidence": "docs/research_v2/RELATED_WORK_MATRIX.md and SOURCE_READING_NOTES.md; preserved old reading receipts",
+  "no_new_comparator_execution": true
+}

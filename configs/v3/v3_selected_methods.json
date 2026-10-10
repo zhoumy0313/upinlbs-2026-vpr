@@ -1,0 +1,52 @@
+{
+  "selected": {
+    "P": {
+      "name": "P_fixed_L9_H3_r1_e0.06",
+      "kind": "P",
+      "backend": "fixed_L9",
+      "H": 3,
+      "r": 1,
+      "epsilon": 0.06
+    },
+    "R1": {
+      "name": "R1_full_L3_H1_r1",
+      "kind": "R1",
+      "backend": "full_L3",
+      "H": 1,
+      "r": 1
+    },
+    "R2": {
+      "name": "R2_full_L3_H3_r1_g0.75",
+      "kind": "R2",
+      "backend": "full_L3",
+      "H": 3,
+      "r": 1,
+      "gamma": 0.75
+    }
+  },
+  "strongest_fixed": {
+    "name": "full_L3",
+    "kind": "temporal",
+    "backend": "full_L3"
+  },
+  "strongest_non_P": {
+    "name": "R2_full_L3_H3_r1_g0.75",
+    "kind": "R2",
+    "backend": "full_L3",
+    "H": 3,
+    "r": 1,
+    "gamma": 0.75
+  },
+  "P_strict_correct": 598,
+  "strong_strict_correct": 644,
+  "common_queries": 656,
+  "net_over_strong": -46,
+  "wide_nondegradation": false,
+  "Nordland_loss_vs_L9": 6,
+  "quantitative_gate_passed": false,
+  "novelty_claim_supported": false,
+  "outcome": "C",
+  "independent_test_not_opened": true,
+  "selected_utc": "2026-10-10T17:35:26.883673+00:00",
+  "decision": "failed_candidate_empirical_audit_no_extra_module"
+}

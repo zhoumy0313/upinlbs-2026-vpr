@@ -1,0 +1,14 @@
+{
+  "format": "ordered_byte_concatenation_of_standard_zip",
+  "zip_sha256": "a42083eb7abb11baa5ad8fee557e9bee751b299087ce72a44470ab2e46037160",
+  "zip_bytes": 283655,
+  "parts": [
+    {
+      "name": "evidence.zip",
+      "bytes": 283655,
+      "sha256": "a42083eb7abb11baa5ad8fee557e9bee751b299087ce72a44470ab2e46037160"
+    }
+  ],
+  "scientific_run": "g1_case_audit_20261010T170505Z_f3faea2a",
+  "source_SHA256SUMS": "5469aed0445ac8edb6efbce7001e000b47dfc1d7a3901b1e719d7dbb1565aa83"
+}
