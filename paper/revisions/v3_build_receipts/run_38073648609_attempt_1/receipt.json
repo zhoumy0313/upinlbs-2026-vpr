@@ -1,0 +1,26 @@
+{
+  "source_commit": "07f5a97c9d3576cd2886149db8fcca8227cd22b2",
+  "versions": {
+    "v3_r01": {
+      "source_sha256": "268116a4c29d0f6aa0fea83db248fac2f8752950e2837fd8485a094f910fe3d4",
+      "compiled": true,
+      "pdf_sha256": "de80a9ff0e470842f58a640cfc89b56ee367ed8fae7e30e7fe474f0a651032fb",
+      "pages": 4,
+      "unresolved_references": false,
+      "overfull_boxes": [],
+      "all_fonts_embedded": true
+    },
+    "v3_r02": {
+      "source_sha256": "46a54296a58281d7c3e7cb724ec9d62ac5198f0e4a9cfd0e379b8cc14367b600",
+      "compiled": true,
+      "pdf_sha256": "fc1a161dd922253da0f89b629d992aa88f6a2c9532d505297effdb4d6a362aa1",
+      "pages": 4,
+      "unresolved_references": false,
+      "overfull_boxes": [],
+      "all_fonts_embedded": true
+    }
+  },
+  "passed": true,
+  "runner": "standard ubuntu-24.04",
+  "all_old_files_outside_V3_unmodified": true
+}
