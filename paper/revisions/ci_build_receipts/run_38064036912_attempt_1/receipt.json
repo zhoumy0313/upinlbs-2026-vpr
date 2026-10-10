@@ -1,0 +1,41 @@
+{
+  "git_source_commit": "0f36c98c08ac7dd8360eb36806d9e876690af31d",
+  "run_id": "38064036912",
+  "runner": "standard ubuntu-24.04",
+  "versions": {
+    "v2_r01": {
+      "source_sha256": "a4893d019177e243634c4d93cc9458982ac7b213e2e88e057b97dc7d4c52fe39",
+      "compiled": true,
+      "pdf_sha256": "1f9334ae91e0516581a17d6917b44b1730dcd066f479104847eb6206be0bd703",
+      "pages": 6,
+      "unresolved_references": false,
+      "overfull_boxes": []
+    },
+    "v2_r02": {
+      "source_sha256": "868e43bd1f7e08c2be298aaa7fb5e963459a0eb0522342102d7189d588a40e04",
+      "compiled": true,
+      "pdf_sha256": "9f58a8d391c0549640df2611b4c8a1d67b7c1be9b3fbb8a5322bd49aa20e8347",
+      "pages": 6,
+      "unresolved_references": false,
+      "overfull_boxes": []
+    },
+    "v2_r03": {
+      "source_sha256": "1235fd8b538120f42526cc718d648b03973c64705b75b1a7c7917be2e7f71f66",
+      "compiled": true,
+      "pdf_sha256": "9516f39362e9b315f97faaf86366abab92481af96f5ba8f0217471527a3ae597",
+      "pages": 6,
+      "unresolved_references": false,
+      "overfull_boxes": []
+    },
+    "v2_empirical_findings": {
+      "source_sha256": "8736cdd0a80b6f1152072a59954be09dd42e384d9f66ca3a82c2e397c39fb96c",
+      "compiled": true,
+      "pdf_sha256": "fa7705085d865214d51802eccc5fcea5986faef9bfd98355e7f082f541c57ead",
+      "pages": 6,
+      "unresolved_references": false,
+      "overfull_boxes": []
+    }
+  },
+  "pdflatex_version": "pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian)",
+  "passed": true
+}
