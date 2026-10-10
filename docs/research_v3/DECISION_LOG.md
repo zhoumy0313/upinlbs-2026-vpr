@@ -1,3 +1,5 @@
 # V3 decisions
 
 2026-10-10T16:41:56.621600+00:00: inherited exact V2 base. User goal file is the only initial untracked input; raw diff/file backup retained before branch creation. No historical file modification. All old data are seen.
+
+Before G1/G2 numerical outputs, protocol/grid 1.0 restrict P to the original fixed-L9 backend (32 configurations) to test the stated endpoint-drift hypothesis. R1/R2 cover all four required temporal backends; all full-velocity L3/L5/L9 remain strong comparators. This is the one pre-experiment budget adjustment allowed in §6.4, not a result-driven grid expansion. Candidate indices whose T is nonfinite are removed consistently from R1/R2/P, making finite-large-epsilon degeneration exact. Completion uses current S for remaining references. All old data remain explicitly seen; within-seen validation is conditional on V2 observations and is not blind evidence. No optional module if H1 passes; no additional module after P failure. Formal decisions use the frozen quantitative gates, not comparison with the weakest historical baseline alone.

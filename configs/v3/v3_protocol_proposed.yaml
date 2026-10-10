@@ -1,0 +1,36 @@
+version: v3-protocol-1.0
+status: predeclared_before_V3_development_outputs_not_independent_preregistration
+created_utc: 2026-10-10T16:50:00Z
+seen_data: [Nordland, St_Lucia, Gardens_Point]
+St_Lucia:
+  training_indices_zero_based_half_open: [0, 700]
+  unused_buffer: [700, 800]
+  validation_indices_zero_based_half_open: [800, 1464]
+  descriptive_historical_audit: [0, 1464]
+  primary_radius_metres: 10
+  auxiliary_radius_metres: 25
+  sensitivity_metres: [5, 15, 50]
+  label_uncertainty_boundary_band_metres: 2
+Nordland:
+  training_original_ordinals: [1, 600]
+  validation_original_ordinals: [701, 1000]
+  primary_radius_frames: 5
+  sensitivity_frames: [1, 10]
+common_startup_exclusion: 8
+full_stream_startup: fallback_to_current_visual_scores_record_separately
+history_reset: every_split_or_query_traversal
+candidate_endpoints: stable_Top_H_distinct_no_NMS
+candidate_indices: bounded_same_gallery_traversal_union_deduplicated
+candidate_invalid_T_policy: remove_nonfinite_T_from_all_local_methods_before_ranking
+completion: local_eligible_by_local_score_then_remaining_gallery_by_current_S_stable
+P_epsilon_zero: T_max_ties_resolved_by_current_S_not_identical_T_tie_order
+selection: lexicographic_St_Lucia_validation_10m_then_25m_then_Nordland_validation_5frames_then_smaller_H_radius_parameter_in_declared_order
+G1_gate: T_error_coverage_H1_r4_at_10m_exceeds_seed0_equal_size_random_by_0.10_and_has_at_least_20_repairable_errors
+G3_gate: selected_P_exceeds_strongest_non_P_validation_10m_by_at_least_2_correct_queries_and_no_loss_at_25m_and_Nordland_loss_at_most_1_vs_fixed_L9
+random_seed: 0
+blocks: contiguous_100_queries_descriptive_not_iid_significance
+optional_mechanism: none_if_H1_passes_no_new_module_after_P_failure
+case_selection: first_two_in_traversal_order_per_category_repairable_r4_unrepairable_r16_A_correct_T_wrong_multiwindow_disagreement_if_insufficient_record_and_next_unselected_common_query
+independent_selection: metadata_only_before_prediction
+budget: {single_new_download_GB: 12, total_new_storage_GB: 45}
+timing: {warmup: 20, full_passes: 3, batch: 1, CUDA_synchronize: true, includes_decode_preprocess_encoding_transfer_similarity_history_ranking: true}
