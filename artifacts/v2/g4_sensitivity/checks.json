@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "all_sensitivity_radii_predeclared": true,
+  "no_method_or_test_protocol_changed": true,
+  "primary_protocol_not_replaced": true,
+  "original_metrics_sha256": "4c97301d50f5df604bd6b81b1d505f3ab40c2abf3ffb2d902b24a012feac4744"
+}

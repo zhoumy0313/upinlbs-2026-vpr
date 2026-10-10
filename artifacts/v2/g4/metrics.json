@@ -1,0 +1,8 @@
+{
+  "outcome": "B",
+  "checked_metric_cells": 216,
+  "timing_records": 39528,
+  "independent": "g4_independent_evaluation_20261010T143959Z_73e61bb4",
+  "latency": "g4_real_online_latency_20261010T144339Z_bb8f86bb",
+  "freeze": "v2_20261010T143902Z"
+}

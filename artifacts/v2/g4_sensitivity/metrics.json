@@ -1,0 +1,79 @@
+{
+  "overall_outcome": "C",
+  "primary_25m_automated_outcome": "B",
+  "predeclared_radius_instability": true,
+  "differences": [
+    {
+      "radius_m": 10,
+      "queries": 1456,
+      "A_correct": 1384,
+      "fixed_T_correct": 1084,
+      "net": -300
+    },
+    {
+      "radius_m": 25,
+      "queries": 1456,
+      "A_correct": 1422,
+      "fixed_T_correct": 1436,
+      "net": 14
+    },
+    {
+      "radius_m": 50,
+      "queries": 1456,
+      "A_correct": 1426,
+      "fixed_T_correct": 1456,
+      "net": 30
+    }
+  ],
+  "reference_distance_diagnostics": {
+    "A-only": {
+      "queries_with_output": 1456,
+      "median_reference_GPS_separation_m": 4.246508897099376,
+      "p95_reference_GPS_separation_m": 9.868585608389147,
+      "interpretation": "retrieved-reference label separation, not pose/navigation error"
+    },
+    "B-only": {
+      "queries_with_output": 1456,
+      "median_reference_GPS_separation_m": 4.212036311915737,
+      "p95_reference_GPS_separation_m": 9.404012005284208,
+      "interpretation": "retrieved-reference label separation, not pose/navigation error"
+    },
+    "RRF_k60": {
+      "queries_with_output": 1456,
+      "median_reference_GPS_separation_m": 4.211300254441442,
+      "p95_reference_GPS_separation_m": 9.078721685231207,
+      "interpretation": "retrieved-reference label separation, not pose/navigation error"
+    },
+    "AB_fixed_0.75": {
+      "queries_with_output": 1456,
+      "median_reference_GPS_separation_m": 4.217789688983747,
+      "p95_reference_GPS_separation_m": 8.973983949892327,
+      "interpretation": "retrieved-reference label separation, not pose/navigation error"
+    },
+    "fixed_T_best": {
+      "queries_with_output": 1456,
+      "median_reference_GPS_separation_m": 5.76900693658947,
+      "p95_reference_GPS_separation_m": 19.21143064206273,
+      "interpretation": "retrieved-reference label separation, not pose/navigation error"
+    },
+    "fixed_blend_best": {
+      "queries_with_output": 1456,
+      "median_reference_GPS_separation_m": 4.441474964569978,
+      "p95_reference_GPS_separation_m": 13.547730941980145,
+      "interpretation": "retrieved-reference label separation, not pose/navigation error"
+    },
+    "adaptive_full": {
+      "queries_with_output": 1456,
+      "median_reference_GPS_separation_m": 4.20898994857963,
+      "p95_reference_GPS_separation_m": 9.699256772875627,
+      "interpretation": "retrieved-reference label separation, not pose/navigation error"
+    },
+    "SMR_first_filter_adapted": {
+      "queries_with_output": 1456,
+      "median_reference_GPS_separation_m": 5.222072656953058,
+      "p95_reference_GPS_separation_m": 13.903286443752977,
+      "interpretation": "retrieved-reference label separation, not pose/navigation error"
+    }
+  },
+  "scope": "conservative scientific interpretation; original frozen evaluator results remain byte-identical"
+}

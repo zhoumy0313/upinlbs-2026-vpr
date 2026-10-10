@@ -2,22 +2,22 @@
   "goal_id": "VPR-GOAL-V2",
   "baseline_sha": "78eb9e45d3bc469630b0c46ad1ea02b318ee151b",
   "working_branch": "research/temporal-vpr-v2",
-  "current_stage": "G4",
+  "current_stage": "G5",
   "stage_status": "in_progress",
   "stages": {
     "G0": "passed",
     "G1": "passed",
     "G2": "passed",
     "G3": "scientifically_negative",
-    "G4": "in_progress",
-    "G5": "pending"
+    "G4": "passed",
+    "G5": "in_progress"
   },
-  "latest_run_id": "g4_freeze_audit_20261010T143853Z_da6d9d05",
+  "latest_run_id": "g4_transfer_sensitivity_audit_20261010T151020Z_c0f74699",
   "selected_research_track": "A_empirical",
-  "new_independent_test_has_been_opened": false,
+  "new_independent_test_has_been_opened": true,
   "paper_revision": "v1_preserved",
   "human_action_required": [],
-  "updated_utc": "2026-10-10T14:39:03.046318+00:00",
+  "updated_utc": "2026-10-10T15:10:21.038234+00:00",
   "g1_diagnosis_run": "g1_diagnosis_20261010T131552Z_19ac45fe",
   "g2_search_predeclaration": "outputs_v2/g1_acceptance_20261010T132758Z_bd97657b/config_effective.yaml",
   "g2_baseline_run": "g2_strong_baselines_20261010T133356Z_5d8c3f15",
@@ -34,5 +34,13 @@
   "g4_geo_audit_run": "g4_GPS_UTM_crosscheck_20261010T142532Z_0670ee7a",
   "g4_audit_run": "g4_independent_data_audit_20261010T135919Z_432bb768",
   "g4_gallery_run": "g4_gallery_build_20261010T143440Z_d261503e",
-  "freeze_directory": "freezes/v2_20261010T143902Z"
+  "freeze_directory": "freezes/v2_20261010T143902Z",
+  "first_independent_open_utc": "2026-10-10T14:39:59.011566+00:00",
+  "g4_evaluation_run": "g4_independent_evaluation_20261010T143959Z_73e61bb4",
+  "g4_latency_run": "g4_real_online_latency_20261010T144339Z_bb8f86bb",
+  "research_outcome": "C",
+  "g4_acceptance_run": "g4_acceptance_20261010T150725Z_c4fe2906",
+  "primary_protocol_outcome": "B",
+  "g4_sensitivity_audit_run": "g4_transfer_sensitivity_audit_20261010T151020Z_c0f74699",
+  "research_outcome_reason": "selected temporal gain reverses at prescribed10m; adaptive contribution unsupported; no test tuning"
 }

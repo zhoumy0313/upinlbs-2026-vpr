@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "tests": 56,
+  "independent_RK_cells_recounted": 216,
+  "paired_rescue_harm_recounted": true,
+  "timing_records_recounted": 39528,
+  "timing_mean_median_P95_recomputed": true,
+  "freeze_source_all_hashes_match": true,
+  "no_test_parameter_changes": true,
+  "freeze_created_utc": "2026-10-10T14:39:03.023773+00:00",
+  "first_test_open_utc": "2026-10-10T14:39:59.011566+00:00"
+}

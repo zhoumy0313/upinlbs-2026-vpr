@@ -11,3 +11,7 @@
 2026-10-10T13:40:59.732830+00:00: Before any G3 validation result, one rule frozen in configs/v2/g3_adaptive_predeclaration.json: train-only median gap scales, ambiguity/support/path-continuity/Top50 membership product; prescribed four ablations and three same-candidate fixed controls. No further L/velocity/threshold family search; SMR reproduction attempt must disclose protocol adaptation.
 
 2026-10-10T14:02:12.174310+00:00: G3 adaptive contribution rejected (242 vs291/292); no additional modules. Final paper track A empirical; SMR275/292 is an adaptation only. Independent scores unopened.
+
+2026-10-10T15:07:33.405738+00:00: immutable v2_20261010T143902Z, G4 Outcome B. No test tuning/correction; retain negative hypotheses. Auto-advance empirical G5.
+
+2026-10-10T15:10:21.038554+00:00: overallOutcomeC after reading all prescribed radii; primary25m labelB stays in raw evaluator. This is conservative interpretation, no source/config/prediction changes, no choice of favorable test parameters.
