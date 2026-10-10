@@ -67,7 +67,11 @@ def coverage(directory, files):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output-dir', type=Path, required=True)
+    parser.add_argument('--paper-acceptance', type=Path,
+                        help='Include a separately inspected user-exported paper PDF and its audit.')
     args = parser.parse_args()
+    if args.paper_acceptance:
+        args.paper_acceptance = args.paper_acceptance.resolve()
     out = args.output_dir.resolve()
     assert out.parent == ROOT / 'outputs', 'Use a fresh directory under project outputs.'
     out.mkdir(exist_ok=True)
@@ -82,7 +86,15 @@ def main():
     assert acceptance['passed']
     rendering = json.loads((P4 / 'rendering_acceptance.json').read_text())
     assert rendering['passed'] and rendering['paper_source_sha256'] == sha(ROOT / 'paper/main.tex')
-    assert not (ROOT / 'paper/main.pdf').exists(), 'PDF arrived: validate it before bundling.'
+    paper_acceptance = None
+    if args.paper_acceptance:
+        paper_acceptance = json.loads(args.paper_acceptance.read_text())
+        assert paper_acceptance['passed'] and 1 <= paper_acceptance['pages'] <= 6
+        assert paper_acceptance['pdf_sha256'] == sha(ROOT / 'paper/main.pdf')
+        assert paper_acceptance['source_sha256'] == sha(ROOT / 'paper/main.tex')
+        assert paper_acceptance['all_pages_rendered_and_visually_reviewed']
+    else:
+        assert not (ROOT / 'paper/main.pdf').exists(), 'PDF arrived: provide its validated acceptance.'
     tracked = subprocess.check_output(['git', 'ls-files'], cwd=ROOT, text=True).splitlines()
     files = {ROOT / p for p in tracked
              if Path(p).parts[0] in {'src', 'scripts', 'tests', 'configs', 'docs', 'paper', 'data'}
@@ -100,6 +112,11 @@ def main():
                  if not {'figures', 'figures_readable_v2'} & set(p.parts)
                  and p.name not in {'delivery_manifest.json', 'bundle_identity.json', 'bundle_acceptance.json'})
     files.update(p for p in (P4 / 'figures_readable_v3').iterdir() if p.is_file())
+    if paper_acceptance:
+        files.add(ROOT / 'paper/main.pdf')
+        files.update(select(args.paper_acceptance.parent))
+        files.update(args.paper_acceptance.parent.glob('page-*.png'))
+        files.add(args.paper_acceptance.parent / 'uploaded_document.pdf')
     for p in files:
         parts = p.relative_to(ROOT).parts
         assert not FORBIDDEN & set(parts) and not any(c.startswith('.venv') for c in parts)
@@ -107,6 +124,8 @@ def main():
         assert p.is_file() and not p.is_symlink()
     stages = {name: coverage(ROOT / 'outputs' / name, files) for name in HISTORY}
     stages[P4.name] = coverage(P4, files)
+    if paper_acceptance:
+        stages[args.paper_acceptance.parent.name] = coverage(args.paper_acceptance.parent, files)
     assert all(stages[n]['recorded_commands'] for n in HISTORY[:-1])
     assert (ROOT / 'outputs' / HISTORY[-1] / 'bootstrap_failure.json') in files
     stage_path = out / 'stage_coverage.json'
@@ -116,11 +135,14 @@ def main():
         'scope': 'Full local source and P0-P4 evidence snapshot, including failed attempts.',
         'git_commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
         'freeze_package_sha256': sha(PACKAGE), 'paper_source_sha256': sha(ROOT / 'paper/main.tex'),
-        'final_experiments_verified': True, 'paper_pdf_included': False, 'goal_complete': False,
+        'final_experiments_verified': True, 'paper_pdf_included': bool(paper_acceptance),
+        'local_working_draft_complete': bool(paper_acceptance), 'submission_ready': False,
         'excluded': ['Bulk datasets', 'Model checkpoints', 'Virtual environments', 'Descriptor arrays',
                      'Authentication files', 'Active bundle-generation log'],
-        'missing': ['Exported paper PDF with verified <=6 total pages, fonts and layout',
-                    'Human author/correspondence and submission-detail review'],
+        'missing_local_working_draft_artifacts': [] if paper_acceptance else
+                    ['Exported paper PDF with verified <=6 total pages, fonts and layout'],
+        'remaining_author_review': ['Authorship/correspondence, contribution, interpretation and submission details'],
+        'paper_pdf_acceptance': paper_acceptance,
         'experiment_rows': {k: acceptance[k] for k in
                             ('offline_rows', 'online_rows', 'policy_radius_evaluations')},
         'source_and_artifact_sha256': {str(p.relative_to(ROOT)): sha(p) for p in sorted(files)},
@@ -144,7 +166,8 @@ def main():
         'sha256': sha(archive), 'file_count': len(files) + 1,
         'stage_roots': len(stages), 'recorded_commands': sum(s['recorded_commands'] for s in stages.values()),
         'retained_nonzero_commands': sum(len(s['nonzero_commands']) for s in stages.values()),
-        'crc_and_every_file_sha256_verified': True, 'paper_pdf_included': False, 'goal_complete': False,
+        'crc_and_every_file_sha256_verified': True, 'paper_pdf_included': bool(paper_acceptance),
+        'local_working_draft_complete': bool(paper_acceptance), 'submission_ready': False,
     }
     write_new(out / 'bundle_acceptance.json', summary)
     print(json.dumps(summary, indent=2))

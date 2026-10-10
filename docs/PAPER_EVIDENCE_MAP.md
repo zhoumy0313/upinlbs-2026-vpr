@@ -26,10 +26,10 @@
 | 两表一原生独立矢量图的逐点来源 | final `paper_elements/provenance.json`；生成元素逐字嵌入main.tex并已核查 |
 | warm-file加载/状态指纹与索引初始化 | final `startup_costs.json`；gallery成本来自各encoder `fingerprint.json.roles.gallery`，不是整机冷启动 |
 | 当前实验工作稿源身份和成功编译 | final `paper_draft_provenance.json`、`paper_final_experiment_draft.tex`、`native_final_compile_attempt_1.json`，kind=success、源SHA e6194a58… |
-| 独立论文PDF、总页数≤6、论文PDF字体与版面 | **未导出，证据缺失，不能由图表PDF或源字数推断完成** |
+| 独立论文PDF、总页数≤6、论文PDF字体与版面 | 用户提供原生导出PDF，已保存paper/main.pdf；P5 `pdf_acceptance.json`：全文5页含引用，19字体全部嵌入，全5页视觉检查，最终表100数字逐项匹配 |
 
 所有公式与输入执行边界对应 `core.py`、`policies.py`、`online.py`；最终入口在图像读取之前检查人工确认。只在训练划分拟合小监督选择器，编码器冻结；不是training-free。门限validation-only，最终不校准。真实B前向在门控之后发生；ID与真值仅用于索引、记录和评测，不输入门控。
 
 八项引用的原始来源、元数据与访问限制见 `PAPER_REFERENCES_AUDIT.md`。To-Match采用CVF页码2874–2885；DINO库存作者已纠正。SMR已有纠错/误伤类别，SU实现/完整数值约定未核实而按确认方案排除数字比较。未找到同名论文不能证明新颖性。
 
-旧review run保留原生初始化/资源下载超时及T1后开发稿编译成功的记录，本次最终实验稿也返回success。当前编译工具只返回诊断、不导出PDF；[官方编辑器说明](https://learn.chatgpt.com/docs/artifacts-viewer)支持LaTeX编辑与PDF预览。没有安装本地TeX或LaTeX插件。独立论文PDF与≤6页、作者/匿名/纸张/具体截止时区仍需核实，见 `SUBMISSION_CHECKLIST.md`。
+旧review run保留原生初始化/资源下载超时及T1后开发稿编译成功的记录，本次最终实验稿也返回success。编译工具只返回诊断；用户2026-10-10从编辑器下载并提供独立PDF，现已完成5页和字体/版面验收，见 `P5_PDF_ACCEPTANCE_REPORT.md`。没有安装本地TeX或LaTeX插件。其他作者、匿名、正式纸张和具体截止时区仍列入作者提交前审阅，见 `SUBMISSION_CHECKLIST.md`。
