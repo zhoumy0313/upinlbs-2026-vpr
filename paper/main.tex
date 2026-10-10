@@ -1,130 +1,310 @@
-% WORKING SKELETON ONLY. UPINLBS 2026's official template is not yet verified.
-% Do not treat this file as a format-compliant camera-ready paper.
-% Confirm page size, anonymity, references in limit, copyright line, and publisher.
-% Replace every TODO with verified content. No experimental results are supplied.
+% Standalone development draft, 2026-10-10. Not ready for submission.
+% Final evaluation, full authors, anonymity and page size still need review.
 \documentclass[conference]{IEEEtran}
+\usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb}
-\usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{url}
-\newcommand{\TODO}[1]{\textbf{[TODO: #1]}}
 \newcommand{\ind}{\mathbf{1}}
+\newcommand{\pending}[1]{\textbf{[Pending: #1]}}
 \title{When Is a Second Visual Encoder Worth Calling?\\
 A Budget-Aware Study of Visual Place Recognition}
-\author{\IEEEauthorblockN{\TODO{Confirm author list and review anonymity}}
-\IEEEauthorblockA{\TODO{Institution and correspondence}}}
+\author{\IEEEauthorblockN{Mingyang Zhou}
+\IEEEauthorblockA{University of Chinese Academy of Sciences\\
+\textit{Additional authors and correspondence pending}}}
 \begin{document}
 \maketitle
 \begin{abstract}
-\TODO{Write this LAST, using only final, frozen experiment outputs.}
-Visual place recognition under appearance changes can benefit from an
-additional visual encoder, but invoking a second encoder introduces cost
-and does not necessarily correct the first encoder's prediction.
-This study investigates whether estimating correction benefit and damage
-is more effective than uncertainty-only invocation under comparable
-computational budgets. \TODO{State the actual method and supervision.}
-We evaluate \TODO{verified models and dataset partitions}, reporting
-\TODO{actual recall, invocation fraction, latency, and comparison results}.
-\TODO{State the supported conclusion and important limitation.}
+\textbf{Development draft; the final abstract will follow held-out evaluation.}
+A second visual encoder can correct retrieval errors but can also damage
+correct predictions. We examine whether estimating correction minus damage
+is more effective than predicting the first encoder's error under an
+invocation budget. Frozen CosPlace descriptors supply five similarity
+statistics to small supervised logistic heads. A selected second encoder
+performs independent global retrieval only after the gate decision.
+On 300 development queries from Nordland-Part-2020, an initial DINOv2 CLS
+model is weaker than CosPlace, and the benefit policy makes no second-stage
+calls. With the sole predeclared EigenPlaces replacement, 25\% invocation
+increases Recall@1 from 71.33\% to 75.67\%, below the same-input error
+predictor's 77.33\%. These findings motivate a prospective comparison of
+routing targets and failure modes rather than a claim that benefit
+prediction is already superior.
+\pending{Final held-out/cross-domain results and supported conclusion.}
 \end{abstract}
 \begin{IEEEkeywords}
-visual place recognition, conditional computation, visual localization
+visual place recognition, conditional computation, retrieval, evaluation
 \end{IEEEkeywords}
 
 \section{Introduction}
-\TODO{About 0.65 page: problem, gap, precise scope, supported contributions.}
-Visual place recognition identifies candidate previously observed locations
-from images; it is not by itself a geometrically verified pose estimator
-\cite{schubert2024tutorial}.
-\TODO{Do not claim new uncertainty estimation or generic benefit prediction.}
+Visual place recognition (VPR) retrieves previously observed places from
+an image database. Its candidates can support relocalization or loop
+closure, but retrieval alone does not establish a geometrically verified
+pose~\cite{tutorial}. Appearance change motivates using a second model
+when a fast descriptor struggles. The benefit depends on how the models'
+errors overlap: a difficult query may defeat both models, and replacing a
+correct fast prediction can introduce an error.
+
+We ask a restricted operational question: before computing a second-model
+query descriptor, can five statistics from the first model's scores guide
+useful additional calls? We compare score-gap invocation, random selection,
+supervised error prediction, and supervised correction minus damage.
+The encoders remain frozen, but the selector is trained. A triggered query
+receives the second model's whole global ranking, without score fusion,
+temporal matching, local reranking or geometric verification.
+
+Uncertainty estimation and predicting postprocessing effects have prior
+work. Our intended contribution is an auditable empirical comparison
+under the same available information, including a weaker second model,
+a stronger specialist, and actual conditional execution. Development
+results do not establish superiority of the benefit target. Prospective
+evaluation will examine a held-out route block and a different day--night
+collection without selecting models or thresholds from their results.
 
 \section{Related Work}
-\TODO{About 0.45 page.}
-\subsection{Frozen Visual Descriptors}
-\TODO{Distinguish specialised CosPlace/EigenPlaces from generic DINOv2 CLS
-features. Do not label the latter AnyLoc or SALAD.}
-Relevant sources include \cite{berton2022cosplace,berton2023eigenplaces,oquab2023dinov2}.
-\subsection{Uncertainty and Selective Processing}
-\TODO{Explain the closest existing methods, not only distant baselines.}
-Discuss score-based uncertainty \cite{miller2026doubt}, selective image
-matching \cite{sferrazza2025match}, and sequence-matching receptiveness
-prediction \cite{hussaini2025smr}. The present study must establish a
-meaningful distinction, rather than claim these ideas are new.
+CosPlace~\cite{cosplace} and EigenPlaces~\cite{eigenplaces} provide
+specialist global descriptors. We also examine DINOv2's~\cite{dinov2}
+normalized global CLS output, a general visual representation; this
+adapter is not AnyLoc or SALAD. Our fixed low-resolution condition is
+not a reproduction of the original papers' benchmark numbers.
+
+Score-based uncertainty, including Statistical Uncertainty
+(SU)~\cite{doubt}, estimates match reliability. Selective image
+matching~\cite{match} uses matching evidence to study when postprocessing
+helps. Sequence-matching receptiveness prediction~\cite{smr} already
+distinguishes beneficial and harmful sequence-processing effects. We do
+not introduce correction/damage labels. Our gate observes a single
+query's first-encoder score statistics and selects a second global
+encoder before computing its query output. We inspected the available
+selective-matching and SMR code. A numerical SU comparator is omitted
+because its official implementation and complete numerical conventions
+have not been verified; this limits the comparison.
 
 \section{Method}
-\TODO{About 1.15 pages including the pipeline diagram.}
 \subsection{Retrieval and Available Information}
-Let $q_i$ denote a query and $d_j$ a reference image. Frozen encoder $m$
-produces a unit-normalised descriptor $z_m(I)$. Similarity is
+Let $D=\{d_j\}_{j=1}^{N}$ be an ordered gallery. Frozen encoder $m$ produces
+$z_m(I)=f_m(I)/\|f_m(I)\|_2$, and exact cosine similarity is
 \begin{equation}
 s_m(q_i,d_j)=z_m(q_i)^\top z_m(d_j).
 \end{equation}
-\TODO{Specify preprocessing, descriptor pooling, model identities, and stable ties.}
-The gate observes statistics from encoder A only. Query ground truth and
-encoder B outputs are unavailable at the online decision point.
+Candidates are ordered by decreasing score; ties retain manifest order.
+Ground-truth aligned frames are used only for training labels and
+evaluation. Frame indices never enter the online gate and are not treated
+as geographic coordinates.
 
-\subsection{Supervised Correction and Damage Estimates}
-For training queries only, let $a_i,b_i\in\{0,1\}$ denote the correctness of
-A and B, respectively. Construct
+For sorted A scores $s_{(1)}\geq\cdots\geq s_{(N)}$, the input is
 \begin{equation}
-y_i^+=\ind[a_i=0,b_i=1],\quad
- y_i^-=\ind[a_i=1,b_i=0].
+u=\big[s_{(1)},\ s_{(1)}-s_{(2)},\ s_{(1)}-s_{(5)},\
+\mu_{10},\ \sigma_{10}\big]^\top,
 \end{equation}
-\TODO{Define the five A-only input statistics and training-only standardisation.}
-Two regularised logistic heads produce scores $p_+(u_i)$ and $p_-(u_i)$.
-Their difference is
-\begin{equation}
-g(u_i)=p_+(u_i)-p_-(u_i).
-\end{equation}
-\TODO{Do not call these certified or calibrated probabilities without evidence.}
+where $\mu_{10}$ and $\sigma_{10}$ are the top-ten mean and population
+standard deviation. Retained features are standardized using training
+queries only. B outputs are unavailable at the decision point.
 
-\subsection{Invocation Policy and Cost}
-For a validation-selected threshold $t$, invoke B when $g(u_i)>t$ and use
-its entire retrieval ranking; otherwise retain A's ranking.
-\TODO{State that this is global ranking selection, not local reranking,
-sequence matching, or geometric verification.}
-The visual encoders are frozen, but the gate is supervised; the system
-must not be described as training-free.
-\TODO{Report the actual test invocation fraction and all cost components.}
+\begin{figure}[t]
+\centering
+\fbox{\parbox{0.94\columnwidth}{\centering
+Offline: gallery descriptors; train labels $\to$ logistic heads;\\
+validation scores $\to$ budget thresholds.\\[4pt]
+Online: $q\to A\to s_A\to u\to g(u)>t$\\[4pt]
+False: return A's ranking.\\
+True: $q\to B\to s_B\to$ return B's ranking.\\[3pt]
+No B query output or ground truth before the decision.}}
+\caption{The execution boundary. Gallery descriptors are prepared offline;
+query B encoding occurs only after a positive gate.}
+\label{fig:pipeline}
+\end{figure}
+
+\subsection{Supervised Correction and Damage Targets}
+Let $a_i,b_i\in\{0,1\}$ denote top-one correctness on training queries.
+Construct
+\begin{equation}
+y_i^+=\ind[a_i=0,b_i=1],\qquad y_i^-=\ind[a_i=1,b_i=0].
+\end{equation}
+Two logistic heads give estimates $p_+(u),p_-(u)$ and
+\begin{equation}
+g(u)=p_+(u)-p_-(u).
+\end{equation}
+For exact conditional probabilities, the difference equals
+$\mathbb{E}[b-a\mid u]$. Our regularized estimates are not certified
+probabilities or a guarantee of benefit. Both heads use $C=1$, LBFGS,
+no class weights, seed~0 and at most 2000 iterations; convergence is
+checked. The primary error control has error/correct heads with the same
+features and regularization. Complementary targets yield the same ordering
+as a single error head, also reported. Equal head counts do not create
+independent information.
+
+\subsection{Budget Thresholds and Ranking Selection}
+For validation budgets $\beta\in\{0.10,0.25,0.50\}$, a threshold allows at
+most $\lfloor\beta Q_{\rm val}\rfloor$ calls. Under strict $g>t$, we use
+an adjacent selected/unselected score midpoint, with conservative ties.
+The benefit threshold is clipped to at least zero, so a budget need not
+be filled when estimated net gain is negative. This numerical boundary
+handling was corrected during development after detecting batch-versus-
+single-query roundoff effects; original runs remain available.
+
+If triggered, B retrieves over the full gallery and replaces A's entire
+ranking; otherwise A is returned (Fig.~\ref{fig:pipeline}). Thresholds are
+fixed on final queries; the final invocation fraction may differ from the
+validation budget. For $Q$ evaluated queries,
+\begin{equation}
+R@1_{\rm route}-R@1_A=(N_{\rm rescue}-N_{\rm harm})/Q.
+\end{equation}
 
 \section{Experimental Protocol}
-\TODO{About 0.70 page.}
 \subsection{Data and Leakage Control}
-\TODO{Specify Nordland-Part-2020 rather than full Nordland; cite the dataset.
-State exact train/validation/test blocks, buffers, and full reference gallery.}
-\cite{garg2020dataset}
-\TODO{Specify Gardens Point's strict aligned-index positives, and distinguish
-any custom tolerance analysis from the tutorial's GTsoft ignore protocol.}
-\subsection{Baselines and Metrics}
-\TODO{A-only, B-only, random, gap, same-feature A-error predictor, literature
-uncertainty comparator, proposed gate, rescue-only ablation, strong single model.}
-\TODO{Report R@1/5/10, rescue/damage counts, actual invocation and real batch-1
-latency. Cached descriptor simulation is not model inference latency.}
+Nordland-Part-2020~\cite{nordland} contains 1750 aligned summer and winter
+frames. All summer frames form the gallery. One-based winter ordinals
+1--600 train the gate, 701--1000 select validation thresholds, and
+1101--1750 are the planned 650-query holdout. Blocks 601--700 and
+1001--1100 are unused buffers. Numeric filenames are sorted before
+assigning ordinals; they start at 251, so ordinals differ from raw filename
+numbers. Primary positives are references within five aligned frames;
+radii one and ten are planned sensitivity analyses using unchanged
+rankings and decisions. This is a fixed-map route-block holdout, not an
+independent unseen route.
 
-\section{Results and Analysis}
-\TODO{About 1.35 pages. All numbers must come from immutable experiment outputs.}
-\subsection{Accuracy--Cost Trade-offs}
-\TODO{Main table and Pareto-style accuracy versus REAL latency plot.}
-\subsection{Ablation and Error Analysis}
-For $Q$ test queries, the measured gain must satisfy
-\begin{equation}
-R@1_{\mathrm{route}}-R@1_A
-=\frac{N_{\mathrm{rescue}}-N_{\mathrm{damage}}}{Q}.
-\end{equation}
-\TODO{Explain whether harm prediction helps and whether benefits transfer.}
-\TODO{Oracle selection uses ground truth and is a diagnostic upper bound only.}
+The planned external test uses Gardens Point's 200 day-right references
+and 200 night-right queries. Exactly aligned frames are the primary
+positives. The tutorial's soft ground truth is an ambiguity/ignore mask;
+our radius-eight positives are explicitly a custom tolerance analysis.
+Full decoding, ID order, alignment and duplicate hashes were checked.
+Repeated images remain in their original splits; none are removed to
+improve results.
 
-\section{Discussion and Conclusion}
-\TODO{About 0.40 page. Summarise findings, including negative results.}
-\TODO{Limitations: small datasets, fixed-map route dependence, gate domain shift,
-no open-set guarantee, no metric pose estimation, no real-robot validation.}
+\subsection{Models and Controls}
+A is CosPlace ResNet18/512. Initial B is DINOv2 ViT-S/14 with a normalized
+384-dimensional final CLS output and no register tokens. After retaining
+its development failure, the single predeclared replacement is
+EigenPlaces ResNet50/512. All models use RGB, ImageNet normalization,
+and antialiased bilinear tensor resizing to $224\times224$. The full-image
+warp is a declared adaptation, not DINOv2's original classification crop.
+EigenPlaces retains official modules and pooling; a redundant constructor
+initializer download is bypassed before strict loading of the full
+checkpoint. Loaded tensors, source commits, hashes and row IDs are
+recorded. TF32 and cuDNN benchmarking are disabled.
 
-% Include only if required/allowed by the confirmed review/publisher policy.
-\section*{Disclosure}
-\TODO{If applicable, disclose AI-generated material accurately: tools used,
-which text/code/figures, scope of human verification. Do not claim verification
-that has not happened. Confirm anonymous-review handling with the conference.}
+Controls comprise A-only, B-only, random invocation, top1--top2 gap,
+the same-input A-error predictor and benefit prediction. Ablations remove
+the harm head or the top-ten standard deviation. Random seeds 0--4 are
+all reported as means and population standard deviations. Random costs
+are validation-matched only; final actual fractions may differ.
+A ground-truth oracle is diagnostic and never deployed. Recall@$K$,
+$K=1,5,10$, counts queries with a positive in their first $K$ candidates.
+We also report invocation, rescues, harms and signed Recall gain.
 
-\bibliographystyle{IEEEtran}
-\bibliography{references}
+\subsection{Actual Runtime}
+The development runtime uses an RTX 3060 Laptop GPU, PyTorch 2.6.0+cu124,
+batch one, twenty warmup queries and three complete validation passes.
+CUDA is synchronized around each query. Times include warm-file decode,
+RGB, preprocessing, selected encoders, gate and exact retrieval. Model
+loading, gallery building and reference checks are excluded and accounted
+for separately. Cached accuracy simulation is not model latency.
+The unlocked GPU clock limits fine timing comparisons.
+
+\section{Development Findings}
+\subsection{Complementarity}
+Validation A reaches 71.33\% R@1 and initial DINOv2 51.67\%. B can rescue
+29 errors and damage 88 successes among 300 queries; the diagnostic oracle
+is 81.00\%. The benefit policy calls B zero times at all budgets, retaining
+A accuracy. This is not an accuracy improvement. At 10\%, error prediction
+rescues eight and damages four, reaching 72.67\%. The original model pair
+is retained after examining the alternative.
+
+EigenPlaces reaches 83.33\% R@1, with 51 rescue and 15 harm opportunities;
+its oracle is 88.33\%. Training A/B R@1 are 82.50\%/86.67\%, with 59 rescue
+and 34 harm opportunities among 600 queries. The different balance across
+blocks cautions against inferring transfer from the fitted estimates.
+
+\begin{table}[t]
+\caption{Development validation R@1 (\%). Conditional rows use exactly the
+indicated EigenPlaces invocation fraction. No final-test numbers.}
+\label{tab:development}
+\centering
+\begin{tabular}{lrrr}
+\toprule
+Policy & 10\% & 25\% & 50\%\\
+\midrule
+Benefit minus harm &73.00&75.67&82.00\\
+A-error predictor &73.67&77.33&82.00\\
+Top1--top2 gap &73.33&75.67&80.33\\
+Rescue head only &73.33&77.33&83.00\\
+Benefit without std &72.33&76.00&81.00\\
+\midrule
+A-only (0\% B)&\multicolumn{3}{c}{71.33}\\
+B-only (100\% B)&\multicolumn{3}{c}{83.33}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Correction and Real Execution}
+At 25\%, benefit prediction rescues 18 queries and damages five, improving
+A by 4.33 points. The error predictor rescues 22 and damages four, improving
+by 6.00 points. Validation-matched random selection averages 73.87\% R@1
+with a 1.34-point population standard deviation. At 50\%, benefit prediction
+avoids three harms relative to error prediction but loses three rescues;
+both reach 82.00\%. Less damage alone does not demonstrate higher net
+accuracy (Table~\ref{tab:development}).
+
+Measured validation mean times for the EigenPlaces pair are 8.92\,ms
+(A-only), 14.44\,ms (B-only), 13.02\,ms (25\% benefit) and 13.38\,ms
+(25\% error). Each conditional policy performs 900 A forwards and 225 B
+forwards over three 300-query passes. Every decision and ranking matches
+the frozen reference, checked outside the timer. For the initial pair,
+zero-call benefit routing takes 10.19\,ms versus A-only's 7.78\,ms: fewer
+second-model calls do not eliminate selector cost. These sequential laptop
+measurements are not confidence intervals for small timing differences.
+
+\subsection{Held-Out and External Results}
+\pending{Final evaluation has not run. Insert only immutable held-out and
+external accuracy/latency outputs, actual invocation, complete random seeds,
+sensitivity and failure examples.}
+No held-out or Gardens Point retrieval performance is asserted here.
+
+\section{Discussion and Next Evaluation}
+Current evidence supports neither universal second-encoder benefit nor
+superiority of the benefit target. The stronger specialist creates more
+rescue opportunities, while error prediction remains competitive. Final
+evaluation must establish transfer and compare actual cost with simply
+using that specialist. Negative transfer will remain part of the study,
+not trigger another model search.
+
+Limitations include small aligned collections, fixed-route dependence,
+a five-feature linear selector, domain shift, unlocked laptop clocks and
+the missing verified SU comparator. This work does not demonstrate open-set
+rejection, metric pose accuracy, SLAM improvement or robot deployment.
+\pending{Final conclusion and complete author/conference review.}
+
+\section*{Draft Disclosure}
+OpenAI Codex assisted coding, source inspection and drafting. Development
+numbers come from logged executable experiments. Human author review of
+interpretation, citations, authorship and the conference's disclosure and
+anonymity policy remains pending.
+
+% Inline bibliography supports the standalone native editor/compiler.
+\begin{thebibliography}{8}
+\bibitem{tutorial} S. Schubert, P. Neubert, S. Garg, M. Milford, and
+T. Fischer, ``Visual place recognition: A tutorial,'' \emph{IEEE Robot.
+Autom. Mag.}, vol. 31, no. 3, pp. 139--153, 2024,
+doi: 10.1109/MRA.2023.3310859.
+\bibitem{cosplace} G. Berton, C. Masone, and B. Caputo, ``Rethinking visual
+geo-localization for large-scale applications,'' in \emph{CVPR}, 2022,
+pp. 4878--4888.
+\bibitem{eigenplaces} G. Berton, G. Trivigno, B. Caputo, and C. Masone,
+``EigenPlaces: Training viewpoint robust models for visual place
+recognition,'' in \emph{ICCV}, 2023, pp. 11080--11090.
+\bibitem{dinov2} M. Oquab \emph{et al.}, ``DINOv2: Learning robust visual
+features without supervision,'' arXiv:2304.07193, 2023.
+\bibitem{doubt} E. Miller, M. Milford, M. B. Hafez, S. D. Ramchurn, and
+S. Ehsan, ``Through the lens of doubt: Robust and efficient uncertainty
+estimation for visual place recognition,'' \emph{IEEE Robot. Autom. Lett.},
+vol. 11, no. 5, pp. 5899--5906, 2026, doi: 10.1109/LRA.2026.3674688.
+\bibitem{match} D. Sferrazza, G. Berton, G. Trivigno, and C. Masone,
+``To match or not to match: Revisiting image matching for reliable visual
+place recognition,'' in \emph{CVPR Workshops}, 2025, pp. 2874--2885.
+\bibitem{smr} S. Hussaini, T. Fischer, and M. Milford, ``Improving visual
+place recognition with sequence-matching receptiveness prediction,''
+arXiv:2503.06840v2, 2025; accepted to IROS 2025.
+\bibitem{nordland} S. Garg, ``Nordland-Part-2020,'' Zenodo, 2020,
+doi: 10.5281/zenodo.4016653.
+\end{thebibliography}
 \end{document}
