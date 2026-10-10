@@ -1,0 +1,325 @@
+{
+  "passed": true,
+  "scope": "Five-page English experimental working draft; not submission or human-author approval.",
+  "pdf_sha256": "e693b054abaa6ba0b274f362c9ab051ed7186cd1d3123b8ef51bd6138a50dd12",
+  "source_sha256": "e6194a581902680e499e3784a3dcdbb03c68a696b0498f0a73e5935069c15f94",
+  "pages": 5,
+  "references_included_in_page_count": true,
+  "paper_size": "US Letter, 612 x 792 pt",
+  "embedded_fonts": [
+    {
+      "name": "IHAIZV+NimbusRomNo9L-Regu",
+      "embedded": true,
+      "raw": "IHAIZV+NimbusRomNo9L-Regu            Type 1C           Custom           yes yes yes      4  0"
+    },
+    {
+      "name": "BZIVMZ+NimbusRomNo9L-ReguItal",
+      "embedded": true,
+      "raw": "BZIVMZ+NimbusRomNo9L-ReguItal        Type 1C           Custom           yes yes yes      5  0"
+    },
+    {
+      "name": "IXFAWU+NimbusRomNo9L-MediItal",
+      "embedded": true,
+      "raw": "IXFAWU+NimbusRomNo9L-MediItal        Type 1C           Custom           yes yes yes      6  0"
+    },
+    {
+      "name": "TQTHRL+NimbusRomNo9L-Medi",
+      "embedded": true,
+      "raw": "TQTHRL+NimbusRomNo9L-Medi            Type 1C           Custom           yes yes yes      7  0"
+    },
+    {
+      "name": "YEUUOC+CMMI10",
+      "embedded": true,
+      "raw": "YEUUOC+CMMI10                        Type 1C           Builtin          yes yes yes      8  0"
+    },
+    {
+      "name": "AKHCZK+CMR10",
+      "embedded": true,
+      "raw": "AKHCZK+CMR10                         Type 1C           Builtin          yes yes yes      9  0"
+    },
+    {
+      "name": "VDVGTR+CMSY10",
+      "embedded": true,
+      "raw": "VDVGTR+CMSY10                        Type 1C           Builtin          yes yes yes     10  0"
+    },
+    {
+      "name": "CAFSZL+CMMI7",
+      "embedded": true,
+      "raw": "CAFSZL+CMMI7                         Type 1C           Builtin          yes yes yes     11  0"
+    },
+    {
+      "name": "DDIEWW+CMR7",
+      "embedded": true,
+      "raw": "DDIEWW+CMR7                          Type 1C           Builtin          yes yes yes     12  0"
+    },
+    {
+      "name": "FKPJSN+CMSY7",
+      "embedded": true,
+      "raw": "FKPJSN+CMSY7                         Type 1C           Builtin          yes yes yes     13  0"
+    },
+    {
+      "name": "PVTTLK+CMEX10",
+      "embedded": true,
+      "raw": "PVTTLK+CMEX10                        Type 1C           Builtin          yes yes yes     14  0"
+    },
+    {
+      "name": "JAGKKY+CMBX10",
+      "embedded": true,
+      "raw": "JAGKKY+CMBX10                        Type 1C           Builtin          yes yes yes     19  0"
+    },
+    {
+      "name": "NOMARO+MSBM10",
+      "embedded": true,
+      "raw": "NOMARO+MSBM10                        Type 1C           Builtin          yes yes yes     20  0"
+    },
+    {
+      "name": "KPXLOM+CMMI8",
+      "embedded": true,
+      "raw": "KPXLOM+CMMI8                         Type 1C           Builtin          yes yes yes     27  0"
+    },
+    {
+      "name": "UTACNV+CMR8",
+      "embedded": true,
+      "raw": "UTACNV+CMR8                          Type 1C           Builtin          yes yes yes     28  0"
+    },
+    {
+      "name": "FZDNHS+CMSY8",
+      "embedded": true,
+      "raw": "FZDNHS+CMSY8                         Type 1C           Builtin          yes yes yes     29  0"
+    },
+    {
+      "name": "DZGKAF+LCIRCLE10",
+      "embedded": true,
+      "raw": "DZGKAF+LCIRCLE10                     Type 1C           Builtin          yes yes no      33  0"
+    },
+    {
+      "name": "GJMHKB+MSAM10",
+      "embedded": true,
+      "raw": "GJMHKB+MSAM10                        Type 1C           Builtin          yes yes yes     34  0"
+    },
+    {
+      "name": "NITCSQ+CMSY5",
+      "embedded": true,
+      "raw": "NITCSQ+CMSY5                         Type 1C           Builtin          yes yes yes     35  0"
+    }
+  ],
+  "type3_fonts_present": false,
+  "all_pages_rendered_and_visually_reviewed": true,
+  "final_table_rows_verified": [
+    {
+      "label": "CosPlace R18",
+      "pdf_values": [
+        "14.15",
+        "23.54",
+        "30.62",
+        "34.50",
+        "88.50",
+        "93.50"
+      ],
+      "matched_experiment_values": true
+    },
+    {
+      "label": "EigenPlaces R50",
+      "pdf_values": [
+        "10.00",
+        "16.46",
+        "24.77",
+        "36.00",
+        "86.00",
+        "96.00"
+      ],
+      "matched_experiment_values": true
+    },
+    {
+      "label": "DINOv2 ViT-S/14 CLS",
+      "pdf_values": [
+        "3.38",
+        "10.46",
+        "16.77",
+        "23.50",
+        "76.00",
+        "87.50"
+      ],
+      "matched_experiment_values": true
+    },
+    {
+      "label": "A-only",
+      "pdf_values": [
+        "14.15",
+        "0.00",
+        "7.56",
+        "34.50",
+        "0.00",
+        "5.84"
+      ],
+      "matched_experiment_values": true
+    },
+    {
+      "label": "EigenPlaces-only",
+      "pdf_values": [
+        "10.00",
+        "100.00",
+        "10.66",
+        "36.00",
+        "100.00",
+        "8.92"
+      ],
+      "matched_experiment_values": true
+    },
+    {
+      "label": "Benefit (10%)",
+      "pdf_values": [
+        "12.15",
+        "40.15",
+        "15.09",
+        "34.00",
+        "9.50",
+        "7.40"
+      ],
+      "matched_experiment_values": true
+    },
+    {
+      "label": "Benefit (25%)",
+      "pdf_values": [
+        "10.31",
+        "78.92",
+        "13.62",
+        "34.50",
+        "15.50",
+        "7.97"
+      ],
+      "matched_experiment_values": true
+    },
+    {
+      "label": "Benefit (50%)",
+      "pdf_values": [
+        "10.46",
+        "82.46",
+        "14.41",
+        "36.50",
+        "29.50",
+        "9.09"
+      ],
+      "matched_experiment_values": true
+    },
+    {
+      "label": "A-error (10%)",
+      "pdf_values": [
+        "10.00",
+        "75.54",
+        "18.52",
+        "34.00",
+        "7.00",
+        "7.18"
+      ],
+      "matched_experiment_values": true
+    },
+    {
+      "label": "A-error (25%)",
+      "pdf_values": [
+        "10.46",
+        "82.00",
+        "17.86",
+        "34.00",
+        "11.00",
+        "7.55"
+      ],
+      "matched_experiment_values": true
+    },
+    {
+      "label": "A-error (50%)",
+      "pdf_values": [
+        "10.31",
+        "84.77",
+        "14.47",
+        "34.00",
+        "18.00",
+        "8.10"
+      ],
+      "matched_experiment_values": true
+    },
+    {
+      "label": "Gap (25%)",
+      "pdf_values": [
+        "12.77",
+        "65.08",
+        "12.87",
+        "34.50",
+        "14.50",
+        "7.78"
+      ],
+      "matched_experiment_values": true
+    },
+    {
+      "label": "Rescue only (25%)",
+      "pdf_values": [
+        "10.62",
+        "80.46",
+        "18.27",
+        "34.50",
+        "10.00",
+        "7.45"
+      ],
+      "matched_experiment_values": true
+    },
+    {
+      "label": "Benefit, no std (25%)",
+      "pdf_values": [
+        "10.31",
+        "78.46",
+        "18.18",
+        "36.50",
+        "23.00",
+        "8.57"
+      ],
+      "matched_experiment_values": true
+    },
+    {
+      "label": "Random, nominal 25%",
+      "pdf_values": [
+        "13.32",
+        "0.37",
+        "23.60",
+        "12.91",
+        "35.20",
+        "1.60",
+        "25.40",
+        "8.68"
+      ],
+      "matched_experiment_values": true
+    },
+    {
+      "label": "Random, validation-matched",
+      "pdf_values": [
+        "13.32",
+        "0.37",
+        "23.60",
+        "13.19",
+        "35.20",
+        "1.60",
+        "25.40",
+        "8.63"
+      ],
+      "matched_experiment_values": true
+    }
+  ],
+  "final_numeric_cells_verified": 100,
+  "figure_source_point_count": 38,
+  "source_fragments_match_logged_provenance": true,
+  "author_submission_review_complete": false,
+  "remaining_author_review": [
+    "Other authors and correspondence",
+    "Contribution and interpretation",
+    "Official anonymity, paper-size and exact deadline details"
+  ],
+  "commands_checked": {
+    "pdf_information": 0,
+    "pdf_fonts": 0,
+    "pdf_text": 0,
+    "render_all_pages": 0,
+    "verify_exported_paper": 1
+  },
+  "retained_nonzero_attempts": {
+    "verify_exported_paper": 1
+  }
+}

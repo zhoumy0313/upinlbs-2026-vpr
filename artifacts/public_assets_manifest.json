@@ -1,0 +1,95 @@
+{
+  "scope": "Copies of project-generated numeric results, plots and acceptances; no dataset photos",
+  "files": {
+    "artifacts/results/nordland_eigenplaces_accuracy.json": {
+      "original": "outputs/p4_frozen_20261010_152754_Z1p6iu/results/nordland/pair_eigenplaces/accuracy.json",
+      "sha256": "815024ec96d75a54a28ef5b949d4d2b5d0fe0703ffa3df0c1b2f6ad92df0e240",
+      "bytes": 104212
+    },
+    "artifacts/results/nordland_eigenplaces_latency.json": {
+      "original": "outputs/p4_frozen_20261010_152754_Z1p6iu/results/nordland/pair_eigenplaces/latency.json",
+      "sha256": "d89d25015139f8c809220c3b0df96467343835d239be762e1df94e9e4ba44603",
+      "bytes": 10506
+    },
+    "artifacts/results/nordland_dinov2_accuracy.json": {
+      "original": "outputs/p4_frozen_20261010_152754_Z1p6iu/results/nordland/pair_dinov2/accuracy.json",
+      "sha256": "cedce32453b096976cb7eb4c23b673e7bbcf072e5a6a80f309f0a360ad24b7fa",
+      "bytes": 101513
+    },
+    "artifacts/results/nordland_dinov2_latency.json": {
+      "original": "outputs/p4_frozen_20261010_152754_Z1p6iu/results/nordland/pair_dinov2/latency.json",
+      "sha256": "d23551e70f7f9f6244e493bc91f913fcfc3461688a1d87a3f927d94a13b42882",
+      "bytes": 10395
+    },
+    "artifacts/results/gardens_eigenplaces_accuracy.json": {
+      "original": "outputs/p4_frozen_20261010_152754_Z1p6iu/results/gardens/pair_eigenplaces/accuracy.json",
+      "sha256": "7305e692ba9421e82f51b0c0e7f04c782c03e315437b5cf640c4cfb1f77b725f",
+      "bytes": 57872
+    },
+    "artifacts/results/gardens_eigenplaces_latency.json": {
+      "original": "outputs/p4_frozen_20261010_152754_Z1p6iu/results/gardens/pair_eigenplaces/latency.json",
+      "sha256": "584790a0c0bc70ab9ad0b729add9578f46b3277b2f1c5675224dbb490fd28dfe",
+      "bytes": 10156
+    },
+    "artifacts/results/gardens_dinov2_accuracy.json": {
+      "original": "outputs/p4_frozen_20261010_152754_Z1p6iu/results/gardens/pair_dinov2/accuracy.json",
+      "sha256": "af4d093728524942b18c8fdfa2cf673583d3c636346bf3a8b4af535e6ace8bfe",
+      "bytes": 57060
+    },
+    "artifacts/results/gardens_dinov2_latency.json": {
+      "original": "outputs/p4_frozen_20261010_152754_Z1p6iu/results/gardens/pair_dinov2/latency.json",
+      "sha256": "9a8b9ef36b4207c27c9cb2b03fca17506329f2d340684f74dc384286b3259d15",
+      "bytes": 10135
+    },
+    "artifacts/results/all_final_metrics.csv": {
+      "original": "outputs/p4_frozen_20261010_152754_Z1p6iu/figures_readable_v3/all_final_metrics.csv",
+      "sha256": "fdb18d103c95d6c3ca784867f86d63545d4139217ddb710d735980dc0b1dd485",
+      "bytes": 114961
+    },
+    "artifacts/results/figure_provenance.json": {
+      "original": "outputs/p4_frozen_20261010_152754_Z1p6iu/figures_readable_v3/figure_provenance.json",
+      "sha256": "999db35e24ef2593049608e06984e05d8b73829c436e56b3f35b9945efb42c60",
+      "bytes": 3230
+    },
+    "artifacts/figures/final_accuracy_latency.pdf": {
+      "original": "outputs/p4_frozen_20261010_152754_Z1p6iu/figures_readable_v3/final_accuracy_latency.pdf",
+      "sha256": "6699ce42e39bc3d2155c0a9bd4cce8ea1dcd1ca2e0aaab3f7abef24c4962a529",
+      "bytes": 24492
+    },
+    "artifacts/figures/final_accuracy_latency.png": {
+      "original": "outputs/p4_frozen_20261010_152754_Z1p6iu/figures_readable_v3/final_accuracy_latency.png",
+      "sha256": "7cf27f783546c0b750d529eda3724aa91bc9d13c44bf18e4fc64c174991df859",
+      "bytes": 227738
+    },
+    "artifacts/figures/final_invocation_drift.pdf": {
+      "original": "outputs/p4_frozen_20261010_152754_Z1p6iu/figures_readable_v3/final_invocation_drift.pdf",
+      "sha256": "cfb55689c117fb9b4673703165f74f5df6bbb88bb118b140264b54bbe1d98389",
+      "bytes": 18779
+    },
+    "artifacts/figures/final_invocation_drift.png": {
+      "original": "outputs/p4_frozen_20261010_152754_Z1p6iu/figures_readable_v3/final_invocation_drift.png",
+      "sha256": "bf1a2defdabaeadc2e8a9a4a3f7b79a229d11725fc583936f536cbe06748d72a",
+      "bytes": 157665
+    },
+    "artifacts/figures/final_complementarity.pdf": {
+      "original": "outputs/p4_frozen_20261010_152754_Z1p6iu/figures_readable_v3/final_complementarity.pdf",
+      "sha256": "eedb763a33cc4f949ea174836575438a325d4f46923126055c63132bf92ce7a9",
+      "bytes": 12082
+    },
+    "artifacts/figures/final_complementarity.png": {
+      "original": "outputs/p4_frozen_20261010_152754_Z1p6iu/figures_readable_v3/final_complementarity.png",
+      "sha256": "07f6fc482eebc253c3045a77759d173d5b59c423a5939a981bf00979543530c5",
+      "bytes": 41043
+    },
+    "artifacts/acceptance/pdf_acceptance.json": {
+      "original": "outputs/p5_pdf_acceptance_20261010_193746/pdf_acceptance.json",
+      "sha256": "c0b9afbacbf559eba0c9e290f38eda48e8e046158f45c05d1cf6a219711ee5aa",
+      "bytes": 8074
+    },
+    "artifacts/acceptance/goal_completion_audit.json": {
+      "original": "outputs/p5_pdf_acceptance_20261010_193746/goal_completion_audit.json",
+      "sha256": "dfd97d8e8c874cf738ce99d6d52abd08710f0a8ad0e85d165e35cefb1aba019c",
+      "bytes": 2931
+    }
+  }
+}

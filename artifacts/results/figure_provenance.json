@@ -1,0 +1,41 @@
+{
+  "scope": "Frozen final evaluation only; all policies retained",
+  "package_sha256": "5da3ca5eb3e80d2facf7e56017694bb437bda22c3fd6b8380f5e1c12a2602769",
+  "acceptance_sha256": "da85195682ba4990099ad08c94a17d784f6df6ace198339d083e5faa3b6e0784",
+  "script_sha256": "a52b247f390f89134ed6b41b0e921ae3f294d02afbe063d2355ad989187da459",
+  "metric_rows": 510,
+  "matplotlib": "3.10.7",
+  "numpy": "2.2.6",
+  "examples_rule": "First manifest-ordered query of each of four correctness classes; no best-looking selection",
+  "notes": [
+    "All five random seeds plotted; their variation is not a confidence interval.",
+    "Unmeasured latency cells remain empty; no interpolation.",
+    "No thresholds or weights fitted on final data."
+  ],
+  "output_sha256": {
+    "all_final_metrics.csv": "fdb18d103c95d6c3ca784867f86d63545d4139217ddb710d735980dc0b1dd485",
+    "example_gardens_both_right.pdf": "80d32913ccdaf4036909a8eaca5b62cf563fee67b3b1ccd6860c4d0916cca2c6",
+    "example_gardens_both_right.png": "0dc8d4996fe1eb615b4dec02dea9b8ac74a15646b84ac7961bcf5589c22dd6d1",
+    "example_gardens_both_wrong.pdf": "92b5dc0069970801ddb88403bdd86394f9d7ecddcea3be698a2a2ce28a790334",
+    "example_gardens_both_wrong.png": "ad16fb609896e1710bf2d4c975d9e6be8399c8ec7205190578c2cdccd5f4004e",
+    "example_gardens_harm.pdf": "839fa5d3faef298581dd8177e97f3fc96de4fe8fca6055bacb38c53ee1892419",
+    "example_gardens_harm.png": "0c39293d605ea213a7aa4e0dae205440ce38b348e9be4510cf0d58a87c93d837",
+    "example_gardens_rescue.pdf": "3f4881516e74d3f8a6c2bae9358175a4b6e12e27f38f62cfb9f37c2224f83703",
+    "example_gardens_rescue.png": "c690194c7c7c801af3d2beb06b2b20eb5f2400bcc04cacac6691f37eab1a69d1",
+    "example_nordland_both_right.pdf": "ddbe38773e6cc94af3c2579dbdfcde782a6f152b40e979b4a82a57ba7c81dbb6",
+    "example_nordland_both_right.png": "ad5892e34acd46b88d2ec65150b15d9dfcd95c7a2f00021a5ad498f9678295b7",
+    "example_nordland_both_wrong.pdf": "00d17bfff958aef2af13a2ec701d75a9916574f7284d708338f9ae70a147449e",
+    "example_nordland_both_wrong.png": "846dacb4134e64c2ebd911d4737aef68655a081d9556e6b2492a083c120387ea",
+    "example_nordland_harm.pdf": "af6743eaeda1c96896432cd5cc1035eff36cd39ef750259571100bcd9b13c5e8",
+    "example_nordland_harm.png": "9a15e241006f4f5ed83e2a084f083a79d226348baca3862b58032f14fc91437d",
+    "example_nordland_rescue.pdf": "1a5b743570dadfe98d588c75a7765516c199cd3681b59ed7cd94e7fe17236bed",
+    "example_nordland_rescue.png": "b2b2ce958613b32286b02f847ba0748231f35d179c6648c37a6ebc62ba852c50",
+    "final_accuracy_latency.pdf": "6699ce42e39bc3d2155c0a9bd4cce8ea1dcd1ca2e0aaab3f7abef24c4962a529",
+    "final_accuracy_latency.png": "7cf27f783546c0b750d529eda3724aa91bc9d13c44bf18e4fc64c174991df859",
+    "final_complementarity.pdf": "eedb763a33cc4f949ea174836575438a325d4f46923126055c63132bf92ce7a9",
+    "final_complementarity.png": "07f6fc482eebc253c3045a77759d173d5b59c423a5939a981bf00979543530c5",
+    "final_invocation_drift.pdf": "cfb55689c117fb9b4673703165f74f5df6bbb88bb118b140264b54bbe1d98389",
+    "final_invocation_drift.png": "bf1a2defdabaeadc2e8a9a4a3f7b79a229d11725fc583936f536cbe06748d72a",
+    "matching_examples.json": "38250961d2f194f80cc7e59180dc53680187f4177bbd70a1e8b0f972ec563231"
+  }
+}

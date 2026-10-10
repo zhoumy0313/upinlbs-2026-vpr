@@ -8,3 +8,26 @@ cache/
 data/raw/
 data/downloads/
 outputs/
+
+# Downloadable or regenerated research assets stay outside ordinary Git.
+*.pth
+*.pt
+*.ckpt
+*.npy
+*.npz
+*.zip
+!artifacts/evidence/execution_evidence_20261010.zip
+
+# Local credentials and LaTeX build intermediates.
+.ssh/
+.env
+.env.*
+auth.json
+*.pem
+*.key
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz

@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "checked_at": "2026-10-10T19:47:05.201712+08:00",
+  "scope": "User-requested local research artifacts and <=6-page English working draft; human-author submission review is not claimed",
+  "requirement_evidence": {
+    "existing_Ubuntu_environment_and_GPU_audit_preserved": "P0 original preservation acceptance, recorded environment/driver/network/Python audits and CUDA probe; no system configuration changes in subsequent project commands",
+    "isolated_environment_units_and_official_CosPlace_toy": "P0 accepted repeat: 12 tests, 17 gallery/5 queries, matching ranks reproduced",
+    "pipeline_data_ID_ground_truth_and_retrieval": "P1 accepted decoding/manifests and self-retrieval repeat; GTsoft custom-tolerance distinction preserved",
+    "frozen_baseline_reproduction": "P2 both models repeated identically in declared 224-pixel setting, 22 tests, cache-fault guards; original-paper numeric reproduction not claimed",
+    "problem_analysis_method_implementation_controls_and_ablations": "P3 both pairs and all policies/seeds, one validation-selected replacement, negative results and literature limitations retained; universal improvement not claimed",
+    "freeze_and_final_experiments": "Actual user confirmation predates P4 access; protected scientific package validates; two complete independent audits agree for all 85000/107100/510 records",
+    "real_runtime_and_matching_explanation": "Actual three-pass encoding logs, startup/memory diagnostics, eight final matching strips and five official toy strips are in archive",
+    "paper_source_citations_disclosure_compile": "Current source matches final-experiment provenance; native compiler success and reference audit retained; AI use disclosed",
+    "at_most_six_page_PDF_fonts_layout_and_numbers": "User-exported PDF is 5 pages including references, all 19 fonts embedded, all pages inspected, final 100 table cells match logs",
+    "official_requirements_checked_and_uncertainty_documented": "Archived official frontend hash and 6-page requirement verified; unstated details remain explicit author-review items",
+    "full_local_delivery_code_commands_logs_artifacts": "Complete archive CRC and every member hash independently checked; current source/PDF exactly included",
+    "no_unauthorized_external_action": "Local artifacts only; no submission, payment, copyright signing, author invention or outbound messaging"
+  },
+  "paper_pages": 5,
+  "archive_sha256": "554152958c741944388b80a2df6a8cdc6c61455e7b8bb0d2478d6808f69f5041",
+  "archive_files": 695,
+  "remaining_required_local_work": [],
+  "remaining_author_submission_review": [
+    "Other authors and correspondence",
+    "Contribution and interpretation",
+    "Official anonymity, paper-size and exact deadline details"
+  ],
+  "contribution_limitation": "Small selector implemented and evaluated; final tests do not prove universal improvement or guarantee conference acceptance."
+}
