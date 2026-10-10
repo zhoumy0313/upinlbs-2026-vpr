@@ -194,7 +194,7 @@ def main():
     data={};sources={}
     for key,statekey in keys.items():
         path='outputs_v2/'+state[statekey]+'/'+('gallery_identities.json' if key=='gallery' else 'metrics.json')
-        data[key],sha=read_evidence(path);sources[key]=dict(path=path,sha256=sha,role='development' if key in ['g1','g2','g3','smr'] else 'independent real latency' if key=='latency' else 'independent metadata/gallery' if key in ['audit','gallery'] else 'independent frozen accuracy')
+        data[key],sha=read_evidence(path);sources[key]=dict(path=path,sha256=sha,role='development' if key in ['g1','g2','g3','smr'] else 'independent real latency' if key=='latency' else 'independent metadata/gallery' if key in ['audit','gallery','geo'] else 'independent frozen accuracy')
     outcome=state.get('research_outcome',data['test']['outcome'])
     target=ROOT/'paper/revisions'/a.revision;target.mkdir(parents=True,exist_ok=False)
     run=Run(ROOT,'g5_manuscript_'+a.variant,dict(revision=a.revision,variant=a.variant,outcome=outcome,primary_outcome=data['test']['outcome']),sources);print(run.id,flush=True)
@@ -288,9 +288,14 @@ Table~\ref{tab:radius} keeps the same $1,456$ queries at all prescribed radii. A
     record('protocol.GPS_UTM_max_difference',data['geo']['maximum_GPS_reprojection_difference_m'],'geo','maximum_GPS_reprojection_difference_m','.5f')
     if a.variant in ['r02','r03','empirical']:
         text=text.replace('The empirical conclusion is limited but reproducible:', 'The paired ledgers support the following limited empirical conclusion:')
-        text=text.replace('and relative-index velocity', 'and relative-index velocity')
+        text=text.replace('The source-pinned receptiveness classifier has very few examples of some training outcomes;', 'The source-pinned classifier has only three harmful-sequence and six both-wrong training examples before resampling;')
+        text=text.replace('This supports reporting window and motion sensitivity while preserving the original selection and unfavorable evidence.', 'This supports reporting window and motion sensitivity while preserving the original selection and unfavorable evidence. The tighter-radius reversal also cautions against treating a correct broad-neighborhood endpoint as precise localization.')
     if a.variant in ['r03','empirical']:
         text=text.replace('All $24$ independent configurations', 'All $24$ predeclared independent configurations')
+        text=text.replace('The current-frame heuristic', 'The causal heuristic')
+        text=text.replace('supports causal temporal baselines', 'supports protocol-specific temporal baselines')
+        text=text.replace('Ordered histories improve the corresponding retrieval task on both datasets, while shuffled histories degrade the long window.', 'Ordered histories exceed shuffled histories under each dataset\'s primary protocol; this control does not negate the selected trajectory\'s tighter-radius failure.')
+        text=text.replace('Real Batch-One Deployment Cost', 'Measured Batch-One Pipeline Cost')
     if a.variant=='empirical':text=text.replace('Causal Temporal Matching under Protocol Transfer:', 'Empirical Findings on Causal Temporal Matching:')
     for token,value in replacements.items():text=text.replace('@@'+token+'@@',value)
     assert '@@' not in text
@@ -300,7 +305,10 @@ Table~\ref{tab:radius} keeps the same $1,456$ queries at all prescribed radii. A
     for match in re.finditer(r'\\bibitem\{([^}]+)\}\s*(.*?)(?=\\bibitem|$)',BIB,re.S):
         key,citation=match.groups();title=re.search(r'``(.*?)\'\'',citation,re.S).group(1)
         year=re.search(r'\b(?:19|20)\d{2}\b',citation).group(0)
-        companion.append('@misc{'+key+',\n title={'+title+'},\n year={'+year+'},\n note={'+citation.strip()+'}\n}')
+        authors=citation.split('``')[0].rstrip(', ')
+        if r'\emph{et al.}' in authors:authors=authors.replace(r'\emph{et al.}','and others')
+        elif ', ' in authors:authors=' and '.join(part.removeprefix('and ') for part in authors.split(', '))
+        companion.append('@misc{'+key+',\n author={'+authors+'},\n title={'+title+'},\n year={'+year+'},\n note={'+citation.strip()+'}\n}')
     assert len(companion)==16
     (target/'references.bib').write_text('\n'.join(companion)+'\n')
     evidence=dict(revision=a.revision,created_utc=utc_now(),freeze=state['freeze_directory'],outcome=outcome,primary_protocol_outcome=data['test']['outcome'],sources=sources,numeric_cells=ledger,
@@ -312,8 +320,8 @@ Table~\ref{tab:radius} keeps the same $1,456$ queries at all prescribed radii. A
             dict(id='AI_and_human_review',sources=['user authorship reply','IEEE AI policy source receipt'],interpretation='code/analysis/text AI assisted; human scientific and authorship review pending')])
     (target/'paper_numeric_evidence.json').write_text(json.dumps(evidence,indent=2,allow_nan=False))
     with (target/'numeric_cells.csv').open('w',newline='') as stream:w=csv.DictWriter(stream,fieldnames=list(ledger[0]));w.writeheader();w.writerows(ledger)
-    (target/'CHANGELOG.md').write_text(f'# {a.revision}\n\n{utc_now()}. Outcome {data["test"]["outcome"]}; empirical paper, no adaptive-superiority claim. Variant {a.variant}. Metrics unchanged across revisions; all displayed values generated from exact frozen/development source cells. r02 clarifies claim bounds; r03 clarifies predeclaration and prepares format/numeric audit; empirical retains alternate discussion title. Native compiler and independent PDF checks follow. Sources/hashes in paper_numeric_evidence.json.\n')
-    run.write('metrics.json',dict(revision=a.revision,numeric_cells=len(ledger),source_sha256=digest(target/'main.tex'),outcome=data['test']['outcome'],PDF_compilation_pending=True))
+    (target/'CHANGELOG.md').write_text(f'# {a.revision}\n\n{utc_now()}. Overall Outcome {outcome}, primary25m automated label {data["test"]["outcome"]}; empirical paper, no adaptive-superiority claim. Variant {a.variant}. Metrics unchanged across revisions; all displayed values generated from exact frozen/development source cells. r02 clarifies claim bounds; r03 clarifies predeclaration and prepares format/numeric audit; empirical retains alternate discussion title. Native compiler and independent PDF checks follow. Sources/hashes in paper_numeric_evidence.json.\n')
+    run.write('metrics.json',dict(revision=a.revision,numeric_cells=len(ledger),source_sha256=digest(target/'main.tex'),outcome=outcome,primary_protocol_outcome=data['test']['outcome'],PDF_compilation_pending=True))
     run.write('checks.json',dict(passed=True,all_metrics_generated_from_actual_source_cells=True,no_remaining_placeholders=True,old_paper_not_modified=True))
     (run.path/'per_query.csv').write_bytes((target/'numeric_cells.csv').read_bytes());(run.path/'interpretation.md').write_text('Versioned empirical draft from frozen independent evidence. Negative adaptive finding retained. Source and number audit passed; PDF/human checks pending, no submission implied.\n')
     update_state(ROOT,paper_revision=a.revision,latest_run_id=run.id)
