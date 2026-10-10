@@ -1,0 +1,312 @@
+Endpoint Drift and Evaluation Sensitivity in Causal
+ Visual Place Recognition: A Reproducible Study
+                                                          Mingyang Zhou
+                                          University of Chinese Academy of Sciences
+                                         Additional authors and correspondence pending
+
+
+   Abstract—Sequence matching can improve visual place recog-           We ask whether a coarse temporal endpoint usually has a
+nition while displacing its selected reference endpoint under        valid neighboring reference, whether a simple current-frame
+a strict geographic matching threshold. We examine whether           reorder already extracts that opportunity, and whether an
+current-frame visual evidence can refine a coarse causal sequence
+prediction without adding an encoder. On already seen St Lucia       explicit temporal-support constraint adds value beyond strong
+data, a radius-four reference neighborhood covers 369 of 372         fixed choices. We predeclare finite grids, common masks
+errors made by a fixed nine-image trajectory at a 10 m threshold.    and a continuation rule before the new development outputs.
+This is a diagnostic upper bound, not algorithm recall. We           The contribution offered here is an empirical mechanism
+execute a bounded comparison of fixed temporal, encoder-fusion,      and protocol audit. Sequence reasoning, local reranking and
+naive local and score-support-constrained policies. On 656 seen
+validation queries, the selected constrained candidate retrieves     confidence-based trust are established; we claim neither their
+598 correctly at 10 m; the strongest non-candidate control           invention nor a new representation network.
+retrieves 644. All configurations and unfavorable results are
+retained. Actual batch-one image pipelines have mean latencies
+11.02 ms for CosPlace and 14.67 ms for the constrained candidate
+on the audited laptop GPU. New geographic validation could
+                                                                                          II. R ELATED W ORK
+not be completed through the audited public sources, so the
+evidence does not establish an independently supported method           CosPlace [2], EigenPlaces [3] and DINOv2 [4] supply
+contribution. The study separates candidate availability, baseline
+strength, label sensitivity and actual image-pipeline cost.
+                                                                     frozen descriptors in our compact configurations. Their orig-
+   Index Terms—visual place recognition, causal sequence match-      inal best benchmark settings are not reproduced by this
+ing, endpoint refinement, baseline comparison, reproducibility       low-resolution experiment. The UPINLBS ResNet–Sinkhorn
+                                                                     work [12] addresses indoor global descriptors; only its pub-
+                                                                     lisher metadata was accessible, restricting detailed novelty
+                      I. I NTRODUCTION                               comparison.
+   Visual place recognition (VPR) retrieves a reference image           SeqSLAM [5] and OpenSeqSLAM2.0 [6] establish se-
+depicting a previously visited place [1]. A global image             quence trajectory reasoning and speed hypotheses. Our past-
+descriptor provides an economical ranking, but appearance            and-current cosine average is a disclosed descriptor-score
+ambiguity can leave the best single-image match incorrect. A         adaptation, rather than an official reproduction of their
+sequence of past observations can support a coherent reference       grayscale normalization. Delta Descriptors [7] transform tem-
+trajectory. This motivates temporal matching, provided that          poral changes; their centered observation convention differs
+past evidence does not erase current-frame discrimination            from our causal endpoint.
+between nearby places.                                                  STA-VPR [16] aligns CNN feature strips spatially and
+   The evaluation protocol determines what constitutes a suc-        relaxes temporal alignment endpoints through local matching
+cessful endpoint. A prediction can identify the correct route        DTW. AdaptSeqVPR [17] describes variable sequence steps
+vicinity yet fail a tighter geographic threshold. Reference-         and a trained candidate discriminator in its publisher abstract;
+index velocity also depends on image sampling, rather than           full text and official executable code were not verified. Thus,
+physical speed. These distinctions become important when             variable speed and flexible endpoints cannot be claimed as new
+a long sequence selected on an ordinally aligned railway             ideas here. SMR [8] learns when sequence matching helps or
+transfers to an irregularly sampled urban reference route with       harms; its preserved earlier code adaptation is separate from
+loops and geographic labels.                                         the present untrained local-score candidate.
+   Our earlier frozen experiments found that a nine-image fixed         Local-image reranking [9] and similarity-distribution uncer-
+trajectory performs strongly on Nordland, but short-window           tainty [10] further constrain novelty. RRF [11] is a mature
+controls outperform it under strict St Lucia labels. These           ranking fusion control. Our candidate’s particular support
+observations are already known: this study treats both datasets      inequality is tested against naive local visual and fixed lo-
+as seen development data. It does not rebrand the previous           cal/global blending. A new combination of established op-
+external test as independent because a new paper or new split        erations, or improvement over an unfavorable long-window
+is used.                                                             baseline, is insufficient evidence of a method contribution.
+              Current image
+                                   Frozen encoder          Gallery cosine            [0,700) for development, a [700,800) buffer unused for param-
+                                   unit descriptor               St
+                                                                                     eter selection, and [800,1464) for validation; common denom-
+             Stable visual rank   Top-H + radius r       Past/current scores         inators are 692 and 656 after independent split resets. Whole-
+               reference IDs          support ε               causal Tt              stream diagnostic comparisons have 1456 common queries.
+                                                                                     This conditional development selection is not a prospective
+Fig. 1. Image input to reference ranking. Query coordinates, labels and
+future images are absent. Geographic truth is used only after predictions for
+                                                                                     blind test.
+evaluation.                                                                             Euclidean UTM label distance defines 10 m primary and
+                                                                                     25 m auxiliary positives; 5/15/50 m are declared sensitivities.
+                                                                                     At each radius every method shares the same no-positive
+                 III. C AUSAL E NDPOINT P OLICIES                                    exclusion and startup mask; no-positive counts and full-stream
+   For image I, frozen encoder f outputs unit descriptor z(I).                       behavior are retained. Radius-dependent exclusions must be
+Current cosine scores are St (j) = z(qt )⊤ z(dj ). A single-                         considered when comparing thresholds. Coordinates enter of-
+frame rank sorts St stably in canonical gallery order. The                           fline evaluation only. Reprojection of rounded St Lucia labels
+causal coarse score is                                                               differs by up to 1.48305 m; a ±2 m threshold band is recorded.
+                                                                                     This reprojection check establishes rounding consistency, not
+                                 L−1
+                               1 X                                                  a bound on physical GPS sensor error, which is not surveyed
+             Tt (j) = max            St−ℓ j − rint(vℓ) .                       (1)   here. Retrieval success is not estimated pose error or a 6DoF
+                           v∈V L
+                                    ℓ=0
+                                                                                     RMSE.
+Only current and past query scores are used; rint rounds ties to                        Reference-coordinate spacing is irregular: adjacent-gallery
+even. Invalid or traversal-crossing reference paths have score                       median 11.42 m and maximum 17.70 m, with source-
+−∞. History resets at each split and query traversal. Before                         frame gaps up to 345. Geographic route revisits can
+a complete window, the current visual rank is used.                                  make distant reference indices correspond to nearby po-
+   Stable Top-H distinct valid endpoints define Ct (H, r), the                       sitions. The endpoint-to-visual index difference is there-
+union of their bounded same-traversal reference-index neigh-                         fore diagnostic only, not a metric localization error. All
+borhoods, without nonmaximum suppression. Overlapping in-                            cache loads verify image-ID alignment, array hashes,
+dices are deduplicated. We consistently remove indices with                          model/checkpoint/source/preprocessing identities and manifest
+nonfinite Tt from all local policies. This boundary convention                       hashes. Required historical St Lucia Top10 predictions and
+is explicit: even an arbitrarily large support tolerance cannot                      Nordland key counts reproduce exactly. An independent scalar
+restore a reference excluded by an invalid path. The radius                          trajectory calculation, stable ranking check and CSV reag-
+counts reference images, not metres. Empty candidates or                             gregation check correctness; no-positive/startup behavior is
+startup fall back to the visual ranking.                                             recorded without method-dependent exclusions.
+   R0 sorts Tt . R1 sorts current St inside Ct ; R3 is its H = 1
+                                                                                     B. Finite Search and Strong Controls
+alias. R2 sorts (1 − γ)(St + 1)/2 + γ(Tt + 1)/2 inside the
+same pool. The candidate P constrains admissibility:                                    All models use RGB ImageNet normalization and a bilinear
+                                                                                     antialiased 224-square tensor warp. CosPlace ResNet18/512,
+             At = {j ∈ Ct : Tt (j) ≥ max Tt (k) − ε}.                          (2)   EigenPlaces ResNet50/512 and DINOv2 ViT-S14 CLS/384 are
+                                                     k
+                                                                                     existing source/checkpoint-fingerprinted frozen encoders. No
+It ranks At by current St , then appends every remaining refer-                      encoder or new classifier is trained.
+ence in original visual order. R1/R2 use the same completion                            Required temporal controls include L9, v = 1.2 and full
+convention. All methods produce a full permutation with no                           V = {.8, 1, 1.2} at L = 3, 5, 9, alongside current-frame/global
+duplicate or missing reference. At ε = 0, maximum-T ties                             fixed blending, three A+B weights, RRF and shuffled past-
+are resolved by S; once ε exceeds all finite candidate gaps, P                       score histories and reversed reference motion. With ties-to-
+equals R1. Neither γ nor ε is a probability or physical distance.                    even rounding, all three L3 velocity hypotheses yield offsets
+                                                                                     [0, 1, 2]; their identical paths preclude attributing an L3 gain
+            IV. P ROTOCOL AND R EPRODUCIBILITY                                       to distinct speed adaptation.
+                                                                                        The declared local grid is H ∈ {1, 3}, r ∈ {1, 2, 4, 8}, γ ∈
+A. Seen Data and Ground Truth
+                                                                                     {0, .25, .5, .75, 1} and ε ∈ {0, .01, .03, .06}. R1/R2 use all four
+   Nordland-Part-2020 [15] provides 1750 summer references                           temporal backends, totaling 32 and 160 configurations. P has
+and aligned winter queries. Original training ordinals 1–600                         32 configurations on the original L9 backbone; this budget
+and validation 701–1000 remain seen; main positives are                              restriction precedes outputs. Selection is lexicographic seen-
+within five reference ordinals. This is an index convention, not                     validation 10 m, then 25 m, then Nordland validation, then
+geographic distance. All validation methods exclude the first                        deterministic smaller parameters. P must exceed the strongest
+eight queries after history reset, giving 292 common queries.                        reasonable non-P control by at least two strict correct queries
+   St Lucia [13], in the source-pinned formatted bench-                              without auxiliary loss or more than one Nordland loss versus
+mark [14], contains 1549 references and 1464 ordered queries.                        fixed L9. This is a continuation rule, not a significance test.
+Its earlier results are already seen. V3 uses zero-based queries                     No further module is added after candidate failure.
+C. Actual Image-Pipeline Measurement                                                                                 Visual A    Fixed L9
+
+
+
+
+                                                                     Reference-label distance (m)
+   The frozen comparisons run on an RTX 3060 Laptop GPU                                                              Full L3    Candidate P
+
+using PyTorch 2.6.0/CUDA 12.4. Each receives 20 warm
+images and three complete 1464-image traversals at batch                                            20
+one, with CUDA synchronization and CPU/BLAS threads
+fixed to one. Every timed query reopens/decodes the image,
+                                                                                                    10
+prepares its tensor, runs the required encoder, transfers its
+descriptor, computes similarity, updates causal history and
+sorts the full gallery. Accuracy caches are used only for                                            0
+checks outside the timed interval. Model loading and a fresh                                             q8         q9              q10       q16
+batch 16 gallery build are measured separately. Measurements
+include this implementation’s audit metadata, rather than a       Fig. 2. Real seen cases in traversal order: q8/q16 have repairable neigh-
+                                                                  borhoods; q9/q10 have no positive in the H1/r16 finite-T pool. Labels are
+theoretical minimum matcher cost. The first real pass supplies    geographic retrieval distances, not estimated poses. Photos and full IDs remain
+the reported whole-stream prediction ledger; repeat and cache-    local in the case evidence.
+score discrepancies are retained. RSS includes audit arrays
+and is separate from CUDA allocated/reserved memory. File
+                                                                  the named categories. This correction affects interpretation,
+cache is warm and GPU clocks are not locked; millisecond
+                                                                  not scores, parameters or prediction selection. Photographs
+differences are descriptive, not deployment guarantees.
+                                                                  are available locally through their image IDs/rebuild script;
+           V. R ESULTS AND M ECHANISM AUDIT                       uncertain redistribution rights prevent including them in this
+A. Candidate Availability versus Algorithm Value                  public draft. Numeric case panels preserve the actual failure
+                                                                  evidence.
+   On 1456 seen St Lucia diagnostic queries at 10 m, fixed L9
+has 372 errors. Its H1, r4 neighborhood covers 369 of these;         All prescribed tolerances, distance medians/P90/P95, near-
+equal-size seed-zero uniform reference candidates cover six.      boundary counts, rescues/harms and contiguous 100-query
+The oracle fraction 99.19% describes available positives, not     blocks are retained. Blocks are descriptive because adjacent
+a realizable policy. Of the paired A/T outcomes, 347 visual       video frames are correlated; neither query count nor three tim-
+successes become temporal errors and 47 visual errors are         ing repeats is treated as independent trials. The exact winning
+rescued. The 25 m comparison changes to 20 harms and 34           coarse velocity/path offsets are recorded in the frozen real-
+rescues. These observations require matched thresholds and do     image ledger; earlier development ledgers’ path_offsets
+not prove geometric localization accuracy.                        denote the first hypothesis and are not claimed to be winning
+   The selected P uses H = 3, r = 1, ε = 0.06 and retrieves       paths. The archival audit preserves failed test collection,
+598/656 strict validation queries; the strongest non-P control    public-source access and oversized-ZIP checkpoint records.
+retrieves 644/656. Its net difference is -46 correct queries.     The first complete ZIP was kept unchanged and divided
+The declared development continuation gate is not met. This       into sub100MB byte chunks; subsequent lossless ZIPs have
+does not establish novelty or external generalization. Table I    indexed parts and checksums. No negative configuration,
+uses the declared seen-validation splits. A strong short-window   difficult query, old manuscript or freeze was overwritten.
+or local-blend control must be compared before interpreting       The corresponding human review checklist marks independent
+an improvement over the original L9. All configuration-level      generalization, partial source access, photo rights and final
+and per-query evidence, including unsuccessful candidates,        conference requirements unresolved.
+remains available.                                                                                       VI. D ISCUSSION AND C ONCLUSION
+B. Cases, Sensitivity and Boundary Failure                           A broad candidate oracle establishes that local reference
+   Eight real cases follow the declared first-two-in-traversal-   availability is often sufficient; it does not establish that tempo-
+order rule for repairable drift, unavailable H1-neighborhood      ral support filtering beats current-frame ranking or a short fixed
+truth, visual success harmed by sequence matching, and mul-       window. Our bounded implementation tests that distinction
+tiwindow disagreement. Query 16 illustrates nearby endpoint       against mature controls, with complete causal rankings and ex-
+drift: visual/L3 reference distance is 6.9 m versus 21.8 m for    act query ledgers. The strongest fixed or simple local method,
+fixed L9. Queries 9 and 10 expose the finite-path boundary:       rather than a weak historical method, sets the incremental
+valid sequence indices can exclude early nearby references,       contribution bar.
+while other loops provide competing reference identities. A          All accuracy evidence is development or descriptive seen-
+reference-index difference is therefore not geographic error,     data evidence. Oxford RobotCar’s official RTK source [18]
+especially with route revisits.                                   is promising, but camera downloads require registration. The
+   The initial case audit used H3 for its unavailable-            SFU Mountain source [19] supplies licensed ordered images
+neighborhood category, found no matching query, and ex-           and manual place correspondences; necessary official archives
+plicitly flagged fallback examples. A preserved supplement        failed normal public HTTP/HTTPS access in our bounded au-
+applies the specified Top1-centered H1 condition and verifies     dit. SFU’s approximate annotation spacing and GPS accuracy
+                                                             TABLE I
+A LREADY SEEN DEVELOPMENT VALIDATION , NOT INDEPENDENT TESTING . S T L UCIA HAS 656 QUERIES AT 10/25 M ; N ORDLAND HAS 292 AT ORDINAL
+ TOLERANCE FIVE . R1/R2/P USE DETERMINISTIC DEVELOPMENT- SELECTED SETTINGS ; PERCENTAGES ARE DERIVED FROM CORRECT COUNTS . R EAL
+              SEEN - STREAM TIMING INCLUDES STARTUP, MEASURED AS MEAN / MEDIAN /P95 MS OVER 4392 QUERIES PER METHOD .
+
+
+            Method                  SL10 correct    SL10 %      SL25 %    Nordland %   Mean ms     Median ms     P95 ms
+            CosPlace A                        621     94.66       97.71        71.92       11.02         11.02     11.33
+            EigenPlaces B                     635     96.80       99.24        84.59       14.04         14.06     14.28
+            DINOv2                            229     34.91       42.07        52.05       14.30         14.27     14.72
+            RRF                               630     96.04       99.09        83.22       23.62         23.61     23.92
+            A+B, B weight .75                 639     97.41       99.70        85.62       23.37         23.38     23.60
+            Fixed L9, v1.2                    495     75.46       98.93        99.66       12.14         12.13     12.36
+            Full-velocity L3                  641     97.71      100.00        84.59       12.10         12.10     12.28
+            Full-velocity L5                  638     97.26      100.00        89.73       12.38         12.37     12.59
+            Full-velocity L9                  626     95.43       99.85        97.26       13.19         13.28     13.55
+            Global L9 blend .75               593     90.40       99.70        98.97       12.29         12.29     12.49
+            Local visual R1                   636     96.95      100.00        84.59       15.17         15.17     15.35
+            Local fixed blend R2              644     98.17      100.00        82.53       14.93         14.93     15.14
+            Support candidate P               598     91.16       99.54        97.60       14.67         14.67     14.86
+
+
+
+                              TABLE II
+     P RESCRIBED SUPPORT / LOCAL ABLATIONS ON SEEN S T L UCIA
+   VALIDATION (656 COMMON QUERIES ). E VERY VALUE REFERS TO A
+   COMPLETE FROZEN RANKING . F ULL 224- CONFIGURATION GRID IS
+                             ARCHIVED .
+
+
+       Policy                   10m correct    25m correct
+       H1, r1, ε0                      495            649
+       H1, r1, ε0.01                   502            648
+       H1, r1, ε0.03                   526            649
+       H1, r1, ε0.06                   564            651
+       H3, r8, ε.06                    598            653
+       P pool, no support              631            655
+       P pool, fixed blend .5          630            655
+       P pool, fixed blend 1           495            649
+
+
+
+would not validate strict 10 m geographic improvement even
+if those bundles became available. No new independent image
+performance is reported, and no alternative is selected using
+model scores.
+   Consequently, this is a working empirical draft, not an
+independently validated new-method submission. Correlated
+video frames, rounded geographic labels, reference loops, one
+limited P backbone grid, unavailable external data and partial
+related-paper access restrict the conclusion. Actual evidence
+and prior manuscripts are preserved for human review. Further
+external validation would require a fresh metadata audit and
+prospective freeze, rather than retuning on an opened test.
+                     ACKNOWLEDGMENT
+   OpenAI ChatGPT/Codex assisted with the V3 implementa-
+tion, experimental execution and analysis, figures, and draft-
+ing/editing of the abstract and Sections I–VI. Human authors
+must review all claims, citations and AI-assisted content and
+remain responsible for the manuscript. Author list/order, cor-
+respondence, affiliation wording and funding require human
+confirmation; no submission or copyright action has been
+performed.
+                              R EFERENCES
+ [1] S. Schubert, P. Neubert, S. Garg, M. Milford, and T. Fischer, “Visual
+     place recognition: A tutorial,” IEEE Robot. Autom. Mag., vol.31, no.3,
+     pp.139–153, 2024, doi:10.1109/MRA.2023.3310859.
+ [2] G. Berton, C. Masone, and B. Caputo, “Rethinking visual geo-
+     localization for large-scale applications,” in CVPR, 2022, pp.4878–4888.
+ [3] G. Berton, G. Trivigno, B. Caputo, and C. Masone, “EigenPlaces:
+     Training viewpoint robust models for visual place recognition,” in ICCV,
+     2023, pp.11080–11090.
+ [4] M. Oquab et al., “DINOv2: Learning robust visual features without
+     supervision,” arXiv:2304.07193, 2023.
+ [5] M. J. Milford and G. F. Wyeth, “SeqSLAM: Visual route-based naviga-
+     tion for sunny summer days and stormy winter nights,” in ICRA, 2012,
+     pp.1643–1649, doi:10.1109/ICRA.2012.6224623.
+ [6] B. Talbot, S. Garg, and M. Milford, “OpenSeqSLAM2.0: An open
+     source toolbox for visual place recognition under changing conditions,”
+     arXiv:1804.02156v2, 2018.
+ [7] S. Garg, B. Harwood, G. Anand, and M. Milford, “Delta descrip-
+     tors: Change-based place representation for robust visual localiza-
+     tion,” IEEE Robot. Autom. Lett., vol.5, no.4, pp.5120–5127, 2020,
+     doi:10.1109/LRA.2020.3005627.
+ [8] S. Hussaini, T. Fischer, and M. Milford, “Improving visual place
+     recognition with sequence-matching receptiveness prediction,” in IROS,
+     2025, pp.11073–11080, doi:10.1109/IROS60139.2025.11247581.
+ [9] D. Sferrazza, G. Berton, G. Trivigno, and C. Masone, “To match or not to
+     match: Revisiting image matching for reliable visual place recognition,”
+     in CVPR Workshops, 2025, pp.2874–2885.
+[10] E. Miller, M. Milford, M. B. Hafez, S. Ramchurn, and S. Ehsan,
+     “Through the lens of doubt: Robust and efficient uncertainty estimation
+     for visual place recognition,” IEEE Robot. Autom. Lett., vol.11, no.5,
+     pp.5899–5906, 2026, doi:10.1109/LRA.2026.3674688.
+[11] G. V. Cormack, C. L. A. Clarke, and S. Büttcher, “Reciprocal rank
+     fusion outperforms condorcet and individual rank learning methods,” in
+     SIGIR, 2009, pp.758–759, doi:10.1145/1571941.1572114.
+[12] Y. Wei, Y. Li, and Z. Zheng, “Balancing accuracy and efficiency:
+     A ResNet–Sinkhorn framework for extracting global image descrip-
+     tors in indoor visual place recognition,” in UPINLBS, 2025, pp.1–6,
+     doi:10.1109/UPINLBS68186.2025.11468446.
+[13] M. J. Milford and G. F. Wyeth, “Mapping a suburb with a single camera
+     using a biologically inspired SLAM system,” IEEE Trans. Robot., vol.24,
+     no.5, pp.1038–1053, 2008, doi:10.1109/TRO.2008.2004520.
+[14] G. Berton, R. Mereu, G. Trivigno, C. Masone, G. Csurka, T. Sattler, and
+     B. Caputo, “Deep visual geo-localization benchmark,” in CVPR, 2022,
+     pp.5396–5407.
+[15] S.        Garg,        “Nordland-Part-2020,”         Zenodo,        2020,
+     doi:10.5281/zenodo.4016653.
+[16] F. Lu, B. Chen, X.-D. Zhou, and D. Song, “STA-VPR: Spatio-temporal
+     alignment for visual place recognition,” IEEE Robot. Autom. Lett., vol.6,
+     no.3, pp.4297–4304, 2021, doi:10.1109/LRA.2021.3067623.
+[17] H. Li, G. Peng, J. Zhang, S. Vaikundam, and D. Wang, “AdaptSeqVPR:
+     An adaptive sequence-based visual place recognition pipeline,” in IROS,
+     2023, pp.3284–3289, doi:10.1109/IROS55552.2023.10341533.
+[18] Oxford Robotics Institute, “Oxford RobotCar Dataset: RTK ground
+     truth,” 2020. [Online]. Available: https://robotcar-dataset.robots.ox.ac.
+     uk/ground_truth/
+[19] J. Bruce, J. Wawerla, and R. Vaughan, “The SFU Mountain dataset:
+     Semi-structured woodland trails under changing environmental condi-
+     tions,” in ICRA Workshop on Visual Place Recognition in Changing
+     Environments, 2015.
+
