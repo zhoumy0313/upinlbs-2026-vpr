@@ -84,3 +84,44 @@ Run g4_metadata_preflight_20261010T165525Z_4f8cf68e; actual HTTP status/errors a
     }
   ]
 }
+
+## Bounded GET verification
+g4_public_GET_retry_20261010T170123Z_f5b7df13
+[
+  {
+    "url": "http://autolab.cmpt.sfu.ca/files/datasets/sfu-mountain-journal-version/place-matches/places-stereo_left-a.tar",
+    "client": "standard",
+    "error": "ReadTimeout: HTTPConnectionPool(host='127.0.0.1', port=7890): Read timed out. (read timeout=10)",
+    "seconds": 10.012925718998304
+  },
+  {
+    "url": "http://autolab.cmpt.sfu.ca/files/datasets/sfu-mountain-journal-version/place-matches/places-stereo_left-a.tar",
+    "client": "direct",
+    "error": "ConnectTimeout: HTTPConnectionPool(host='autolab.cmpt.sfu.ca', port=80): Max retries exceeded with url: /files/datasets/sfu-mountain-journal-version/place-matches/places-stereo_left-a.tar (Caused by ConnectTimeoutError(<HTTPConnection(host='autolab.cmpt.sfu.ca', port=80) at 0x7f55845aa230>, 'Connection to autolab.cmpt.sfu.ca timed out. (connect timeout=8)'))",
+    "seconds": 8.474005190997559
+  },
+  {
+    "url": "http://autolab.cmpt.sfu.ca/files/datasets/sfu-mountain-journal-version/zip/sfumd-dry-a-camera_stereo_left-0.3fps.tar",
+    "client": "standard",
+    "error": "ReadTimeout: HTTPConnectionPool(host='127.0.0.1', port=7890): Read timed out. (read timeout=10)",
+    "seconds": 10.008743117999984
+  },
+  {
+    "url": "http://autolab.cmpt.sfu.ca/files/datasets/sfu-mountain-journal-version/zip/sfumd-dry-a-camera_stereo_left-0.3fps.tar",
+    "client": "direct",
+    "error": "ConnectTimeout: HTTPConnectionPool(host='autolab.cmpt.sfu.ca', port=80): Max retries exceeded with url: /files/datasets/sfu-mountain-journal-version/zip/sfumd-dry-a-camera_stereo_left-0.3fps.tar (Caused by ConnectTimeoutError(<HTTPConnection(host='autolab.cmpt.sfu.ca', port=80) at 0x7f55845aac20>, 'Connection to autolab.cmpt.sfu.ca timed out. (connect timeout=8)'))",
+    "seconds": 8.020407969001099
+  },
+  {
+    "url": "http://autolab.cmpt.sfu.ca/files/datasets/sfu-mountain-journal-version/zip/sfumd-wet-a-camera_stereo_left-0.3fps.tar",
+    "client": "standard",
+    "error": "StopIteration: ",
+    "seconds": 3.0079092160012806
+  },
+  {
+    "url": "http://autolab.cmpt.sfu.ca/files/datasets/sfu-mountain-journal-version/zip/sfumd-wet-a-camera_stereo_left-0.3fps.tar",
+    "client": "direct",
+    "error": "ConnectTimeout: HTTPConnectionPool(host='autolab.cmpt.sfu.ca', port=80): Max retries exceeded with url: /files/datasets/sfu-mountain-journal-version/zip/sfumd-wet-a-camera_stereo_left-0.3fps.tar (Caused by ConnectTimeoutError(<HTTPConnection(host='autolab.cmpt.sfu.ca', port=80) at 0x7f55845e02e0>, 'Connection to autolab.cmpt.sfu.ca timed out. (connect timeout=8)'))",
+    "seconds": 8.01793232599448
+  }
+]

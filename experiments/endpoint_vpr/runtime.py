@@ -47,6 +47,7 @@ class Run:
             if not allow_failure:raise subprocess.CalledProcessError(p.returncode,argv)
         return p.returncode
     def finish(self,metrics,checks):
+        self.event('entrypoint_complete',dict(argv=sys.argv,actual_exit_code=0))
         self.write('raw_metrics.json',metrics);self.write('acceptance.json',checks)
         if not (self.path/'per_query.csv').exists():(self.path/'per_query.csv').write_text('run_id,status\n'+self.id+','+('pass' if checks.get('passed') else 'not_passed')+'\n')
         self.write('completion.json',dict(ended_utc=utc(),checks=checks))
@@ -61,15 +62,28 @@ def preserve_check():
     if errors:raise RuntimeError('BLOCKED_PRESERVE_OLD: '+str(errors))
     return len(rows)
 def publish(stage,run,report):
+    import shutil
     public=ROOT/'artifacts/v3'/stage;public.mkdir(parents=True,exist_ok=False)
-    text_ext={'.py','.json','.jsonl','.log','.csv','.xml','.yaml','.md','.txt'}
-    with zipfile.ZipFile(public/'evidence.zip','x',zipfile.ZIP_DEFLATED) as z:
+    pack=Run(stage+'_archive','lossless public evidence compression/splitting',dict(max_part_bytes=48*1024**2,zip_method='LZMA'),dict(scientific_run=run.id))
+    local=pack.path/'evidence.zip';text_ext={'.py','.json','.jsonl','.log','.csv','.xml','.yaml','.md','.txt','.actual'}
+    with zipfile.ZipFile(local,'x',zipfile.ZIP_LZMA) as z:
         for p in sorted(run.path.rglob('*')):
             if p.is_file() and p.suffix in text_ext and 'reading' not in p.parts:z.write(p,p.relative_to(ROOT).as_posix())
         assert z.testzip() is None
+    parts=[];size=local.stat().st_size;cap=48*1024**2
+    if size<=cap:
+        shutil.copyfile(local,public/'evidence.zip');parts=[dict(name='evidence.zip',bytes=size,sha256=sha(local))]
+    else:
+        with local.open('rb') as f:
+            i=0
+            while data:=f.read(cap):
+                i+=1;p=public/f'evidence.zip.part{i:03d}';p.write_bytes(data);parts.append(dict(name=p.name,bytes=len(data),sha256=sha(p)))
+    receipt=dict(format='ordered_byte_concatenation_of_standard_zip',zip_sha256=sha(local),zip_bytes=size,parts=parts,scientific_run=run.id,source_SHA256SUMS=sha(run.path/'SHA256SUMS'))
+    atomic(public/'archive_manifest.json',receipt)
     for name in ['raw_metrics.json','acceptance.json']:(public/name).write_bytes((run.path/name).read_bytes())
     (public/'SHA256SUMS').write_text(''.join(sha(p)+'  '+p.name+'\n' for p in sorted(public.iterdir()) if p.is_file()))
-    (ROOT/'docs/research_v3'/('G'+stage.removeprefix('g')+'_ACCEPTANCE.md')).write_text(report+'\n\nRun '+run.id+'; archive SHA '+sha(public/'evidence.zip')+'; exact commands/exits/logs in the public archive. Checkpoint follows this report; push receipt is recorded separately.\n')
+    pack.finish(receipt,dict(passed=True,zip_integrity_test_passed=True,all_parts_below_GitHub_limit=True))
+    (ROOT/'docs/research_v3'/('G'+stage.removeprefix('g')+'_ACCEPTANCE.md')).write_text(report+'\n\nRun '+run.id+'; archive SHA '+receipt['zip_sha256']+'; ordered parts and exact hashes in archive_manifest.json. Exact commands/exits/logs in archive. Checkpoint follows; push receipt is separate.\n')
 def checkpoint(stage):
     assert subprocess.check_output(['git','branch','--show-current'],cwd=ROOT,text=True).strip()==BRANCH
     run=Run(stage+'_checkpoint','authorized V3 branch backup',{},{});preserve_check()

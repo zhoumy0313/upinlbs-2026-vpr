@@ -28,7 +28,13 @@ def seen():
             scores[m]=align_by_ids(a,info['query_ids'],info['gallery_ids'],qids,gids)[start:end]
             provenance[m]=dict(score_path=str(p.relative_to(ROOT)),score_sha256=expected,original_identity=info)
             if is_sl:
-                fp=info['fingerprint'];assert sha(ROOT/fp['source']['checkpoint'])==fp['source']['checkpoint_sha256']
+                fp=info['fingerprint']
+            else:
+                cache=(ROOT/'outputs_v2/g1_diagnosis_20261010T131552Z_19ac45fe/dinov2') if m=='dinov2' else ROOT/'outputs/p3_eigenplaces_20261010_141736_ayAvV5'/m
+                assert sha(cache/'fingerprint.json')==info['cache_fp_sha256']
+                cache_fp=json.loads((cache/'fingerprint.json').read_text());assert cache_fp['manifest_sha256']==sha(NMAN);fp=cache_fp['model'];provenance[m]['full_cache_fingerprint']=cache_fp
+            assert sha(ROOT/fp['source']['checkpoint'])==fp['source']['checkpoint_sha256']
+            assert sha(ROOT/'src/vpr_research/encoders/frozen.py')==fp['adapter_source_sha256']
         if is_sl:
             qxy=np.array([[r['easting'],r['northing']] for r in q]);gxy=np.array([[r['easting'],r['northing']] for r in g]);dist=np.linalg.norm(qxy[:,None,:]-gxy[None,:,:],axis=-1);radii=[5,10,15,25,50];unit='metres';primary=10
         else:dist=np.abs(np.array([r['frame_index'] for r in q])[:,None]-np.array([r['frame_index'] for r in g])[None,:]);radii=[1,5,10];unit='frames';primary=5

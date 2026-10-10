@@ -29,8 +29,11 @@ class Strategy:
         elif self.kind=='control':self.temporal=Temporal(x['L'],x['velocities'],x['shuffled'])
         else:self.temporal=None
     def step(self,scores):
-        x=self.spec;s=np.asarray(scores['cosplace']);t=s;warm=False;meta=dict(candidates=[],eligible=[],fallback_reason='')
+        s=np.asarray(scores['cosplace']);t=s;warm=False
         if self.temporal:t,warm=self.temporal.step(s,self.traversals)
+        return self._rank_current(scores,t,warm)
+    def _rank_current(self,scores,t,warm):
+        x=self.spec;s=np.asarray(scores['cosplace']);meta=dict(candidates=[],eligible=[],fallback_reason='')
         if self.kind=='single':values=scores[x['encoder']];result=rank(values)
         elif self.kind=='rrf':values=rrf(s,scores['eigenplaces']);result=rank(values)
         elif self.kind=='AB':w=x['weight'];values=(1-w)*(s+1)/2+w*(scores['eigenplaces']+1)/2;result=rank(values)
@@ -43,6 +46,12 @@ class Strategy:
 
 def predictions(d,spec):
     tr=[r.get('traversal',r.get('traverse')) for r in d['g']];m=Strategy(spec,tr);out=[];metadata=[]
+    cache=d.setdefault('_temporal_cache',{})
+    key=spec.get('backend') if spec['kind']!='control' else spec['name']
+    if m.temporal and key not in cache:
+        cache[key]=[m.temporal.step(row,tr) for row in d['scores']['cosplace']]
     for i in range(len(d['q'])):
-        o,meta=m.step({k:v[i] for k,v in d['scores'].items()});out.append(o[:10]);metadata.append(meta)
+        scores={k:v[i] for k,v in d['scores'].items()}
+        o,meta=m._rank_current(scores,*cache[key][i]) if m.temporal else m.step(scores)
+        out.append(o[:10]);metadata.append(meta)
     return np.stack(out),metadata

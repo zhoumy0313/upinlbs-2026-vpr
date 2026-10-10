@@ -4,7 +4,9 @@ from .core import rank
 from .baselines import predictions
 
 def evaluate(d,spec,pred,metadata):
-    qn=len(d['q']);mask=np.arange(qn)>=8;distance=d['distance'];a=np.array([rank(s)[0] for s in d['scores']['cosplace']]);rows=[];metrics=[]
+    qn=len(d['q']);mask=np.arange(qn)>=8;distance=d['distance'];a=d.get('_A_top1')
+    if a is None:a=np.array([rank(s)[0] for s in d['scores']['cosplace']]);d['_A_top1']=a
+    rows=[];metrics=[]
     dd=distance[np.arange(qn)[:,None],pred]
     for radius in d['radii']:
         has=(distance<=radius).any(axis=1);valid=mask&has;hits=dd<=radius;ac=distance[np.arange(qn),a]<=radius

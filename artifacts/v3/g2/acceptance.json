@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "all_ledger_counts_recomputed": true,
+  "independent_scalar_ranking_verified": true,
+  "historical_top10_exact": true,
+  "GT_not_online_input": true
+}

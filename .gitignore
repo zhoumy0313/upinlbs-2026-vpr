@@ -48,3 +48,5 @@ outputs_v3/
 paper/revisions/v3_*/**/*.aux
 paper/revisions/v3_*/**/*.log
 paper/revisions/v3_*/**/*.out
+# Oversized first G2 public ZIP retained locally; exact byte chunks backed up separately.
+artifacts/v3/g2/evidence.zip

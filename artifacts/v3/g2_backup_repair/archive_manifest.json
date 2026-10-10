@@ -1,0 +1,24 @@
+{
+  "zip_sha256": "cf9eb3a3b2481bc74c2c17ae1c39aa0e75caaf58c6925cf30df5fe7e2a396654",
+  "zip_bytes": 106100454,
+  "parts": [
+    {
+      "name": "evidence.zip.part001",
+      "bytes": 50331648,
+      "sha256": "ba0abdcc535dc24fcc4facb8a83f2b00016608d474949e4f0c4d3829d5c77de3"
+    },
+    {
+      "name": "evidence.zip.part002",
+      "bytes": 50331648,
+      "sha256": "75b3be93d9b7d9fc32e94e8b52a07278b34afdf3c1d8803b0d493dff41c62154"
+    },
+    {
+      "name": "evidence.zip.part003",
+      "bytes": 5437158,
+      "sha256": "d109e63a1db4a6c68d96837968e5b84cf875810789a823cd959f704de1851b9c"
+    }
+  ],
+  "format": "ordered_byte_concatenation_of_standard_zip",
+  "scientific_run": "g2_strong_baselines_20261010T165844Z_6eb1c1b3",
+  "original_file_retained_unchanged": true
+}
