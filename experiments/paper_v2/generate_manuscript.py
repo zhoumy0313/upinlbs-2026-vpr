@@ -187,7 +187,7 @@ Source versions, finite grids, source/licence receipts, train-statistic and mode
 '''
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--revision',required=True);p.add_argument('--variant',choices=['r01','r02','r03','empirical'],required=True);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--revision',required=True);p.add_argument('--variant',choices=['r01','r02','r03','r04','empirical'],required=True);a=p.parse_args()
     assert '/' not in a.revision and '..' not in a.revision
     state=json.loads((ROOT/'docs/goals/GOAL_V2_STATE.json').read_text());assert state['stages']['G4']=='passed'
     keys={'g1':'g1_diagnosis_run','g2':'g2_baseline_run','g3':'g3_adaptive_run','smr':'g3_smr_run','test':'g4_evaluation_run','latency':'g4_latency_run','audit':'g4_audit_run','gallery':'g4_gallery_run','geo':'g4_geo_audit_run'}
@@ -286,17 +286,22 @@ Table~\ref{tab:radius} keeps the same $1,456$ queries at all prescribed radii. A
     for r in data['audit']['trajectories']:
         record('protocol.spacing.'+r['role'],r['coordinate_step_median'],'audit','trajectories[role='+r['role']+'].coordinate_step_median','.2f')
     record('protocol.GPS_UTM_max_difference',data['geo']['maximum_GPS_reprojection_difference_m'],'geo','maximum_GPS_reprojection_difference_m','.5f')
-    if a.variant in ['r02','r03','empirical']:
+    if a.variant in ['r02','r03','r04','empirical']:
         text=text.replace('The empirical conclusion is limited but reproducible:', 'The paired ledgers support the following limited empirical conclusion:')
         text=text.replace('The source-pinned receptiveness classifier has very few examples of some training outcomes;', 'The source-pinned classifier has only three harmful-sequence and six both-wrong training examples before resampling;')
         text=text.replace('This supports reporting window and motion sensitivity while preserving the original selection and unfavorable evidence.', 'This supports reporting window and motion sensitivity while preserving the original selection and unfavorable evidence. The tighter-radius reversal also cautions against treating a correct broad-neighborhood endpoint as precise localization.')
-    if a.variant in ['r03','empirical']:
+    if a.variant in ['r03','r04','empirical']:
         text=text.replace('All $24$ independent configurations', 'All $24$ predeclared independent configurations')
         text=text.replace('The current-frame heuristic', 'The causal heuristic')
         text=text.replace('supports causal temporal baselines', 'supports protocol-specific temporal baselines')
         text=text.replace('Ordered histories improve the corresponding retrieval task on both datasets, while shuffled histories degrade the long window.', 'Ordered histories exceed shuffled histories under each dataset\'s primary protocol; this control does not negate the selected trajectory\'s tighter-radius failure.')
         text=text.replace('Real Batch-One Deployment Cost', 'Measured Batch-One Pipeline Cost')
     if a.variant=='empirical':text=text.replace('Causal Temporal Matching under Protocol Transfer:', 'Empirical Findings on Causal Temporal Matching:')
+    if a.variant=='r04':
+        text=text.replace(r'\section*{Reproducibility and AI Disclosure}',r'\section*{Reproducibility}\nPLACEHOLDER_ACK'.replace(r'\n','\n'))
+        text=text.replace('PLACEHOLDER_ACK','')
+        text=text.replace('This draft used OpenAI ChatGPT/Codex',r'\section*{Acknowledgments and AI Disclosure}'+'\nThis draft used OpenAI ChatGPT/Codex')
+        text=text.replace('throughout the paper. Official encoder', 'in the abstract and Sections I--VI, including the pipeline and result-figure code. AI assistance produced initial implementations and draft analysis/text; the preserved executable ledgers support the numerical claims. Official encoder')
     for token,value in replacements.items():text=text.replace('@@'+token+'@@',value)
     assert '@@' not in text
     (target/'main.tex').write_text(text)
