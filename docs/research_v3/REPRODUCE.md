@@ -34,3 +34,14 @@ Use `.venv-paper/bin/python -m experiments.endpoint_vpr.g7_delivery_checked` for
 `.venv-p0/bin/python -m experiments.endpoint_vpr.replay_seen --dataset St_Lucia --split validation --suite selected`
 
 This runs A, fixedL9, fullL3 and the three frozen selected local policies into a fresh outputs_v3 run; 30 method/radius groups are independently recomputed from new CSV. Actual successful receipt: replay_seen_20261010T180636Z_d400b761, exit0. It does not change phase state, publish into accepted folders, push, or measure online latency. `--suite baselines` replays 16 controls and `--suite grid` the original 224 configurations; these larger replay options were not reexecuted here. Existing original data/weights/score caches with exact identities are still required.
+
+### Public numerical replay without original photos/weights
+
+The one frozen canonical score archive is in artifacts/v3/replay_inputs (two ordered byte parts, total79,569,418 bytes, SHA50527bb46684977bb64e1ac2e102b533aaa217e303a86e0efa3b9f8e0e43b266). It contains CosPlace/EigenPlaces/DINOv2 similarities for one whole St Lucia route and Nordland train/validation plus image IDs/evaluation metadata/model provenance, no photos/descriptors/checkpoints. Numerical experiments can be replayed with Python and NumPy2.2.6; no Torch/GPU is needed for this cached ranking verification.
+
+```bash
+.venv-p0/bin/python -m experiments.endpoint_vpr.reassemble artifacts/v3/replay_inputs outputs_v3/my_unique_restore/numerical_inputs.zip
+.venv-p0/bin/python -m experiments.endpoint_vpr.public_replay --archive outputs_v3/my_unique_restore/numerical_inputs.zip --dataset St_Lucia --split validation --suite selected
+```
+
+Actual restore and replay passed: public_numeric_restore_20261010T1823, public_numeric_replay_20261010T182507Z_b5975a03, six methods/thirty metric groups. --suite baselines or grid reconstructs the original policy sets; --dataset Nordland --split train/validation reconstructs ordinal GT. No phase/push/accepted evidence is changed. Archive SHA/array SHA/canonical shape/dtype and frozen code/configs are checked. Original images, pretrained encoding correctness and real online timing cannot be verified from numerical inputs alone; those require original licensed data/weights/source identities and the G5 recipe. All inputs are already seen; replay does not provide independent validation.

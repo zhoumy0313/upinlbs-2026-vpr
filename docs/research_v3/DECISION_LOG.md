@@ -21,3 +21,6 @@ New replay_seen.py exposes already-frozen core/datasets/predictions/evaluate int
 
 ## Native source and receipt repairs (2026-10-10T18:24 UTC)
 Native r03 compilation found an unescaped path_offsets underscore. Original failed source/diagnostics are retained; new r03/r04 TeX render it with an escaped underscore and both actual compile calls returned success. Native tool returns JSON text: the first r01/r02 success_confirmed flag had been parsed incorrectly as false; original malformed receipts are preserved in g6_native_receipt_parse_repair_20261010T182507Z_c2c985fd and Git. Corrected receipt flags derive from parsing the saved actual success response, not a new unsupported claim. All source/PDF numerics and frozen scientific files remain unchanged.
+
+## Portable numerical archive (2026-10-10T18:27 UTC)
+One derived, canonical numerical input archive enables ranking/GT audits without downloading images/weights. It supplements rather than replaces raw-image/model provenance and real G5 timing. Pack/restore/SHA/ZIP and six-policy public replay passed; full frozen scientific bytes remain unchanged. New public_replay.py is an archival/reproduction adapter, with no new method or test score selection. All data remain already seen. Two sub100MB parts respect GitHub limits; original arrays/weights/images are retained locally unchanged.
