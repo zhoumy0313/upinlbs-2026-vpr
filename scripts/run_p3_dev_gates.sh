@@ -36,4 +36,5 @@ record fit_evaluate_gates .venv-p0/bin/python scripts/fit_evaluate_dev_gates.py 
 record causal_consistency .venv-p0/bin/python scripts/verify_causal_gate_consistency.py --feature-run "$P3_RUN" --manifest "$P3_MANIFEST" --run-dir "$P3_RUN"
 record online_validation_budget25 .venv-p0/bin/python scripts/benchmark_dev_routing.py --feature-run "$P3_RUN" --manifest "$P3_MANIFEST" --run-dir "$P3_RUN" --budget 25
 record dependencies .venv-p0/bin/python -m pip check
+record independent_artifact_replay .venv-p0/bin/python scripts/verify_p3_artifacts.py --run-dir "$P3_RUN"
 printf '%s\n' "$P3_RUN"
