@@ -1,0 +1,28 @@
+name: V3 exact-source manuscript PDFs
+on:
+  push:
+    branches: [research/vpr-v3-endpoint-refinement]
+    paths:
+      - 'paper/revisions/v3_*/main.tex'
+permissions:
+  contents: write
+jobs:
+  compile:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Install compiler on disposable standard runner
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends texlive-latex-recommended texlive-fonts-recommended texlive-publishers texlive-pictures cm-super-minimal poppler-utils
+      - name: Compile exact new V3 sources and preserve checks
+        run: python3 experiments/endpoint_vpr/ci_build.py
+      - name: Preserve V3 PDFs and receipts only
+        if: always()
+        run: |
+          git add paper/revisions/v3_r*/main.pdf paper/revisions/v3_build_receipts
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'G6: preserve exact-source V3 PDFs and diagnostics'
+            git push origin HEAD:research/vpr-v3-endpoint-refinement
+          fi
