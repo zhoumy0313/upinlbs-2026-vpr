@@ -1,0 +1,14 @@
+{
+  "format": "ordered_byte_concatenation_of_standard_zip",
+  "zip_sha256": "3cf2980cc7404dd555b2da9ca81e068925e5fd0400c5af183d2ba5852b429e9c",
+  "zip_bytes": 11595735,
+  "parts": [
+    {
+      "name": "evidence.zip",
+      "bytes": 11595735,
+      "sha256": "3cf2980cc7404dd555b2da9ca81e068925e5fd0400c5af183d2ba5852b429e9c"
+    }
+  ],
+  "scientific_run": "g5_real_online_20261010T175234Z_dfcec131",
+  "source_SHA256SUMS": "196579487fef68f155acdfaff3508c0f3081d02162b71e6012c3fcfde1ec664e"
+}

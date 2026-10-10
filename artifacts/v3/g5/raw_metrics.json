@@ -1,0 +1,4954 @@
+{
+  "results": [
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "A",
+      "settings": {
+        "name": "A",
+        "kind": "single",
+        "encoder": "cosplace"
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 888,
+        "5": 1222,
+        "10": 1251
+      },
+      "recall": {
+        "1": 0.6889061287820015,
+        "5": 0.948021722265322,
+        "10": 0.9705197827773467
+      },
+      "rescue": 0,
+      "harm": 0,
+      "net": 0,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 893,
+      "full_stream_queries": 1297,
+      "distance_median": 3.9657029640587314,
+      "distance_P90": 7.669375428194125,
+      "distance_P95": 9.594755203990928,
+      "near_boundary_2m": 730
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "A",
+      "settings": {
+        "name": "A",
+        "kind": "single",
+        "encoder": "cosplace"
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 1384,
+        "5": 1441,
+        "10": 1447
+      },
+      "recall": {
+        "1": 0.9505494505494505,
+        "5": 0.9896978021978022,
+        "10": 0.9938186813186813
+      },
+      "rescue": 0,
+      "harm": 0,
+      "net": 0,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1391,
+      "full_stream_queries": 1464,
+      "distance_median": 4.246508897099376,
+      "distance_P90": 7.986222170413666,
+      "distance_P95": 9.868585608389147,
+      "near_boundary_2m": 96
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "A",
+      "settings": {
+        "name": "A",
+        "kind": "single",
+        "encoder": "cosplace"
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 1416,
+        "5": 1449,
+        "10": 1452
+      },
+      "recall": {
+        "1": 0.9725274725274725,
+        "5": 0.9951923076923077,
+        "10": 0.9972527472527473
+      },
+      "rescue": 0,
+      "harm": 0,
+      "net": 0,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1423,
+      "full_stream_queries": 1464,
+      "distance_median": 4.246508897099376,
+      "distance_P90": 7.986222170413666,
+      "distance_P95": 9.868585608389147,
+      "near_boundary_2m": 10
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "A",
+      "settings": {
+        "name": "A",
+        "kind": "single",
+        "encoder": "cosplace"
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 1422,
+        "5": 1449,
+        "10": 1452
+      },
+      "recall": {
+        "1": 0.9766483516483516,
+        "5": 0.9951923076923077,
+        "10": 0.9972527472527473
+      },
+      "rescue": 0,
+      "harm": 0,
+      "net": 0,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1429,
+      "full_stream_queries": 1464,
+      "distance_median": 4.246508897099376,
+      "distance_P90": 7.986222170413666,
+      "distance_P95": 9.868585608389147,
+      "near_boundary_2m": 2
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "A",
+      "settings": {
+        "name": "A",
+        "kind": "single",
+        "encoder": "cosplace"
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 1426,
+        "5": 1449,
+        "10": 1452
+      },
+      "recall": {
+        "1": 0.9793956043956044,
+        "5": 0.9951923076923077,
+        "10": 0.9972527472527473
+      },
+      "rescue": 0,
+      "harm": 0,
+      "net": 0,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1433,
+      "full_stream_queries": 1464,
+      "distance_median": 4.246508897099376,
+      "distance_P90": 7.986222170413666,
+      "distance_P95": 9.868585608389147,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "B",
+      "settings": {
+        "name": "B",
+        "kind": "single",
+        "encoder": "eigenplaces"
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 910,
+        "5": 1245,
+        "10": 1274
+      },
+      "recall": {
+        "1": 0.7059736229635376,
+        "5": 0.9658650116369278,
+        "10": 0.9883630721489527
+      },
+      "rescue": 104,
+      "harm": 82,
+      "net": 22,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 915,
+      "full_stream_queries": 1297,
+      "distance_median": 3.883722441054072,
+      "distance_P90": 7.322317606778147,
+      "distance_P95": 9.064733543318768,
+      "near_boundary_2m": 737
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "B",
+      "settings": {
+        "name": "B",
+        "kind": "single",
+        "encoder": "eigenplaces"
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 1397,
+        "5": 1448,
+        "10": 1454
+      },
+      "recall": {
+        "1": 0.959478021978022,
+        "5": 0.9945054945054945,
+        "10": 0.9986263736263736
+      },
+      "rescue": 44,
+      "harm": 31,
+      "net": 13,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1404,
+      "full_stream_queries": 1464,
+      "distance_median": 4.212036311915737,
+      "distance_P90": 7.787112912946383,
+      "distance_P95": 9.404012005284208,
+      "near_boundary_2m": 99
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "B",
+      "settings": {
+        "name": "B",
+        "kind": "single",
+        "encoder": "eigenplaces"
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 1439,
+        "5": 1452,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9883241758241759,
+        "5": 0.9972527472527473,
+        "10": 1.0
+      },
+      "rescue": 33,
+      "harm": 10,
+      "net": 23,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1446,
+      "full_stream_queries": 1464,
+      "distance_median": 4.212036311915737,
+      "distance_P90": 7.787112912946383,
+      "distance_P95": 9.404012005284208,
+      "near_boundary_2m": 7
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "B",
+      "settings": {
+        "name": "B",
+        "kind": "single",
+        "encoder": "eigenplaces"
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 1442,
+        "5": 1452,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9903846153846154,
+        "5": 0.9972527472527473,
+        "10": 1.0
+      },
+      "rescue": 27,
+      "harm": 7,
+      "net": 20,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1449,
+      "full_stream_queries": 1464,
+      "distance_median": 4.212036311915737,
+      "distance_P90": 7.787112912946383,
+      "distance_P95": 9.404012005284208,
+      "near_boundary_2m": 1
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "B",
+      "settings": {
+        "name": "B",
+        "kind": "single",
+        "encoder": "eigenplaces"
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 1442,
+        "5": 1452,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9903846153846154,
+        "5": 0.9972527472527473,
+        "10": 1.0
+      },
+      "rescue": 23,
+      "harm": 7,
+      "net": 16,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1449,
+      "full_stream_queries": 1464,
+      "distance_median": 4.212036311915737,
+      "distance_P90": 7.787112912946383,
+      "distance_P95": 9.404012005284208,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "DINOv2",
+      "settings": {
+        "name": "DINOv2",
+        "kind": "single",
+        "encoder": "dinov2"
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 246,
+        "5": 493,
+        "10": 618
+      },
+      "recall": {
+        "1": 0.1908456167571761,
+        "5": 0.382467028704422,
+        "10": 0.4794414274631497
+      },
+      "rescue": 52,
+      "harm": 694,
+      "net": -642,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 247,
+      "full_stream_queries": 1297,
+      "distance_median": 133.6832622290213,
+      "distance_P90": 696.7135767195863,
+      "distance_P95": 821.9190701643428,
+      "near_boundary_2m": 237
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "DINOv2",
+      "settings": {
+        "name": "DINOv2",
+        "kind": "single",
+        "encoder": "dinov2"
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 447,
+        "5": 736,
+        "10": 870
+      },
+      "recall": {
+        "1": 0.3070054945054945,
+        "5": 0.5054945054945055,
+        "10": 0.5975274725274725
+      },
+      "rescue": 9,
+      "harm": 946,
+      "net": -937,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 451,
+      "full_stream_queries": 1464,
+      "distance_median": 140.22445465241577,
+      "distance_P90": 699.0055608403618,
+      "distance_P95": 836.35145830881,
+      "near_boundary_2m": 84
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "DINOv2",
+      "settings": {
+        "name": "DINOv2",
+        "kind": "single",
+        "encoder": "dinov2"
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 508,
+        "5": 806,
+        "10": 938
+      },
+      "recall": {
+        "1": 0.3489010989010989,
+        "5": 0.5535714285714286,
+        "10": 0.6442307692307693
+      },
+      "rescue": 6,
+      "harm": 914,
+      "net": -908,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 512,
+      "full_stream_queries": 1464,
+      "distance_median": 140.22445465241577,
+      "distance_P90": 699.0055608403618,
+      "distance_P95": 836.35145830881,
+      "near_boundary_2m": 32
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "DINOv2",
+      "settings": {
+        "name": "DINOv2",
+        "kind": "single",
+        "encoder": "dinov2"
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 551,
+        "5": 864,
+        "10": 1007
+      },
+      "recall": {
+        "1": 0.3784340659340659,
+        "5": 0.5934065934065934,
+        "10": 0.6916208791208791
+      },
+      "rescue": 7,
+      "harm": 878,
+      "net": -871,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 556,
+      "full_stream_queries": 1464,
+      "distance_median": 140.22445465241577,
+      "distance_P90": 699.0055608403618,
+      "distance_P95": 836.35145830881,
+      "near_boundary_2m": 15
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "DINOv2",
+      "settings": {
+        "name": "DINOv2",
+        "kind": "single",
+        "encoder": "dinov2"
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 604,
+        "5": 928,
+        "10": 1075
+      },
+      "recall": {
+        "1": 0.41483516483516486,
+        "5": 0.6373626373626373,
+        "10": 0.7383241758241759
+      },
+      "rescue": 5,
+      "harm": 827,
+      "net": -822,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 609,
+      "full_stream_queries": 1464,
+      "distance_median": 140.22445465241577,
+      "distance_P90": 699.0055608403618,
+      "distance_P95": 836.35145830881,
+      "near_boundary_2m": 3
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "RRF_k60",
+      "settings": {
+        "name": "RRF_k60",
+        "kind": "rrf"
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 901,
+        "5": 1244,
+        "10": 1268
+      },
+      "recall": {
+        "1": 0.6989914662529092,
+        "5": 0.9650892164468581,
+        "10": 0.9837083010085338
+      },
+      "rescue": 53,
+      "harm": 40,
+      "net": 13,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 906,
+      "full_stream_queries": 1297,
+      "distance_median": 3.8940082176473503,
+      "distance_P90": 7.300989610576075,
+      "distance_P95": 8.913331200340446,
+      "near_boundary_2m": 736
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "RRF_k60",
+      "settings": {
+        "name": "RRF_k60",
+        "kind": "rrf"
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 1403,
+        "5": 1448,
+        "10": 1454
+      },
+      "recall": {
+        "1": 0.9635989010989011,
+        "5": 0.9945054945054945,
+        "10": 0.9986263736263736
+      },
+      "rescue": 27,
+      "harm": 8,
+      "net": 19,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1410,
+      "full_stream_queries": 1464,
+      "distance_median": 4.211300254441442,
+      "distance_P90": 7.743986927442916,
+      "distance_P95": 9.078721685231207,
+      "near_boundary_2m": 95
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "RRF_k60",
+      "settings": {
+        "name": "RRF_k60",
+        "kind": "rrf"
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 1440,
+        "5": 1454,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.989010989010989,
+        "5": 0.9986263736263736,
+        "10": 1.0
+      },
+      "rescue": 24,
+      "harm": 0,
+      "net": 24,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1447,
+      "full_stream_queries": 1464,
+      "distance_median": 4.211300254441442,
+      "distance_P90": 7.743986927442916,
+      "distance_P95": 9.078721685231207,
+      "near_boundary_2m": 6
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "RRF_k60",
+      "settings": {
+        "name": "RRF_k60",
+        "kind": "rrf"
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 1441,
+        "5": 1454,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9896978021978022,
+        "5": 0.9986263736263736,
+        "10": 1.0
+      },
+      "rescue": 19,
+      "harm": 0,
+      "net": 19,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1448,
+      "full_stream_queries": 1464,
+      "distance_median": 4.211300254441442,
+      "distance_P90": 7.743986927442916,
+      "distance_P95": 9.078721685231207,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "RRF_k60",
+      "settings": {
+        "name": "RRF_k60",
+        "kind": "rrf"
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 1442,
+        "5": 1454,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9903846153846154,
+        "5": 0.9986263736263736,
+        "10": 1.0
+      },
+      "rescue": 16,
+      "harm": 0,
+      "net": 16,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1449,
+      "full_stream_queries": 1464,
+      "distance_median": 4.211300254441442,
+      "distance_P90": 7.743986927442916,
+      "distance_P95": 9.078721685231207,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "AB_0.25",
+      "settings": {
+        "name": "AB_0.25",
+        "kind": "AB",
+        "weight": 0.25
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 897,
+        "5": 1242,
+        "10": 1267
+      },
+      "recall": {
+        "1": 0.6958882854926299,
+        "5": 0.9635376260667183,
+        "10": 0.9829325058184639
+      },
+      "rescue": 39,
+      "harm": 30,
+      "net": 9,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 902,
+      "full_stream_queries": 1297,
+      "distance_median": 3.9583456140862685,
+      "distance_P90": 7.349374257414988,
+      "distance_P95": 9.006756503898494,
+      "near_boundary_2m": 747
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "AB_0.25",
+      "settings": {
+        "name": "AB_0.25",
+        "kind": "AB",
+        "weight": 0.25
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 1400,
+        "5": 1449,
+        "10": 1452
+      },
+      "recall": {
+        "1": 0.9615384615384616,
+        "5": 0.9951923076923077,
+        "10": 0.9972527472527473
+      },
+      "rescue": 23,
+      "harm": 7,
+      "net": 16,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1407,
+      "full_stream_queries": 1464,
+      "distance_median": 4.251699320543131,
+      "distance_P90": 7.778326830941499,
+      "distance_P95": 9.484361661970947,
+      "near_boundary_2m": 94
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "AB_0.25",
+      "settings": {
+        "name": "AB_0.25",
+        "kind": "AB",
+        "weight": 0.25
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 1434,
+        "5": 1453,
+        "10": 1455
+      },
+      "recall": {
+        "1": 0.9848901098901099,
+        "5": 0.9979395604395604,
+        "10": 0.9993131868131868
+      },
+      "rescue": 19,
+      "harm": 1,
+      "net": 18,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1441,
+      "full_stream_queries": 1464,
+      "distance_median": 4.251699320543131,
+      "distance_P90": 7.778326830941499,
+      "distance_P95": 9.484361661970947,
+      "near_boundary_2m": 8
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "AB_0.25",
+      "settings": {
+        "name": "AB_0.25",
+        "kind": "AB",
+        "weight": 0.25
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 1436,
+        "5": 1453,
+        "10": 1455
+      },
+      "recall": {
+        "1": 0.9862637362637363,
+        "5": 0.9979395604395604,
+        "10": 0.9993131868131868
+      },
+      "rescue": 16,
+      "harm": 2,
+      "net": 14,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1443,
+      "full_stream_queries": 1464,
+      "distance_median": 4.251699320543131,
+      "distance_P90": 7.778326830941499,
+      "distance_P95": 9.484361661970947,
+      "near_boundary_2m": 1
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "AB_0.25",
+      "settings": {
+        "name": "AB_0.25",
+        "kind": "AB",
+        "weight": 0.25
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 1438,
+        "5": 1453,
+        "10": 1455
+      },
+      "recall": {
+        "1": 0.9876373626373627,
+        "5": 0.9979395604395604,
+        "10": 0.9993131868131868
+      },
+      "rescue": 13,
+      "harm": 1,
+      "net": 12,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1445,
+      "full_stream_queries": 1464,
+      "distance_median": 4.251699320543131,
+      "distance_P90": 7.778326830941499,
+      "distance_P95": 9.484361661970947,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "AB_0.5",
+      "settings": {
+        "name": "AB_0.5",
+        "kind": "AB",
+        "weight": 0.5
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 906,
+        "5": 1248,
+        "10": 1275
+      },
+      "recall": {
+        "1": 0.7028704422032583,
+        "5": 0.9681923972071373,
+        "10": 0.9891388673390225
+      },
+      "rescue": 68,
+      "harm": 50,
+      "net": 18,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 911,
+      "full_stream_queries": 1297,
+      "distance_median": 3.944223624722271,
+      "distance_P90": 7.151798232915454,
+      "distance_P95": 8.738174388700495,
+      "near_boundary_2m": 746
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "AB_0.5",
+      "settings": {
+        "name": "AB_0.5",
+        "kind": "AB",
+        "weight": 0.5
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 1408,
+        "5": 1450,
+        "10": 1454
+      },
+      "recall": {
+        "1": 0.967032967032967,
+        "5": 0.9958791208791209,
+        "10": 0.9986263736263736
+      },
+      "rescue": 36,
+      "harm": 12,
+      "net": 24,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1415,
+      "full_stream_queries": 1464,
+      "distance_median": 4.218945293220713,
+      "distance_P90": 7.635623352440581,
+      "distance_P95": 8.993829895930364,
+      "near_boundary_2m": 94
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "AB_0.5",
+      "settings": {
+        "name": "AB_0.5",
+        "kind": "AB",
+        "weight": 0.5
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 1442,
+        "5": 1454,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9903846153846154,
+        "5": 0.9986263736263736,
+        "10": 1.0
+      },
+      "rescue": 28,
+      "harm": 2,
+      "net": 26,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1449,
+      "full_stream_queries": 1464,
+      "distance_median": 4.218945293220713,
+      "distance_P90": 7.635623352440581,
+      "distance_P95": 8.993829895930364,
+      "near_boundary_2m": 6
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "AB_0.5",
+      "settings": {
+        "name": "AB_0.5",
+        "kind": "AB",
+        "weight": 0.5
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 1443,
+        "5": 1454,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9910714285714286,
+        "5": 0.9986263736263736,
+        "10": 1.0
+      },
+      "rescue": 23,
+      "harm": 2,
+      "net": 21,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1450,
+      "full_stream_queries": 1464,
+      "distance_median": 4.218945293220713,
+      "distance_P90": 7.635623352440581,
+      "distance_P95": 8.993829895930364,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "AB_0.5",
+      "settings": {
+        "name": "AB_0.5",
+        "kind": "AB",
+        "weight": 0.5
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 1444,
+        "5": 1454,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9917582417582418,
+        "5": 0.9986263736263736,
+        "10": 1.0
+      },
+      "rescue": 19,
+      "harm": 1,
+      "net": 18,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1451,
+      "full_stream_queries": 1464,
+      "distance_median": 4.218945293220713,
+      "distance_P90": 7.635623352440581,
+      "distance_P95": 8.993829895930364,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "AB_0.75",
+      "settings": {
+        "name": "AB_0.75",
+        "kind": "AB",
+        "weight": 0.75
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 912,
+        "5": 1248,
+        "10": 1277
+      },
+      "recall": {
+        "1": 0.7075252133436772,
+        "5": 0.9681923972071373,
+        "10": 0.9906904577191621
+      },
+      "rescue": 93,
+      "harm": 69,
+      "net": 24,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 917,
+      "full_stream_queries": 1297,
+      "distance_median": 3.9250605092625332,
+      "distance_P90": 7.204715083686784,
+      "distance_P95": 8.762606320018177,
+      "near_boundary_2m": 748
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "AB_0.75",
+      "settings": {
+        "name": "AB_0.75",
+        "kind": "AB",
+        "weight": 0.75
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 1411,
+        "5": 1450,
+        "10": 1454
+      },
+      "recall": {
+        "1": 0.9690934065934066,
+        "5": 0.9958791208791209,
+        "10": 0.9986263736263736
+      },
+      "rescue": 43,
+      "harm": 16,
+      "net": 27,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1418,
+      "full_stream_queries": 1464,
+      "distance_median": 4.217789688983747,
+      "distance_P90": 7.647464406782364,
+      "distance_P95": 8.973983949892327,
+      "near_boundary_2m": 98
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "AB_0.75",
+      "settings": {
+        "name": "AB_0.75",
+        "kind": "AB",
+        "weight": 0.75
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 1446,
+        "5": 1455,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9931318681318682,
+        "5": 0.9993131868131868,
+        "10": 1.0
+      },
+      "rescue": 32,
+      "harm": 2,
+      "net": 30,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1453,
+      "full_stream_queries": 1464,
+      "distance_median": 4.217789688983747,
+      "distance_P90": 7.647464406782364,
+      "distance_P95": 8.973983949892327,
+      "near_boundary_2m": 5
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "AB_0.75",
+      "settings": {
+        "name": "AB_0.75",
+        "kind": "AB",
+        "weight": 0.75
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 1447,
+        "5": 1455,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9938186813186813,
+        "5": 0.9993131868131868,
+        "10": 1.0
+      },
+      "rescue": 26,
+      "harm": 1,
+      "net": 25,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1454,
+      "full_stream_queries": 1464,
+      "distance_median": 4.217789688983747,
+      "distance_P90": 7.647464406782364,
+      "distance_P95": 8.973983949892327,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "AB_0.75",
+      "settings": {
+        "name": "AB_0.75",
+        "kind": "AB",
+        "weight": 0.75
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 1447,
+        "5": 1455,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9938186813186813,
+        "5": 0.9993131868131868,
+        "10": 1.0
+      },
+      "rescue": 22,
+      "harm": 1,
+      "net": 21,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1454,
+      "full_stream_queries": 1464,
+      "distance_median": 4.217789688983747,
+      "distance_P90": 7.647464406782364,
+      "distance_P95": 8.973983949892327,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "fixed_L9",
+      "settings": {
+        "name": "fixed_L9",
+        "kind": "temporal",
+        "backend": "fixed_L9"
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 631,
+        "5": 1172,
+        "10": 1261
+      },
+      "recall": {
+        "1": 0.4895267649340574,
+        "5": 0.9092319627618308,
+        "10": 0.978277734678045
+      },
+      "rescue": 183,
+      "harm": 440,
+      "net": -257,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 636,
+      "full_stream_queries": 1297,
+      "distance_median": 5.1133159490933195,
+      "distance_P90": 14.62271446602934,
+      "distance_P95": 18.00278380756631,
+      "near_boundary_2m": 523
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "fixed_L9",
+      "settings": {
+        "name": "fixed_L9",
+        "kind": "temporal",
+        "backend": "fixed_L9"
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 1084,
+        "5": 1436,
+        "10": 1450
+      },
+      "recall": {
+        "1": 0.7445054945054945,
+        "5": 0.9862637362637363,
+        "10": 0.9958791208791209
+      },
+      "rescue": 47,
+      "harm": 347,
+      "net": -300,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1091,
+      "full_stream_queries": 1464,
+      "distance_median": 5.76900693658947,
+      "distance_P90": 15.056911588670605,
+      "distance_P95": 19.21143064206273,
+      "near_boundary_2m": 252
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "fixed_L9",
+      "settings": {
+        "name": "fixed_L9",
+        "kind": "temporal",
+        "backend": "fixed_L9"
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 1309,
+        "5": 1446,
+        "10": 1454
+      },
+      "recall": {
+        "1": 0.8990384615384616,
+        "5": 0.9931318681318682,
+        "10": 0.9986263736263736
+      },
+      "rescue": 32,
+      "harm": 139,
+      "net": -107,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1316,
+      "full_stream_queries": 1464,
+      "distance_median": 5.76900693658947,
+      "distance_P90": 15.056911588670605,
+      "distance_P95": 19.21143064206273,
+      "near_boundary_2m": 114
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "fixed_L9",
+      "settings": {
+        "name": "fixed_L9",
+        "kind": "temporal",
+        "backend": "fixed_L9"
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 1436,
+        "5": 1455,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9862637362637363,
+        "5": 0.9993131868131868,
+        "10": 1.0
+      },
+      "rescue": 34,
+      "harm": 20,
+      "net": 14,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1443,
+      "full_stream_queries": 1464,
+      "distance_median": 5.76900693658947,
+      "distance_P90": 15.056911588670605,
+      "distance_P95": 19.21143064206273,
+      "near_boundary_2m": 19
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "fixed_L9",
+      "settings": {
+        "name": "fixed_L9",
+        "kind": "temporal",
+        "backend": "fixed_L9"
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 1456,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 30,
+      "harm": 0,
+      "net": 30,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1463,
+      "full_stream_queries": 1464,
+      "distance_median": 5.76900693658947,
+      "distance_P90": 15.056911588670605,
+      "distance_P95": 19.21143064206273,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "full_L3",
+      "settings": {
+        "name": "full_L3",
+        "kind": "temporal",
+        "backend": "full_L3"
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 902,
+        "5": 1271,
+        "10": 1288
+      },
+      "recall": {
+        "1": 0.6997672614429791,
+        "5": 0.9860356865787432,
+        "10": 0.9992242048099301
+      },
+      "rescue": 140,
+      "harm": 126,
+      "net": 14,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 903,
+      "full_stream_queries": 1297,
+      "distance_median": 3.898166236031041,
+      "distance_P90": 7.256763473614403,
+      "distance_P95": 8.763626877669875,
+      "near_boundary_2m": 735
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "full_L3",
+      "settings": {
+        "name": "full_L3",
+        "kind": "temporal",
+        "backend": "full_L3"
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 1425,
+        "5": 1455,
+        "10": 1455
+      },
+      "recall": {
+        "1": 0.9787087912087912,
+        "5": 0.9993131868131868,
+        "10": 0.9993131868131868
+      },
+      "rescue": 59,
+      "harm": 18,
+      "net": 41,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1432,
+      "full_stream_queries": 1464,
+      "distance_median": 4.219727478948403,
+      "distance_P90": 7.647239111667372,
+      "distance_P95": 8.973983949892327,
+      "near_boundary_2m": 112
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "full_L3",
+      "settings": {
+        "name": "full_L3",
+        "kind": "temporal",
+        "backend": "full_L3"
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 1455,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9993131868131868,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 40,
+      "harm": 1,
+      "net": 39,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1462,
+      "full_stream_queries": 1464,
+      "distance_median": 4.219727478948403,
+      "distance_P90": 7.647239111667372,
+      "distance_P95": 8.973983949892327,
+      "near_boundary_2m": 3
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "full_L3",
+      "settings": {
+        "name": "full_L3",
+        "kind": "temporal",
+        "backend": "full_L3"
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 1455,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9993131868131868,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 34,
+      "harm": 1,
+      "net": 33,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1462,
+      "full_stream_queries": 1464,
+      "distance_median": 4.219727478948403,
+      "distance_P90": 7.647239111667372,
+      "distance_P95": 8.973983949892327,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "full_L3",
+      "settings": {
+        "name": "full_L3",
+        "kind": "temporal",
+        "backend": "full_L3"
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 1455,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9993131868131868,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 30,
+      "harm": 1,
+      "net": 29,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1462,
+      "full_stream_queries": 1464,
+      "distance_median": 4.219727478948403,
+      "distance_P90": 7.647239111667372,
+      "distance_P95": 8.973983949892327,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "full_L5",
+      "settings": {
+        "name": "full_L5",
+        "kind": "temporal",
+        "backend": "full_L5"
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 882,
+        "5": 1275,
+        "10": 1286
+      },
+      "recall": {
+        "1": 0.6842513576415826,
+        "5": 0.9891388673390225,
+        "10": 0.9976726144297905
+      },
+      "rescue": 150,
+      "harm": 156,
+      "net": -6,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 884,
+      "full_stream_queries": 1297,
+      "distance_median": 3.9657029640587314,
+      "distance_P90": 7.426463541201038,
+      "distance_P95": 8.957374138399159,
+      "near_boundary_2m": 737
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "full_L5",
+      "settings": {
+        "name": "full_L5",
+        "kind": "temporal",
+        "backend": "full_L5"
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 1416,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9725274725274725,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 57,
+      "harm": 25,
+      "net": 32,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1423,
+      "full_stream_queries": 1464,
+      "distance_median": 4.2778143045036074,
+      "distance_P90": 7.845552735381766,
+      "distance_P95": 9.103752751882325,
+      "near_boundary_2m": 127
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "full_L5",
+      "settings": {
+        "name": "full_L5",
+        "kind": "temporal",
+        "backend": "full_L5"
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 1456,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 40,
+      "harm": 0,
+      "net": 40,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1463,
+      "full_stream_queries": 1464,
+      "distance_median": 4.2778143045036074,
+      "distance_P90": 7.845552735381766,
+      "distance_P95": 9.103752751882325,
+      "near_boundary_2m": 3
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "full_L5",
+      "settings": {
+        "name": "full_L5",
+        "kind": "temporal",
+        "backend": "full_L5"
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 1456,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 34,
+      "harm": 0,
+      "net": 34,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1463,
+      "full_stream_queries": 1464,
+      "distance_median": 4.2778143045036074,
+      "distance_P90": 7.845552735381766,
+      "distance_P95": 9.103752751882325,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "full_L5",
+      "settings": {
+        "name": "full_L5",
+        "kind": "temporal",
+        "backend": "full_L5"
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 1456,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 30,
+      "harm": 0,
+      "net": 30,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1463,
+      "full_stream_queries": 1464,
+      "distance_median": 4.2778143045036074,
+      "distance_P90": 7.845552735381766,
+      "distance_P95": 9.103752751882325,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "full_L9",
+      "settings": {
+        "name": "full_L9",
+        "kind": "temporal",
+        "backend": "full_L9"
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 824,
+        "5": 1250,
+        "10": 1280
+      },
+      "recall": {
+        "1": 0.6392552366175329,
+        "5": 0.969743987587277,
+        "10": 0.9930178432893716
+      },
+      "rescue": 156,
+      "harm": 220,
+      "net": -64,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 829,
+      "full_stream_queries": 1297,
+      "distance_median": 4.110012165798997,
+      "distance_P90": 8.564575043209585,
+      "distance_P95": 9.919548365695617,
+      "near_boundary_2m": 671
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "full_L9",
+      "settings": {
+        "name": "full_L9",
+        "kind": "temporal",
+        "backend": "full_L9"
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 1388,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9532967032967034,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 56,
+      "harm": 52,
+      "net": 4,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1395,
+      "full_stream_queries": 1464,
+      "distance_median": 4.454110436322468,
+      "distance_P90": 8.649097704503095,
+      "distance_P95": 9.921972458920765,
+      "near_boundary_2m": 162
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "full_L9",
+      "settings": {
+        "name": "full_L9",
+        "kind": "temporal",
+        "backend": "full_L9"
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 1451,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9965659340659341,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 40,
+      "harm": 5,
+      "net": 35,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1458,
+      "full_stream_queries": 1464,
+      "distance_median": 4.454110436322468,
+      "distance_P90": 8.649097704503095,
+      "distance_P95": 9.921972458920765,
+      "near_boundary_2m": 12
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "full_L9",
+      "settings": {
+        "name": "full_L9",
+        "kind": "temporal",
+        "backend": "full_L9"
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 1455,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9993131868131868,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 34,
+      "harm": 1,
+      "net": 33,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1462,
+      "full_stream_queries": 1464,
+      "distance_median": 4.454110436322468,
+      "distance_P90": 8.649097704503095,
+      "distance_P95": 9.921972458920765,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "full_L9",
+      "settings": {
+        "name": "full_L9",
+        "kind": "temporal",
+        "backend": "full_L9"
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 1456,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 30,
+      "harm": 0,
+      "net": 30,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1463,
+      "full_stream_queries": 1464,
+      "distance_median": 4.454110436322468,
+      "distance_P90": 8.649097704503095,
+      "distance_P95": 9.921972458920765,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "global_fixed_L9_blend_0.25",
+      "settings": {
+        "name": "global_fixed_L9_blend_0.25",
+        "kind": "global_blend",
+        "backend": "fixed_L9",
+        "weight": 0.25
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 934,
+        "5": 1255,
+        "10": 1272
+      },
+      "recall": {
+        "1": 0.7245927075252133,
+        "5": 0.9736229635376261,
+        "10": 0.9868114817688131
+      },
+      "rescue": 82,
+      "harm": 36,
+      "net": 46,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 939,
+      "full_stream_queries": 1297,
+      "distance_median": 3.8429806140627876,
+      "distance_P90": 6.863453158772124,
+      "distance_P95": 8.34656300612957,
+      "near_boundary_2m": 755
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "global_fixed_L9_blend_0.25",
+      "settings": {
+        "name": "global_fixed_L9_blend_0.25",
+        "kind": "global_blend",
+        "backend": "fixed_L9",
+        "weight": 0.25
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 1414,
+        "5": 1454,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9711538461538461,
+        "5": 0.9986263736263736,
+        "10": 1.0
+      },
+      "rescue": 42,
+      "harm": 12,
+      "net": 30,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1421,
+      "full_stream_queries": 1464,
+      "distance_median": 4.141001228779913,
+      "distance_P90": 7.398766750762496,
+      "distance_P95": 8.635863438918253,
+      "near_boundary_2m": 82
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "global_fixed_L9_blend_0.25",
+      "settings": {
+        "name": "global_fixed_L9_blend_0.25",
+        "kind": "global_blend",
+        "backend": "fixed_L9",
+        "weight": 0.25
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 1447,
+        "5": 1455,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9938186813186813,
+        "5": 0.9993131868131868,
+        "10": 1.0
+      },
+      "rescue": 33,
+      "harm": 2,
+      "net": 31,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1454,
+      "full_stream_queries": 1464,
+      "distance_median": 4.141001228779913,
+      "distance_P90": 7.398766750762496,
+      "distance_P95": 8.635863438918253,
+      "near_boundary_2m": 12
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "global_fixed_L9_blend_0.25",
+      "settings": {
+        "name": "global_fixed_L9_blend_0.25",
+        "kind": "global_blend",
+        "backend": "fixed_L9",
+        "weight": 0.25
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 1452,
+        "5": 1455,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9972527472527473,
+        "5": 0.9993131868131868,
+        "10": 1.0
+      },
+      "rescue": 32,
+      "harm": 2,
+      "net": 30,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1459,
+      "full_stream_queries": 1464,
+      "distance_median": 4.141001228779913,
+      "distance_P90": 7.398766750762496,
+      "distance_P95": 8.635863438918253,
+      "near_boundary_2m": 1
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "global_fixed_L9_blend_0.25",
+      "settings": {
+        "name": "global_fixed_L9_blend_0.25",
+        "kind": "global_blend",
+        "backend": "fixed_L9",
+        "weight": 0.25
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 1453,
+        "5": 1455,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9979395604395604,
+        "5": 0.9993131868131868,
+        "10": 1.0
+      },
+      "rescue": 29,
+      "harm": 2,
+      "net": 27,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1460,
+      "full_stream_queries": 1464,
+      "distance_median": 4.141001228779913,
+      "distance_P90": 7.398766750762496,
+      "distance_P95": 8.635863438918253,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "global_fixed_L9_blend_0.5",
+      "settings": {
+        "name": "global_fixed_L9_blend_0.5",
+        "kind": "global_blend",
+        "backend": "fixed_L9",
+        "weight": 0.5
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 927,
+        "5": 1265,
+        "10": 1285
+      },
+      "recall": {
+        "1": 0.7191621411947245,
+        "5": 0.9813809154383243,
+        "10": 0.9968968192397207
+      },
+      "rescue": 146,
+      "harm": 107,
+      "net": 39,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 932,
+      "full_stream_queries": 1297,
+      "distance_median": 3.865591804103433,
+      "distance_P90": 7.355557028929587,
+      "distance_P95": 8.903416413323056,
+      "near_boundary_2m": 717
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "global_fixed_L9_blend_0.5",
+      "settings": {
+        "name": "global_fixed_L9_blend_0.5",
+        "kind": "global_blend",
+        "backend": "fixed_L9",
+        "weight": 0.5
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 1397,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.959478021978022,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 54,
+      "harm": 41,
+      "net": 13,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1404,
+      "full_stream_queries": 1464,
+      "distance_median": 4.1436577923770255,
+      "distance_P90": 7.848990144509346,
+      "distance_P95": 9.297829231516733,
+      "near_boundary_2m": 98
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "global_fixed_L9_blend_0.5",
+      "settings": {
+        "name": "global_fixed_L9_blend_0.5",
+        "kind": "global_blend",
+        "backend": "fixed_L9",
+        "weight": 0.5
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 1440,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.989010989010989,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 35,
+      "harm": 11,
+      "net": 24,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1447,
+      "full_stream_queries": 1464,
+      "distance_median": 4.1436577923770255,
+      "distance_P90": 7.848990144509346,
+      "distance_P95": 9.297829231516733,
+      "near_boundary_2m": 19
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "global_fixed_L9_blend_0.5",
+      "settings": {
+        "name": "global_fixed_L9_blend_0.5",
+        "kind": "global_blend",
+        "backend": "fixed_L9",
+        "weight": 0.5
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 1453,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9979395604395604,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 33,
+      "harm": 2,
+      "net": 31,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1460,
+      "full_stream_queries": 1464,
+      "distance_median": 4.1436577923770255,
+      "distance_P90": 7.848990144509346,
+      "distance_P95": 9.297829231516733,
+      "near_boundary_2m": 1
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "global_fixed_L9_blend_0.5",
+      "settings": {
+        "name": "global_fixed_L9_blend_0.5",
+        "kind": "global_blend",
+        "backend": "fixed_L9",
+        "weight": 0.5
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 1455,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9993131868131868,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 29,
+      "harm": 0,
+      "net": 29,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1462,
+      "full_stream_queries": 1464,
+      "distance_median": 4.1436577923770255,
+      "distance_P90": 7.848990144509346,
+      "distance_P95": 9.297829231516733,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "global_fixed_L9_blend_0.75",
+      "settings": {
+        "name": "global_fixed_L9_blend_0.75",
+        "kind": "global_blend",
+        "backend": "fixed_L9",
+        "weight": 0.75
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 834,
+        "5": 1251,
+        "10": 1282
+      },
+      "recall": {
+        "1": 0.6470131885182312,
+        "5": 0.9705197827773467,
+        "10": 0.9945694336695112
+      },
+      "rescue": 181,
+      "harm": 235,
+      "net": -54,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 839,
+      "full_stream_queries": 1297,
+      "distance_median": 4.110924470054236,
+      "distance_P90": 10.38215456500951,
+      "distance_P95": 12.909640933578423,
+      "near_boundary_2m": 645
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "global_fixed_L9_blend_0.75",
+      "settings": {
+        "name": "global_fixed_L9_blend_0.75",
+        "kind": "global_blend",
+        "backend": "fixed_L9",
+        "weight": 0.75
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 1296,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.8901098901098901,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 54,
+      "harm": 142,
+      "net": -88,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1303,
+      "full_stream_queries": 1464,
+      "distance_median": 4.441474964569978,
+      "distance_P90": 10.505317700961983,
+      "distance_P95": 13.547730941980145,
+      "near_boundary_2m": 159
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "global_fixed_L9_blend_0.75",
+      "settings": {
+        "name": "global_fixed_L9_blend_0.75",
+        "kind": "global_blend",
+        "backend": "fixed_L9",
+        "weight": 0.75
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 1398,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9601648351648352,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 34,
+      "harm": 52,
+      "net": -18,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1405,
+      "full_stream_queries": 1464,
+      "distance_median": 4.441474964569978,
+      "distance_P90": 10.505317700961983,
+      "distance_P95": 13.547730941980145,
+      "near_boundary_2m": 46
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "global_fixed_L9_blend_0.75",
+      "settings": {
+        "name": "global_fixed_L9_blend_0.75",
+        "kind": "global_blend",
+        "backend": "fixed_L9",
+        "weight": 0.75
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 1449,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9951923076923077,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 34,
+      "harm": 7,
+      "net": 27,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1456,
+      "full_stream_queries": 1464,
+      "distance_median": 4.441474964569978,
+      "distance_P90": 10.505317700961983,
+      "distance_P95": 13.547730941980145,
+      "near_boundary_2m": 9
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "global_fixed_L9_blend_0.75",
+      "settings": {
+        "name": "global_fixed_L9_blend_0.75",
+        "kind": "global_blend",
+        "backend": "fixed_L9",
+        "weight": 0.75
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 1456,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 30,
+      "harm": 0,
+      "net": 30,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1463,
+      "full_stream_queries": 1464,
+      "distance_median": 4.441474964569978,
+      "distance_P90": 10.505317700961983,
+      "distance_P95": 13.547730941980145,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "shuffled_full_L9_seed0",
+      "settings": {
+        "name": "shuffled_full_L9_seed0",
+        "kind": "control",
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ],
+        "shuffled": true
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 457,
+        "5": 953,
+        "10": 1120
+      },
+      "recall": {
+        "1": 0.35453840186190844,
+        "5": 0.73933281613654,
+        "10": 0.8688906128782001
+      },
+      "rescue": 80,
+      "harm": 511,
+      "net": -431,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 462,
+      "full_stream_queries": 1297,
+      "distance_median": 7.790410772461433,
+      "distance_P90": 37.17918195893327,
+      "distance_P95": 51.36259695996367,
+      "near_boundary_2m": 380
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "shuffled_full_L9_seed0",
+      "settings": {
+        "name": "shuffled_full_L9_seed0",
+        "kind": "control",
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ],
+        "shuffled": true
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 837,
+        "5": 1274,
+        "10": 1366
+      },
+      "recall": {
+        "1": 0.5748626373626373,
+        "5": 0.875,
+        "10": 0.9381868131868132
+      },
+      "rescue": 28,
+      "harm": 575,
+      "net": -547,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 844,
+      "full_stream_queries": 1464,
+      "distance_median": 7.980779905458381,
+      "distance_P90": 39.02622828113287,
+      "distance_P95": 55.16651527435182,
+      "near_boundary_2m": 180
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "shuffled_full_L9_seed0",
+      "settings": {
+        "name": "shuffled_full_L9_seed0",
+        "kind": "control",
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ],
+        "shuffled": true
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 1004,
+        "5": 1342,
+        "10": 1403
+      },
+      "recall": {
+        "1": 0.6895604395604396,
+        "5": 0.9217032967032966,
+        "10": 0.9635989010989011
+      },
+      "rescue": 22,
+      "harm": 434,
+      "net": -412,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1011,
+      "full_stream_queries": 1464,
+      "distance_median": 7.980779905458381,
+      "distance_P90": 39.02622828113287,
+      "distance_P95": 55.16651527435182,
+      "near_boundary_2m": 109
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "shuffled_full_L9_seed0",
+      "settings": {
+        "name": "shuffled_full_L9_seed0",
+        "kind": "control",
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ],
+        "shuffled": true
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 1191,
+        "5": 1395,
+        "10": 1434
+      },
+      "recall": {
+        "1": 0.8179945054945055,
+        "5": 0.9581043956043956,
+        "10": 0.9848901098901099
+      },
+      "rescue": 22,
+      "harm": 253,
+      "net": -231,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1198,
+      "full_stream_queries": 1464,
+      "distance_median": 7.980779905458381,
+      "distance_P90": 39.02622828113287,
+      "distance_P95": 55.16651527435182,
+      "near_boundary_2m": 44
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "shuffled_full_L9_seed0",
+      "settings": {
+        "name": "shuffled_full_L9_seed0",
+        "kind": "control",
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ],
+        "shuffled": true
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 1368,
+        "5": 1448,
+        "10": 1454
+      },
+      "recall": {
+        "1": 0.9395604395604396,
+        "5": 0.9945054945054945,
+        "10": 0.9986263736263736
+      },
+      "rescue": 24,
+      "harm": 82,
+      "net": -58,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1375,
+      "full_stream_queries": 1464,
+      "distance_median": 7.980779905458381,
+      "distance_P90": 39.02622828113287,
+      "distance_P95": 55.16651527435182,
+      "near_boundary_2m": 13
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "reversed_fixed_L9",
+      "settings": {
+        "name": "reversed_fixed_L9",
+        "kind": "control",
+        "L": 9,
+        "velocities": [
+          -1.2
+        ],
+        "shuffled": false
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 30,
+        "5": 116,
+        "10": 209
+      },
+      "recall": {
+        "1": 0.023273855702094646,
+        "5": 0.0899922420480993,
+        "10": 0.1621411947245927
+      },
+      "rescue": 6,
+      "harm": 864,
+      "net": -858,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 35,
+      "full_stream_queries": 1297,
+      "distance_median": 142.6615312552823,
+      "distance_P90": 478.65163365244496,
+      "distance_P95": 663.3449073640254,
+      "near_boundary_2m": 23
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "reversed_fixed_L9",
+      "settings": {
+        "name": "reversed_fixed_L9",
+        "kind": "control",
+        "L": 9,
+        "velocities": [
+          -1.2
+        ],
+        "shuffled": false
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 61,
+        "5": 198,
+        "10": 323
+      },
+      "recall": {
+        "1": 0.04189560439560439,
+        "5": 0.13598901098901098,
+        "10": 0.22184065934065933
+      },
+      "rescue": 1,
+      "harm": 1324,
+      "net": -1323,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 68,
+      "full_stream_queries": 1464,
+      "distance_median": 140.54871425448977,
+      "distance_P90": 481.62492822300123,
+      "distance_P95": 672.4897293259737,
+      "near_boundary_2m": 19
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "reversed_fixed_L9",
+      "settings": {
+        "name": "reversed_fixed_L9",
+        "kind": "control",
+        "L": 9,
+        "velocities": [
+          -1.2
+        ],
+        "shuffled": false
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 90,
+        "5": 243,
+        "10": 390
+      },
+      "recall": {
+        "1": 0.061813186813186816,
+        "5": 0.16689560439560439,
+        "10": 0.26785714285714285
+      },
+      "rescue": 0,
+      "harm": 1326,
+      "net": -1326,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 97,
+      "full_stream_queries": 1464,
+      "distance_median": 140.54871425448977,
+      "distance_P90": 481.62492822300123,
+      "distance_P95": 672.4897293259737,
+      "near_boundary_2m": 23
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "reversed_fixed_L9",
+      "settings": {
+        "name": "reversed_fixed_L9",
+        "kind": "control",
+        "L": 9,
+        "velocities": [
+          -1.2
+        ],
+        "shuffled": false
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 144,
+        "5": 324,
+        "10": 484
+      },
+      "recall": {
+        "1": 0.0989010989010989,
+        "5": 0.22252747252747251,
+        "10": 0.3324175824175824
+      },
+      "rescue": 4,
+      "harm": 1282,
+      "net": -1278,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 151,
+      "full_stream_queries": 1464,
+      "distance_median": 140.54871425448977,
+      "distance_P90": 481.62492822300123,
+      "distance_P95": 672.4897293259737,
+      "near_boundary_2m": 19
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "reversed_fixed_L9",
+      "settings": {
+        "name": "reversed_fixed_L9",
+        "kind": "control",
+        "L": 9,
+        "velocities": [
+          -1.2
+        ],
+        "shuffled": false
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 262,
+        "5": 506,
+        "10": 691
+      },
+      "recall": {
+        "1": 0.17994505494505494,
+        "5": 0.3475274725274725,
+        "10": 0.47458791208791207
+      },
+      "rescue": 11,
+      "harm": 1175,
+      "net": -1164,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 269,
+      "full_stream_queries": 1464,
+      "distance_median": 140.54871425448977,
+      "distance_P90": 481.62492822300123,
+      "distance_P95": 672.4897293259737,
+      "near_boundary_2m": 9
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "P_fixed_L9_H3_r1_e0.06",
+      "settings": {
+        "name": "P_fixed_L9_H3_r1_e0.06",
+        "kind": "P",
+        "backend": "fixed_L9",
+        "H": 3,
+        "r": 1,
+        "epsilon": 0.06
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 839,
+        "5": 1231,
+        "10": 1274
+      },
+      "recall": {
+        "1": 0.6508921644685803,
+        "5": 0.9550038789759504,
+        "10": 0.9883630721489527
+      },
+      "rescue": 157,
+      "harm": 206,
+      "net": -49,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 844,
+      "full_stream_queries": 1297,
+      "distance_median": 4.062634613062966,
+      "distance_P90": 9.40069027418878,
+      "distance_P95": 12.368518630296812,
+      "near_boundary_2m": 653
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "P_fixed_L9_H3_r1_e0.06",
+      "settings": {
+        "name": "P_fixed_L9_H3_r1_e0.06",
+        "kind": "P",
+        "backend": "fixed_L9",
+        "H": 3,
+        "r": 1,
+        "epsilon": 0.06
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 1315,
+        "5": 1448,
+        "10": 1455
+      },
+      "recall": {
+        "1": 0.9031593406593407,
+        "5": 0.9945054945054945,
+        "10": 0.9993131868131868
+      },
+      "rescue": 52,
+      "harm": 121,
+      "net": -69,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1322,
+      "full_stream_queries": 1464,
+      "distance_median": 4.390232484308646,
+      "distance_P90": 9.875785955881728,
+      "distance_P95": 12.72838246534612,
+      "near_boundary_2m": 153
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "P_fixed_L9_H3_r1_e0.06",
+      "settings": {
+        "name": "P_fixed_L9_H3_r1_e0.06",
+        "kind": "P",
+        "backend": "fixed_L9",
+        "H": 3,
+        "r": 1,
+        "epsilon": 0.06
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 1404,
+        "5": 1455,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9642857142857143,
+        "5": 0.9993131868131868,
+        "10": 1.0
+      },
+      "rescue": 34,
+      "harm": 46,
+      "net": -12,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1411,
+      "full_stream_queries": 1464,
+      "distance_median": 4.390232484308646,
+      "distance_P90": 9.875785955881728,
+      "distance_P95": 12.72838246534612,
+      "near_boundary_2m": 38
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "P_fixed_L9_H3_r1_e0.06",
+      "settings": {
+        "name": "P_fixed_L9_H3_r1_e0.06",
+        "kind": "P",
+        "backend": "fixed_L9",
+        "H": 3,
+        "r": 1,
+        "epsilon": 0.06
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 1449,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9951923076923077,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 34,
+      "harm": 7,
+      "net": 27,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1456,
+      "full_stream_queries": 1464,
+      "distance_median": 4.390232484308646,
+      "distance_P90": 9.875785955881728,
+      "distance_P95": 12.72838246534612,
+      "near_boundary_2m": 7
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "P_fixed_L9_H3_r1_e0.06",
+      "settings": {
+        "name": "P_fixed_L9_H3_r1_e0.06",
+        "kind": "P",
+        "backend": "fixed_L9",
+        "H": 3,
+        "r": 1,
+        "epsilon": 0.06
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 1456,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 30,
+      "harm": 0,
+      "net": 30,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1463,
+      "full_stream_queries": 1464,
+      "distance_median": 4.390232484308646,
+      "distance_P90": 9.875785955881728,
+      "distance_P95": 12.72838246534612,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "R1_full_L3_H1_r1",
+      "settings": {
+        "name": "R1_full_L3_H1_r1",
+        "kind": "R1",
+        "backend": "full_L3",
+        "H": 1,
+        "r": 1
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 887,
+        "5": 1234,
+        "10": 1276
+      },
+      "recall": {
+        "1": 0.6881303335919318,
+        "5": 0.9573312645461598,
+        "10": 0.9899146625290923
+      },
+      "rescue": 96,
+      "harm": 97,
+      "net": -1,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 889,
+      "full_stream_queries": 1297,
+      "distance_median": 3.9881073205076962,
+      "distance_P90": 7.33074587053191,
+      "distance_P95": 9.18662326384762,
+      "near_boundary_2m": 735
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "R1_full_L3_H1_r1",
+      "settings": {
+        "name": "R1_full_L3_H1_r1",
+        "kind": "R1",
+        "backend": "full_L3",
+        "H": 1,
+        "r": 1
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 1410,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9684065934065934,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 43,
+      "harm": 17,
+      "net": 26,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1417,
+      "full_stream_queries": 1464,
+      "distance_median": 4.264217157755353,
+      "distance_P90": 7.842352963222507,
+      "distance_P95": 9.227508218301493,
+      "near_boundary_2m": 111
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "R1_full_L3_H1_r1",
+      "settings": {
+        "name": "R1_full_L3_H1_r1",
+        "kind": "R1",
+        "backend": "full_L3",
+        "H": 1,
+        "r": 1
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 1449,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9951923076923077,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 36,
+      "harm": 3,
+      "net": 33,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1456,
+      "full_stream_queries": 1464,
+      "distance_median": 4.264217157755353,
+      "distance_P90": 7.842352963222507,
+      "distance_P95": 9.227508218301493,
+      "near_boundary_2m": 10
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "R1_full_L3_H1_r1",
+      "settings": {
+        "name": "R1_full_L3_H1_r1",
+        "kind": "R1",
+        "backend": "full_L3",
+        "H": 1,
+        "r": 1
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 1455,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9993131868131868,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 34,
+      "harm": 1,
+      "net": 33,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1462,
+      "full_stream_queries": 1464,
+      "distance_median": 4.264217157755353,
+      "distance_P90": 7.842352963222507,
+      "distance_P95": 9.227508218301493,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "R1_full_L3_H1_r1",
+      "settings": {
+        "name": "R1_full_L3_H1_r1",
+        "kind": "R1",
+        "backend": "full_L3",
+        "H": 1,
+        "r": 1
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 1455,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9993131868131868,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 30,
+      "harm": 1,
+      "net": 29,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1462,
+      "full_stream_queries": 1464,
+      "distance_median": 4.264217157755353,
+      "distance_P90": 7.842352963222507,
+      "distance_P95": 9.227508218301493,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "R2_full_L3_H3_r1_g0.75",
+      "settings": {
+        "name": "R2_full_L3_H3_r1_g0.75",
+        "kind": "R2",
+        "backend": "full_L3",
+        "H": 3,
+        "r": 1,
+        "gamma": 0.75
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 925,
+        "5": 1273,
+        "10": 1285
+      },
+      "recall": {
+        "1": 0.7176105508145849,
+        "5": 0.9875872769588828,
+        "10": 0.9968968192397207
+      },
+      "rescue": 124,
+      "harm": 87,
+      "net": 37,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 926,
+      "full_stream_queries": 1297,
+      "distance_median": 3.874235409061211,
+      "distance_P90": 6.91899025786435,
+      "distance_P95": 8.413198082089757,
+      "near_boundary_2m": 756
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "R2_full_L3_H3_r1_g0.75",
+      "settings": {
+        "name": "R2_full_L3_H3_r1_g0.75",
+        "kind": "R2",
+        "backend": "full_L3",
+        "H": 3,
+        "r": 1,
+        "gamma": 0.75
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 1431,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9828296703296703,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 57,
+      "harm": 10,
+      "net": 47,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1438,
+      "full_stream_queries": 1464,
+      "distance_median": 4.188167826776134,
+      "distance_P90": 7.401573300753867,
+      "distance_P95": 8.685226041854293,
+      "near_boundary_2m": 98
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "R2_full_L3_H3_r1_g0.75",
+      "settings": {
+        "name": "R2_full_L3_H3_r1_g0.75",
+        "kind": "R2",
+        "backend": "full_L3",
+        "H": 3,
+        "r": 1,
+        "gamma": 0.75
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 1456,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 40,
+      "harm": 0,
+      "net": 40,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1463,
+      "full_stream_queries": 1464,
+      "distance_median": 4.188167826776134,
+      "distance_P90": 7.401573300753867,
+      "distance_P95": 8.685226041854293,
+      "near_boundary_2m": 3
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "R2_full_L3_H3_r1_g0.75",
+      "settings": {
+        "name": "R2_full_L3_H3_r1_g0.75",
+        "kind": "R2",
+        "backend": "full_L3",
+        "H": 3,
+        "r": 1,
+        "gamma": 0.75
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 1456,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 34,
+      "harm": 0,
+      "net": 34,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1463,
+      "full_stream_queries": 1464,
+      "distance_median": 4.188167826776134,
+      "distance_P90": 7.401573300753867,
+      "distance_P95": 8.685226041854293,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "R2_full_L3_H3_r1_g0.75",
+      "settings": {
+        "name": "R2_full_L3_H3_r1_g0.75",
+        "kind": "R2",
+        "backend": "full_L3",
+        "H": 3,
+        "r": 1,
+        "gamma": 0.75
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 1456,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 30,
+      "harm": 0,
+      "net": 30,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1463,
+      "full_stream_queries": 1464,
+      "distance_median": 4.188167826776134,
+      "distance_P90": 7.401573300753867,
+      "distance_P95": 8.685226041854293,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "P_epsilon_zero",
+      "settings": {
+        "name": "P_epsilon_zero",
+        "kind": "P",
+        "backend": "fixed_L9",
+        "H": 3,
+        "r": 1,
+        "epsilon": 0
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 631,
+        "5": 1246,
+        "10": 1269
+      },
+      "recall": {
+        "1": 0.4895267649340574,
+        "5": 0.9666408068269977,
+        "10": 0.9844840961986036
+      },
+      "rescue": 183,
+      "harm": 440,
+      "net": -257,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 636,
+      "full_stream_queries": 1297,
+      "distance_median": 5.1133159490933195,
+      "distance_P90": 14.62271446602934,
+      "distance_P95": 18.00278380756631,
+      "near_boundary_2m": 523
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "P_epsilon_zero",
+      "settings": {
+        "name": "P_epsilon_zero",
+        "kind": "P",
+        "backend": "fixed_L9",
+        "H": 3,
+        "r": 1,
+        "epsilon": 0
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 1084,
+        "5": 1453,
+        "10": 1454
+      },
+      "recall": {
+        "1": 0.7445054945054945,
+        "5": 0.9979395604395604,
+        "10": 0.9986263736263736
+      },
+      "rescue": 47,
+      "harm": 347,
+      "net": -300,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1091,
+      "full_stream_queries": 1464,
+      "distance_median": 5.76900693658947,
+      "distance_P90": 15.056911588670605,
+      "distance_P95": 19.21143064206273,
+      "near_boundary_2m": 252
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "P_epsilon_zero",
+      "settings": {
+        "name": "P_epsilon_zero",
+        "kind": "P",
+        "backend": "fixed_L9",
+        "H": 3,
+        "r": 1,
+        "epsilon": 0
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 1309,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.8990384615384616,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 32,
+      "harm": 139,
+      "net": -107,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1316,
+      "full_stream_queries": 1464,
+      "distance_median": 5.76900693658947,
+      "distance_P90": 15.056911588670605,
+      "distance_P95": 19.21143064206273,
+      "near_boundary_2m": 114
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "P_epsilon_zero",
+      "settings": {
+        "name": "P_epsilon_zero",
+        "kind": "P",
+        "backend": "fixed_L9",
+        "H": 3,
+        "r": 1,
+        "epsilon": 0
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 1436,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9862637362637363,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 34,
+      "harm": 20,
+      "net": 14,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1443,
+      "full_stream_queries": 1464,
+      "distance_median": 5.76900693658947,
+      "distance_P90": 15.056911588670605,
+      "distance_P95": 19.21143064206273,
+      "near_boundary_2m": 19
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "P_epsilon_zero",
+      "settings": {
+        "name": "P_epsilon_zero",
+        "kind": "P",
+        "backend": "fixed_L9",
+        "H": 3,
+        "r": 1,
+        "epsilon": 0
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 1456,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 30,
+      "harm": 0,
+      "net": 30,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1463,
+      "full_stream_queries": 1464,
+      "distance_median": 5.76900693658947,
+      "distance_P90": 15.056911588670605,
+      "distance_P95": 19.21143064206273,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "R1_same_P_pool",
+      "settings": {
+        "name": "R1_same_P_pool",
+        "kind": "R1",
+        "backend": "fixed_L9",
+        "H": 3,
+        "r": 1
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 895,
+        "5": 1236,
+        "10": 1279
+      },
+      "recall": {
+        "1": 0.6943366951124903,
+        "5": 0.9588828549262994,
+        "10": 0.9922420480993018
+      },
+      "rescue": 70,
+      "harm": 63,
+      "net": 7,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 900,
+      "full_stream_queries": 1297,
+      "distance_median": 3.8837224410515243,
+      "distance_P90": 7.490569872551849,
+      "distance_P95": 9.012245381898019,
+      "near_boundary_2m": 713
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "R1_same_P_pool",
+      "settings": {
+        "name": "R1_same_P_pool",
+        "kind": "R1",
+        "backend": "fixed_L9",
+        "H": 3,
+        "r": 1
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 1404,
+        "5": 1451,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9642857142857143,
+        "5": 0.9965659340659341,
+        "10": 1.0
+      },
+      "rescue": 38,
+      "harm": 18,
+      "net": 20,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1411,
+      "full_stream_queries": 1464,
+      "distance_median": 4.204508691728317,
+      "distance_P90": 7.849158993664359,
+      "distance_P95": 9.094810237335272,
+      "near_boundary_2m": 102
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "R1_same_P_pool",
+      "settings": {
+        "name": "R1_same_P_pool",
+        "kind": "R1",
+        "backend": "fixed_L9",
+        "H": 3,
+        "r": 1
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 1443,
+        "5": 1455,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9910714285714286,
+        "5": 0.9993131868131868,
+        "10": 1.0
+      },
+      "rescue": 31,
+      "harm": 4,
+      "net": 27,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1450,
+      "full_stream_queries": 1464,
+      "distance_median": 4.204508691728317,
+      "distance_P90": 7.849158993664359,
+      "distance_P95": 9.094810237335272,
+      "near_boundary_2m": 11
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "R1_same_P_pool",
+      "settings": {
+        "name": "R1_same_P_pool",
+        "kind": "R1",
+        "backend": "fixed_L9",
+        "H": 3,
+        "r": 1
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 1451,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9965659340659341,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 30,
+      "harm": 1,
+      "net": 29,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1458,
+      "full_stream_queries": 1464,
+      "distance_median": 4.204508691728317,
+      "distance_P90": 7.849158993664359,
+      "distance_P95": 9.094810237335272,
+      "near_boundary_2m": 2
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "R1_same_P_pool",
+      "settings": {
+        "name": "R1_same_P_pool",
+        "kind": "R1",
+        "backend": "fixed_L9",
+        "H": 3,
+        "r": 1
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 1454,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9986263736263736,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 29,
+      "harm": 1,
+      "net": 28,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1461,
+      "full_stream_queries": 1464,
+      "distance_median": 4.204508691728317,
+      "distance_P90": 7.849158993664359,
+      "distance_P95": 9.094810237335272,
+      "near_boundary_2m": 0
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "R3_same_P_radius",
+      "settings": {
+        "name": "R3_same_P_radius",
+        "kind": "R1",
+        "backend": "fixed_L9",
+        "H": 1,
+        "r": 1
+      },
+      "radius": 5,
+      "queries": 1289,
+      "correct": {
+        "1": 849,
+        "5": 1240,
+        "10": 1275
+      },
+      "recall": {
+        "1": 0.6586501163692785,
+        "5": 0.9619860356865787,
+        "10": 0.9891388673390225
+      },
+      "rescue": 147,
+      "harm": 186,
+      "net": -39,
+      "no_positive": 167,
+      "startup_excluded": 8,
+      "full_stream_correct": 854,
+      "full_stream_queries": 1297,
+      "distance_median": 4.0557736622011475,
+      "distance_P90": 8.903653396171315,
+      "distance_P95": 11.085014305245725,
+      "near_boundary_2m": 659
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "R3_same_P_radius",
+      "settings": {
+        "name": "R3_same_P_radius",
+        "kind": "R1",
+        "backend": "fixed_L9",
+        "H": 1,
+        "r": 1
+      },
+      "radius": 10,
+      "queries": 1456,
+      "correct": {
+        "1": 1354,
+        "5": 1455,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.929945054945055,
+        "5": 0.9993131868131868,
+        "10": 1.0
+      },
+      "rescue": 49,
+      "harm": 79,
+      "net": -30,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1361,
+      "full_stream_queries": 1464,
+      "distance_median": 4.359649701915641,
+      "distance_P90": 9.034530944085848,
+      "distance_P95": 11.078829678769985,
+      "near_boundary_2m": 161
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "R3_same_P_radius",
+      "settings": {
+        "name": "R3_same_P_radius",
+        "kind": "R1",
+        "backend": "fixed_L9",
+        "H": 1,
+        "r": 1
+      },
+      "radius": 15,
+      "queries": 1456,
+      "correct": {
+        "1": 1424,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.978021978021978,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 35,
+      "harm": 27,
+      "net": 8,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1431,
+      "full_stream_queries": 1464,
+      "distance_median": 4.359649701915641,
+      "distance_P90": 9.034530944085848,
+      "distance_P95": 11.078829678769985,
+      "near_boundary_2m": 16
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "R3_same_P_radius",
+      "settings": {
+        "name": "R3_same_P_radius",
+        "kind": "R1",
+        "backend": "fixed_L9",
+        "H": 1,
+        "r": 1
+      },
+      "radius": 25,
+      "queries": 1456,
+      "correct": {
+        "1": 1442,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 0.9903846153846154,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 32,
+      "harm": 12,
+      "net": 20,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1449,
+      "full_stream_queries": 1464,
+      "distance_median": 4.359649701915641,
+      "distance_P90": 9.034530944085848,
+      "distance_P95": 11.078829678769985,
+      "near_boundary_2m": 7
+    },
+    {
+      "dataset": "St_Lucia",
+      "split": "descriptive",
+      "unit": "metres",
+      "method": "R3_same_P_radius",
+      "settings": {
+        "name": "R3_same_P_radius",
+        "kind": "R1",
+        "backend": "fixed_L9",
+        "H": 1,
+        "r": 1
+      },
+      "radius": 50,
+      "queries": 1456,
+      "correct": {
+        "1": 1456,
+        "5": 1456,
+        "10": 1456
+      },
+      "recall": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "rescue": 30,
+      "harm": 0,
+      "net": 30,
+      "no_positive": 0,
+      "startup_excluded": 8,
+      "full_stream_correct": 1463,
+      "full_stream_queries": 1464,
+      "distance_median": 4.359649701915641,
+      "distance_P90": 9.034530944085848,
+      "distance_P95": 11.078829678769985,
+      "near_boundary_2m": 1
+    }
+  ],
+  "timing": [
+    {
+      "method": "A",
+      "mean_ms": 11.017067051255573,
+      "median_ms": 11.018828503438272,
+      "P95_ms": 11.32572179667477,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.20525134899799014,
+      "startup_included": true
+    },
+    {
+      "method": "B",
+      "mean_ms": 14.042160917092083,
+      "median_ms": 14.057644501008326,
+      "P95_ms": 14.27669020522444,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.4718641759973252,
+      "startup_included": true
+    },
+    {
+      "method": "DINOv2",
+      "mean_ms": 14.296826730229252,
+      "median_ms": 14.2749240003468,
+      "P95_ms": 14.715658748173155,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.4517817100058892,
+      "startup_included": true
+    },
+    {
+      "method": "RRF_k60",
+      "mean_ms": 23.619552993385113,
+      "median_ms": 23.610170999745606,
+      "P95_ms": 23.916454399659415,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.6913405430022976,
+      "startup_included": true
+    },
+    {
+      "method": "AB_0.25",
+      "mean_ms": 23.186913763944005,
+      "median_ms": 23.19216649993905,
+      "P95_ms": 23.447825098992325,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.6949826780037256,
+      "startup_included": true
+    },
+    {
+      "method": "AB_0.5",
+      "mean_ms": 23.34461175845277,
+      "median_ms": 23.3256520004943,
+      "P95_ms": 23.640124597295653,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.6899074520042632,
+      "startup_included": true
+    },
+    {
+      "method": "AB_0.75",
+      "mean_ms": 23.370063222154666,
+      "median_ms": 23.375277498416835,
+      "P95_ms": 23.604871499628644,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.6924483480033814,
+      "startup_included": true
+    },
+    {
+      "method": "fixed_L9",
+      "mean_ms": 12.144073991550915,
+      "median_ms": 12.12726299854694,
+      "P95_ms": 12.358525101444684,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.21219172100245487,
+      "startup_included": true
+    },
+    {
+      "method": "full_L3",
+      "mean_ms": 12.102906184451697,
+      "median_ms": 12.1015750009974,
+      "P95_ms": 12.282800397224491,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.20796971500385553,
+      "startup_included": true
+    },
+    {
+      "method": "full_L5",
+      "mean_ms": 12.383226745415282,
+      "median_ms": 12.372687499009771,
+      "P95_ms": 12.589001700325753,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.2111602760051028,
+      "startup_included": true
+    },
+    {
+      "method": "full_L9",
+      "mean_ms": 13.186266601974364,
+      "median_ms": 13.27878050142317,
+      "P95_ms": 13.553820598463062,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.20647773500240874,
+      "startup_included": true
+    },
+    {
+      "method": "global_fixed_L9_blend_0.25",
+      "mean_ms": 12.270056167141588,
+      "median_ms": 12.28140500097652,
+      "P95_ms": 12.468566150710103,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.211634758998116,
+      "startup_included": true
+    },
+    {
+      "method": "global_fixed_L9_blend_0.5",
+      "mean_ms": 11.870970374738233,
+      "median_ms": 11.864623997098533,
+      "P95_ms": 12.10318859812105,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.20567609599675052,
+      "startup_included": true
+    },
+    {
+      "method": "global_fixed_L9_blend_0.75",
+      "mean_ms": 12.286760256829572,
+      "median_ms": 12.288821999391075,
+      "P95_ms": 12.491069550742395,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.21298058699903777,
+      "startup_included": true
+    },
+    {
+      "method": "shuffled_full_L9_seed0",
+      "mean_ms": 13.019871013865567,
+      "median_ms": 13.03312050367822,
+      "P95_ms": 13.285952398655354,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.20544024799892213,
+      "startup_included": true
+    },
+    {
+      "method": "reversed_fixed_L9",
+      "mean_ms": 12.227105429227825,
+      "median_ms": 12.231973501911853,
+      "P95_ms": 12.424413248663768,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.21357379000255605,
+      "startup_included": true
+    },
+    {
+      "method": "P_fixed_L9_H3_r1_e0.06",
+      "mean_ms": 14.668387979840793,
+      "median_ms": 14.669550502731,
+      "P95_ms": 14.855031448678346,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.20917173600173555,
+      "startup_included": true
+    },
+    {
+      "method": "R1_full_L3_H1_r1",
+      "mean_ms": 15.170657512532152,
+      "median_ms": 15.17021250037942,
+      "P95_ms": 15.350983647294925,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.21509772499848623,
+      "startup_included": true
+    },
+    {
+      "method": "R2_full_L3_H3_r1_g0.75",
+      "mean_ms": 14.929565907495899,
+      "median_ms": 14.92590750058298,
+      "P95_ms": 15.14209669912816,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.2074701890014694,
+      "startup_included": true
+    },
+    {
+      "method": "P_epsilon_zero",
+      "mean_ms": 14.895931919424777,
+      "median_ms": 14.898346500558546,
+      "P95_ms": 15.080745849991217,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.21153579899691977,
+      "startup_included": true
+    },
+    {
+      "method": "R1_same_P_pool",
+      "mean_ms": 14.802353069410215,
+      "median_ms": 14.819805499428185,
+      "P95_ms": 15.027078300045105,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.2050400830048602,
+      "startup_included": true
+    },
+    {
+      "method": "R3_same_P_radius",
+      "mean_ms": 15.02007984714851,
+      "median_ms": 15.014779000921408,
+      "P95_ms": 15.267177151690703,
+      "measurements": 4392,
+      "queries_per_pass": 1464,
+      "passes": 3,
+      "warmup20": true,
+      "batch1": true,
+      "actual_images_encoded": true,
+      "includes_decode_to_complete_ranking": true,
+      "model_load_seconds": 0.21328173900110414,
+      "startup_included": true
+    }
+  ],
+  "offline_gallery": [
+    {
+      "encoder": "cosplace",
+      "model_load_seconds": 0.32132274100149516,
+      "actual_gallery_encode_seconds": 12.45194350300153,
+      "images": 1549,
+      "batch": 16,
+      "array_sha256": "bb6b49ac147a3755827083a24986660fa0bdb51655cc8ed20f33cd90d621faa6",
+      "fingerprint": {
+        "method": "cosplace",
+        "backbone": "ResNet18",
+        "dimension": 512,
+        "pooling": "L2 -> GeM -> Flatten -> Linear -> L2",
+        "dtype": "float32",
+        "source": {
+          "repository": "https://github.com/gmberton/CosPlace",
+          "local_directory": "third_party/CosPlace",
+          "commit": "52b56e95ea62245281281f3bafd7b9390d19a0fd",
+          "checkpoint": "weights/p0_torch/hub/checkpoints/ResNet18_512_cosplace.pth",
+          "checkpoint_sha256": "db09310a175e325fe25e7a460b41886ab9357b19c41d370a9ed3ed81bc9abf9f",
+          "checkpoint_url": "https://github.com/gmberton/CosPlace/releases/download/v1.0/ResNet18_512_cosplace.pth"
+        },
+        "source_python_sha256": {
+          "augmentations.py": "f7fc71bf7f48a149faf8a81b77255d25e2fe7b587184b411759d877e7ccea28e",
+          "commons.py": "68ed1c810869e6a1aeea6d993aad68c01e978e917ffeb297dc63993c0c5e7bbd",
+          "cosface_loss.py": "96c7beb349a7bc84321068a476dc53f1fc0d13938c4ce54c24e63a449832cca3",
+          "cosplace_model/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "cosplace_model/cosplace_network.py": "53c5c5e0d01bb705d2a94b7e029ea0cf819186bb1070f396abfb0522e782e523",
+          "cosplace_model/layers.py": "f11faa403f384a7e68c7abe24cdd2460727c9c89eceb00d2dfe107c312fe9005",
+          "datasets/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "datasets/dataset_utils.py": "347cd5f630c06f4510dafe8ab16ee89158345e55d9c22e59e807aa182e4765d1",
+          "datasets/test_dataset.py": "a9e64923e4eb931e50702662a56c57a078c9c48064977bc02735cb1321a3ed62",
+          "datasets/train_dataset.py": "ca91e25b2db9606dd823c8bccf94722b798f9cc6b721d47de80e6e3e5da2d72e",
+          "eval.py": "e643e52a8ba5cfcb2e1d811a57e9cc1c7715b598413e748d6d497edaca6aeb68",
+          "hubconf.py": "c7c6df40afade24d698ee1002765e4d73d9667f88bd3992757c00dba9e265173",
+          "parser.py": "f5d598e976108148bf75eda16e18a2c691c40c8b5d6c5abfb55907d7a625e7df",
+          "test.py": "2953460f26169a891074c1d9806ba2d7c526d5135ec47ea92f415270518ee8b2",
+          "train.py": "114b3828e712a80549277a93371afc67cf793cc8beeb77ae046206c9e8739388",
+          "util.py": "51cbc6c14a82ead97d6aa5cfa393e88a0630b952a9849d1b8271ee11f0c66853",
+          "visualizations.py": "c16a1ef350a4bda9ecd3a5c42056e8f1a3f21a2dd7da2797cc0022f4bce451d2"
+        },
+        "model_state_sha256": "0097d0508f1b5ab6c820906f3a99f53fdfbbe1c07ae3a4c2242dd8dfdebf9254",
+        "eval_mode": true,
+        "all_parameters_frozen": true,
+        "torch": "2.6.0+cu124",
+        "torchvision": "0.21.0+cu124",
+        "numerics": {
+          "cuda_matmul_tf32": false,
+          "cudnn_tf32": false,
+          "cudnn_benchmark": false
+        },
+        "adapter_source_sha256": "09812cf25f08235ae10575c8a6ba00317e0a12c7abf063b3ba041fc0a96cca3c",
+        "preprocessing": {
+          "RGB": true,
+          "resize_hw": [
+            224,
+            224
+          ],
+          "order": "ToTensor -> ImageNet Normalize -> tensor Resize",
+          "mean": [
+            0.485,
+            0.456,
+            0.406
+          ],
+          "std": [
+            0.229,
+            0.224,
+            0.225
+          ],
+          "interpolation": "bilinear",
+          "antialias": true,
+          "descriptor_l2_normalization": true,
+          "setting": "protocol full-image low-resolution warp; not original paper reproduction"
+        }
+      },
+      "descriptor_bytes": 6344704
+    },
+    {
+      "encoder": "eigenplaces",
+      "model_load_seconds": 0.5281357990024844,
+      "actual_gallery_encode_seconds": 15.326498590999108,
+      "images": 1549,
+      "batch": 16,
+      "array_sha256": "b373fb45f0514d2999dbd38a7b821fb339ecef9cee4de147ab5de9daecc19782",
+      "fingerprint": {
+        "method": "eigenplaces",
+        "backbone": "ResNet50",
+        "dimension": 512,
+        "pooling": "L2 -> GeM -> Flatten -> Linear -> L2",
+        "dtype": "float32",
+        "source": {
+          "repository": "https://github.com/gmberton/EigenPlaces",
+          "local_directory": "third_party/EigenPlaces",
+          "commit": "a2969f71d5ea31017443af490b15273ca4c50af1",
+          "checkpoint": "weights/p0_torch/hub/checkpoints/ResNet50_512_eigenplaces.pth",
+          "checkpoint_sha256": "886a2fbd910e961d02e5c74ccc5e11cc1fe9a049a4fe290b9514878c691ce491",
+          "checkpoint_url": "https://github.com/gmberton/EigenPlaces/releases/download/v1.0/ResNet50_512_eigenplaces.pth",
+          "initialization_adaptation": "Official GeoLocalizationNet_ and forward; bypass overwritten CosPlace initializer, strict-load every tensor from the complete official EigenPlaces checkpoint."
+        },
+        "source_python_sha256": {
+          "augmentations.py": "6edc203a4bc6e9b3c945f8d22134a61dee38b8cd84b22b918e94d8bccfda926c",
+          "commons.py": "c6868ad1106d7b006f284e207afda879fb3a0fbcbcc06053b7cfa03209217038",
+          "cosface_loss.py": "96c7beb349a7bc84321068a476dc53f1fc0d13938c4ce54c24e63a449832cca3",
+          "datasets/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "datasets/dataset_utils.py": "d60402da316938e4b24e4b2b4131ac7aeb747f2788f73f981569ae4ffba29392",
+          "datasets/eigenplaces_dataset.py": "85ac97e918dec7a5a4b5dd6c274418fbdeec4d950b0a33d1419e60d0e31f57af",
+          "datasets/map_utils.py": "1bb515008d44a47ad6b927ccbdc6a505829ee7dfb211cb0412863f59350a666b",
+          "datasets/test_dataset.py": "b2d87d800d1a98b2498eb675586f0bf708f477f098fbafcf24ae83b9a91d9f3c",
+          "eigenplaces_model/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "eigenplaces_model/eigenplaces_network.py": "53fb8bbaa170557c52d7527f05ca8658d54e825a91385ce40cb64b86c6cf53f2",
+          "eigenplaces_model/layers.py": "f11faa403f384a7e68c7abe24cdd2460727c9c89eceb00d2dfe107c312fe9005",
+          "eval.py": "dd27b182bc878ddbe72c993346db1508803ea8ae0a2c649c160a2079075917a9",
+          "hubconf.py": "deba6fe9354f1fab47c13b4ffada701e3a47ae7f21a0b2b785ed9a55d864fb97",
+          "parser.py": "4215d72518fb6f1abefad5d47043fc2f3df1628e6ca0e0d47f315c60e88a1774",
+          "test.py": "505686880b7c9ab57def0e790197e6402178b661f523b4322db1aa3fe556cfc1",
+          "train.py": "5a6207b0346bdb6d83efa4399b4d513befc02d97f79dad1319b59fa6396789ab",
+          "util.py": "7b082bb09cf8e7d51784bb65ff8680298cddf77071aab8ad01a05da63b115db0"
+        },
+        "model_state_sha256": "32a99ccdaf0b51fc028128e24e9198a40d41c728ba4c66e686b081c95dd53e7f",
+        "eval_mode": true,
+        "all_parameters_frozen": true,
+        "torch": "2.6.0+cu124",
+        "torchvision": "0.21.0+cu124",
+        "numerics": {
+          "cuda_matmul_tf32": false,
+          "cudnn_tf32": false,
+          "cudnn_benchmark": false
+        },
+        "adapter_source_sha256": "09812cf25f08235ae10575c8a6ba00317e0a12c7abf063b3ba041fc0a96cca3c",
+        "preprocessing": {
+          "RGB": true,
+          "resize_hw": [
+            224,
+            224
+          ],
+          "order": "ToTensor -> ImageNet Normalize -> tensor Resize",
+          "mean": [
+            0.485,
+            0.456,
+            0.406
+          ],
+          "std": [
+            0.229,
+            0.224,
+            0.225
+          ],
+          "interpolation": "bilinear",
+          "antialias": true,
+          "descriptor_l2_normalization": true,
+          "setting": "protocol full-image low-resolution warp; not original paper reproduction"
+        }
+      },
+      "descriptor_bytes": 6344704
+    },
+    {
+      "encoder": "dinov2",
+      "model_load_seconds": 0.43229911999515025,
+      "actual_gallery_encode_seconds": 16.61706979900191,
+      "images": 1549,
+      "batch": 16,
+      "array_sha256": "2fd68c635b3e886a42c7d4fb0bc8f07c236ce2172922caeba6d30c1850398a34",
+      "fingerprint": {
+        "method": "dinov2",
+        "backbone": "dinov2_vits14",
+        "dimension": 384,
+        "pooling": "final LayerNorm CLS -> descriptor L2; no registers",
+        "dtype": "float32",
+        "source": {
+          "repository": "https://github.com/facebookresearch/dinov2",
+          "local_directory": "third_party/dinov2",
+          "commit": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+          "checkpoint": "weights/p0_torch/hub/checkpoints/dinov2_vits14_pretrain.pth",
+          "checkpoint_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+          "checkpoint_url": "https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth"
+        },
+        "source_python_sha256": {
+          "dinov2/__init__.py": "0d2b87b7e71c7f7279ccc4b4f8b541d26071425284a0ea01a5a435fac4511cfe",
+          "dinov2/configs/__init__.py": "be6503fea5e43bf81c504247a35f731f12541e567b18607152eff102137f8dc0",
+          "dinov2/data/__init__.py": "a3d422bc188029270a69b231306eed8482093c0317b0ba406867a115f2e67f01",
+          "dinov2/data/accumulators.py": "f7b8677699afbaaef17bb42573db0d45e1bc9a5e6f7da16573672a35f1f9a06f",
+          "dinov2/data/adapters.py": "1d24004ce6ead1e35408f590867d0b1c09a4a3a65278771f574f1a3ba0d7ccba",
+          "dinov2/data/augmentations.py": "10e949f266c7cffa57ffc8c5cf9dc094a8e701cdc74f1a3fefd2e02f78f8cdf7",
+          "dinov2/data/cell_dino/augmentations.py": "b87c8283f717945c8429f220a769aeb0278604a38ded1c75b8adadfa1d2f3ddf",
+          "dinov2/data/cell_dino/transforms.py": "18f435ff0a346d972a95c66d8b20bb1fee2fa275740e0fcc99253d982f5e3cd8",
+          "dinov2/data/collate.py": "0d2bb0060094b8c86838ad5af2572a9ff0e66c73660b61be70d60f64b9508570",
+          "dinov2/data/datasets/__init__.py": "00057731a94738bf3fdbc15af2bcc64f8c21e954e7ff79c0e48dae38b79202f2",
+          "dinov2/data/datasets/cell_dino/chammi_cp.py": "bd35d07dec62ab3b5f99c78d97cdfa3fad8a617db5b844e81ded17142ef90361",
+          "dinov2/data/datasets/cell_dino/chammi_hpa.py": "dc40cfc28ae02d2275b896189520c85c0c5d8aa9ad1d06f0ed3cd4a760ef488a",
+          "dinov2/data/datasets/cell_dino/chammi_wtc.py": "e90ddea42e9273495f294ef584c467667bb8002758707cb154da55d37a24dc37",
+          "dinov2/data/datasets/cell_dino/hpafov.py": "065108a515651ef21411e6951fa64197646e2887c8b772185673d3df65c4a779",
+          "dinov2/data/datasets/cell_dino/hpaone.py": "16b080fd09d61c8241409d0e444d0b23464f7590f11df612e45efd354526ffe2",
+          "dinov2/data/datasets/decoders.py": "a43ca26d46b973943ff17c5e6d0d4115cd07e01851e4fc9d46e4b13738da17f8",
+          "dinov2/data/datasets/extended.py": "4f042450ff939a13d284df30a859a16f8c13ac8e3ece48e3437b8bca473980f0",
+          "dinov2/data/datasets/image_net.py": "748a6d9f39b1ca9e94a2bdd61a78c40d1655508fcfae40057057fe8c74bb611b",
+          "dinov2/data/datasets/image_net_22k.py": "e94c0bffc3f1aa78d770c871ecb72fbbf66a5dfcd0703f8319b263708698e351",
+          "dinov2/data/loaders.py": "1f6c2f709f880c8b94717fc3ee2531f18e034ff98986c0a7e90096dc42b82b6e",
+          "dinov2/data/masking.py": "4fcbc5aa4cfa069a32200b3eb39f86e09de3ac476afa7a12a2fbdfb160a892c3",
+          "dinov2/data/samplers.py": "5f19029f6da99de6c81ec5e8d313d85739c66020cf8447b5b35e7f80c9071ebb",
+          "dinov2/data/transforms.py": "725823be317c6a549810740c6566a2a448ba1eba85eea87769c10b986dda2e5b",
+          "dinov2/distributed/__init__.py": "b6aaa4151999c88a4ff031e786dc66bb2ecbc8b5421ffe72169c9c305c1414e5",
+          "dinov2/eval/__init__.py": "2932e94a2d67be87b717c49468214c1127be7864aedf37f5891d26be7bc1437f",
+          "dinov2/eval/cell_dino/knn.py": "1360aaaf72fa561315e269e1c714d431aa6e5aa0ec64abe4d1c26be14b4c1750",
+          "dinov2/eval/cell_dino/linear.py": "0f103e6a5578138c614a445fc36c8555a74751cc5b6a90218fe0a417baf43df8",
+          "dinov2/eval/cell_dino/utils.py": "4117190b6b216f0ad48b2dab91cea55a09a861d27cb8d8993677274b01a76fd6",
+          "dinov2/eval/depth/__init__.py": "2932e94a2d67be87b717c49468214c1127be7864aedf37f5891d26be7bc1437f",
+          "dinov2/eval/depth/models/__init__.py": "6d2d9aa7396eafa2c3d04d5609b39c068b210a5ca8368d2f7cd47f5fc3e7d152",
+          "dinov2/eval/depth/models/backbones/__init__.py": "e6e25365ad291aad30d8bce4c9f9b906580f204c141d62be4bcc3699e563d901",
+          "dinov2/eval/depth/models/backbones/vision_transformer.py": "9aa72220970247ccb8399e5a95d82721679c479e0f0c0096c4ef0bdff4fe6735",
+          "dinov2/eval/depth/models/builder.py": "0b1dcd672ba5a6b5acec2fa70cfea70ee280aba264a3236e7c1139976b2d02dc",
+          "dinov2/eval/depth/models/decode_heads/__init__.py": "38268a3d08272273b7a1cf03b88b1eff6604cbef519637476e9652dcef4f43bc",
+          "dinov2/eval/depth/models/decode_heads/decode_head.py": "4d163967518b4ef251dbd400792a295033983a7c3eb9ce2b362df32f1bc57046",
+          "dinov2/eval/depth/models/decode_heads/dpt_head.py": "4de04fd7fd8681d0bb5977f250be89d76314f97d626f717d1d09eeff14e059f7",
+          "dinov2/eval/depth/models/decode_heads/linear_head.py": "bf6c448f2635a5db0eb0423bf7854899c1e36f0e0897107c14dfb2bf064d0160",
+          "dinov2/eval/depth/models/depther/__init__.py": "a00bcccdea87b79d23b0085ad3db9728169103c236749dfda09184dc0fefa8aa",
+          "dinov2/eval/depth/models/depther/base.py": "59233aeb2bdf0266937213d5d1f12628835bc5a204f11a7b6982838f61adf28f",
+          "dinov2/eval/depth/models/depther/encoder_decoder.py": "96d0d2ff321707888191b52ee9180ef6f38d6b7212f5d604891c764b4b46d248",
+          "dinov2/eval/depth/models/losses/__init__.py": "5dacc4c02607b64ee63906bbda9de9158d59d50fc2d1e4cf360455f6f749bee0",
+          "dinov2/eval/depth/models/losses/gradientloss.py": "61d625dd618ca3fb2443d1e831949f1e79c2bc4081d72355ff932a41c8b47f89",
+          "dinov2/eval/depth/models/losses/sigloss.py": "97ff67edf57ebfd6570be45859545580171cfbca489803429005529ccc0e4135",
+          "dinov2/eval/depth/ops/__init__.py": "1640dd76d0d09a1db46df8a1c767ff04d2a0d6004d9c9b6134d80a0f53f6c4e7",
+          "dinov2/eval/depth/ops/wrappers.py": "85d58e303eff9a0a306d97101c8b35c24196bfe55e8da019df1e4817411a4dc7",
+          "dinov2/eval/knn.py": "5f59977c5d697579d64b1acb19244d819c54a253cdcf1b023b818418bdf841e1",
+          "dinov2/eval/linear.py": "cd6cb057561ab180557711b20d2f5f4916393a848375b0cefae11ff61d339865",
+          "dinov2/eval/log_regression.py": "273648c0937183af4b2f516b8009e7ef4ffda91b599e8512422e2c3b51829615",
+          "dinov2/eval/metrics.py": "2f436b2a67949955bddce0b6b58d73fe338ba362a3de4834290593f7a134e9aa",
+          "dinov2/eval/segmentation/__init__.py": "2932e94a2d67be87b717c49468214c1127be7864aedf37f5891d26be7bc1437f",
+          "dinov2/eval/segmentation/hooks/__init__.py": "590638a03129a24077f4dff2477b3d9326e234f23590d5c5715c37dff26b5638",
+          "dinov2/eval/segmentation/hooks/optimizer.py": "1c116c35dfad8fa9abdfa5738c7e621e75c9277304fd009f48c2592571204ab1",
+          "dinov2/eval/segmentation/models/__init__.py": "8d3601782bc10c5477243d1d6760c94e78a8ef8e7028476c70ee4781a693fd36",
+          "dinov2/eval/segmentation/models/backbones/__init__.py": "e6e25365ad291aad30d8bce4c9f9b906580f204c141d62be4bcc3699e563d901",
+          "dinov2/eval/segmentation/models/backbones/vision_transformer.py": "ed687476a2381bc708c6035b5f77e7b2560baaee36313c55f5e26aa5253adbb7",
+          "dinov2/eval/segmentation/models/decode_heads/__init__.py": "f440e7a342f485db7c5766359f5b747f0ed810172e89521b218e50057a94c5e4",
+          "dinov2/eval/segmentation/models/decode_heads/linear_head.py": "14500d7aa301797f77774348bd6912ee2ee3e68909c9f511a2730ff340349340",
+          "dinov2/eval/segmentation/utils/__init__.py": "2932e94a2d67be87b717c49468214c1127be7864aedf37f5891d26be7bc1437f",
+          "dinov2/eval/segmentation/utils/colormaps.py": "5c421de6f63e74b098fa9bd75f5410d816336bb3bcee0194e483682766aa4036",
+          "dinov2/eval/segmentation_m2f/__init__.py": "7fb45f0041dd007542578ecf31414a883a9e028a591f9570eec0d25afd928e9d",
+          "dinov2/eval/segmentation_m2f/core/__init__.py": "99e3920edbb8635012e51b583c4264556f540f098a80dee90534a454c34b4c68",
+          "dinov2/eval/segmentation_m2f/core/anchor/__init__.py": "cd269c97e28579d99706f3f31241173b22210429249742005b8a00bc8528d366",
+          "dinov2/eval/segmentation_m2f/core/anchor/builder.py": "fa8456a4f2941fb3b6bc88d210c6ce43298d0b081d00af9ac0ea9050edf6d16e",
+          "dinov2/eval/segmentation_m2f/core/anchor/point_generator.py": "23ff9cf80fef4472cf8a361d2df8f211fab4092925d6bb9cce18bb68a60cd6f0",
+          "dinov2/eval/segmentation_m2f/core/box/__init__.py": "7b0b68761110103819b5e8ef0733327021bcca5ac78168e8f27a5a721b1bfa43",
+          "dinov2/eval/segmentation_m2f/core/box/builder.py": "93ad53a18707547dc53c28c52ae616da19e43064d7e4f30240d08ea50dfb955f",
+          "dinov2/eval/segmentation_m2f/core/box/samplers/__init__.py": "b3383233672410d9f13fdfb9dc47ae4543a98c45ee2361a0cc825afc5dd00e32",
+          "dinov2/eval/segmentation_m2f/core/box/samplers/base_sampler.py": "91fd7bc656e0519b6f732a55a0f00457ba339bd98c6d3393d7ba35280442a1ed",
+          "dinov2/eval/segmentation_m2f/core/box/samplers/mask_pseudo_sampler.py": "3ac44707526239d782a1653ad641d447ecb1003eea399e0a718790a92a476305",
+          "dinov2/eval/segmentation_m2f/core/box/samplers/mask_sampling_result.py": "527d952b5001c86ca285a3f7895d804d12dd47b9d3c07535b6494a8b35e21d39",
+          "dinov2/eval/segmentation_m2f/core/box/samplers/sampling_result.py": "c4b34191ab9589a098b0e46116ca9a53eedeae3adda515b8078f635096b1d492",
+          "dinov2/eval/segmentation_m2f/core/utils/__init__.py": "17ecc2ee748e92194c272e63a0db74dae0bb2ef921cecedc9cffe5c23b86dea9",
+          "dinov2/eval/segmentation_m2f/core/utils/dist_utils.py": "a3747a307397dbc10c09838d44fa90438f758977254ed305647ce96bd16bd045",
+          "dinov2/eval/segmentation_m2f/core/utils/misc.py": "97409a32ac290d34da2bb7d28a3f6ecbc975537a3aa76060fd16ab5924de400f",
+          "dinov2/eval/segmentation_m2f/models/__init__.py": "2c8e40b6362d507e4d1ad18700feb53897ec7403e32033065d7927dae6ccf818",
+          "dinov2/eval/segmentation_m2f/models/backbones/__init__.py": "f35535dbddb96f998a9bd1a7734cbc02abb652c18a5c6df7a47e7548ac33440c",
+          "dinov2/eval/segmentation_m2f/models/backbones/adapter_modules.py": "e103c8bdff5c3427a59a0bf84dc70677d5fef5ac9d43445815da16537944ccbe",
+          "dinov2/eval/segmentation_m2f/models/backbones/drop_path.py": "068b166f953c0939f5479ef1735736116d91bc9942990472b60d104d95f9c83a",
+          "dinov2/eval/segmentation_m2f/models/backbones/vit.py": "7ad30e14310c5bee54743459f128b076195554760eefd60e1593fbfde2234021",
+          "dinov2/eval/segmentation_m2f/models/backbones/vit_adapter.py": "cb89b1d4943049c0ee3e3993738fb56806239221dce72345ea054fc7fa8785b0",
+          "dinov2/eval/segmentation_m2f/models/builder.py": "e96e68e45a5139d16e3238c7f5690d72d4e7838c9fe9fc85273215a3b7a0115f",
+          "dinov2/eval/segmentation_m2f/models/decode_heads/__init__.py": "8bea632762d84b954373d0fb2e35a224786eb4692f2bf6acf4b61b0c5fc89c06",
+          "dinov2/eval/segmentation_m2f/models/decode_heads/mask2former_head.py": "c7b5d0d307da7737ac087b368de5d8160053d2e7fb9c705e805e7930ad9446ad",
+          "dinov2/eval/segmentation_m2f/models/losses/__init__.py": "ca75161c95771d281968c329697642f7f84e0deaa6ec780262f4fe2c4a33fd4c",
+          "dinov2/eval/segmentation_m2f/models/losses/cross_entropy_loss.py": "b5cf193e70a20c9a0936222dab0546918940b9dee714cac2c4836197ed6bf940",
+          "dinov2/eval/segmentation_m2f/models/losses/dice_loss.py": "d6dc52a33494d569b98dc165f176c1444060d2f6bd8c8f458aabcea72d2edeee",
+          "dinov2/eval/segmentation_m2f/models/losses/match_costs.py": "4cccb76ea151a0c38581f73d4da727ecb1d95a4b92ac294680adb588e6534046",
+          "dinov2/eval/segmentation_m2f/models/plugins/__init__.py": "80ed4eab0a7f3c8a03c96a328a94cd972fb804cff30ccfc68e87b066ffb08fb5",
+          "dinov2/eval/segmentation_m2f/models/plugins/msdeformattn_pixel_decoder.py": "66fc2f5a58638747576492250ce43e076bb119fe54a5e82569f4e6bd88a5a95b",
+          "dinov2/eval/segmentation_m2f/models/segmentors/__init__.py": "02bc4c748360de2f9b4fe61b112fbd49cfcd943265f0c6f78afc2802b0d11a96",
+          "dinov2/eval/segmentation_m2f/models/segmentors/encoder_decoder_mask2former.py": "06fdad9b0f24a0a3af4e4213bc1beb288fca7ad9010b24b3284103f2b9ea4e04",
+          "dinov2/eval/segmentation_m2f/models/utils/__init__.py": "091931518ac32103e9ef30be7a7b57839c1970bb4a8658f5bce0643735c73bb2",
+          "dinov2/eval/segmentation_m2f/models/utils/assigner.py": "47d015ce3a022c720fa5c8d37260c1bd39b19f77808b51dae25a0a9c7fdd70f3",
+          "dinov2/eval/segmentation_m2f/models/utils/point_sample.py": "e4f2dc0a1a4d5db984a590a85a0fb4ef224cfbfa013c1a212ee9cbcb8b49a9ae",
+          "dinov2/eval/segmentation_m2f/models/utils/positional_encoding.py": "3b07f2b2127f03048dcd10266e3d14818334becb56970a8cfe9ac680ec0b8753",
+          "dinov2/eval/segmentation_m2f/models/utils/transformer.py": "6bc659898dd0d4e75bbb941bb1720f696eb840667cda52fbac46feab1eac20ab",
+          "dinov2/eval/segmentation_m2f/ops/modules/__init__.py": "2b1c15f2a30741376faebf09ac22e3fdf672b768c1717a3b7bbffaa844c0f111",
+          "dinov2/eval/segmentation_m2f/ops/modules/ms_deform_attn.py": "ef8d800b0e3139b6ec2dbe22de3a39da653dcc88129bc246239fc47abf6524ec",
+          "dinov2/eval/setup.py": "629eea62ca20ad2694b4979a91fb85e644cda429049580360a3a86be4bbe477c",
+          "dinov2/eval/utils.py": "3eb42fa16c97b21c8e69c229e71388b2db04923097912e42c29676c82f03ed44",
+          "dinov2/fsdp/__init__.py": "672fc23d385c86530e439c42f8c73abb585a5bb96ce87c6ad5e8fb004e631efa",
+          "dinov2/hub/__init__.py": "2932e94a2d67be87b717c49468214c1127be7864aedf37f5891d26be7bc1437f",
+          "dinov2/hub/backbones.py": "871fca671b12a9ff02e810654baf509e97ccf461bf8196ce5ddeefff2fd87d3e",
+          "dinov2/hub/cell_dino/backbones.py": "5e2be2a84f04bab20050f8e9c6e14870d5a2d3e7894631dd8747e00f3b5299d2",
+          "dinov2/hub/classifiers.py": "e2dcf8c2aaec1c695bb20dae8f808811e28f27032338f3450f2ac17e309e0e1d",
+          "dinov2/hub/depth/__init__.py": "de8f3fbecabae6552ebb8f3d7dee27987b1dbc11e94143c95137c438e86a9123",
+          "dinov2/hub/depth/decode_heads.py": "04eb9639a4441409b80651c3d019a6e850c32b7e709236ceb6dbbaeb9fa17713",
+          "dinov2/hub/depth/encoder_decoder.py": "1baf6f59269fb99faf274900f12910a22e038a3bb6d81c6fc712c0c482041a57",
+          "dinov2/hub/depth/ops.py": "85d58e303eff9a0a306d97101c8b35c24196bfe55e8da019df1e4817411a4dc7",
+          "dinov2/hub/depthers.py": "098e10859c1e8188d5245318911025eef1c5f37331d01e6014167027b25cd5b7",
+          "dinov2/hub/dinotxt.py": "9124df0f7f8f21995f33a86a4e6545c11e25591f7bafcbe96a299ae6bd070677",
+          "dinov2/hub/text/dinotxt_model.py": "7ef7bfceaacfd1566a3984038a691edeaf9b9f42910583e5de62a00e3cf852d0",
+          "dinov2/hub/text/dinov2_wrapper.py": "834423f869038ce7c2b1794564018e0d3ca8194faa6d4c17f0d208b1625d0c64",
+          "dinov2/hub/text/text_tower.py": "fa591e45ad0e7400290e716ff0ddca102fd646edc2da448807c1006a5b94744f",
+          "dinov2/hub/text/text_transformer.py": "7138271bc95251d33a172cead1392434b9f8f7b1401fe1e0b4c37e64ff2bf354",
+          "dinov2/hub/text/tokenizer.py": "85078188841107932343123f29104288615b41ca4e5d1eb2d8623e02a8ac749a",
+          "dinov2/hub/text/vision_tower.py": "2496418c885c01ba7b7b9172d72906911ad950211c08a6e085ef2ee574405ebb",
+          "dinov2/hub/utils.py": "579613e3d7b82c2a387eddc215ad9f076b8740f9618229628395fe5755dbd131",
+          "dinov2/hub/xray_dino/backbones.py": "23c4513ac900815772d6076d2dd8c6e8564cd85ec11873c8ebe62e5de0647d03",
+          "dinov2/layers/__init__.py": "1b55deed39d5ab0b589bef421bbfe06f24a10cd590a0f8403234c9ee4e34109d",
+          "dinov2/layers/attention.py": "79c7be7a452b3aad96698ec38d5d5150b9f4d8ac084fa93324510dc9f624775d",
+          "dinov2/layers/block.py": "60c0ac7dfa4474be313fabfa5a23d82faf6f0cecd4e720a88be35de9788cb636",
+          "dinov2/layers/dino_head.py": "9fdb1fa61c0609dc0876f711f9d0d828c33bf9fd972aab3d9c968d44e16b98d1",
+          "dinov2/layers/drop_path.py": "b9f8236e86054b9d9a71275efcad2a9ecaa1f86b529d4b8d6109ddb5e806f67a",
+          "dinov2/layers/layer_scale.py": "dadd5aafe178f1bf72a205a02a6645c7e635cacbad585d4a7369c200c6e89135",
+          "dinov2/layers/mlp.py": "255825c73b60a916dd00eb1e38aacbcdbf316e40d6a005efb46e245b7edb43aa",
+          "dinov2/layers/patch_embed.py": "40da6add3d811198ea3e17cb99cdd4e5cda59e369efbbe3d18d89308618cf142",
+          "dinov2/layers/swiglu_ffn.py": "e46d2948fb97e497cf991ff82ce30cb59b59fdf2e12a19568417113716b4f119",
+          "dinov2/logging/__init__.py": "fff00c7e5d5381b55d8f820ba3a1f8f0902af15dacb3159fe5c6e3b542771c40",
+          "dinov2/logging/helpers.py": "5c2ee4b35f6c160836c7f5e7f3db1246662499ecc6ec8e53d06f14fef71504ae",
+          "dinov2/loss/__init__.py": "e5ae2143dd98108f81d26c276e2048fa339cde5f5fe369e2d6797acea09912bf",
+          "dinov2/loss/dino_clstoken_loss.py": "49f0b2b75c2feba83b3fc9dfb40ef5eb4e3db350ab1e12a63d75d3060a88f7df",
+          "dinov2/loss/ibot_patch_loss.py": "19c0ffc85c8af01657ad2e6cffc2d4d311415b10807f63c2d6341195c7a62ddb",
+          "dinov2/loss/koleo_loss.py": "ddccd75b7985d5e584f0fe6f3fb1ac474b9cbd9a6fd6fb6c6ae471ca479085d1",
+          "dinov2/models/__init__.py": "b93329ce676f3eb0c9a7790d1b3b2b114a0855ea8dc76e32e262d1a7dc6c55ae",
+          "dinov2/models/vision_transformer.py": "7799a260f2d7d0fe197331d08502fb8c542f9b7424723650f6a39b64fa2639ea",
+          "dinov2/run/__init__.py": "2932e94a2d67be87b717c49468214c1127be7864aedf37f5891d26be7bc1437f",
+          "dinov2/run/eval/cell_dino/knn.py": "944113cdf344910011150a52e7874dce69640e0afb8e438a4c7e582349bbe1ff",
+          "dinov2/run/eval/cell_dino/linear.py": "efb20708485a41bacd8db2a6a274988fac3e1e7cfec5290050293a8b587e7601",
+          "dinov2/run/eval/knn.py": "21d1ed25bc9206b412e2d17bac150549f69929f5d0c924b7400a72d1bd295c31",
+          "dinov2/run/eval/linear.py": "f89eb0a2eccdd2f35e27f7a5ca91ded95e4a5699f57e8e568c58547625f87ac5",
+          "dinov2/run/eval/log_regression.py": "b4c4ddd086408c681b8b5642a26858b6c9e1a798c483a5283a983f2cd2b44c46",
+          "dinov2/run/submit.py": "64597db2041e9c16a7640eeac00a299cb2761329af980f33f26a6dd025ffb541",
+          "dinov2/run/train/train.py": "b469e29aaa460e509d52f19c787aad50963265d242200cad5f9ee3ce85938ba5",
+          "dinov2/thirdparty/CLIP/clip/simple_tokenizer.py": "47b4a3678fed8a7a8b9ca614e7728c33c6ccda5aea3bd2acebf24c081cb25b64",
+          "dinov2/train/__init__.py": "64dde70804b782a876524b529b00b9775559314a88d738cf4aee914bd4dbb9c4",
+          "dinov2/train/ssl_meta_arch.py": "a97cdcc721e9312f5e088f78257dbbeb98cb3af40e3e3b975aefbd6bfd1996c4",
+          "dinov2/train/train.py": "04c4829d6cb428df546536cba4b2a313fae38bac084abf82758bf69483b03e89",
+          "dinov2/utils/__init__.py": "2932e94a2d67be87b717c49468214c1127be7864aedf37f5891d26be7bc1437f",
+          "dinov2/utils/checkpoint.py": "36335648d4574417c41e0fe82ddb8cc23653bbbc251b580541167b73a83b8eff",
+          "dinov2/utils/cluster.py": "be49f48f01edbc7d209941e1078be309bef7d06631da851cafcfdec7112d269f",
+          "dinov2/utils/config.py": "588574a78951ccfe7ffaad9ef7cab53d37e837e3ae98cfc1b6a976189073d87c",
+          "dinov2/utils/dtype.py": "610251537bcf55de8961a17dd625560eae5cfa5082e9382bbd9ded86db92e1c6",
+          "dinov2/utils/param_groups.py": "ec1daae9eb7c50492091504f97087e3179d46a080d7b7f131967c07cb15cf6d4",
+          "dinov2/utils/utils.py": "4e1419e8dd4a24d48689357ca48d304d1f895fa49f5dbf42d400ac941216e9f7",
+          "hubconf.py": "c1f5090e78ff940b72c076d2bf9c0310d1707c946b3d10e2d6f2b0bdf56a6f64",
+          "setup.py": "8ec72d3be027aee099a7b7b1c36c874be6d7ade4dd9eb69baff3975b586820ae"
+        },
+        "model_state_sha256": "5ba70ff8cbcc944b73eb1d49f71e1ea54b009ad866b34d0cb8b84ed143aa56eb",
+        "eval_mode": true,
+        "all_parameters_frozen": true,
+        "torch": "2.6.0+cu124",
+        "torchvision": "0.21.0+cu124",
+        "numerics": {
+          "cuda_matmul_tf32": false,
+          "cudnn_tf32": false,
+          "cudnn_benchmark": false
+        },
+        "adapter_source_sha256": "09812cf25f08235ae10575c8a6ba00317e0a12c7abf063b3ba041fc0a96cca3c",
+        "preprocessing": {
+          "RGB": true,
+          "resize_hw": [
+            224,
+            224
+          ],
+          "order": "ToTensor -> ImageNet Normalize -> tensor Resize",
+          "mean": [
+            0.485,
+            0.456,
+            0.406
+          ],
+          "std": [
+            0.229,
+            0.224,
+            0.225
+          ],
+          "interpolation": "bilinear",
+          "antialias": true,
+          "descriptor_l2_normalization": true,
+          "setting": "protocol full-image low-resolution warp; not original paper reproduction"
+        }
+      },
+      "descriptor_bytes": 4758528
+    }
+  ],
+  "resources": [
+    {
+      "method": "A",
+      "process_RSS_before_model_bytes": 1425154048,
+      "process_RSS_after_bytes": 1435668480,
+      "process_highwater_RSS_bytes": 1435238400,
+      "CUDA_peak_allocated_bytes": 82697728,
+      "CUDA_peak_reserved_bytes": 111149056,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "B",
+      "process_RSS_before_model_bytes": 1435721728,
+      "process_RSS_after_bytes": 1438633984,
+      "process_highwater_RSS_bytes": 1519943680,
+      "CUDA_peak_allocated_bytes": 136267776,
+      "CUDA_peak_reserved_bytes": 180355072,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "DINOv2",
+      "process_RSS_before_model_bytes": 1438633984,
+      "process_RSS_after_bytes": 1439612928,
+      "process_highwater_RSS_bytes": 1519943680,
+      "CUDA_peak_allocated_bytes": 104567808,
+      "CUDA_peak_reserved_bytes": 207618048,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "RRF_k60",
+      "process_RSS_before_model_bytes": 1439612928,
+      "process_RSS_after_bytes": 1457262592,
+      "process_highwater_RSS_bytes": 1539358720,
+      "CUDA_peak_allocated_bytes": 182071808,
+      "CUDA_peak_reserved_bytes": 272629760,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "AB_0.25",
+      "process_RSS_before_model_bytes": 1457262592,
+      "process_RSS_after_bytes": 1465454592,
+      "process_highwater_RSS_bytes": 1547493376,
+      "CUDA_peak_allocated_bytes": 185426432,
+      "CUDA_peak_reserved_bytes": 289406976,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "AB_0.5",
+      "process_RSS_before_model_bytes": 1465454592,
+      "process_RSS_after_bytes": 1473646592,
+      "process_highwater_RSS_bytes": 1550213120,
+      "CUDA_peak_allocated_bytes": 181030400,
+      "CUDA_peak_reserved_bytes": 283115520,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "AB_0.75",
+      "process_RSS_before_model_bytes": 1473646592,
+      "process_RSS_after_bytes": 1483083776,
+      "process_highwater_RSS_bytes": 1554243584,
+      "CUDA_peak_allocated_bytes": 186009088,
+      "CUDA_peak_reserved_bytes": 289406976,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "fixed_L9",
+      "process_RSS_before_model_bytes": 1483083776,
+      "process_RSS_after_bytes": 1508814848,
+      "process_highwater_RSS_bytes": 1554243584,
+      "CUDA_peak_allocated_bytes": 82568704,
+      "CUDA_peak_reserved_bytes": 186646528,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "full_L3",
+      "process_RSS_before_model_bytes": 1508814848,
+      "process_RSS_after_bytes": 1511571456,
+      "process_highwater_RSS_bytes": 1554243584,
+      "CUDA_peak_allocated_bytes": 82175488,
+      "CUDA_peak_reserved_bytes": 171966464,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "full_L5",
+      "process_RSS_before_model_bytes": 1511571456,
+      "process_RSS_after_bytes": 1515479040,
+      "process_highwater_RSS_bytes": 1554243584,
+      "CUDA_peak_allocated_bytes": 82568704,
+      "CUDA_peak_reserved_bytes": 169869312,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "full_L9",
+      "process_RSS_before_model_bytes": 1515479040,
+      "process_RSS_after_bytes": 1518596096,
+      "process_highwater_RSS_bytes": 1554243584,
+      "CUDA_peak_allocated_bytes": 82568704,
+      "CUDA_peak_reserved_bytes": 148897792,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "global_fixed_L9_blend_0.25",
+      "process_RSS_before_model_bytes": 1518596096,
+      "process_RSS_after_bytes": 1524613120,
+      "process_highwater_RSS_bytes": 1554243584,
+      "CUDA_peak_allocated_bytes": 81651200,
+      "CUDA_peak_reserved_bytes": 148897792,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "global_fixed_L9_blend_0.5",
+      "process_RSS_before_model_bytes": 1524613120,
+      "process_RSS_after_bytes": 1530376192,
+      "process_highwater_RSS_bytes": 1554243584,
+      "CUDA_peak_allocated_bytes": 83486208,
+      "CUDA_peak_reserved_bytes": 148897792,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "global_fixed_L9_blend_0.75",
+      "process_RSS_before_model_bytes": 1530376192,
+      "process_RSS_after_bytes": 1540730880,
+      "process_highwater_RSS_bytes": 1554243584,
+      "CUDA_peak_allocated_bytes": 81651200,
+      "CUDA_peak_reserved_bytes": 148897792,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "shuffled_full_L9_seed0",
+      "process_RSS_before_model_bytes": 1540730880,
+      "process_RSS_after_bytes": 1542311936,
+      "process_highwater_RSS_bytes": 1554243584,
+      "CUDA_peak_allocated_bytes": 83486208,
+      "CUDA_peak_reserved_bytes": 148897792,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "reversed_fixed_L9",
+      "process_RSS_before_model_bytes": 1542311936,
+      "process_RSS_after_bytes": 1555959808,
+      "process_highwater_RSS_bytes": 1555062784,
+      "CUDA_peak_allocated_bytes": 82568704,
+      "CUDA_peak_reserved_bytes": 150994944,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "P_fixed_L9_H3_r1_e0.06",
+      "process_RSS_before_model_bytes": 1555959808,
+      "process_RSS_after_bytes": 1572167680,
+      "process_highwater_RSS_bytes": 1572265984,
+      "CUDA_peak_allocated_bytes": 82568704,
+      "CUDA_peak_reserved_bytes": 148897792,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "R1_full_L3_H1_r1",
+      "process_RSS_before_model_bytes": 1572167680,
+      "process_RSS_after_bytes": 1572777984,
+      "process_highwater_RSS_bytes": 1572265984,
+      "CUDA_peak_allocated_bytes": 82568704,
+      "CUDA_peak_reserved_bytes": 148897792,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "R2_full_L3_H3_r1_g0.75",
+      "process_RSS_before_model_bytes": 1572777984,
+      "process_RSS_after_bytes": 1583017984,
+      "process_highwater_RSS_bytes": 1582153728,
+      "CUDA_peak_allocated_bytes": 82568704,
+      "CUDA_peak_reserved_bytes": 148897792,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "P_epsilon_zero",
+      "process_RSS_before_model_bytes": 1583017984,
+      "process_RSS_after_bytes": 1583312896,
+      "process_highwater_RSS_bytes": 1582481408,
+      "CUDA_peak_allocated_bytes": 82568704,
+      "CUDA_peak_reserved_bytes": 150994944,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "R1_same_P_pool",
+      "process_RSS_before_model_bytes": 1583312896,
+      "process_RSS_after_bytes": 1584132096,
+      "process_highwater_RSS_bytes": 1583300608,
+      "CUDA_peak_allocated_bytes": 82568704,
+      "CUDA_peak_reserved_bytes": 148897792,
+      "RSS_includes_accuracy_audit_arrays": true
+    },
+    {
+      "method": "R3_same_P_radius",
+      "process_RSS_before_model_bytes": 1584132096,
+      "process_RSS_after_bytes": 1594552320,
+      "process_highwater_RSS_bytes": 1593622528,
+      "CUDA_peak_allocated_bytes": 81651200,
+      "CUDA_peak_reserved_bytes": 150994944,
+      "RSS_includes_accuracy_audit_arrays": true
+    }
+  ],
+  "precision_checks": [
+    {
+      "method": "A",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "B",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "DINOv2",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "RRF_k60",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "AB_0.25",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "AB_0.5",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "AB_0.75",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "fixed_L9",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "full_L3",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "full_L5",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "full_L9",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "global_fixed_L9_blend_0.25",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "global_fixed_L9_blend_0.5",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "global_fixed_L9_blend_0.75",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "shuffled_full_L9_seed0",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "reversed_fixed_L9",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "P_fixed_L9_H3_r1_e0.06",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "R1_full_L3_H1_r1",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "R2_full_L3_H3_r1_g0.75",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "P_epsilon_zero",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "R1_same_P_pool",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    },
+    {
+      "method": "R3_same_P_radius",
+      "score_difference_max": 1.1102230246251565e-15,
+      "cached_top10_mismatches": 0,
+      "repeat_top10_mismatches": 0,
+      "passed": true
+    }
+  ],
+  "independent_status": "INDEPENDENT_TEST_UNAVAILABLE",
+  "data_role": "seen_only",
+  "hardware": {
+    "GPU": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "torch": "2.6.0+cu124",
+    "CUDA_runtime": "12.4",
+    "threads": 1,
+    "CUDA_synchronized": true,
+    "clocks_locked": false
+  },
+  "audit": {
+    "passed": true,
+    "groups": 110,
+    "all_R1_R5_R10_and_rescue_harm_and_distance_quantiles_recomputed": true
+  },
+  "all_checks_passed": true
+}

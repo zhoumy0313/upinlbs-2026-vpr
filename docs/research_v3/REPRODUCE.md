@@ -24,3 +24,13 @@ The destination must be new. Restore verifies every part's size/SHA, whole ZIP S
 Actual online timing uses frozen real images/encoders, never cached features. `.venv-p0/bin/python -m experiments.endpoint_vpr.driver experiments.endpoint_vpr.run_g5` records the whole-stage exit and its command/environment overrides; internal worker executes warm20 plus three full passes. It requires the existing model/source/image hashes and frozen code, and may be long. The external test is explicitly NOT_RUN when source unavailable; no local replay grants St Lucia independence.
 
 V3 manuscripts are standalone main.tex with embedded bibliography and vector diagrams; references.tex is an archival bibliography copy, not a build dependency. Native compile_latex_document checks each saved source. Exact PDF exports are from new V3-only standard public GitHub CI; Poppler checks pages/fonts/text locally, without installing a local TeX toolchain. All earlier paper versions remain read-only.
+
+### G7 delivery-only font correction
+
+Use `.venv-paper/bin/python -m experiments.endpoint_vpr.g7_delivery_checked` for the final Chinese briefing/archive. Original frozen `final_delivery.py` is retained unchanged; the wrapper corrects verified Latin/numeral glyph gaps only, not predictions, masks, parameters or evaluation. The preserved probe/warnings are outputs_v3/g7_font_preflight_20261010T175729Z_88dcaafd. G2 ordered parts were actually reassembled, whole SHA matched and ZIP test passed in outputs_v3/g7_chunk_restore_audit_20261010T175729Z_37e0cb7c.
+
+### Nonmutating replay command actually checked
+
+`.venv-p0/bin/python -m experiments.endpoint_vpr.replay_seen --dataset St_Lucia --split validation --suite selected`
+
+This runs A, fixedL9, fullL3 and the three frozen selected local policies into a fresh outputs_v3 run; 30 method/radius groups are independently recomputed from new CSV. Actual successful receipt: replay_seen_20261010T180636Z_d400b761, exit0. It does not change phase state, publish into accepted folders, push, or measure online latency. `--suite baselines` replays 16 controls and `--suite grid` the original 224 configurations; these larger replay options were not reexecuted here. Existing original data/weights/score caches with exact identities are still required.
