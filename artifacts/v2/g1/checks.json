@@ -1,0 +1,10 @@
+{
+  "strict_cache_identity_verified": true,
+  "all_images_verified_and_decoded": true,
+  "train_val_disjoint_hashes": true,
+  "old_test_used_for_selection": false,
+  "new_independent_performance_opened": false,
+  "ordinal_vs_filename_checked": true,
+  "raw_logs_preserved": true,
+  "per_query_rows": 2700
+}

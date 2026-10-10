@@ -5,6 +5,7 @@ import json
 import os
 from pathlib import Path
 import subprocess
+import sys
 import uuid
 
 def utc_now():
@@ -36,6 +37,11 @@ class Run:
         self.path = self.root / 'outputs_v2' / self.id
         self.path.mkdir(parents=True, exist_ok=False)
         (self.path / 'figures').mkdir()
+        source_files=sorted((self.root/'experiments/temporal_vpr').rglob('*.py'))
+        for source in source_files:
+            snapshot=self.path/'source_snapshot'/source.relative_to(self.root)
+            snapshot.parent.mkdir(parents=True,exist_ok=True)
+            snapshot.write_bytes(source.read_bytes())
         self.commands = []
         self.write('run_manifest.json', dict(run_id=self.id, task=task, started_utc=utc_now(),
             git_sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=self.root,text=True).strip(),
@@ -45,7 +51,7 @@ class Run:
                 json.dumps(config,sort_keys=True,allow_nan=False).encode()).hexdigest()))
         self.write('config_effective.yaml', config) # JSON is a valid YAML subset.
         self.write('inputs.json', inputs)
-        self.write('argv.json', dict(commands=[], cwd=str(self.root), environment_overrides={}))
+        self.write('argv.json', dict(entrypoint_argv=sys.argv,commands=[], cwd=str(self.root), environment_overrides={}))
         for filename in ['commands.jsonl','stdout.log','stderr.log']:
             (self.path/filename).touch(exist_ok=False)
 
@@ -72,7 +78,7 @@ class Run:
         self.commands.append(row)
         with (self.path/'commands.jsonl').open('a') as f:
             f.write(json.dumps(row)+'\n')
-        atomic_json(self.path/'argv.json',dict(commands=self.commands,cwd=str(self.root)))
+        atomic_json(self.path/'argv.json',dict(entrypoint_argv=sys.argv,commands=self.commands,cwd=str(self.root)))
         if result.returncode and not allow_failure:
             self.write('command_failure_'+str(len(self.commands))+'.json',row)
             raise subprocess.CalledProcessError(result.returncode,row['argv'])

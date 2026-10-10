@@ -1,5 +1,6 @@
 # VPR-GOAL-V2
 
-G0 passed: old version preserved; 34 tests pass. G1 in progress; G2–G5 pending.
+G0/G1 passed; G2 in progress; G3–G5 pending. Independent performance unopened.
 
-Branch `research/temporal-vpr-v2`; baseline `78eb9e45d3bc469630b0c46ad1ea02b318ee151b`. Independent test unopened. Next: GT/order + train/validation candidate diagnosis and literature audit.
+G1 CosPlace validation R@1=71.33%, R@10=97.33%, candidate diagnostic only. No new method improvement established.
+Next: bounded causal temporal/fusion baselines. See docs/research_v2/G1_DIAGNOSIS.md and RELATED_WORK_MATRIX.md for evidence/limits.

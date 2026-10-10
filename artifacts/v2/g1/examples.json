@@ -1,0 +1,62 @@
+[
+  {
+    "split": "train",
+    "error_type": "rank_error",
+    "query_image_id": "nordland/winter/images-00292.png",
+    "predicted_image_id": "nordland/summer/images-00541.png",
+    "best_positive_image_id": "nordland/summer/images-00296.png",
+    "positive_rank": 2,
+    "figure": "outputs_v2/g1_diagnosis_20261010T131552Z_19ac45fe/figures/train_rank_error_41.png",
+    "role": "offline visual GT/aliasing diagnostic, not new spatial ground truth"
+  },
+  {
+    "split": "train",
+    "error_type": "rank_error",
+    "query_image_id": "nordland/winter/images-00301.png",
+    "predicted_image_id": "nordland/summer/images-00272.png",
+    "best_positive_image_id": "nordland/summer/images-00300.png",
+    "positive_rank": 4,
+    "figure": "outputs_v2/g1_diagnosis_20261010T131552Z_19ac45fe/figures/train_rank_error_50.png",
+    "role": "offline visual GT/aliasing diagnostic, not new spatial ground truth"
+  },
+  {
+    "split": "train",
+    "error_type": "retrieval_missing",
+    "query_image_id": "nordland/winter/images-00346.png",
+    "predicted_image_id": "nordland/summer/images-00538.png",
+    "best_positive_image_id": "nordland/summer/images-00346.png",
+    "positive_rank": 51,
+    "figure": "outputs_v2/g1_diagnosis_20261010T131552Z_19ac45fe/figures/train_retrieval_missing_95.png",
+    "role": "offline visual GT/aliasing diagnostic, not new spatial ground truth"
+  },
+  {
+    "split": "train",
+    "error_type": "retrieval_missing",
+    "query_image_id": "nordland/winter/images-00349.png",
+    "predicted_image_id": "nordland/summer/images-00538.png",
+    "best_positive_image_id": "nordland/summer/images-00344.png",
+    "positive_rank": 385,
+    "figure": "outputs_v2/g1_diagnosis_20261010T131552Z_19ac45fe/figures/train_retrieval_missing_98.png",
+    "role": "offline visual GT/aliasing diagnostic, not new spatial ground truth"
+  },
+  {
+    "split": "validation",
+    "error_type": "rank_error",
+    "query_image_id": "nordland/winter/images-00951.png",
+    "predicted_image_id": "nordland/summer/images-00275.png",
+    "best_positive_image_id": "nordland/summer/images-00951.png",
+    "positive_rank": 3,
+    "figure": "outputs_v2/g1_diagnosis_20261010T131552Z_19ac45fe/figures/validation_rank_error_0.png",
+    "role": "offline visual GT/aliasing diagnostic, not new spatial ground truth"
+  },
+  {
+    "split": "validation",
+    "error_type": "rank_error",
+    "query_image_id": "nordland/winter/images-00953.png",
+    "predicted_image_id": "nordland/summer/images-00563.png",
+    "best_positive_image_id": "nordland/summer/images-00956.png",
+    "positive_rank": 4,
+    "figure": "outputs_v2/g1_diagnosis_20261010T131552Z_19ac45fe/figures/validation_rank_error_2.png",
+    "role": "offline visual GT/aliasing diagnostic, not new spatial ground truth"
+  }
+]
