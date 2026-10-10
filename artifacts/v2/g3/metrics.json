@@ -1,0 +1,926 @@
+{
+  "scientific_status": "scientifically_negative",
+  "implementation_verified": true,
+  "checked_cells": 48,
+  "own_rule_not_superior": true,
+  "adaptive_results": {
+    "development_only": true,
+    "results": [
+      {
+        "split": "train",
+        "method": "adaptive_full",
+        "settings": {
+          "length": 9,
+          "velocities": [
+            1.2
+          ],
+          "scales": {
+            "A_gap_median": 0.021545156781904273,
+            "T_gap_median": 0.018370866637548056,
+            "fit_role": "Nordland train only, without labels",
+            "training_valid_queries": 592
+          },
+          "candidate_count": 50
+        },
+        "common": {
+          "R@1": {
+            "correct": 535,
+            "queries": 592,
+            "recall": 0.9037162162162162
+          },
+          "R@5": {
+            "correct": 571,
+            "queries": 592,
+            "recall": 0.964527027027027
+          },
+          "R@10": {
+            "correct": 578,
+            "queries": 592,
+            "recall": 0.9763513513513513
+          }
+        },
+        "full_stream_with_startup": {
+          "R@1": {
+            "correct": 543,
+            "queries": 600,
+            "recall": 0.905
+          },
+          "R@5": {
+            "correct": 579,
+            "queries": 600,
+            "recall": 0.965
+          },
+          "R@10": {
+            "correct": 586,
+            "queries": 600,
+            "recall": 0.9766666666666667
+          }
+        },
+        "rescue": 49,
+        "harm": 1,
+        "mean_adaptive_weight": 0.177326196469394
+      },
+      {
+        "split": "train",
+        "method": "remove_continuity",
+        "settings": {
+          "length": 9,
+          "velocities": [
+            1.2
+          ],
+          "scales": {
+            "A_gap_median": 0.021545156781904273,
+            "T_gap_median": 0.018370866637548056,
+            "fit_role": "Nordland train only, without labels",
+            "training_valid_queries": 592
+          },
+          "candidate_count": 50,
+          "ablation": "remove_continuity"
+        },
+        "common": {
+          "R@1": {
+            "correct": 537,
+            "queries": 592,
+            "recall": 0.9070945945945946
+          },
+          "R@5": {
+            "correct": 572,
+            "queries": 592,
+            "recall": 0.9662162162162162
+          },
+          "R@10": {
+            "correct": 578,
+            "queries": 592,
+            "recall": 0.9763513513513513
+          }
+        },
+        "full_stream_with_startup": {
+          "R@1": {
+            "correct": 545,
+            "queries": 600,
+            "recall": 0.9083333333333333
+          },
+          "R@5": {
+            "correct": 580,
+            "queries": 600,
+            "recall": 0.9666666666666667
+          },
+          "R@10": {
+            "correct": 586,
+            "queries": 600,
+            "recall": 0.9766666666666667
+          }
+        },
+        "rescue": 51,
+        "harm": 1,
+        "mean_adaptive_weight": 0.1969261675841823
+      },
+      {
+        "split": "train",
+        "method": "remove_ambiguity",
+        "settings": {
+          "length": 9,
+          "velocities": [
+            1.2
+          ],
+          "scales": {
+            "A_gap_median": 0.021545156781904273,
+            "T_gap_median": 0.018370866637548056,
+            "fit_role": "Nordland train only, without labels",
+            "training_valid_queries": 592
+          },
+          "candidate_count": 50,
+          "ablation": "remove_ambiguity"
+        },
+        "common": {
+          "R@1": {
+            "correct": 555,
+            "queries": 592,
+            "recall": 0.9375
+          },
+          "R@5": {
+            "correct": 576,
+            "queries": 592,
+            "recall": 0.972972972972973
+          },
+          "R@10": {
+            "correct": 580,
+            "queries": 592,
+            "recall": 0.9797297297297297
+          }
+        },
+        "full_stream_with_startup": {
+          "R@1": {
+            "correct": 563,
+            "queries": 600,
+            "recall": 0.9383333333333334
+          },
+          "R@5": {
+            "correct": 584,
+            "queries": 600,
+            "recall": 0.9733333333333334
+          },
+          "R@10": {
+            "correct": 588,
+            "queries": 600,
+            "recall": 0.98
+          }
+        },
+        "rescue": 69,
+        "harm": 1,
+        "mean_adaptive_weight": 0.6262945543108053
+      },
+      {
+        "split": "train",
+        "method": "remove_agreement",
+        "settings": {
+          "length": 9,
+          "velocities": [
+            1.2
+          ],
+          "scales": {
+            "A_gap_median": 0.021545156781904273,
+            "T_gap_median": 0.018370866637548056,
+            "fit_role": "Nordland train only, without labels",
+            "training_valid_queries": 592
+          },
+          "candidate_count": 50,
+          "ablation": "remove_agreement"
+        },
+        "common": {
+          "R@1": {
+            "correct": 536,
+            "queries": 592,
+            "recall": 0.9054054054054054
+          },
+          "R@5": {
+            "correct": 573,
+            "queries": 592,
+            "recall": 0.9679054054054054
+          },
+          "R@10": {
+            "correct": 580,
+            "queries": 592,
+            "recall": 0.9797297297297297
+          }
+        },
+        "full_stream_with_startup": {
+          "R@1": {
+            "correct": 544,
+            "queries": 600,
+            "recall": 0.9066666666666666
+          },
+          "R@5": {
+            "correct": 581,
+            "queries": 600,
+            "recall": 0.9683333333333334
+          },
+          "R@10": {
+            "correct": 588,
+            "queries": 600,
+            "recall": 0.98
+          }
+        },
+        "rescue": 51,
+        "harm": 2,
+        "mean_adaptive_weight": 0.1854246615969285
+      },
+      {
+        "split": "train",
+        "method": "fixed_lambda1_Top50",
+        "settings": {
+          "length": 9,
+          "velocities": [
+            1.2
+          ],
+          "scales": {
+            "A_gap_median": 0.021545156781904273,
+            "T_gap_median": 0.018370866637548056,
+            "fit_role": "Nordland train only, without labels",
+            "training_valid_queries": 592
+          },
+          "candidate_count": 50,
+          "fixed_weight": 1.0
+        },
+        "common": {
+          "R@1": {
+            "correct": 576,
+            "queries": 592,
+            "recall": 0.972972972972973
+          },
+          "R@5": {
+            "correct": 582,
+            "queries": 592,
+            "recall": 0.9831081081081081
+          },
+          "R@10": {
+            "correct": 585,
+            "queries": 592,
+            "recall": 0.9881756756756757
+          }
+        },
+        "full_stream_with_startup": {
+          "R@1": {
+            "correct": 584,
+            "queries": 600,
+            "recall": 0.9733333333333334
+          },
+          "R@5": {
+            "correct": 590,
+            "queries": 600,
+            "recall": 0.9833333333333333
+          },
+          "R@10": {
+            "correct": 593,
+            "queries": 600,
+            "recall": 0.9883333333333333
+          }
+        },
+        "rescue": 91,
+        "harm": 2,
+        "mean_adaptive_weight": 1.0
+      },
+      {
+        "split": "train",
+        "method": "fixed_lambda05_Top50",
+        "settings": {
+          "length": 9,
+          "velocities": [
+            1.2
+          ],
+          "scales": {
+            "A_gap_median": 0.021545156781904273,
+            "T_gap_median": 0.018370866637548056,
+            "fit_role": "Nordland train only, without labels",
+            "training_valid_queries": 592
+          },
+          "candidate_count": 50,
+          "fixed_weight": 0.5
+        },
+        "common": {
+          "R@1": {
+            "correct": 565,
+            "queries": 592,
+            "recall": 0.9543918918918919
+          },
+          "R@5": {
+            "correct": 580,
+            "queries": 592,
+            "recall": 0.9797297297297297
+          },
+          "R@10": {
+            "correct": 584,
+            "queries": 592,
+            "recall": 0.9864864864864865
+          }
+        },
+        "full_stream_with_startup": {
+          "R@1": {
+            "correct": 573,
+            "queries": 600,
+            "recall": 0.955
+          },
+          "R@5": {
+            "correct": 588,
+            "queries": 600,
+            "recall": 0.98
+          },
+          "R@10": {
+            "correct": 592,
+            "queries": 600,
+            "recall": 0.9866666666666667
+          }
+        },
+        "rescue": 81,
+        "harm": 3,
+        "mean_adaptive_weight": 0.5
+      },
+      {
+        "split": "train",
+        "method": "replace_adaptive_with_G2_fixed_lambda",
+        "settings": {
+          "length": 9,
+          "velocities": [
+            1.2
+          ],
+          "scales": {
+            "A_gap_median": 0.021545156781904273,
+            "T_gap_median": 0.018370866637548056,
+            "fit_role": "Nordland train only, without labels",
+            "training_valid_queries": 592
+          },
+          "candidate_count": 50,
+          "fixed_weight": 0.75
+        },
+        "common": {
+          "R@1": {
+            "correct": 572,
+            "queries": 592,
+            "recall": 0.9662162162162162
+          },
+          "R@5": {
+            "correct": 584,
+            "queries": 592,
+            "recall": 0.9864864864864865
+          },
+          "R@10": {
+            "correct": 585,
+            "queries": 592,
+            "recall": 0.9881756756756757
+          }
+        },
+        "full_stream_with_startup": {
+          "R@1": {
+            "correct": 580,
+            "queries": 600,
+            "recall": 0.9666666666666667
+          },
+          "R@5": {
+            "correct": 592,
+            "queries": 600,
+            "recall": 0.9866666666666667
+          },
+          "R@10": {
+            "correct": 593,
+            "queries": 600,
+            "recall": 0.9883333333333333
+          }
+        },
+        "rescue": 88,
+        "harm": 3,
+        "mean_adaptive_weight": 0.75
+      },
+      {
+        "split": "validation",
+        "method": "adaptive_full",
+        "settings": {
+          "length": 9,
+          "velocities": [
+            1.2
+          ],
+          "scales": {
+            "A_gap_median": 0.021545156781904273,
+            "T_gap_median": 0.018370866637548056,
+            "fit_role": "Nordland train only, without labels",
+            "training_valid_queries": 592
+          },
+          "candidate_count": 50
+        },
+        "common": {
+          "R@1": {
+            "correct": 242,
+            "queries": 292,
+            "recall": 0.8287671232876712
+          },
+          "R@5": {
+            "correct": 278,
+            "queries": 292,
+            "recall": 0.952054794520548
+          },
+          "R@10": {
+            "correct": 288,
+            "queries": 292,
+            "recall": 0.9863013698630136
+          }
+        },
+        "full_stream_with_startup": {
+          "R@1": {
+            "correct": 246,
+            "queries": 300,
+            "recall": 0.82
+          },
+          "R@5": {
+            "correct": 286,
+            "queries": 300,
+            "recall": 0.9533333333333334
+          },
+          "R@10": {
+            "correct": 296,
+            "queries": 300,
+            "recall": 0.9866666666666667
+          }
+        },
+        "rescue": 33,
+        "harm": 1,
+        "mean_adaptive_weight": 0.18634032476008572
+      },
+      {
+        "split": "validation",
+        "method": "remove_continuity",
+        "settings": {
+          "length": 9,
+          "velocities": [
+            1.2
+          ],
+          "scales": {
+            "A_gap_median": 0.021545156781904273,
+            "T_gap_median": 0.018370866637548056,
+            "fit_role": "Nordland train only, without labels",
+            "training_valid_queries": 592
+          },
+          "candidate_count": 50,
+          "ablation": "remove_continuity"
+        },
+        "common": {
+          "R@1": {
+            "correct": 248,
+            "queries": 292,
+            "recall": 0.8493150684931506
+          },
+          "R@5": {
+            "correct": 278,
+            "queries": 292,
+            "recall": 0.952054794520548
+          },
+          "R@10": {
+            "correct": 288,
+            "queries": 292,
+            "recall": 0.9863013698630136
+          }
+        },
+        "full_stream_with_startup": {
+          "R@1": {
+            "correct": 252,
+            "queries": 300,
+            "recall": 0.84
+          },
+          "R@5": {
+            "correct": 286,
+            "queries": 300,
+            "recall": 0.9533333333333334
+          },
+          "R@10": {
+            "correct": 296,
+            "queries": 300,
+            "recall": 0.9866666666666667
+          }
+        },
+        "rescue": 39,
+        "harm": 1,
+        "mean_adaptive_weight": 0.21439311095861957
+      },
+      {
+        "split": "validation",
+        "method": "remove_ambiguity",
+        "settings": {
+          "length": 9,
+          "velocities": [
+            1.2
+          ],
+          "scales": {
+            "A_gap_median": 0.021545156781904273,
+            "T_gap_median": 0.018370866637548056,
+            "fit_role": "Nordland train only, without labels",
+            "training_valid_queries": 592
+          },
+          "candidate_count": 50,
+          "ablation": "remove_ambiguity"
+        },
+        "common": {
+          "R@1": {
+            "correct": 261,
+            "queries": 292,
+            "recall": 0.8938356164383562
+          },
+          "R@5": {
+            "correct": 284,
+            "queries": 292,
+            "recall": 0.9726027397260274
+          },
+          "R@10": {
+            "correct": 290,
+            "queries": 292,
+            "recall": 0.9931506849315068
+          }
+        },
+        "full_stream_with_startup": {
+          "R@1": {
+            "correct": 265,
+            "queries": 300,
+            "recall": 0.8833333333333333
+          },
+          "R@5": {
+            "correct": 292,
+            "queries": 300,
+            "recall": 0.9733333333333334
+          },
+          "R@10": {
+            "correct": 298,
+            "queries": 300,
+            "recall": 0.9933333333333333
+          }
+        },
+        "rescue": 51,
+        "harm": 0,
+        "mean_adaptive_weight": 0.5404071636672555
+      },
+      {
+        "split": "validation",
+        "method": "remove_agreement",
+        "settings": {
+          "length": 9,
+          "velocities": [
+            1.2
+          ],
+          "scales": {
+            "A_gap_median": 0.021545156781904273,
+            "T_gap_median": 0.018370866637548056,
+            "fit_role": "Nordland train only, without labels",
+            "training_valid_queries": 592
+          },
+          "candidate_count": 50,
+          "ablation": "remove_agreement"
+        },
+        "common": {
+          "R@1": {
+            "correct": 244,
+            "queries": 292,
+            "recall": 0.8356164383561644
+          },
+          "R@5": {
+            "correct": 279,
+            "queries": 292,
+            "recall": 0.9554794520547946
+          },
+          "R@10": {
+            "correct": 288,
+            "queries": 292,
+            "recall": 0.9863013698630136
+          }
+        },
+        "full_stream_with_startup": {
+          "R@1": {
+            "correct": 248,
+            "queries": 300,
+            "recall": 0.8266666666666667
+          },
+          "R@5": {
+            "correct": 287,
+            "queries": 300,
+            "recall": 0.9566666666666667
+          },
+          "R@10": {
+            "correct": 296,
+            "queries": 300,
+            "recall": 0.9866666666666667
+          }
+        },
+        "rescue": 35,
+        "harm": 1,
+        "mean_adaptive_weight": 0.19648601994103995
+      },
+      {
+        "split": "validation",
+        "method": "fixed_lambda1_Top50",
+        "settings": {
+          "length": 9,
+          "velocities": [
+            1.2
+          ],
+          "scales": {
+            "A_gap_median": 0.021545156781904273,
+            "T_gap_median": 0.018370866637548056,
+            "fit_role": "Nordland train only, without labels",
+            "training_valid_queries": 592
+          },
+          "candidate_count": 50,
+          "fixed_weight": 1.0
+        },
+        "common": {
+          "R@1": {
+            "correct": 287,
+            "queries": 292,
+            "recall": 0.9828767123287672
+          },
+          "R@5": {
+            "correct": 291,
+            "queries": 292,
+            "recall": 0.9965753424657534
+          },
+          "R@10": {
+            "correct": 292,
+            "queries": 292,
+            "recall": 1.0
+          }
+        },
+        "full_stream_with_startup": {
+          "R@1": {
+            "correct": 291,
+            "queries": 300,
+            "recall": 0.97
+          },
+          "R@5": {
+            "correct": 299,
+            "queries": 300,
+            "recall": 0.9966666666666667
+          },
+          "R@10": {
+            "correct": 300,
+            "queries": 300,
+            "recall": 1.0
+          }
+        },
+        "rescue": 79,
+        "harm": 2,
+        "mean_adaptive_weight": 1.0
+      },
+      {
+        "split": "validation",
+        "method": "fixed_lambda05_Top50",
+        "settings": {
+          "length": 9,
+          "velocities": [
+            1.2
+          ],
+          "scales": {
+            "A_gap_median": 0.021545156781904273,
+            "T_gap_median": 0.018370866637548056,
+            "fit_role": "Nordland train only, without labels",
+            "training_valid_queries": 592
+          },
+          "candidate_count": 50,
+          "fixed_weight": 0.5
+        },
+        "common": {
+          "R@1": {
+            "correct": 277,
+            "queries": 292,
+            "recall": 0.9486301369863014
+          },
+          "R@5": {
+            "correct": 292,
+            "queries": 292,
+            "recall": 1.0
+          },
+          "R@10": {
+            "correct": 292,
+            "queries": 292,
+            "recall": 1.0
+          }
+        },
+        "full_stream_with_startup": {
+          "R@1": {
+            "correct": 281,
+            "queries": 300,
+            "recall": 0.9366666666666666
+          },
+          "R@5": {
+            "correct": 300,
+            "queries": 300,
+            "recall": 1.0
+          },
+          "R@10": {
+            "correct": 300,
+            "queries": 300,
+            "recall": 1.0
+          }
+        },
+        "rescue": 67,
+        "harm": 0,
+        "mean_adaptive_weight": 0.5
+      },
+      {
+        "split": "validation",
+        "method": "replace_adaptive_with_G2_fixed_lambda",
+        "settings": {
+          "length": 9,
+          "velocities": [
+            1.2
+          ],
+          "scales": {
+            "A_gap_median": 0.021545156781904273,
+            "T_gap_median": 0.018370866637548056,
+            "fit_role": "Nordland train only, without labels",
+            "training_valid_queries": 592
+          },
+          "candidate_count": 50,
+          "fixed_weight": 0.75
+        },
+        "common": {
+          "R@1": {
+            "correct": 286,
+            "queries": 292,
+            "recall": 0.9794520547945206
+          },
+          "R@5": {
+            "correct": 291,
+            "queries": 292,
+            "recall": 0.9965753424657534
+          },
+          "R@10": {
+            "correct": 292,
+            "queries": 292,
+            "recall": 1.0
+          }
+        },
+        "full_stream_with_startup": {
+          "R@1": {
+            "correct": 290,
+            "queries": 300,
+            "recall": 0.9666666666666667
+          },
+          "R@5": {
+            "correct": 299,
+            "queries": 300,
+            "recall": 0.9966666666666667
+          },
+          "R@10": {
+            "correct": 300,
+            "queries": 300,
+            "recall": 1.0
+          }
+        },
+        "rescue": 76,
+        "harm": 0,
+        "mean_adaptive_weight": 0.75
+      }
+    ],
+    "fixed_G2_interior_reference": {
+      "split": "validation",
+      "method": "temporal_L9_v1.2_lambda0.75",
+      "settings": {
+        "length": 9,
+        "velocities": [
+          1.2
+        ],
+        "weight": 0.75
+      },
+      "common": {
+        "R@1": {
+          "correct": 289,
+          "queries": 292,
+          "recall": 0.9897260273972602
+        },
+        "R@5": {
+          "correct": 292,
+          "queries": 292,
+          "recall": 1.0
+        },
+        "R@10": {
+          "correct": 292,
+          "queries": 292,
+          "recall": 1.0
+        }
+      },
+      "full_stream_with_startup": {
+        "R@1": {
+          "correct": 293,
+          "queries": 300,
+          "recall": 0.9766666666666667
+        },
+        "R@5": {
+          "correct": 300,
+          "queries": 300,
+          "recall": 1.0
+        },
+        "R@10": {
+          "correct": 300,
+          "queries": 300,
+          "recall": 1.0
+        }
+      },
+      "rescue": 79,
+      "harm": 0,
+      "net_gain_count": 79,
+      "common_query_mask_sha256": "a1e7d71c2f4641f1fd5baa97f4c7b8ed7a0fdd7bb82547ad2275f4e73dd2c906"
+    },
+    "strongest_G2_correct": 291,
+    "strongest_Top50_fixed_correct": 287,
+    "adaptive_exceeds_strongest_fixed": false,
+    "interpretation": "adaptive_contribution_not_demonstrated; stop adding mechanisms; empirical track A"
+  },
+  "SMR_adaptation_results": {
+    "development_only": true,
+    "adaptation_not_official_benchmark": true,
+    "results": [
+      {
+        "split": "train",
+        "method": "SMR_first_filter_adapted",
+        "common": {
+          "R@1": {
+            "correct": 582,
+            "queries": 592,
+            "recall": 0.9831081081081081
+          },
+          "R@5": {
+            "correct": 582,
+            "queries": 592,
+            "recall": 0.9831081081081081
+          },
+          "R@10": {
+            "correct": 582,
+            "queries": 592,
+            "recall": 0.9831081081081081
+          }
+        },
+        "full_stream_with_startup": {
+          "R@1": {
+            "correct": 590,
+            "queries": 600,
+            "recall": 0.9833333333333333
+          },
+          "R@5": {
+            "correct": 590,
+            "queries": 600,
+            "recall": 0.9833333333333333
+          },
+          "R@10": {
+            "correct": 590,
+            "queries": 600,
+            "recall": 0.9833333333333333
+          }
+        },
+        "accepted_queries": 582,
+        "abstained_queries": 10,
+        "rescue": 99,
+        "harm": 4
+      },
+      {
+        "split": "validation",
+        "method": "SMR_first_filter_adapted",
+        "common": {
+          "R@1": {
+            "correct": 275,
+            "queries": 292,
+            "recall": 0.9417808219178082
+          },
+          "R@5": {
+            "correct": 275,
+            "queries": 292,
+            "recall": 0.9417808219178082
+          },
+          "R@10": {
+            "correct": 275,
+            "queries": 292,
+            "recall": 0.9417808219178082
+          }
+        },
+        "full_stream_with_startup": {
+          "R@1": {
+            "correct": 279,
+            "queries": 300,
+            "recall": 0.93
+          },
+          "R@5": {
+            "correct": 283,
+            "queries": 300,
+            "recall": 0.9433333333333334
+          },
+          "R@10": {
+            "correct": 283,
+            "queries": 300,
+            "recall": 0.9433333333333334
+          }
+        },
+        "accepted_queries": 275,
+        "abstained_queries": 17,
+        "rescue": 77,
+        "harm": 12
+      }
+    ],
+    "original_source_float32_convolution_max_difference": 3.814697265625e-06,
+    "original_source_top10_rank_equal": true,
+    "trained_pipeline_sha256": "9bf4056605f17d62f4eb55f6ff8ddc78897d99b213d6024768cf7ef31e69600e",
+    "internal_SMOTE_CV_not_independent": true
+  }
+}

@@ -6,3 +6,4 @@
 | G0 | Preservation/regression after ROS plugin isolation | metadata only | g0_regression_20261010T131233Z_697c38c9 | passed, 34 tests |
 | G1 | GT/order + candidate diagnosis | train/validation only; old test descriptive | g1_diagnosis_20261010T131552Z_19ac45fe / g1_acceptance_20261010T132758Z_bd97657b | passed with text-access limitations |
 | G2 | Fixed causal temporal/fusion finite grid | train/validation | g2_strong_baselines_20261010T133356Z_5d8c3f15 / g2_acceptance_20261010T133813Z_d6200bfc | passed, track A |
+| G3 | One adaptive rule, ablations, SMR first-filter adaptation | train/val | g3_adaptive_development_20261010T134356Z_93dbfee7; g3_smr_adaptation_20261010T135720Z_bcbbf327; g3_acceptance_20261010T140208Z_5ab06d53 | scientifically_negative |

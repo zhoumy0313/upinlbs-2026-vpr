@@ -1,0 +1,21 @@
+{
+  "stage": "G3",
+  "one_instantiation_only": true,
+  "research_track": "A",
+  "window_and_velocity": "reuse G2 best fixed temporal; no additional sweep",
+  "candidate_count": 50,
+  "candidate_source": "current A full-gallery Top-50, no GT",
+  "score_normalization": "(cosine+1)/2",
+  "train_statistics": "median A top1-top2 gap and median valid T top1-top2 gap on train only",
+  "ambiguity": "clip(1 - A_gap / train_median_A_gap, 0, 1)",
+  "support": "clip(T_gap / train_median_T_gap, 0, 1)",
+  "continuity": "mean of up to last two T-top1 reference-index steps agreeing with median declared velocity within 1 reference index; first valid T has 1; reset each split",
+  "candidate_agreement": "1 if full-gallery T top1 belongs to current A Top-50, else 0.25",
+  "adaptive_weight": "ambiguity * support * continuity * candidate_agreement",
+  "epsilon": 1e-12,
+  "ablation": ["remove_continuity", "replace_adaptive_with_best_fixed_lambda", "remove_ambiguity", "remove_agreement"],
+  "extra_fixed_controls": ["Top-50 restricted T-only", "Top-50 restricted best G2 fixed blend", "Top-50 restricted lambda0.5"],
+  "stop_rule": "If adaptive does not exceed best mature fixed temporal/control, do not add mechanisms; use empirical interpretation",
+  "independent_performance_opened": false,
+  "SMR_policy": "Attempt fixed official-source feature/MLP comparator with adaptations disclosed; failure retained, never invent result"
+}
