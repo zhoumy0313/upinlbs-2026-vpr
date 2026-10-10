@@ -1,0 +1,10 @@
+.venv*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+third_party/
+weights/
+cache/
+data/raw/
+data/downloads/
+outputs/

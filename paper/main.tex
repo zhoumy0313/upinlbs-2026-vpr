@@ -1,0 +1,130 @@
+% WORKING SKELETON ONLY. UPINLBS 2026's official template is not yet verified.
+% Do not treat this file as a format-compliant camera-ready paper.
+% Confirm page size, anonymity, references in limit, copyright line, and publisher.
+% Replace every TODO with verified content. No experimental results are supplied.
+\documentclass[conference]{IEEEtran}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{url}
+\newcommand{\TODO}[1]{\textbf{[TODO: #1]}}
+\newcommand{\ind}{\mathbf{1}}
+\title{When Is a Second Visual Encoder Worth Calling?\\
+A Budget-Aware Study of Visual Place Recognition}
+\author{\IEEEauthorblockN{\TODO{Confirm author list and review anonymity}}
+\IEEEauthorblockA{\TODO{Institution and correspondence}}}
+\begin{document}
+\maketitle
+\begin{abstract}
+\TODO{Write this LAST, using only final, frozen experiment outputs.}
+Visual place recognition under appearance changes can benefit from an
+additional visual encoder, but invoking a second encoder introduces cost
+and does not necessarily correct the first encoder's prediction.
+This study investigates whether estimating correction benefit and damage
+is more effective than uncertainty-only invocation under comparable
+computational budgets. \TODO{State the actual method and supervision.}
+We evaluate \TODO{verified models and dataset partitions}, reporting
+\TODO{actual recall, invocation fraction, latency, and comparison results}.
+\TODO{State the supported conclusion and important limitation.}
+\end{abstract}
+\begin{IEEEkeywords}
+visual place recognition, conditional computation, visual localization
+\end{IEEEkeywords}
+
+\section{Introduction}
+\TODO{About 0.65 page: problem, gap, precise scope, supported contributions.}
+Visual place recognition identifies candidate previously observed locations
+from images; it is not by itself a geometrically verified pose estimator
+\cite{schubert2024tutorial}.
+\TODO{Do not claim new uncertainty estimation or generic benefit prediction.}
+
+\section{Related Work}
+\TODO{About 0.45 page.}
+\subsection{Frozen Visual Descriptors}
+\TODO{Distinguish specialised CosPlace/EigenPlaces from generic DINOv2 CLS
+features. Do not label the latter AnyLoc or SALAD.}
+Relevant sources include \cite{berton2022cosplace,berton2023eigenplaces,oquab2023dinov2}.
+\subsection{Uncertainty and Selective Processing}
+\TODO{Explain the closest existing methods, not only distant baselines.}
+Discuss score-based uncertainty \cite{miller2026doubt}, selective image
+matching \cite{sferrazza2025match}, and sequence-matching receptiveness
+prediction \cite{hussaini2025smr}. The present study must establish a
+meaningful distinction, rather than claim these ideas are new.
+
+\section{Method}
+\TODO{About 1.15 pages including the pipeline diagram.}
+\subsection{Retrieval and Available Information}
+Let $q_i$ denote a query and $d_j$ a reference image. Frozen encoder $m$
+produces a unit-normalised descriptor $z_m(I)$. Similarity is
+\begin{equation}
+s_m(q_i,d_j)=z_m(q_i)^\top z_m(d_j).
+\end{equation}
+\TODO{Specify preprocessing, descriptor pooling, model identities, and stable ties.}
+The gate observes statistics from encoder A only. Query ground truth and
+encoder B outputs are unavailable at the online decision point.
+
+\subsection{Supervised Correction and Damage Estimates}
+For training queries only, let $a_i,b_i\in\{0,1\}$ denote the correctness of
+A and B, respectively. Construct
+\begin{equation}
+y_i^+=\ind[a_i=0,b_i=1],\quad
+ y_i^-=\ind[a_i=1,b_i=0].
+\end{equation}
+\TODO{Define the five A-only input statistics and training-only standardisation.}
+Two regularised logistic heads produce scores $p_+(u_i)$ and $p_-(u_i)$.
+Their difference is
+\begin{equation}
+g(u_i)=p_+(u_i)-p_-(u_i).
+\end{equation}
+\TODO{Do not call these certified or calibrated probabilities without evidence.}
+
+\subsection{Invocation Policy and Cost}
+For a validation-selected threshold $t$, invoke B when $g(u_i)>t$ and use
+its entire retrieval ranking; otherwise retain A's ranking.
+\TODO{State that this is global ranking selection, not local reranking,
+sequence matching, or geometric verification.}
+The visual encoders are frozen, but the gate is supervised; the system
+must not be described as training-free.
+\TODO{Report the actual test invocation fraction and all cost components.}
+
+\section{Experimental Protocol}
+\TODO{About 0.70 page.}
+\subsection{Data and Leakage Control}
+\TODO{Specify Nordland-Part-2020 rather than full Nordland; cite the dataset.
+State exact train/validation/test blocks, buffers, and full reference gallery.}
+\cite{garg2020dataset}
+\TODO{Specify Gardens Point's strict aligned-index positives, and distinguish
+any custom tolerance analysis from the tutorial's GTsoft ignore protocol.}
+\subsection{Baselines and Metrics}
+\TODO{A-only, B-only, random, gap, same-feature A-error predictor, literature
+uncertainty comparator, proposed gate, rescue-only ablation, strong single model.}
+\TODO{Report R@1/5/10, rescue/damage counts, actual invocation and real batch-1
+latency. Cached descriptor simulation is not model inference latency.}
+
+\section{Results and Analysis}
+\TODO{About 1.35 pages. All numbers must come from immutable experiment outputs.}
+\subsection{Accuracy--Cost Trade-offs}
+\TODO{Main table and Pareto-style accuracy versus REAL latency plot.}
+\subsection{Ablation and Error Analysis}
+For $Q$ test queries, the measured gain must satisfy
+\begin{equation}
+R@1_{\mathrm{route}}-R@1_A
+=\frac{N_{\mathrm{rescue}}-N_{\mathrm{damage}}}{Q}.
+\end{equation}
+\TODO{Explain whether harm prediction helps and whether benefits transfer.}
+\TODO{Oracle selection uses ground truth and is a diagnostic upper bound only.}
+
+\section{Discussion and Conclusion}
+\TODO{About 0.40 page. Summarise findings, including negative results.}
+\TODO{Limitations: small datasets, fixed-map route dependence, gate domain shift,
+no open-set guarantee, no metric pose estimation, no real-robot validation.}
+
+% Include only if required/allowed by the confirmed review/publisher policy.
+\section*{Disclosure}
+\TODO{If applicable, disclose AI-generated material accurately: tools used,
+which text/code/figures, scope of human verification. Do not claim verification
+that has not happened. Confirm anonymous-review handling with the conference.}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+\end{document}

@@ -1,0 +1,115 @@
+protocol_version: '2026-10-10-proposed-v1'
+status: proposed_not_preregistered_or_experimentally_validated
+research_question: >-
+  At the same second-encoder invocation budget, does predicting correction
+  benefit minus damage outperform predicting fast-model error alone?
+method_name: benefit_aware_conditional_encoder_selection
+scope:
+  frozen_visual_encoders: true
+  gate_uses_supervised_training: true
+  training_free_claim_allowed: false
+  real_robot_or_metric_pose_claim_allowed: false
+  second_stage: independent_global_retrieval_then_replace_entire_ranking
+  score_fusion: false
+  geometric_verification: false
+models:
+  A: {method: cosplace, backbone: ResNet18, dimension: 512}
+  B: {method: dinov2, backbone: dinov2_vits14, dimension: 384, pooling: cls, registers: false}
+  fallback_B: {method: eigenplaces, backbone: ResNet50, dimension: 512}
+  fallback_rule: >-
+    At most one B replacement, using train/validation observations only,
+    before any final test. Record reason and still report the original pair.
+preprocessing:
+  initial_research_setting: {resize_hw: [224, 224], color: RGB}
+  normalization: ImageNet_mean_std_verify_against_each_encoder_code
+  descriptor_l2_normalization: true
+  inference_mode: true
+  eval_mode: true
+  note: This low-resolution setting is not a claim to reproduce original paper numbers.
+data:
+  nordland:
+    source: 'https://zenodo.org/records/4016653'
+    archive_md5: 3127c5965bd4d1f3a1ef8ee49285fbb9
+    gallery: summer_all_1750
+    queries: winter_all_1750
+    split_indexing: one_based_inclusive_after_manifest_verification
+    query_train: [1, 600]
+    query_buffer_1: [601, 700]
+    query_validation: [701, 1000]
+    query_buffer_2: [1001, 1100]
+    query_test: [1101, 1750]
+    positive_radius_frames_primary: 5
+    positive_radius_frames_sensitivity: [1, 10]
+    claim: same_reference_map_route_block_holdout_not_independent_new_route
+  gardens_point:
+    source: 'https://www.tu-chemnitz.de/etit/proaut/datasets/GardensPoint_Walking.zip'
+    gallery: day_right
+    queries: night_right
+    role: external_test_only_after_freeze
+    pipeline_smoke_test: image_count_ground_truth_inspection_and_self_retrieval_only
+    positive_radius_frames_primary: 0
+    custom_tolerance_sensitivity: 8
+    note: >-
+      Tutorial GThard is identity; its GTsoft is an ambiguity/ignore mask.
+      A custom +/-8 positive-radius analysis is NOT the tutorial's original
+      GTsoft-ignore evaluation and must be labeled separately.
+retrieval:
+  method: exact_cosine
+  matrix_orientation: query_by_database
+  tie_break: stable_database_manifest_order
+  output_k: [1, 5, 10]
+gate:
+  features: [top1_score, top1_minus_top2, top1_minus_top5, top10_mean, top10_std]
+  heads: [rescue_binary_logistic, harm_binary_logistic]
+  C: 1.0
+  max_iter: 2000
+  class_weight: null
+  scaling_fit_split: train_only
+  target_labels: [A_wrong_B_right, A_right_B_wrong]
+  score: rescue_probability_estimate_minus_harm_probability_estimate
+  certified_probability_claim_allowed: false
+  trigger: score_strictly_greater_than_validation_threshold
+  clip_threshold_minimum_to_zero: true
+  validation_budgets: [0.10, 0.25, 0.50]
+  test_budget_recalibration: forbidden
+  actual_test_invocation_fraction_must_be_reported: true
+baselines:
+  required:
+    - A_only
+    - B_only
+    - random_invocation_at_matched_cost
+    - top1_top2_gap_invocation
+    - trained_A_error_predictor_same_features_same_regularization
+    - benefit_minus_harm_gate
+    - oracle_choose_correct_A_or_B_DIAGNOSTIC_ONLY
+  literature_comparator: SU_after_source_and_numerical_convention_verification
+  professional_single_model_comparator: EigenPlaces_ResNet50_if_not_already_B
+ablation:
+  - rescue_head_only
+  - error_target_instead_of_net_benefit_target
+  - remove_score_dispersion_features
+random_controls:
+  seeds: [0, 1, 2, 3, 4]
+  rule: report_all_runs_mean_and_std_never_best_seed
+metrics:
+  - R_at_1_5_10
+  - second_encoder_invocation_fraction
+  - rescue_count
+  - harm_count
+  - net_gain_percentage_points
+  - real_batch1_mean_median_p95_latency
+  - peak_memory
+  - offline_gallery_build_cost_and_size
+runtime:
+  cached_descriptor_simulation_is_not_latency: true
+  use_real_query_encodings_for_online_timing: true
+  gpu_synchronize_if_cuda: true
+  batch_size: 1
+  warmup_queries: 20
+  repeated_full_timing_passes: 3
+  second_encoder_called_only_after_gate: true
+freeze:
+  target_date: '2026-10-12'
+  required_artifacts: [git_commit, protocol_hash, model_hashes, manifests, gate_parameters, thresholds]
+  final_test_tuning: forbidden
+  bug_fix_after_test: version_protocol_and_rerun_all_methods_report_reason
