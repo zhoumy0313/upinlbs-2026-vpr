@@ -21,7 +21,7 @@ from vpr_research.encoders.frozen import create_encoder
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--manifest", type=Path, required=True)
-    parser.add_argument("--method", choices=["cosplace", "dinov2"], required=True)
+    parser.add_argument("--method", choices=["cosplace", "dinov2", "eigenplaces"], required=True)
     parser.add_argument("--run-dir", type=Path, required=True)
     args = parser.parse_args()
     settings = yaml.safe_load((ROOT / "configs/protocol.yaml").read_text())

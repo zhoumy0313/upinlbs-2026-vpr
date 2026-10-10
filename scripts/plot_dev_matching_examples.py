@@ -15,6 +15,8 @@ def main():
     parser.add_argument("--manifest",type=Path,required=True)
     parser.add_argument("--run-dir",type=Path,required=True)
     args=parser.parse_args()
+    second=json.loads((args.run_dir/"dev_baselines/metrics.json").read_text()).get("B_method","dinov2")
+    second_title={"dinov2":"DINOv2","eigenplaces":"EigenPlaces"}[second]
     records=json.loads(args.manifest.read_text())["records"]
     lookup={r["image_id"]:r for r in records}
     gallery={r["frame_index"]:r for r in records if r["traverse"]=="summer"}
@@ -30,7 +32,7 @@ def main():
         q=lookup[row["query_image_id"]]
         panels=[("Winter query",q,None), ("Summer same-frame anchor",gallery[q["frame_index"]],None),
                 ("A: CosPlace top1",lookup[row["A_top1_image_id"]],row["A_correct"]=="True"),
-                ("B: DINOv2 top1",lookup[row["B_top1_image_id"]],row["B_correct"]=="True")]
+                (f"B: {second_title} top1",lookup[row["B_top1_image_id"]],row["B_correct"]=="True")]
         draw.text((8,i*310+5),f"{row['outcome']} | validation frame {q['frame_index']} | positives: frame difference <= 5",font=font,fill="black")
         for column,(title,record,correct) in enumerate(panels):
             x,y=column*430+8,i*310+38

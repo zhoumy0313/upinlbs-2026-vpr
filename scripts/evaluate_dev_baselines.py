@@ -23,6 +23,7 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--manifest",type=Path,required=True)
     parser.add_argument("--run-dir",type=Path,required=True)
+    parser.add_argument("--second-method",choices=["dinov2","eigenplaces"],default="dinov2")
     args=parser.parse_args()
     config=yaml.safe_load((ROOT/"configs/protocol.yaml").read_text())
     records=json.loads(args.manifest.read_text())["records"]
@@ -31,17 +32,17 @@ def main():
     out.mkdir()
     radius=config["data"]["nordland"]["positive_radius_frames_primary"]
     gallery={}
-    for method in ["cosplace","dinov2"]:
+    for method in ["cosplace",args.second_method]:
         gallery[method]=load_descriptors(args.run_dir/method,args.manifest,"gallery")
-    assert gallery["cosplace"][1]==gallery["dinov2"][1]
+    assert gallery["cosplace"][1]==gallery[args.second_method][1]
     db_ids=gallery["cosplace"][1]
     db_frames=np.array([lookup[i]["frame_index"] for i in db_ids])
     np.testing.assert_array_equal(db_frames,np.arange(1,1751))
     summary={"dataset":"Nordland-Part-2020","primary_positive_radius_frames":radius,
-             "development_only":True,"final_test_metrics_computed":False,"splits":{}}
+             "development_only":True,"B_method":args.second_method,"final_test_metrics_computed":False,"splits":{}}
     for role,count in [("train",600),("validation",300)]:
         models={}
-        for method in ["cosplace","dinov2"]:
+        for method in ["cosplace",args.second_method]:
             q,ids,fp=load_descriptors(args.run_dir/method,args.manifest,role)
             frames=np.array([lookup[i]["frame_index"] for i in ids])
             expected=config["data"]["nordland"]["query_"+role]
@@ -58,7 +59,7 @@ def main():
             np.save(out/f"{role}_{method}_scores.npy",s)
             models[method]={"ids":ids,"frames":frames,"scores":s,"ranks":ranks,"correct":correct,
                             "recall":recall_at_k(s,p),"fingerprint_sha256":file_digest(args.run_dir/method/"fingerprint.json")}
-        a,b=models["cosplace"],models["dinov2"]
+        a,b=models["cosplace"],models[args.second_method]
         assert a["ids"]==b["ids"]
         features=score_features(a["scores"])
         groups=np.array(["both_right" if x and y else "A_wrong_B_right" if y else
@@ -90,7 +91,7 @@ def main():
                             for label,model in [("A",a),("B",b)]})
                 writer.writerow(row)
         summary["splits"][role]={"n_queries":count,"n_gallery":len(db_ids),
-            "A_CosPlace":a["recall"],"B_DINOv2":b["recall"],"complementarity_counts":counts,
+            "A_CosPlace":a["recall"],"B_DINOv2" if args.second_method=="dinov2" else "B_EigenPlaces":b["recall"],"complementarity_counts":counts,
             "oracle_R1_DIAGNOSTIC_ONLY":float((a["correct"]|b["correct"]).mean()),
             "B_minus_A_R1_percentage_points":100*float(b["correct"].mean()-a["correct"].mean()),
             "potential_rescue_percentage_points":100*counts["A_wrong_B_right"]/count,

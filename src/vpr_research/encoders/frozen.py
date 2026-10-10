@@ -131,5 +131,33 @@ class DinoV2Encoder(FrozenEncoder):
         return self.model.forward_features(tensor)["x_norm_clstoken"]
 
 
+class EigenPlacesEncoder(FrozenEncoder):
+    dimension = 512
+    backbone = "ResNet50"
+    pooling = "L2 -> GeM -> Flatten -> Linear -> L2"
+
+    def __init__(self, device="cuda", size_hw=(224, 224)):
+        folder, checkpoint = self._source("eigenplaces")
+        sys.path.insert(0, str(folder))
+        from eigenplaces_model import eigenplaces_network
+        from unittest.mock import patch
+        # The official constructor downloads an unrelated CosPlace initializer.
+        # Every backbone/aggregation tensor is replaced by the complete EigenPlaces
+        # checkpoint below, strictly. Preserve official modules and forward code.
+        backbone = torch.nn.Sequential(*list(torchvision.models.resnet50(weights=None).children())[:-2])
+        with patch.object(eigenplaces_network, "_get_backbone", return_value=(backbone, 2048)):
+            self.model = eigenplaces_network.GeoLocalizationNet_(self.backbone, self.dimension)
+        state = torch.load(checkpoint, map_location="cpu", weights_only=True)
+        self.model.load_state_dict(state, strict=True)
+        for key, value in self.model.state_dict().items():
+            if not torch.equal(value, state[key]):
+                raise ValueError("Loaded EigenPlaces state differs from the complete checkpoint")
+        self._freeze(device, size_hw)
+
+    def _forward(self, tensor):
+        return self.model(tensor)
+
+
 def create_encoder(method, device, size_hw=(224, 224)):
-    return {"cosplace": CosPlaceEncoder, "dinov2": DinoV2Encoder}[method](device, size_hw)
+    return {"cosplace": CosPlaceEncoder, "dinov2": DinoV2Encoder,
+            "eigenplaces": EigenPlacesEncoder}[method](device, size_hw)

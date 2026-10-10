@@ -15,5 +15,14 @@
     "checkpoint_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
     "checkpoint_url": "https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth"
   },
+  "eigenplaces": {
+    "repository": "https://github.com/gmberton/EigenPlaces",
+    "local_directory": "third_party/EigenPlaces",
+    "commit": "a2969f71d5ea31017443af490b15273ca4c50af1",
+    "checkpoint": "weights/p0_torch/hub/checkpoints/ResNet50_512_eigenplaces.pth",
+    "checkpoint_sha256": "886a2fbd910e961d02e5c74ccc5e11cc1fe9a049a4fe290b9514878c691ce491",
+    "checkpoint_url": "https://github.com/gmberton/EigenPlaces/releases/download/v1.0/ResNet50_512_eigenplaces.pth",
+    "initialization_adaptation": "Official GeoLocalizationNet_ and forward; bypass overwritten CosPlace initializer, strict-load every tensor from the complete official EigenPlaces checkpoint."
+  },
   "note": "Local SHA-256 identity, not an independently published upstream checksum. Strictly load actual weights and hash loaded state."
 }
