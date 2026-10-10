@@ -1,0 +1,16 @@
+{
+  "fonts": [
+    {
+      "path": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter/.venv-paper/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf",
+      "sha256": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22"
+    },
+    {
+      "path": "/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf",
+      "sha256": "acb6440a713d880a13a21b468ba7cd43f5a2b2934972e51be791c880730777b8"
+    }
+  ],
+  "missing_glyphs": [],
+  "pages": 1,
+  "critical_identifiers_and_counts_extracted": true,
+  "frozen_prediction_code_unchanged": true
+}
