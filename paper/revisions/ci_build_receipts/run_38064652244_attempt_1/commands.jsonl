@@ -1,0 +1,6 @@
+{"argv": ["pdflatex", "--version"], "cwd": ".", "started_utc": "2026-10-10T15:42:38.374376+00:00", "ended_utc": "2026-10-10T15:42:38.376579+00:00", "exit_code": 0}
+{"argv": ["pdflatex", "-interaction=nonstopmode", "-halt-on-error", "-file-line-error", "main.tex"], "cwd": "paper/revisions/v2_r04", "started_utc": "2026-10-10T15:42:38.377903+00:00", "ended_utc": "2026-10-10T15:42:38.874122+00:00", "exit_code": 0}
+{"argv": ["pdflatex", "-interaction=nonstopmode", "-halt-on-error", "-file-line-error", "main.tex"], "cwd": "paper/revisions/v2_r04", "started_utc": "2026-10-10T15:42:38.874137+00:00", "ended_utc": "2026-10-10T15:42:39.363250+00:00", "exit_code": 0}
+{"argv": ["pdfinfo", "main.pdf"], "cwd": "paper/revisions/v2_r04", "started_utc": "2026-10-10T15:42:39.363453+00:00", "ended_utc": "2026-10-10T15:42:39.389746+00:00", "exit_code": 0}
+{"argv": ["pdffonts", "main.pdf"], "cwd": "paper/revisions/v2_r04", "started_utc": "2026-10-10T15:42:39.389764+00:00", "ended_utc": "2026-10-10T15:42:39.406347+00:00", "exit_code": 0}
+{"argv": ["pdftotext", "-layout", "main.pdf", "/home/runner/work/upinlbs-2026-vpr/upinlbs-2026-vpr/paper/revisions/ci_build_receipts/run_38064652244_attempt_1/v2_r04.text.txt"], "cwd": "paper/revisions/v2_r04", "started_utc": "2026-10-10T15:42:39.406373+00:00", "ended_utc": "2026-10-10T15:42:39.432899+00:00", "exit_code": 0}

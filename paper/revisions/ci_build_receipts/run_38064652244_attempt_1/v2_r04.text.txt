@@ -1,0 +1,359 @@
+Causal Temporal Matching under Protocol Transfer:
+ A Reproducible Visual Place Recognition Audit
+                                                           Mingyang Zhou
+                                           University of Chinese Academy of Sciences
+                                          Additional authors and correspondence pending
+
+
+   Abstract—Sequential visual place recognition can improve im-        add value over strong fixed choices and a related-code com-
+age retrieval, but a gain over a single image does not establish the   parator? Which findings survive an independent protocol and
+value of an adaptive decision rule. We audit a causal descriptor-      genuine online computation? The method-selection budget is
+score pipeline, fixed temporal and encoder-fusion controls, one
+predeclared confidence heuristic, and an adaptation of sequence-       declared before development evaluation, the new test is opened
+matching receptiveness prediction. Encoder weights are frozen;         only after an immutable freeze, and all unfavorable configu-
+only Nordland training and validation determine the method             rations remain available. We stop extending the heuristic after
+settings. All compared methods share ground truth and startup          it fails the development superiority criterion.
+exclusions within each dataset. On 292 validation queries, single-        The contribution is an empirical audit with matched query
+frame CosPlace, the selected fixed trajectory, and the heuristic
+obtain 71.92%, 99.66%, and 82.88% Recall@1. A timestamped              sets, exact prediction ledgers, causal tests, explicit source
+code-and-protocol freeze precedes a new St Lucia evaluation            adaptations, and a documented negative adaptive hypothesis.
+using geographic labels. On 1456 common queries, the same              Sequence matching, candidate reranking, confidence filtering
+methods obtain 97.66%, 98.63%, and 98.83%; fixed score blend-          and learned image descriptors are established ideas; we claim
+ing reaches 99.52%. Ordered-history and prescribed ablation            neither their invention nor a new network. The paper’s numer-
+controls are retained together with negative results. Real-image
+batch-one timings include decoding, preprocessing, encoding,           ical comparisons apply to the specified encoders, resolutions,
+history and ranking. At the prescribed 10 m tolerance, single-         galleries and ground-truth definitions.
+frame and selected temporal recall are 95.05% and 74.45%,
+exposing unstable geographic transfer. The tested adaptive contri-                           II. R ELATED W ORK
+bution remains unsubstantiated. The study provides a bounded,             CosPlace [2] and EigenPlaces [3] provide learned global
+reproducible account of baseline strength, protocol transfer and
+deployment cost.                                                       VPR descriptors; we use fixed checkpoints rather than re-
+   Index Terms—visual place recognition, causal sequence match-        training their encoders. DINOv2 [4] supplies a self-supervised
+ing, reproducibility, baseline comparison, protocol transfer           representation as a contrasting frozen baseline. These config-
+                                                                       urations are compact instances of their model families and
+                       I. I NTRODUCTION                                do not reproduce each paper’s highest-performing benchmark
+   Visual place recognition (VPR) retrieves a previously ob-           setup.
+served place from an image, often under changes in appearance             SeqSLAM [5] and the author-provided OpenSeqSLAM2.0
+and viewpoint [1]. An image encoder produces a compact                 account [6] motivate reasoning over reference trajectories. Our
+descriptor; the nearest reference descriptor gives an image-           implementation aggregates descriptor similarities causally; it
+level place hypothesis. Sequential observations offer extra            does not reproduce the original grayscale difference and
+information: an isolated high similarity may become less               contrast-normalization pipeline. Delta Descriptors [7] encode
+credible when earlier queries do not support a compatible              temporal changes; their centered formulation differs from
+reference trajectory. Conversely, a visually ambiguous current         the strictly past-and-current score window used here. Thus,
+frame may be resolved by consistent past observations.                 descriptor trajectories are a baseline adaptation, not a claim to
+   This intuition does not justify every temporal or confidence        introduce sequence reasoning.
+mechanism. A simple fixed sequence can already solve most                 SMR [8] predicts whether sequence matching helps using
+development errors, leaving little room for a further compo-           ratio features and a supervised receptiveness classifier. We
+nent. A heuristic can also suppress useful temporal evidence           execute fixed-source feature and training functions, while
+or restrict the candidate pool. Finally, a relative reference-         explicitly changing the encoder, training geography, labels and
+index velocity selected on one video can transfer poorly to a          streaming evaluation. Its first-filter adaptation is reported sepa-
+dataset with different sampling and geographic ground truth.           rately from the original published benchmark. Image-matching
+These issues matter when the empirical claim is an incremental         reranking [9], similarity-distribution uncertainty [10], and re-
+method contribution rather than the usefulness of history in           ciprocal rank fusion (RRF) [11] provide additional context
+general.                                                               for candidate quality and confidence. The recent UPINLBS
+   We ask three bounded questions. How much does a causal              ResNet–Sinkhorn paper [12] concerns global indoor VPR
+fixed trajectory add beyond frozen single-frame and static-            descriptors; its verified bibliographic record does not establish
+fusion controls? Does one train-statistic-based confidence rule        a complete mechanism-level novelty comparison. Its full text
+                                                Offline gallery                validation-only deterministic selection chooses L = 9,
+                                                                               V = {1.2}, λ = 1 for pure temporal matching and λ = .75
+             RGB image       Frozen encoder     Cosine scores                  for the best interior blend at the same window and velocity.
+                                                                               Reference-index velocity is not GPS speed. The independent
+                                                                               window/velocity/reverse sensitivities are specified before test
+              Evaluation         Ranking        Causal history                 opening and never used to change those selections.
+                                                                                  Static controls include EigenPlaces, DINOv2, fixed affine-
+              Offline GT                                                       normalized CosPlace–EigenPlaces mixtures and full-gallery
+                                                                               RRF. RRF sums 1/(60+r) using one-based ranks from the two
+Fig. 1. The temporal pipeline uses current and past score rows. Labels enter   encoders. It needs no cross-model score calibration or trained
+only offline evaluation. Single-frame/static-fusion controls bypass temporal   coefficient. Static fusion always invokes both encoders; the
+history. The output is a reference-image ranking, not a metric navigation
+estimate.
+                                                                               temporal variants use CosPlace only.
+
+                                                                               C. One Heuristic, without a Post-Test Search
+and the original SeqSLAM paper remained access-limited
+                                                                                  The heuristic reranks the current CosPlace Top-50 candi-
+during this audit; the accessible author follow-up supports the
+                                                                               dates and leaves its tail unchanged. It reuses the selected
+sequence background.
+                                                                               trajectory settings. Let gA and gT be the top-two finite-score
+        III. P IPELINE AND P REDECLARED H EURISTIC                             gaps. Their training-only medians, fitted without labels on 592
+A. Frozen Image-to-Ranking Pipeline                                            valid windows, are mA = 0.02154516 and mT = 0.01837087.
+                                                                               Define ambiguity at = clip(1 − gA /mA , 0, 1) and temporal
+   Figure 1 separates online visual computation from offline
+                                                                               support bt = clip(gT /mT , 0, 1), with an epsilon floor 10−12 .
+labels. Each image is decoded to RGB, converted to a ten-
+                                                                                  The full temporal argmax endpoint is maintained as causal
+sor, ImageNet-normalized and resized over the full frame to
+                                                                               state. Continuity ct is the fraction of its last at most two
+224 × 224 with antialiasing. The frozen encoders output unit
+                                                                               increments within tolerance 1 of the median velocity; the first
+descriptors: CosPlace ResNet-18 and EigenPlaces ResNet-50
+                                                                               valid endpoint uses ct = 1. Candidate agreement is dt = 1
+each have dimension 512; DINOv2 ViT-S/14 uses a 384-
+                                                                               when the endpoint belongs to the current Top-50, and .25
+dimensional class token. These preprocessing choices are fixed
+                                                                               otherwise. The predeclared blend weight is
+across development and independent evaluation. No image
+encoder is trained in this study.                                                                       λt = at bt ct dt .                   (3)
+   Let xt be the current unit query descriptor and yj an
+ordered gallery descriptor. We compute clipped cosine sim-                     This quantity is a heuristic weight, not a calibrated probability.
+ilarity St (j) = x⊤
+                  t yj after float64 unit renormalization. Stable
+                                                                               If no candidate has a valid path, output reverts to the current
+descending sorting retains gallery order for ties. The online                  ranking. We remove continuity, ambiguity and agreement
+matcher sees only score vectors and its internal history. Query                separately, and replace the weight by fixed values on the
+filenames, ordinal labels, coordinates and positive sets are                   identical candidate pool. No coefficients, new modules or
+unavailable to its scoring API.                                                window search are added after its failure on validation.
+                                                                                  The score computation costs O(N L|V |) with O(N L) re-
+B. Fixed Causal Trajectory and Fusion Controls
+                                                                               tained score storage for gallery size N . Our stable full-gallery
+   For a zero-based reference endpoint j, window L and                         sorting is O(N log N ). The heuristic still computes the full
+relative-index velocity set V , the temporal score is                          trajectory before candidate reranking, so it does not reduce
+                                 L−1                                           the encoding cost or establish an asymptotic search advantage.
+                            1 X
+             Tt (j) = max       St−ℓ (j − rint(vℓ)) .                   (1)    Dense gallery comparison and descriptor storage scale as
+                        v∈V L
+                                 ℓ=0                                           O(N D) for descriptor dimension D.
+Rounding follows ties-to-even. Any trajectory with an out-
+of-gallery index is invalid as a whole, with score −∞. No                      D. SMR First-Filter Adaptation
+future query is accessed. State resets at each traversal or                       We pin the official SMR source commit and execute its
+split; the first L − 1 queries use the single-frame ranking. For               unchanged selected functions under its MIT notice. Four ratio
+positive blend weights, invalid temporal paths stay invalid. At                features use cosine-derived squared unit-descriptor distances,
+weight zero, the ranking is exactly single-frame. Known-range                  a length-nine unit-velocity diagonal, top rank one, epsilon
+normalization f (s) = (s + 1)/2 gives the fixed blend                          10−6 and group window two. Training uses the Nordland
+                                                                               training queries only, with the original supervised four-class
+              Ft (j) = (1 − λ)f (St (j)) + λf (Tt (j)).                 (2)
+                                                                               interpretation, StandardScaler, SMOTE and three hidden layers
+   Development explores L           ∈  {1, 3, 5, 9}, V      ∈                  of 128 units. Source defaults use random states 42 for SMOTE
+{{.8}, {1}, {1.2}, {.8, 1, 1.2}} and λ ∈ {0, .25, .5, .75, 1}:                 and 0 for the MLP. The single-configuration, five-fold source
+the declared grid contains 80 configurations, with single-                     procedure is retained; because oversampling precedes its in-
+frame/static and shuffled controls also retained. The                          ternal cross-validation, that score is not independent evidence.
+   Our full reference gallery, compact CosPlace encoder, or-         under each specified radius. A closed-set exclusion ledger
+dinal tolerance and train size differ from the original multi-       is retained even though it is empty here. The same first-
+descriptor benchmark. We implement its first filter at a fixed       eight exclusion gives 1, 456 primary queries for every method.
+all-trusted operating point, count rejected queries as retrieval     Excluded startup queries still update history and have separate
+misses, omit restoration, and transfer the classifier without        full-stream results.
+St Lucia retraining. Training callbacks only change diagnos-            We report image retrieval Recall@1/5/10, paired rescues
+tic output format. Source convolution and streamed float32           and harms versus CosPlace, and descriptive contiguous blocks
+temporal sums agree on development top-ten rankings within           of 100 queries. Correlated video frames do not provide inde-
+the declared numeric bound. These limitations prevent a full         pendent trials, and seed variation or three timing repeats is not
+published-reproduction claim.                                        treated as a confidence interval. The geographic and ordinal
+                                                                     protocols are reported separately; absolute percentages across
+     IV. DATA , F REEZE AND E VALUATION P ROTOCOL
+                                                                     them are not a common-task accuracy comparison.
+A. Three Distinct Data Roles
+                                                                     C. Pre-Test Freeze and Genuine Online Cost
+   Nordland-Part-2020 [15] supplies paired summer/winter
+frames. The gallery has 1, 750 reference images. Query train-           A timestamped immutable packet stores code/test snapshots,
+ing uses verified one-based ordinals 1–600, and validation uses      source commits, encoder preprocessing and weight hashes,
+701–1000, with their separation retained. Eligible references        gallery identities, training statistics, the trained SMR classifier,
+differ by at most five ordinals. This is a frame-order bench-        all parameters, masks, thresholds, plots and the timing plan.
+mark convention, not geographic ground truth. The candidate          Its recorded independent-performance flag is false. The first
+audit found CosPlace Top-50 recall of 300/300 on the full            performance-access receipt follows the freeze, and all frozen
+validation split; it motivates checking a bounded reranker but       source hashes are verified at evaluation. All 24 predeclared
+does not predict a usable method gain. All primary validation        independent configurations and the radius sensitivities remain
+methods share the first-eight exclusion, giving 292 queries;         in the public numeric evidence; no test-selected configuration
+all-query startup results are recorded separately.                   replaces the development choice.
+   The earlier 650-query Nordland holdout and 200-query                 Accuracy extraction and timed queries both use batch one.
+Gardens Point night results had already been seen. They are          Latency reopens and decodes every image, prepares the tensor,
+historical/post-hoc evidence, never a new blind test or a source     runs each required encoder, transfers its descriptor to CPU,
+of V2 choices. Their original code, negative gate experiments,       computes gallery similarities, updates history and sorts the
+frozen result files and five-page paper remain preserved. This       result. Cached scores are used only outside the timed interval
+paper’s new independent comparison uses St Lucia.                    for identity checks. On the RTX 3060 Laptop GPU, with
+   We retrieve the official formatted test-only St Lucia subset      PyTorch 2.6.0 and CUDA 12.4, each method receives 20 warm
+through the source-pinned VPR dataset downloader, citing             images followed by three complete traversals with CUDA
+its original collection [13] and benchmark curation [14]. It         synchronization. CPU and BLAS threads are fixed to one,
+contains 1, 549 reference images and 1, 464 queries in one           startup remains included and clocks are not locked. Dual-
+reference and one query traversal. Source pano identifiers           encoder methods prepare each encoder’s input separately in
+recover each traversal and increasing original-frame order;          this implementation; shared preprocessing could reduce their
+the timestamp field is empty. All images are decoded and             cost. Gallery extraction is an offline batch-sixteen operation;
+hashed before the freeze. UTM zone 56 south, latitude band           initialization and serialization are excluded from its per-
+J, is consistent. Independent PROJ reprojection of all 3, 013        encoder extraction timer and remain in the total command
+latitude/longitude pairs differs from labels by at most 1.48305      wall time.
+m, within the predeclared rounding check.                                             V. R ESULTS AND A NALYSIS
+   Documentation describes nominal five-metre selection, but
+                                                                     A. Fixed Controls and Transfer
+measured adjacent-position medians are 11.42 m in the ref-
+erence and 11.96 m in the query trajectory. Original-frame              Table I compares the preselected methods using the same
+gaps are irregular. We preserve that discrepancy and do not          per-dataset query mask. On validation, pure fixed temporal
+resample the data to fit the trajectory model. This permits an       retrieves 291/292 correctly compared with 210/292 for Cos-
+ordered-index transfer experiment, not a claim of uniformly          Place. Its 82 rescues and one harm show a large development
+timed motion or fixed physical speed.                                gain; they do not prove an incremental adaptive contribution.
+                                                                     The causal heuristic retrieves only 242/292, and even its
+B. Geographic Labels and Common Masks                                strongest prescribed component removal remains below mature
+   St Lucia positives are references within Euclidean UTM            fixed controls.
+distance 25 m, consistent with the checked encoder bench-               On independent St Lucia, the development-selected pure
+mark’s default geographic threshold. Sensitivities at 10 and         trajectory gains 14 correct queries net over CosPlace, with 34
+50 m are specified before test access. Coordinates generate          rescues and 20 harms. The fixed interior blend has 34 rescues
+offline labels only; they never drive similarity, velocity, gating   and 7 harms. The heuristic has 17 rescues and no harms;
+or path choice. Every query has at least one eligible reference      its apparent advantage over pure temporal disappears against
+                   100                                                           result is preserved, but it cannot support a uniformly improved
+    Recall@1 (%)                                                                 geographic retrieval claim. A broad-neighborhood label can
+                   90                                                            accept a temporal endpoint that a tighter tolerance rejects.
+                                                                                 Index-velocity mismatch and averaging are plausible contrib-
+                               Nordland validation                               utors; this experiment does not establish a separate causal
+                   80         St Lucia independent
+                                                                                 explanation or pose-error estimate. No tolerance or method
+                         L3          L5               L9        Shuffle          is selected to conceal the reversal.
+
+Fig. 2. Fixed V = {.8, 1, 1.2}, λ = 1 with length sensitivity; Shuffle retains   D. Measured Batch-One Pipeline Cost
+L9 and current query while permuting past history. Different GT/denominators
+across datasets; compare ordered and shuffled points within each role. These        Table IV reports actual end-to-end latency. CosPlace’s mean
+are prescribed controls, not test-driven parameter choices.
+                                                                                 is 10.88 ms, of which preprocessing averages 5.63 ms and
+                                                                                 encoding plus CPU transfer 2.93 ms. Current-image decoding
+stronger fixed blending and fixed candidate-pool controls. The                   and preprocessing are consequently substantial; an encoder-
+transferred SMR adaptation also exceeds the heuristic under                      only or cached-score timer would conceal practical cost. The
+the primary radius. The primary result has an automated                          temporal methods avoid a second visual encoder but still incur
+Outcome B label. The prescribed tighter tolerance reverses                       history and ranking work. SMR’s measured pipeline includes
+the selected temporal gain, requiring an overall Outcome C                       its source ratio-feature computation and classifier, so it is not
+assessment of unstable transfer. The tested new rule has no                      comparable to a published predictor-only timing.
+established superiority over mature controls.                                       Offline per-encoder gallery extraction takes 12.35, 15.21 and
+                                                                                 16.89 s for CosPlace, EigenPlaces and DINOv2 respectively.
+B. Ablations and Sequence Controls                                               Float32 gallery payloads and actual CPU/GPU residency are
+                                                                                 reported separately in the evidence; score histories are small
+   Table II separates the heuristic from weight replacement and
+                                                                                 for these galleries. CPU RSS includes audit arrays and al-
+component removal. Removing ambiguity helps the heuristic
+                                                                                 locator state, while CUDA allocated/reserved values do not
+on validation, supporting the concern that a gap-based con-
+                                                                                 represent total device memory. Neither these small-gallery
+fidence veto can suppress useful evidence. This descriptive
+                                                                                 costs nor warm-file-cache timings establish performance for
+observation does not authorize another post-test rule. Fixed
+                                                                                 a city-scale deployment.
+weights on the same Top-50 pool also exceed the full heuristic.
+Candidate coverage is therefore an upper bound, not evidence
+                                                                                             VI. D ISCUSSION AND C ONCLUSION
+that the chosen weight extracts its available signal.
+   Figure 2 retains the broad-velocity window sensitivity and                       The development result demonstrates the danger of attribut-
+shuffled-history control. Ordered histories exceed shuffled                      ing a temporal gain to an extra component. The selected
+histories under each dataset’s primary protocol; this control                    fixed trajectory is already near the validation ceiling. The
+does not negate the selected trajectory’s tighter-radius fail-                   heuristic’s ambiguity, agreement and continuity factors can
+ure. The externally perfect length-five broad-velocity row is                    suppress history, and an apparent low-harm operating point
+a predeclared sensitivity observation, not a newly selected                      is insufficient when fixed controls yield higher recall. On the
+final method. Reverse velocity is also unfavorable. Relative                     independent protocol, the ordering among predeclared fixed
+motion and sampling assumptions matter; selecting the best                       variants also changes. This supports reporting window and
+external window or velocity would change this test’s role from                   motion sensitivity while preserving the original selection and
+independent validation to exploration.                                           unfavorable evidence. The tighter-radius reversal also cautions
+   The source-pinned classifier has only three harmful-                          against treating a correct broad-neighborhood endpoint as
+sequence and six both-wrong training examples before re-                         precise localization.
+sampling; its source resampling and internal cross-validation                       Several validity limits remain. Nordland uses ordinal rather
+cannot substitute for held-out transfer. Its protocol and model                  than geographic labels, and historical exact-frame repetitions
+capacity also differ from the label-free heuristic. We therefore                 and uncertain correspondence can distort its seen holdout.
+interpret this comparator as a related-code stress test and                      St Lucia is one curated route pair, with irregular spacing,
+keep its adaptations and rejection counts visible. A method                      loop revisits and positional-label uncertainty. Its measured
+claim must survive both mature fixed controls and a genuinely                    spacing differs from documentation. Upstream encoder pre-
+comparable related method.                                                       training overlap is not audited; independence here concerns
+                                                                                 our method development. Compact checkpoints, full-frame
+C. Predeclared Geographic Tolerance Sensitivity                                  resizing, dense search, candidate truncation, source SMR
+   Table III keeps the same 1, 456 queries at all prescribed                     adaptations, uncalibrated heuristic weights, serial correlation
+radii. At 10 m, single-frame recall is 95.05%, whereas the                       and unlocked clocks bound interpretation. Retrieval recall does
+selected pure trajectory obtains 74.45%. The selected tra-                       not establish localization RMSE, navigation success or robotic
+jectory’s net correct count changes from −300 at 10 m to                         deployment. The access-limited same-conference paper also
++14 at the primary 25 m and +30 at 50 m. The primary                             leaves a complete novelty comparison pending human review.
+                                                                 TABLE I
+  R ECALL PERCENTAGES UNDER DISTINCT PROTOCOLS . N ORDLAND USES 292 VALIDATION QUERIES AND ORDINAL TOLERANCE ±5; S T L UCIA USES
+ 1, 456 INDEPENDENT QUERIES AND RADIUS 25 M . R ESCUE / HARM IS PAIRED AGAINST C OS P LACE ON S T L UCIA . F IXED T AND BLEND ARE SELECTED
+                                     ON VALIDATION . SMR* IS THE DISCLOSED CODE ADAPTATION .
+
+
+            Method                    Nordland R@1        St Lucia R@1      St Lucia R@5        St Lucia R@10         Rescue     Harm
+            CosPlace A                          71.92             97.66               99.52                99.73            0         0
+            EigenPlaces B                       84.59             99.04               99.73               100.00           27         7
+            DINOv2                              52.05             37.84               59.34                69.16            7       878
+            RRF                                 83.22             98.97               99.86               100.00           19         0
+            Fixed A+B (wB = .75)                85.62             99.38               99.93               100.00           26         1
+            Fixed T (L9, v1.2)                  99.66             98.63               99.93               100.00           34        20
+            Fixed blend (λ = .75)               98.97             99.52              100.00               100.00           34         7
+            Heuristic                           82.88             98.83               99.79                99.93           17         0
+            SMR*                                94.18             99.66              100.00               100.00           34         5
+
+
+
+                          TABLE II                                                                      TABLE IV
+  P RESCRIBED HEURISTIC ABLATIONS AND IDENTICAL - POOL FIXED               R EAL - IMAGE ONLINE LATENCY IN MILLISECONDS : 20 WARM IMAGES ,
+ WEIGHTS ; R@1 PERCENTAGES . N O ABLATION IS ADOPTED USING THE            THREE FULL TRAVERSALS (4, 392 TIMED QUERIES PER METHOD ), BATCH
+                     INDEPENDENT RESULT.                                      ONE , SYNCHRONIZED CUDA. S TARTUP INCLUDED ; CLOCKS NOT
+                                                                                      LOCKED . S MALL DIFFERENCES ARE DESCRIPTIVE .
+              Top-50 rule        Nordland    St Lucia
+                                                                                  Method                        Mean      Median          P95
+              Full heuristic        82.88      98.83
+              Without ct            84.93      98.90                              CosPlace A                    10.88       10.83     11.14
+              Without at            89.38      99.45                              EigenPlaces B                 14.00       14.00     14.27
+              Without dt            83.56      98.97                              DINOv2                        14.28       14.27     14.69
+              Fixed λ = 1           98.29      99.18                              RRF                           23.17       23.18     23.47
+              Fixed λ = .5          94.86      99.73                              Fixed A+B (wB = .75)          22.95       22.98     23.34
+              Fixed λ = .75         97.95      99.59                              Fixed T (L9, v1.2)            11.41       11.42     11.68
+                                                                                  Fixed blend (λ = .75)         11.30       11.31     11.55
+                                                                                  Heuristic                     11.67       11.67     11.95
+                             TABLE III                                            SMR*                          73.87       74.19     75.31
+   P RESCRIBED GEOGRAPHIC RADII , COMMON 1, 456 QUERIES ; R@1
+         PERCENTAGES . T HE PRIMARY RADIUS REMAINS 25 M .
+
+
+         Method                    10 m     25 m        50 m           photos and external pretrained checkpoints are retained locally
+                                                                       with source URLs and hashes.
+         CosPlace A                95.05    97.66    97.94
+         Fixed T (L9, v1.2)        74.45    98.63   100.00
+                                                                                  ACKNOWLEDGMENTS AND AI D ISCLOSURE
+         Fixed blend (λ = .75)     89.01    99.52   100.00
+         Heuristic                 95.40    98.83    98.90                This draft used OpenAI ChatGPT/Codex for code genera-
+         SMR*                      86.06    99.66   100.00             tion, test and analysis scripts, figure code, manuscript drafting
+                                                                       and revision in the abstract and Sections I–VI, including
+                                                                       the pipeline and result-figure code. AI assistance produced
+   The paired ledgers support the following limited empirical          initial implementations and draft analysis/text; the preserved
+conclusion: causal temporal ordering can improve broad-                executable ledgers support the numerical claims. Official
+neighborhood retrieval here, its gains are unstable under tighter      encoder and SMR source attribution is preserved. Human
+geographic tolerance, strong fixed choices are indispensable           authors must verify all code, scientific interpretation, citations,
+controls, and the tested adaptive contribution is not demon-           wording and authorship before submission; additional authors,
+strated. Future studies would need new development data and a          correspondence, funding and conference-format details remain
+new independent freeze before exploring a revised mechanism.           pending. No submission or author approval is implied.
+The present evidence is preserved as a research audit rather
+than repaired by further test-based tuning.                                                           R EFERENCES
+                                                                          [1] S. Schubert, P. Neubert, S. Garg, M. Milford, and T. Fischer, “Visual
+                       R EPRODUCIBILITY                                       place recognition: A tutorial,” IEEE Robot. Autom. Mag., vol.31, no.3,
+                                                                              pp.139–153, 2024, doi:10.1109/MRA.2023.3310859.
+                                                                          [2] G. Berton, C. Masone, and B. Caputo, “Rethinking visual geo-
+   Source versions, finite grids, source/licence receipts, train-             localization for large-scale applications,” in CVPR, 2022, pp.4878–4888.
+statistic and model hashes, freeze/access timestamps, per-                [3] G. Berton, G. Trivigno, B. Caputo, and C. Masone, “EigenPlaces:
+query and contiguous-block results, real latency samples, fail-               Training viewpoint robust models for visual place recognition,” in ICCV,
+                                                                              2023, pp.11080–11090.
+ures, and claim mappings are archived on the research branch              [4] M. Oquab et al., “DINOv2: Learning robust visual features without
+of https://github.com/zhoumy0313/upinlbs-2026-vpr. Dataset                    supervision,” arXiv:2304.07193, 2023.
+ [5] M. J. Milford and G. F. Wyeth, “SeqSLAM: Visual route-based naviga-
+     tion for sunny summer days and stormy winter nights,” in ICRA, 2012,
+     pp.1643–1649, doi:10.1109/ICRA.2012.6224623.
+ [6] B. Talbot, S. Garg, and M. Milford, “OpenSeqSLAM2.0: An open
+     source toolbox for visual place recognition under changing conditions,”
+     arXiv:1804.02156v2, 2018.
+ [7] S. Garg, B. Harwood, G. Anand, and M. Milford, “Delta descrip-
+     tors: Change-based place representation for robust visual localiza-
+     tion,” IEEE Robot. Autom. Lett., vol.5, no.4, pp.5120–5127, 2020,
+     doi:10.1109/LRA.2020.3005627.
+ [8] S. Hussaini, T. Fischer, and M. Milford, “Improving visual place
+     recognition with sequence-matching receptiveness prediction,” in IROS,
+     2025, pp.11073–11080, doi:10.1109/IROS60139.2025.11247581.
+ [9] D. Sferrazza, G. Berton, G. Trivigno, and C. Masone, “To match or not to
+     match: Revisiting image matching for reliable visual place recognition,”
+     in CVPR Workshops, 2025, pp.2874–2885.
+[10] E. Miller, M. Milford, M. B. Hafez, S. Ramchurn, and S. Ehsan,
+     “Through the lens of doubt: Robust and efficient uncertainty estimation
+     for visual place recognition,” IEEE Robot. Autom. Lett., vol.11, no.5,
+     pp.5899–5906, 2026, doi:10.1109/LRA.2026.3674688.
+[11] G. V. Cormack, C. L. A. Clarke, and S. Büttcher, “Reciprocal rank
+     fusion outperforms condorcet and individual rank learning methods,” in
+     SIGIR, 2009, pp.758–759, doi:10.1145/1571941.1572114.
+[12] Y. Wei, Y. Li, and Z. Zheng, “Balancing accuracy and efficiency:
+     A ResNet–Sinkhorn framework for extracting global image descrip-
+     tors in indoor visual place recognition,” in UPINLBS, 2025, pp.1–6,
+     doi:10.1109/UPINLBS68186.2025.11468446.
+[13] M. J. Milford and G. F. Wyeth, “Mapping a suburb with a single camera
+     using a biologically inspired SLAM system,” IEEE Trans. Robot., vol.24,
+     no.5, pp.1038–1053, 2008, doi:10.1109/TRO.2008.2004520.
+[14] G. Berton, R. Mereu, G. Trivigno, C. Masone, G. Csurka, T. Sattler, and
+     B. Caputo, “Deep visual geo-localization benchmark,” in CVPR, 2022,
+     pp.5396–5407.
+[15] S.        Garg,        “Nordland-Part-2020,”       Zenodo,        2020,
+     doi:10.5281/zenodo.4016653.
+
