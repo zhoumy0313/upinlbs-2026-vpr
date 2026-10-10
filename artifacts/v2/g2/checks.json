@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "causal_unit_and_original_regression_passed": true,
+  "real_development_replay": {
+    "passed": true,
+    "device": "cuda",
+    "torch": "2.6.0+cu124",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "protocol": "18 real development frames only; tolerance declared before replay",
+    "checks": [
+      {
+        "split": "train",
+        "real_images": 9,
+        "first9_stream_no_future": true,
+        "descriptor_atol": 2e-05,
+        "score_atol": 2e-05,
+        "cpu_gpu_float64_atol": 1e-12,
+        "descriptor_max_abs_difference": 0.0,
+        "top10_equal": true,
+        "causal_temporal_top10_equal": true,
+        "not_latency_measurement": true
+      },
+      {
+        "split": "validation",
+        "real_images": 9,
+        "first9_stream_no_future": true,
+        "descriptor_atol": 2e-05,
+        "score_atol": 2e-05,
+        "cpu_gpu_float64_atol": 1e-12,
+        "descriptor_max_abs_difference": 0.0,
+        "top10_equal": true,
+        "causal_temporal_top10_equal": true,
+        "not_latency_measurement": true
+      }
+    ]
+  },
+  "common_query_denominators": {
+    "train": 592,
+    "validation": 292
+  },
+  "GT_not_online_input": true,
+  "all_grid_configurations_retained": true,
+  "independent_performance_unopened": true,
+  "per_query_rows": 81000
+}

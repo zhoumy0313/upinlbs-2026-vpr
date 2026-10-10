@@ -1,6 +1,6 @@
 # VPR-GOAL-V2
 
-G0/G1 passed; G2 in progress; G3–G5 pending. Independent performance unopened.
+G0–G2 passed; G3 in progress; G4/G5 pending. Independent performance unopened.
 
-G1 CosPlace validation R@1=71.33%, R@10=97.33%, candidate diagnostic only. No new method improvement established.
-Next: bounded causal temporal/fusion baselines. See docs/research_v2/G1_DIAGNOSIS.md and RELATED_WORK_MATRIX.md for evidence/limits.
+G2 fixed causal temporal validation: 291/292 (99.66%); single-frame A: 210/292 (71.92%). Development-only, not a new method or test claim. Adaptive contribution unproved.
+Next: one bounded adaptive rule and ablations, then immutable freeze and independent evaluation.

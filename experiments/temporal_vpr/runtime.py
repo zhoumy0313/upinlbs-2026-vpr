@@ -65,7 +65,7 @@ class Run:
         environment = environment or {}
         # Only these harmless explicit overrides may be logged. Never dump environment.
         allowed = {'PYTHONPATH','PYTEST_DISABLE_PLUGIN_AUTOLOAD','OMP_NUM_THREADS','OPENBLAS_NUM_THREADS',
-                   'MPLCONFIGDIR','CUDA_VISIBLE_DEVICES'}
+                   'MPLCONFIGDIR','CUDA_VISIBLE_DEVICES','TORCH_HOME'}
         if set(environment) - allowed:
             raise ValueError('Unreviewed environment override; no credentials in logs')
         row = dict(argv=[str(a) for a in argv], cwd=str(self.root),

@@ -2,22 +2,30 @@
   "goal_id": "VPR-GOAL-V2",
   "baseline_sha": "78eb9e45d3bc469630b0c46ad1ea02b318ee151b",
   "working_branch": "research/temporal-vpr-v2",
-  "current_stage": "G2",
+  "current_stage": "G3",
   "stage_status": "in_progress",
   "stages": {
     "G0": "passed",
     "G1": "passed",
-    "G2": "in_progress",
-    "G3": "pending",
+    "G2": "passed",
+    "G3": "in_progress",
     "G4": "pending",
     "G5": "pending"
   },
-  "latest_run_id": "g1_acceptance_20261010T132758Z_bd97657b",
-  "selected_research_track": null,
+  "latest_run_id": "g2_acceptance_20261010T133813Z_d6200bfc",
+  "selected_research_track": "A",
   "new_independent_test_has_been_opened": false,
   "paper_revision": "v1_preserved",
   "human_action_required": [],
-  "updated_utc": "2026-10-10T13:28:01.659786+00:00",
+  "updated_utc": "2026-10-10T13:38:19.733792+00:00",
   "g1_diagnosis_run": "g1_diagnosis_20261010T131552Z_19ac45fe",
-  "g2_search_predeclaration": "outputs_v2/g1_acceptance_20261010T132758Z_bd97657b/config_effective.yaml"
+  "g2_search_predeclaration": "outputs_v2/g1_acceptance_20261010T132758Z_bd97657b/config_effective.yaml",
+  "g2_baseline_run": "g2_strong_baselines_20261010T133356Z_5d8c3f15",
+  "selected_temporal_settings": {
+    "length": 9,
+    "velocities": [
+      1.2
+    ],
+    "weight": 1
+  }
 }
