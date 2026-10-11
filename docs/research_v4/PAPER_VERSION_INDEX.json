@@ -1,0 +1,97 @@
+{
+  "current": "paper/revisions/v4_r02/main.tex",
+  "current_pdf": "paper/revisions/v4_r02/main.pdf",
+  "current_pages": 5,
+  "older_versions": [
+    {
+      "source": "paper/main.tex",
+      "source_sha256": "e6194a581902680e499e3784a3dcdbb03c68a696b0498f0a73e5935069c15f94",
+      "pdf": "paper/main.pdf",
+      "pdf_sha256": "e693b054abaa6ba0b274f362c9ab051ed7186cd1d3123b8ef51bd6138a50dd12"
+    },
+    {
+      "source": "paper/revisions/v2_empirical_findings/main.tex",
+      "source_sha256": "8736cdd0a80b6f1152072a59954be09dd42e384d9f66ca3a82c2e397c39fb96c",
+      "pdf": "paper/revisions/v2_empirical_findings/main.pdf",
+      "pdf_sha256": "fa7705085d865214d51802eccc5fcea5986faef9bfd98355e7f082f541c57ead"
+    },
+    {
+      "source": "paper/revisions/v2_r01/main.tex",
+      "source_sha256": "a4893d019177e243634c4d93cc9458982ac7b213e2e88e057b97dc7d4c52fe39",
+      "pdf": "paper/revisions/v2_r01/main.pdf",
+      "pdf_sha256": "1f9334ae91e0516581a17d6917b44b1730dcd066f479104847eb6206be0bd703"
+    },
+    {
+      "source": "paper/revisions/v2_r02/main.tex",
+      "source_sha256": "868e43bd1f7e08c2be298aaa7fb5e963459a0eb0522342102d7189d588a40e04",
+      "pdf": "paper/revisions/v2_r02/main.pdf",
+      "pdf_sha256": "9f58a8d391c0549640df2611b4c8a1d67b7c1be9b3fbb8a5322bd49aa20e8347"
+    },
+    {
+      "source": "paper/revisions/v2_r03/main.tex",
+      "source_sha256": "1235fd8b538120f42526cc718d648b03973c64705b75b1a7c7917be2e7f71f66",
+      "pdf": "paper/revisions/v2_r03/main.pdf",
+      "pdf_sha256": "9516f39362e9b315f97faaf86366abab92481af96f5ba8f0217471527a3ae597"
+    },
+    {
+      "source": "paper/revisions/v2_r04/main.tex",
+      "source_sha256": "95c4c39202fbabdfa472802ef4b2120f3a31fff1ca009a34dc7d87cdaacae380",
+      "pdf": "paper/revisions/v2_r04/main.pdf",
+      "pdf_sha256": "ed82fee673aba1889bd17feccab05299c3e801be936a99765ce640d654d4ec4b"
+    },
+    {
+      "source": "paper/revisions/v3_r01/main.tex",
+      "source_sha256": "268116a4c29d0f6aa0fea83db248fac2f8752950e2837fd8485a094f910fe3d4",
+      "pdf": "paper/revisions/v3_r01/main.pdf",
+      "pdf_sha256": "de80a9ff0e470842f58a640cfc89b56ee367ed8fae7e30e7fe474f0a651032fb"
+    },
+    {
+      "source": "paper/revisions/v3_r02/main.tex",
+      "source_sha256": "46a54296a58281d7c3e7cb724ec9d62ac5198f0e4a9cfd0e379b8cc14367b600",
+      "pdf": "paper/revisions/v3_r02/main.pdf",
+      "pdf_sha256": "fc1a161dd922253da0f89b629d992aa88f6a2c9532d505297effdb4d6a362aa1"
+    },
+    {
+      "source": "paper/revisions/v3_r03/main.tex",
+      "source_sha256": "167b82ec6977b083ebefc3026fd8c092e4bb3d30227448aff4926b6c8a5dc6be",
+      "pdf": "paper/revisions/v3_r03/main.pdf",
+      "pdf_sha256": "e84917a3eb92acfac5fafce3d903410b70c38fd828947abc0a13939c64191734"
+    },
+    {
+      "source": "paper/revisions/v3_r04/main.tex",
+      "source_sha256": "0e8c4acbba2c191c3f756e443873b10d535464d0542beb5ae678966102669b1b",
+      "pdf": "paper/revisions/v3_r04/main.pdf",
+      "pdf_sha256": "6e747b2258b17f576774df62fb2a9870edd82d07638caa6e8f8f6ff3e3f56bda"
+    },
+    {
+      "source": "paper/revisions/v4_r01/main.tex",
+      "source_sha256": "14a88e0af44c92714bdf62ea05079c69bf9d159f6cee312d2e714427dd6e6543",
+      "pdf": "paper/revisions/v4_r01/main.pdf",
+      "pdf_sha256": "78924dc3a08c68491125c966d95fc9646d0320197c1703a0070fe0f23479aaa0"
+    },
+    {
+      "source": "paper/revisions/v4_r02/main.tex",
+      "source_sha256": "c3af5256f7572cce93963a9903224dab964a58299a3ebcc7307307ddcf871c78",
+      "pdf": "paper/revisions/v4_r02/main.pdf",
+      "pdf_sha256": "15b2de447f6179c9256a637e086f561f13f31bc19193735b943687652c2971d1"
+    },
+    {
+      "source": "paper/revisions/v4_review_snapshots/r02_pre_g6_correction/main.tex",
+      "source_sha256": "9f8784b2b6e85e0d040bf1edb5008bd2740de288fb536a10679c1cd76612fabc",
+      "pdf": "paper/revisions/v4_review_snapshots/r02_pre_g6_correction/main.pdf",
+      "pdf_sha256": "8133a1ede5f4307368956cf1d6b951d9bd7c57ab0b67efb1854e13f65e854b2e"
+    },
+    {
+      "source": "paper/submission_candidate/v2/main.tex",
+      "source_sha256": "95c4c39202fbabdfa472802ef4b2120f3a31fff1ca009a34dc7d87cdaacae380",
+      "pdf": "paper/submission_candidate/v2/main.pdf",
+      "pdf_sha256": "ed82fee673aba1889bd17feccab05299c3e801be936a99765ce640d654d4ec4b"
+    },
+    {
+      "source": "paper/versions/v1_20261010_frozen/main.tex",
+      "source_sha256": "e6194a581902680e499e3784a3dcdbb03c68a696b0498f0a73e5935069c15f94",
+      "pdf": "paper/versions/v1_20261010_frozen/main.pdf",
+      "pdf_sha256": "e693b054abaa6ba0b274f362c9ab051ed7186cd1d3123b8ef51bd6138a50dd12"
+    }
+  ]
+}

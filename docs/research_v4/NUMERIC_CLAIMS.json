@@ -1,0 +1,389 @@
+{
+  "data": {
+    "source": "docs/research_v4/DATA_MANIFEST_r02.json",
+    "sequences": [
+      {
+        "sequence": "freiburg2_pioneer_slam",
+        "role": "development",
+        "status": "archive_extracted_safely",
+        "sha256": "f05a702c9aa0379de7d14067adeade21af1f23939de7cf7e5affa6a9fb896bf6",
+        "archive_bytes": 1626343043,
+        "members": 5818,
+        "rgb_png_files": 2921,
+        "depth_png_files": 2890,
+        "extracted_root": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter/data/raw/v4/tum_rgbd/extracted/g0_import_20261011T032146Z_0de0ebd8/freiburg2_pioneer_slam/rgbd_dataset_freiburg2_pioneer_slam",
+        "rgb_txt_sha256": "043b1cf51595ab401f6ed8fae5ed6351cc45472ba559a2325fc97738e0c22162",
+        "groundtruth_txt_sha256": "fd69e4a8d9d2646130c47acea9a32d22f80aca0d32b6feed5b3caee57048ff5a",
+        "note": "RGB decode/timestamp/GT association validation still required; G0 not accepted automatically",
+        "rgb_count": 2921,
+        "gt_count": 44212,
+        "unique_gt_timestamps": 44202,
+        "duplicate_gt_count": 10,
+        "rgb_span_seconds": 155.2168800830841,
+        "gt_span_seconds": 155.71750020980835,
+        "rgb_first": 1311878194.274451,
+        "rgb_last": 1311878349.491331,
+        "gt_first": 1311878193.7868,
+        "gt_last": 1311878349.5043,
+        "valid_rgb_gt_matches": 2883,
+        "invalid_rgb_gt_matches": 38,
+        "all_rgb_decoded": true,
+        "quaternion_max_norm_error": 9.406942452827582e-05,
+        "all_rgb_manifest": "data/manifests/v4/freiburg2_pioneer_slam_all_rgb.json",
+        "all_rgb_manifest_sha256": "d31cf867e08e52c6a05168025605ff58a836cf5afe24eb540dbf3c2df2bf1822",
+        "association_max_seconds": 0.03,
+        "association": "nearest, earlier tie break, first original row for duplicate GT timestamps, many RGB can share GT; offline only",
+        "source_attestation": "user transferred requested official archives; upstream independent published checksum not available"
+      },
+      {
+        "sequence": "freiburg3_long_office_household",
+        "role": "independent",
+        "status": "archive_extracted_safely",
+        "sha256": "c7cd8e1afb87c80e5744a356214819b110fa09b4744fa4ba0cc2382f9ba59e9c",
+        "archive_bytes": 1483556251,
+        "members": 5101,
+        "rgb_png_files": 2585,
+        "depth_png_files": 2509,
+        "extracted_root": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter/data/raw/v4/tum_rgbd/extracted/g0_import_20261011T032146Z_0de0ebd8/freiburg3_long_office_household/rgbd_dataset_freiburg3_long_office_household",
+        "rgb_txt_sha256": "9bc53b49d65090bf7fe519123a7c1d0561c53672576d781a81b63088765c15dd",
+        "groundtruth_txt_sha256": "e255d5d9c5bab915132c7ac5ec4e23f9f1efe98f765b0c9b26ac74e40b02533f",
+        "note": "RGB decode/timestamp/GT association validation still required; G0 not accepted automatically",
+        "rgb_count": 2585,
+        "gt_count": 8710,
+        "unique_gt_timestamps": 8710,
+        "duplicate_gt_count": 0,
+        "rgb_span_seconds": 87.13982009887695,
+        "gt_span_seconds": 87.08949995040894,
+        "rgb_first": 1341847980.722988,
+        "rgb_last": 1341848067.862808,
+        "gt_first": 1341847980.79,
+        "gt_last": 1341848067.8795,
+        "valid_rgb_gt_matches": 2583,
+        "invalid_rgb_gt_matches": 2,
+        "all_rgb_decoded": true,
+        "quaternion_max_norm_error": 8.570632721283111e-05,
+        "all_rgb_manifest": "data/manifests/v4/freiburg3_long_office_household_all_rgb.json",
+        "all_rgb_manifest_sha256": "b5b21892fa5d2d13398df7e9c8e41ab695517d8797330ead54d4ddf1a61121f9",
+        "association_max_seconds": 0.03,
+        "association": "nearest, earlier tie break, first original row for duplicate GT timestamps, many RGB can share GT; offline only",
+        "source_attestation": "user transferred requested official archives; upstream independent published checksum not available"
+      }
+    ]
+  },
+  "protocol": {
+    "source": "docs/research_v4/PROTOCOL_METADATA.json",
+    "values": [
+      {
+        "sequence": "freiburg2_pioneer_slam",
+        "hz": 1,
+        "gallery": 77,
+        "query": 68,
+        "midpoint": 1311878271.8828912,
+        "minimum_time_gap": 11.046140909194946,
+        "sampled": 155,
+        "excluded_buffer_or_invalid_gallery": 10,
+        "coverage": [
+          {
+            "radius_m": 0.25,
+            "total_queries": 68,
+            "valid_gt_queries": 67,
+            "invalid_gt_queries": 1,
+            "closed_queries": 32,
+            "open_queries": 35,
+            "closed_coverage": 0.47761194029850745,
+            "nearest_gallery_distance_median": 0.2556293019197915,
+            "nearest_gallery_distance_P90": 1.3809456633890789
+          },
+          {
+            "radius_m": 0.5,
+            "total_queries": 68,
+            "valid_gt_queries": 67,
+            "invalid_gt_queries": 1,
+            "closed_queries": 45,
+            "open_queries": 22,
+            "closed_coverage": 0.6716417910447762,
+            "nearest_gallery_distance_median": 0.2556293019197915,
+            "nearest_gallery_distance_P90": 1.3809456633890789
+          },
+          {
+            "radius_m": 1.0,
+            "total_queries": 68,
+            "valid_gt_queries": 67,
+            "invalid_gt_queries": 1,
+            "closed_queries": 55,
+            "open_queries": 12,
+            "closed_coverage": 0.8208955223880597,
+            "nearest_gallery_distance_median": 0.2556293019197915,
+            "nearest_gallery_distance_P90": 1.3809456633890789
+          }
+        ]
+      },
+      {
+        "sequence": "freiburg2_pioneer_slam",
+        "hz": 3,
+        "gallery": 227,
+        "query": 203,
+        "midpoint": 1311878271.8828912,
+        "minimum_time_gap": 10.343060970306396,
+        "sampled": 460,
+        "excluded_buffer_or_invalid_gallery": 30,
+        "coverage": [
+          {
+            "radius_m": 0.25,
+            "total_queries": 203,
+            "valid_gt_queries": 202,
+            "invalid_gt_queries": 1,
+            "closed_queries": 102,
+            "open_queries": 100,
+            "closed_coverage": 0.504950495049505,
+            "nearest_gallery_distance_median": 0.24276032961105706,
+            "nearest_gallery_distance_P90": 1.3895991632484104
+          },
+          {
+            "radius_m": 0.5,
+            "total_queries": 203,
+            "valid_gt_queries": 202,
+            "invalid_gt_queries": 1,
+            "closed_queries": 138,
+            "open_queries": 64,
+            "closed_coverage": 0.6831683168316832,
+            "nearest_gallery_distance_median": 0.24276032961105706,
+            "nearest_gallery_distance_P90": 1.3895991632484104
+          },
+          {
+            "radius_m": 1.0,
+            "total_queries": 203,
+            "valid_gt_queries": 202,
+            "invalid_gt_queries": 1,
+            "closed_queries": 166,
+            "open_queries": 36,
+            "closed_coverage": 0.8217821782178217,
+            "nearest_gallery_distance_median": 0.24276032961105706,
+            "nearest_gallery_distance_P90": 1.3895991632484104
+          }
+        ]
+      },
+      {
+        "sequence": "freiburg2_pioneer_slam",
+        "hz": 5,
+        "gallery": 377,
+        "query": 339,
+        "midpoint": 1311878271.8828912,
+        "minimum_time_gap": 10.040316104888916,
+        "sampled": 766,
+        "excluded_buffer_or_invalid_gallery": 50,
+        "coverage": [
+          {
+            "radius_m": 0.25,
+            "total_queries": 339,
+            "valid_gt_queries": 338,
+            "invalid_gt_queries": 1,
+            "closed_queries": 172,
+            "open_queries": 166,
+            "closed_coverage": 0.5088757396449705,
+            "nearest_gallery_distance_median": 0.24247552030668099,
+            "nearest_gallery_distance_P90": 1.3924895902677132
+          },
+          {
+            "radius_m": 0.5,
+            "total_queries": 339,
+            "valid_gt_queries": 338,
+            "invalid_gt_queries": 1,
+            "closed_queries": 229,
+            "open_queries": 109,
+            "closed_coverage": 0.6775147928994083,
+            "nearest_gallery_distance_median": 0.24247552030668099,
+            "nearest_gallery_distance_P90": 1.3924895902677132
+          },
+          {
+            "radius_m": 1.0,
+            "total_queries": 339,
+            "valid_gt_queries": 338,
+            "invalid_gt_queries": 1,
+            "closed_queries": 278,
+            "open_queries": 60,
+            "closed_coverage": 0.8224852071005917,
+            "nearest_gallery_distance_median": 0.24247552030668099,
+            "nearest_gallery_distance_P90": 1.3924895902677132
+          }
+        ]
+      },
+      {
+        "sequence": "freiburg3_long_office_household",
+        "hz": 5,
+        "gallery": 217,
+        "query": 168,
+        "midpoint": 1341848024.292898,
+        "minimum_time_gap": 10.19502305984497,
+        "sampled": 436,
+        "excluded_buffer_or_invalid_gallery": 51,
+        "coverage": [
+          {
+            "radius_m": 0.25,
+            "total_queries": 168,
+            "valid_gt_queries": 168,
+            "invalid_gt_queries": 0,
+            "closed_queries": 20,
+            "open_queries": 148,
+            "closed_coverage": 0.11904761904761904,
+            "nearest_gallery_distance_median": 0.9031419481605689,
+            "nearest_gallery_distance_P90": 2.678386418548029
+          },
+          {
+            "radius_m": 0.5,
+            "total_queries": 168,
+            "valid_gt_queries": 168,
+            "invalid_gt_queries": 0,
+            "closed_queries": 48,
+            "open_queries": 120,
+            "closed_coverage": 0.2857142857142857,
+            "nearest_gallery_distance_median": 0.9031419481605689,
+            "nearest_gallery_distance_P90": 2.678386418548029
+          },
+          {
+            "radius_m": 1.0,
+            "total_queries": 168,
+            "valid_gt_queries": 168,
+            "invalid_gt_queries": 0,
+            "closed_queries": 89,
+            "open_queries": 79,
+            "closed_coverage": 0.5297619047619048,
+            "nearest_gallery_distance_median": 0.9031419481605689,
+            "nearest_gallery_distance_P90": 2.678386418548029
+          }
+        ]
+      }
+    ]
+  },
+  "selected": {
+    "source": "configs/v4/selected_methods.json",
+    "proposed": {
+      "name": "Proposed_W1.6_H1_r0.2_e0.01",
+      "kind": "time_P",
+      "H": 1,
+      "r_seconds": 0.2,
+      "epsilon": 0.01,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    }
+  },
+  "figures": {
+    "source": "docs/research_v4/figures/figure_data.json",
+    "values": {
+      "sampling_coordinates": {
+        "A": [
+          [
+            1,
+            11.11111111111111
+          ],
+          [
+            3,
+            9.420289855072465
+          ],
+          [
+            5,
+            10.043668122270741
+          ]
+        ],
+        "L9": [
+          [
+            1,
+            11.11111111111111
+          ],
+          [
+            3,
+            1.4492753623188406
+          ],
+          [
+            5,
+            5.676855895196507
+          ]
+        ],
+        "Time_W1.6": [
+          [
+            1,
+            11.11111111111111
+          ],
+          [
+            3,
+            10.144927536231885
+          ],
+          [
+            5,
+            10.480349344978166
+          ]
+        ]
+      },
+      "orientation": [
+        {
+          "sequence": "freiburg2_pioneer_slam",
+          "role": "posthoc_offline_diagnosis_not_online_or_selection",
+          "radius": 0.5,
+          "closed_queries": 229,
+          "best_positive_rotation_degrees_median": 136.94762094048065,
+          "positive_rotation_above60deg": 175,
+          "positive_rotation_above120deg": 160,
+          "no_orientation_filter": true,
+          "no_protocol_or_algorithm_changes": true
+        },
+        {
+          "sequence": "freiburg3_long_office_household",
+          "role": "posthoc_offline_diagnosis_not_online_or_selection",
+          "radius": 0.5,
+          "closed_queries": 48,
+          "best_positive_rotation_degrees_median": 8.696445079105475,
+          "positive_rotation_above60deg": 0,
+          "positive_rotation_above120deg": 0,
+          "no_orientation_filter": true,
+          "no_protocol_or_algorithm_changes": true
+        }
+      ],
+      "source_sha256": {
+        "BASELINE_RESULTS.json": "0dce2e11826be38b20d0f4e1ecf1d3cbb482e85d140f91f7d184e92154d3aeac",
+        "PROTOCOL_METADATA.json": "bb06d72f0be66a9969cab8dd2bda52bf31d08be5a723aed4ee5e1d6b6ac63240"
+      }
+    }
+  },
+  "orientation": {
+    "source": "docs/research_v4/POSTHOC_DIAGNOSTICS.json",
+    "values": {
+      "orientation": [
+        {
+          "sequence": "freiburg2_pioneer_slam",
+          "role": "posthoc_offline_diagnosis_not_online_or_selection",
+          "radius": 0.5,
+          "closed_queries": 229,
+          "best_positive_rotation_degrees_median": 136.94762094048065,
+          "positive_rotation_above60deg": 175,
+          "positive_rotation_above120deg": 160,
+          "no_orientation_filter": true,
+          "no_protocol_or_algorithm_changes": true
+        },
+        {
+          "sequence": "freiburg3_long_office_household",
+          "role": "posthoc_offline_diagnosis_not_online_or_selection",
+          "radius": 0.5,
+          "closed_queries": 48,
+          "best_positive_rotation_degrees_median": 8.696445079105475,
+          "positive_rotation_above60deg": 0,
+          "positive_rotation_above120deg": 0,
+          "no_orientation_filter": true,
+          "no_protocol_or_algorithm_changes": true
+        }
+      ],
+      "interpretation": "Descriptive metadata diagnosis only; position-only positives can lack aligned views. Does not prove causal origin of model errors or permit test filtering."
+    }
+  },
+  "tables": "paper/revisions/v4_r02/numeric_evidence_map.json",
+  "all_actual_query_counts_and_geometry_audit": "outputs_v4/g6_archive_20261011T035815Z_18d45654/final_audit.json",
+  "freeze": "freezes/v4_20261011T033425Z/freeze.json"
+}

@@ -11,5 +11,11 @@
   "failures": "docs/research_v4/FAILURE_REGISTER.json",
   "old_preservation": "artifacts/v4/g0/old_files.json; each checkpoint/preservation.json",
   "actual_commands": "outputs_v4/execution_*/commands.jsonl and stdout.log/stderr.log; individual run checkpoints",
-  "replay": "experiments/temporal_alignment_v4/replay.py"
+  "replay": "experiments/temporal_alignment_v4/replay.py",
+  "final_acceptance": "docs/research_v4/G6_ACCEPTANCE.md",
+  "all_numeric_claims": "docs/research_v4/NUMERIC_CLAIMS.json",
+  "paper_versions": "docs/research_v4/PAPER_VERSION_INDEX.json",
+  "independent_geometric_audit": "outputs_v4/g6_archive_20261011T035815Z_18d45654/final_audit.json",
+  "restore": "experiments/temporal_alignment_v4/restore_evidence.py",
+  "closing_history": "artifacts/v4/g6/closing_history_g6_archive_20261011T035815Z_18d45654"
 }

@@ -1,0 +1,7 @@
+{
+  "run_id": "closing_history_g6_archive_20261011T035815Z_18d45654",
+  "zip_sha256": "ea23be280fa31960799d5637d8af02cf35c6aca50c740831fc276087b067ba9c",
+  "zip_bytes": 4481774,
+  "files": 506,
+  "note": "Final actual bytes; historical seals are retained as historical records, not claimed to include later checkpoint writes"
+}

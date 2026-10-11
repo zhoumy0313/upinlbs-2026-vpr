@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "old_files_preserved": 14482,
+  "metric_groups": 1995,
+  "geometric_query_rows": 390810,
+  "fresh_restoration_passed": true,
+  "closing_history": "artifacts/v4/g6/closing_history_g6_archive_20261011T035815Z_18d45654",
+  "positive_method_claim": false,
+  "submission_ready": false,
+  "final_manuscript_pages": 5
+}

@@ -11,7 +11,8 @@
     "failed": true,
     "whole_process_exit_code": 1,
     "archive": "artifacts/v4/execution/execution_20261011T032334Z_1fc69598/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "execution_20261011T033306Z_91464371",
@@ -25,7 +26,8 @@
     "failed": true,
     "whole_process_exit_code": 1,
     "archive": "artifacts/v4/execution/execution_20261011T033306Z_91464371/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g0_close_20261011T023030Z_affd191e",
@@ -38,7 +40,8 @@
     "failed": true,
     "whole_process_exit_code": null,
     "archive": "artifacts/v4/g0/g0_close_20261011T023030Z_affd191e/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g0_download_20261011T022531Z_45f2ec89",
@@ -50,8 +53,9 @@
     "started_utc": "2026-10-11T02:25:31.099713+00:00",
     "failed": true,
     "whole_process_exit_code": null,
-    "archive": "artifacts/v4/g0/g0_download_20261011T022531Z_45f2ec89/evidence.zip",
-    "source_snapshot": true
+    "archive": null,
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g0_download_20261011T022531Z_8a9737a4",
@@ -63,8 +67,9 @@
     "started_utc": "2026-10-11T02:25:31.100206+00:00",
     "failed": true,
     "whole_process_exit_code": null,
-    "archive": "artifacts/v4/g0/g0_download_20261011T022531Z_8a9737a4/evidence.zip",
-    "source_snapshot": true
+    "archive": null,
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g0_fallback_20261011T022732Z_3fa6bc61",
@@ -76,8 +81,9 @@
     "started_utc": "2026-10-11T02:27:32.521201+00:00",
     "failed": true,
     "whole_process_exit_code": null,
-    "archive": "artifacts/v4/g0/g0_fallback_20261011T022732Z_3fa6bc61/evidence.zip",
-    "source_snapshot": true
+    "archive": null,
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g0_fallback_20261011T022732Z_f07de4df",
@@ -89,8 +95,9 @@
     "started_utc": "2026-10-11T02:27:32.521657+00:00",
     "failed": true,
     "whole_process_exit_code": null,
-    "archive": "artifacts/v4/g0/g0_fallback_20261011T022732Z_f07de4df/evidence.zip",
-    "source_snapshot": true
+    "archive": null,
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g0_metadata_audit_20261011T032334Z_de67e748",
@@ -102,8 +109,9 @@
     "started_utc": "2026-10-11T03:23:34.986988+00:00",
     "failed": true,
     "whole_process_exit_code": null,
-    "archive": "artifacts/v4/g0/g0_metadata_audit_20261011T032334Z_de67e748/evidence.zip",
-    "source_snapshot": true
+    "archive": null,
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g4_freeze_20261011T033308Z_e3a56d8e",
@@ -115,7 +123,8 @@
     "started_utc": "2026-10-11T03:33:08.818230+00:00",
     "failed": true,
     "whole_process_exit_code": null,
-    "archive": "artifacts/v4/g4/g4_freeze_20261011T033308Z_e3a56d8e/evidence.zip",
-    "source_snapshot": true
+    "archive": null,
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   }
 ]

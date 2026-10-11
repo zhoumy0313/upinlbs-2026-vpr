@@ -1,5 +1,3 @@
-# V4 research status
+# V4 research status — complete
 
-G0 data-ready acceptance: FAILED. G1–G6: NOT RUN. Independent test: UNOPENED. New method claim: UNSUPPORTED / NOT EVALUATED. V4 submission readiness: NO. Old V1–V3 papers preserved.
-
-Required next change: two official TUM archives, see MAC_TRANSFER_RESUME.md. Do not run retrieval or regenerate papers from missing inputs.
+G0–G6 completed and verified. Earlier blocked G0 reports are retained as historical acquisition failures. Independent test: one frozen run, now seen. Positive method gates: false. Current empirical working draft: paper/revisions/v4_r02/main.tex and main.pdf (5 pages). No positive-method submission readiness. Complete evidence: FINAL_RESEARCH_REPORT.md, G6_ACCEPTANCE.md, EVIDENCE_MAP.json, RUN_REGISTER.json and public artifacts/v4 archives. Old V1–V3 originals unchanged.

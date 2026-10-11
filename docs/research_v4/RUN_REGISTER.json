@@ -11,7 +11,8 @@
     "failed": true,
     "whole_process_exit_code": 1,
     "archive": "artifacts/v4/execution/execution_20261011T032334Z_1fc69598/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "execution_20261011T032422Z_6c763c3a",
@@ -25,7 +26,8 @@
     "failed": false,
     "whole_process_exit_code": 0,
     "archive": "artifacts/v4/execution/execution_20261011T032422Z_6c763c3a/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "execution_20261011T032753Z_10b395c9",
@@ -39,7 +41,8 @@
     "failed": false,
     "whole_process_exit_code": 0,
     "archive": "artifacts/v4/execution/execution_20261011T032753Z_10b395c9/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "execution_20261011T033118Z_12278295",
@@ -53,7 +56,8 @@
     "failed": false,
     "whole_process_exit_code": 0,
     "archive": "artifacts/v4/execution/execution_20261011T033118Z_12278295/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "execution_20261011T033306Z_91464371",
@@ -67,7 +71,8 @@
     "failed": true,
     "whole_process_exit_code": 1,
     "archive": "artifacts/v4/execution/execution_20261011T033306Z_91464371/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "execution_20261011T033405Z_21c29ce9",
@@ -81,7 +86,8 @@
     "failed": false,
     "whole_process_exit_code": 0,
     "archive": "artifacts/v4/execution/execution_20261011T033405Z_21c29ce9/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "execution_20261011T033544Z_41ef735d",
@@ -95,7 +101,8 @@
     "failed": false,
     "whole_process_exit_code": 0,
     "archive": "artifacts/v4/execution/execution_20261011T033544Z_41ef735d/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "execution_20261011T033657Z_82473655",
@@ -109,7 +116,53 @@
     "failed": false,
     "whole_process_exit_code": 0,
     "archive": "artifacts/v4/execution/execution_20261011T033657Z_82473655/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
+  },
+  {
+    "run_id": "execution_20261011T034804Z_6650c317",
+    "parent_git_sha": "770ff7ccc6b4d69f9f40d194d5d97ba5ed7c4a69",
+    "argv": [
+      "experiments/temporal_alignment_v4/driver.py",
+      "run_g5_paper.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:48:04.643154+00:00",
+    "failed": false,
+    "whole_process_exit_code": 0,
+    "archive": "artifacts/v4/execution/execution_20261011T034804Z_6650c317/evidence.zip",
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
+  },
+  {
+    "run_id": "execution_20261011T035407Z_12fc0bf1",
+    "parent_git_sha": "1433b54893255f50c681a6bfffad3091b132185d",
+    "argv": [
+      "experiments/temporal_alignment_v4/driver.py",
+      "run_g5_correction.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:54:07.426462+00:00",
+    "failed": false,
+    "whole_process_exit_code": 0,
+    "archive": "artifacts/v4/execution/execution_20261011T035407Z_12fc0bf1/evidence.zip",
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
+  },
+  {
+    "run_id": "execution_20261011T035815Z_0c4ef4da",
+    "parent_git_sha": "168966b6da1688eb8d39ae63cf812f57f433788e",
+    "argv": [
+      "experiments/temporal_alignment_v4/driver.py",
+      "run_g6.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:58:15.647309+00:00",
+    "failed": false,
+    "whole_process_exit_code": null,
+    "archive": null,
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "freeze_publication_20261011T033427Z_0d30c2ed",
@@ -122,7 +175,8 @@
     "failed": false,
     "whole_process_exit_code": null,
     "archive": "artifacts/v4/freeze/freeze_publication_20261011T033427Z_0d30c2ed/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g0_blocked_audit_20261011T023311Z_b0f1dc76",
@@ -135,7 +189,8 @@
     "failed": false,
     "whole_process_exit_code": null,
     "archive": "artifacts/v4/g0/g0_blocked_audit_20261011T023311Z_b0f1dc76/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g0_blocked_audit_20261011T023431Z_b0c74a47",
@@ -148,7 +203,8 @@
     "failed": false,
     "whole_process_exit_code": null,
     "archive": "artifacts/v4/g0/g0_blocked_audit_20261011T023431Z_b0c74a47/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g0_bootstrap_20261011T022521Z_6633e6aa",
@@ -161,7 +217,8 @@
     "failed": false,
     "whole_process_exit_code": null,
     "archive": "artifacts/v4/g0/g0_bootstrap_20261011T022521Z_6633e6aa/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g0_close_20261011T023030Z_affd191e",
@@ -174,7 +231,8 @@
     "failed": true,
     "whole_process_exit_code": null,
     "archive": "artifacts/v4/g0/g0_close_20261011T023030Z_affd191e/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g0_download_20261011T022531Z_45f2ec89",
@@ -186,8 +244,9 @@
     "started_utc": "2026-10-11T02:25:31.099713+00:00",
     "failed": true,
     "whole_process_exit_code": null,
-    "archive": "artifacts/v4/g0/g0_download_20261011T022531Z_45f2ec89/evidence.zip",
-    "source_snapshot": true
+    "archive": null,
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g0_download_20261011T022531Z_8a9737a4",
@@ -199,8 +258,9 @@
     "started_utc": "2026-10-11T02:25:31.100206+00:00",
     "failed": true,
     "whole_process_exit_code": null,
-    "archive": "artifacts/v4/g0/g0_download_20261011T022531Z_8a9737a4/evidence.zip",
-    "source_snapshot": true
+    "archive": null,
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g0_fallback_20261011T022732Z_3fa6bc61",
@@ -212,8 +272,9 @@
     "started_utc": "2026-10-11T02:27:32.521201+00:00",
     "failed": true,
     "whole_process_exit_code": null,
-    "archive": "artifacts/v4/g0/g0_fallback_20261011T022732Z_3fa6bc61/evidence.zip",
-    "source_snapshot": true
+    "archive": null,
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g0_fallback_20261011T022732Z_f07de4df",
@@ -225,8 +286,9 @@
     "started_utc": "2026-10-11T02:27:32.521657+00:00",
     "failed": true,
     "whole_process_exit_code": null,
-    "archive": "artifacts/v4/g0/g0_fallback_20261011T022732Z_f07de4df/evidence.zip",
-    "source_snapshot": true
+    "archive": null,
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g0_import_20261011T023030Z_2feb7151",
@@ -239,7 +301,8 @@
     "failed": false,
     "whole_process_exit_code": null,
     "archive": "artifacts/v4/g0/g0_import_20261011T023030Z_2feb7151/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g0_import_20261011T032146Z_0de0ebd8",
@@ -252,7 +315,8 @@
     "failed": false,
     "whole_process_exit_code": null,
     "archive": "artifacts/v4/g0/g0_import_20261011T032146Z_0de0ebd8/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g0_metadata_audit_20261011T032334Z_de67e748",
@@ -264,8 +328,9 @@
     "started_utc": "2026-10-11T03:23:34.986988+00:00",
     "failed": true,
     "whole_process_exit_code": null,
-    "archive": "artifacts/v4/g0/g0_metadata_audit_20261011T032334Z_de67e748/evidence.zip",
-    "source_snapshot": true
+    "archive": null,
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g0_metadata_audit_20261011T032422Z_f239f7f4",
@@ -278,7 +343,8 @@
     "failed": false,
     "whole_process_exit_code": null,
     "archive": "artifacts/v4/g0/g0_metadata_audit_20261011T032422Z_f239f7f4/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g1_protocol_20261011T032518Z_fb6daf5d",
@@ -291,7 +357,8 @@
     "failed": false,
     "whole_process_exit_code": null,
     "archive": "artifacts/v4/g1/g1_protocol_20261011T032518Z_fb6daf5d/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g2_baselines_20261011T032755Z_2db3b2a4",
@@ -304,7 +371,8 @@
     "failed": false,
     "whole_process_exit_code": null,
     "archive": "artifacts/v4/g2/g2_baselines_20261011T032755Z_2db3b2a4/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g2_predeclare_20261011T032631Z_610c139b",
@@ -317,7 +385,8 @@
     "failed": false,
     "whole_process_exit_code": null,
     "archive": "artifacts/v4/g2/g2_predeclare_20261011T032631Z_610c139b/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g3_bounded_20261011T033120Z_63a26a28",
@@ -330,7 +399,8 @@
     "failed": false,
     "whole_process_exit_code": null,
     "archive": "artifacts/v4/g3/g3_bounded_20261011T033120Z_63a26a28/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g4_freeze_20261011T033308Z_e3a56d8e",
@@ -342,8 +412,9 @@
     "started_utc": "2026-10-11T03:33:08.818230+00:00",
     "failed": true,
     "whole_process_exit_code": null,
-    "archive": "artifacts/v4/g4/g4_freeze_20261011T033308Z_e3a56d8e/evidence.zip",
-    "source_snapshot": true
+    "archive": null,
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g4_freeze_20261011T033407Z_b4f7845e",
@@ -356,7 +427,8 @@
     "failed": false,
     "whole_process_exit_code": null,
     "archive": "artifacts/v4/g4/g4_freeze_20261011T033407Z_b4f7845e/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g4_independent_20261011T033546Z_444c50d3",
@@ -369,7 +441,22 @@
     "failed": false,
     "whole_process_exit_code": null,
     "archive": "artifacts/v4/g4/g4_independent_20261011T033546Z_444c50d3/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
+  },
+  {
+    "run_id": "g5_paper_20261011T034804Z_bad63668",
+    "parent_git_sha": "770ff7ccc6b4d69f9f40d194d5d97ba5ed7c4a69",
+    "argv": [
+      "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter/experiments/temporal_alignment_v4/run_g5_paper.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:48:04.680234+00:00",
+    "failed": false,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g5/g5_paper_20261011T034804Z_bad63668/evidence.zip",
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
   {
     "run_id": "g5_real_timing_20261011T033659Z_7f2fd755",
@@ -382,6 +469,35 @@
     "failed": false,
     "whole_process_exit_code": null,
     "archive": "artifacts/v4/g5/g5_real_timing_20261011T033659Z_7f2fd755/evidence.zip",
-    "source_snapshot": true
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
+  },
+  {
+    "run_id": "g6_archive_20261011T035815Z_18d45654",
+    "parent_git_sha": "168966b6da1688eb8d39ae63cf812f57f433788e",
+    "argv": [
+      "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter/experiments/temporal_alignment_v4/run_g6.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:58:15.685875+00:00",
+    "failed": false,
+    "whole_process_exit_code": null,
+    "archive": null,
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
+  },
+  {
+    "run_id": "publication_correction_20261011T035407Z_9c926e1f",
+    "parent_git_sha": "1433b54893255f50c681a6bfffad3091b132185d",
+    "argv": [
+      "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter/experiments/temporal_alignment_v4/run_g5_correction.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:54:07.463154+00:00",
+    "failed": false,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/publication/publication_correction_20261011T035407Z_9c926e1f/evidence.zip",
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   }
 ]

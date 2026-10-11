@@ -1,6 +1,6 @@
 {
   "goal_id": "VPR-GOAL-V4",
-  "status": "active",
+  "status": "complete",
   "base_sha": "09e7fb0fc63489817a09901fda37ae9896a9c404",
   "branch": "research/vpr-v4-temporal-alignment",
   "stages": {
@@ -9,23 +9,18 @@
     "g2": "passed",
     "g3": "passed",
     "g4": "passed",
-    "g5": "not_run",
-    "g6": "not_run"
+    "g5": "passed",
+    "g6": "passed"
   },
   "independent_retrieval_opened": true,
   "positive_method_claim": false,
   "formal_submission_ready": false,
-  "latest_run_id": "publication_correction_20261011T035407Z_9c926e1f",
-  "updated_utc": "2026-10-11T03:54:07.593453+00:00",
-  "current_stage": "G5 paper",
-  "stop_condition": "G0 official source unavailable after original retries and one bounded alternate route",
-  "required_external_change": "Both official TUM tgz archives transferred to data/raw/v4/tum_rgbd/archives, or demonstrably restored official-host reachability. Do not repeat unchanged network retries.",
+  "latest_run_id": "g6_archive_20261011T035815Z_18d45654",
+  "updated_utc": "2026-10-11T03:59:11.315420+00:00",
+  "current_stage": "complete",
   "blocked_goal_turn_count": 0,
-  "verified_scientific_checkpoint": "5c6ed6f4ca962258f0883c25345ff974f80ef9c3",
-  "last_blocker_audit_run": "g0_blocked_audit_20261011T023431Z_b0c74a47",
-  "blocked_utc": "2026-10-11T02:34:31.039709+00:00",
-  "goal_complete": false,
-  "blocked_reason": "Same genuine official-data acquisition blocker verified across original turn and two continuations. No live transfer handle. Goal G0 stop rule prohibits further retries/experiments; both exact official archives or restored official connectivity required.",
+  "verified_scientific_checkpoint": "168966b6da1688eb8d39ae63cf812f57f433788e",
+  "goal_complete": true,
   "resumed_utc": "2026-10-11T03:24:22.272901+00:00",
   "resumed_by": "user supplied official archives and explicitly requested continuation",
   "g0_resume_run": "g0_metadata_audit_20261011T032422Z_f239f7f4",
@@ -40,5 +35,14 @@
   "test_state": "single_blind_run_complete",
   "g4_run": "g4_independent_20261011T033546Z_444c50d3",
   "test_positive_gate": false,
-  "g5_timing_run": "g5_real_timing_20261011T033659Z_7f2fd755"
+  "g5_timing_run": "g5_real_timing_20261011T033659Z_7f2fd755",
+  "historical_acquisition_block": {
+    "stop_condition": "G0 official source unavailable after original retries and one bounded alternate route",
+    "required_external_change": "Both official TUM tgz archives transferred to data/raw/v4/tum_rgbd/archives, or demonstrably restored official-host reachability. Do not repeat unchanged network retries.",
+    "last_blocker_audit_run": "g0_blocked_audit_20261011T023431Z_b0c74a47",
+    "blocked_utc": "2026-10-11T02:34:31.039709+00:00",
+    "blocked_reason": "Same genuine official-data acquisition blocker verified across original turn and two continuations. No live transfer handle. Goal G0 stop rule prohibits further retries/experiments; both exact official archives or restored official connectivity required."
+  },
+  "g6_run": "g6_archive_20261011T035815Z_18d45654",
+  "completed_utc": "2026-10-11T03:59:11.176200+00:00"
 }
