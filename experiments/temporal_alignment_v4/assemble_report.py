@@ -1,0 +1,89 @@
+"""Evidence-mapped complete V4 research report, no result selection."""
+import json,csv,subprocess
+from runtime import ROOT,sha,write,utc
+def main():
+    state=json.loads((ROOT/'docs/goals/GOAL_V4_STATE.json').read_text());audit=json.loads((ROOT/'docs/research_v4/DATA_MANIFEST_r02.json').read_text());dev=json.loads((ROOT/'docs/research_v4/BASELINE_RESULTS.json').read_text());sel=json.loads((ROOT/'configs/v4/selected_methods.json').read_text());test=json.loads((ROOT/'docs/research_v4/INDEPENDENT_RESULTS.json').read_text());timing=json.loads((ROOT/'docs/research_v4/REAL_TIMING_RESULTS.json').read_text());post=json.loads((ROOT/'docs/research_v4/POSTHOC_DIAGNOSTICS.json').read_text())
+    assets=[]
+    for seq in audit['sequences']:assets.append(f"- {seq['sequence']}: archive {seq['archive_bytes']:,} bytes, SHA256 `{seq['sha256']}`; RGB={seq['rgb_count']}, poses={seq['gt_count']}, valid associations={seq['valid_rgb_gt_matches']}, invalid={seq['invalid_rgb_gt_matches']}; RGB span={seq['rgb_span_seconds']:.6f}s, pose span={seq['gt_span_seconds']:.6f}s.")
+    methods=[]
+    for seq in ['freiburg2_pioneer_slam','freiburg3_long_office_household']:
+        for name in ['A','B',sel['strongest_selected']['name'],'L3','L9','Time_W1.6',sel['proposed']['name']]:
+            metrics=(dev['results']+sel['results']) if seq.startswith('freiburg2') else test['results'];m=next(x for x in metrics if x['method']==name and x['hz']==5 and x['radius_m']==.5);t=next(x for x in timing['results'] if x['sequence']==seq and x['method']==name)
+            methods.append(f"| {seq.split('_',1)[1]} | {name} | {m['correct1']}/{m['closed_queries']} ({100*m['R1']:.2f}%) | {m['correct5']}/{m['closed_queries']} | {m['correct10']}/{m['closed_queries']} | {t['mean_ms']:.3f}/{t['P95_ms']:.3f} | {m['top1_distance_median_all_valid']:.3f}/{m['top1_distance_P90_all_valid']:.3f} |")
+    mismatches=sum(x['cached_top1_mismatches'] for x in timing['results']);top10=sum(x['cached_top10_mismatches'] for x in timing['results']);repeat=sum(sum(x['repeat_top10_mismatches']) for x in timing['results'])
+    failures=[];register=[]
+    for folder in sorted((ROOT/'outputs_v4').iterdir()):
+        if not folder.is_dir() or not (folder/'run_meta.json').exists():continue
+        meta=json.loads((folder/'run_meta.json').read_text());raw=json.loads((folder/'raw_metrics.json').read_text()) if (folder/'raw_metrics.json').exists() else {};failed=(folder/'process_failure.json').exists() or raw.get('actual_whole_process_exit_code',0)!=0 or bool((folder/'failures.jsonl').exists() and (folder/'failures.jsonl').stat().st_size)
+        row=dict(run_id=folder.name,parent_git_sha=meta['parent_git_sha'],argv=meta['argv'],cwd=meta['cwd'],started_utc=meta['utc'],failed=failed,whole_process_exit_code=raw.get('actual_whole_process_exit_code'),archive=str(Path('artifacts/v4')/folder.name.split('_')[0]/folder.name/'evidence.zip'),source_snapshot=True)
+        register.append(row)
+        if failed:failures.append(row)
+    write(ROOT/'docs/research_v4/RUN_REGISTER.json',register);write(ROOT/'docs/research_v4/FAILURE_REGISTER.json',failures)
+    # Preserve the initial missing-data canonical manifest byte-for-byte before current publication.
+    p=ROOT/'docs/research_v4/DATA_MANIFEST.json';old=ROOT/'docs/research_v4/DATA_MANIFEST_r01_failure.json'
+    if not old.exists():old.write_bytes(p.read_bytes())
+    p.write_bytes((ROOT/'docs/research_v4/DATA_MANIFEST_r02.json').read_bytes())
+    with (ROOT/'docs/research_v4/SOURCE_AUDIT.md').open('a') as f:f.write('\n## Resumed official-data audit\n\nUser supplied both requested official archive files on Oct.11. Both complete tar/gzip streams and safe extraction passed; all 5,506 RGB PNGs decoded. Archive identities, pose/GT association counts and spans are in DATA_MANIFEST_r02.json, now also the canonical DATA_MANIFEST.json. First missing-data manifest remains byte-identical as DATA_MANIFEST_r01_failure.json; original network failures remain. Original upstream independent published checksums were not available; official source attribution and transferred-file provenance are declared rather than claiming external checksum certification.\n')
+    mapping=dict(protocol='configs/v4/protocol_accepted.yaml; data/manifests/v4/*_protocol.json',data='docs/research_v4/DATA_MANIFEST_r02.json',all_development_baselines='docs/research_v4/BASELINE_RESULTS.json',all_candidate_development='configs/v4/selected_methods.json; outputs_v4/'+state['g3_run']+'/per_query.csv',independent='docs/research_v4/INDEPENDENT_RESULTS.json; outputs_v4/'+state['g4_run']+'/per_query.csv',latency='docs/research_v4/REAL_TIMING_RESULTS.json; outputs_v4/'+state['g5_timing_run']+'/timing_per_query.csv',main_paper_cells='paper/revisions/v4_r02/numeric_evidence_map.json',figures='docs/research_v4/figures/figure_data.json; experiments/temporal_alignment_v4/report_assets.py',frozen_code_model_images='freezes/'+Path(state['freeze_folder']).name+'/freeze.json',failures='docs/research_v4/FAILURE_REGISTER.json',old_preservation='artifacts/v4/g0/old_files.json; each checkpoint/preservation.json',actual_commands='outputs_v4/execution_*/commands.jsonl and stdout.log/stderr.log; individual run checkpoints',replay='experiments/temporal_alignment_v4/replay.py')
+    write(ROOT/'docs/research_v4/EVIDENCE_MAP.json',mapping)
+    report='''# VPR-GOAL-V4 完整研究报告
+
+## 结论与投稿判断
+
+本轮真实数据、协议、强基线、36 个有界候选、一次冻结独立测试与真实在线计时均已执行。**候选终点精修没有超过强基线，不支持正向新方法贡献。** 新稿按 empirical working draft 定位；不具备以“优于强基线的新方法”提交的科研条件。可由导师判断是否以小规模负结果/协议审计经验研究投稿，但当前两条短室内序列、低开发精度、20 个严格测试闭集样本和既有时间对齐技术使录用风险较高。没有保证录用、SOTA、完整SLAM或机器人定位精度声明。
+
+正式作者/通讯确认、模板/匿名/截止时区、版权、付费与实际提交继续由作者处理；本任务没有执行这些动作。V1–V3 所有代码、原始记录、失败、源稿和 PDF 字节保留，V4 自始独立于 V3 指定提交与旧分支。
+
+## G0–G1 数据及协议
+
+'''+ '\n'.join(assets)+'''
+
+来源为指定 TUM 官方包，由用户下载后传入 Ubuntu；先前代理 curl35/唯一直接路由 curl28 失败均保留。归档完整性、安全路径、全部 RGB 解码、位姿有限值与四元数检查完成。Pioneer 有 10 个重复 GT 时间戳，保留所有原始行，关联取同一时刻首条；两者不插值 pose，而是按最近时间戳、0.03s 上限关联。原始深度保留但不使用。每张照片有原始时间、关联时间及误差、XYZ/四元数、SHA、角色和 validity。
+
+5Hz 主协议取每个相对起始时间 bin 的第一张 RGB。固定前半时间段图库，查询从时间中点后 10s 开始；Pioneer 377 库图/339 查询，Long Office 217/168。开发 0.5m 闭集229超过预声明最少100，原协议无调整。图库与查询无交叠，实际最小间隔10.040s/10.195s。5Hz Pioneer 有338合法GT查询（172/229/278闭集）和1 invalid GT；独立集168合法（20/48/89闭集）。每半径对应无正样本数均保存；主半径开放集109/120。所有方法尝试全部查询，不拒绝任何开放集图像，不宣称开放集安全；invalid图像保留并参与过去历史，仅离线合法分母不含其坐标。
+
+## G2–G3 强基线与有界研究
+
+预声明139基线设置：CosPlace、EigenPlaces、RRF与固定双模型融合；旧固定L9/完整L3/L5/L9；固定全局融合、简单R1/R2；时间感知全局/局部同候选池控制。36候选：固定秒级过去窗口0.4/0.8/1.6、5点因果分数插值、含反向/静止的统一时钟比假设、TopH时间邻域和有限时序支持约束。模型沿用原权重，224×224，全部冻结，无微调；这是本协议适配，不是原论文在TUM上的官方数值复现。GT/真实速度/位姿/未来查询不得进入匹配器。
+
+全部设置跑预声明1/3/5Hz开发分布变化；这只是同一采集的人为子采样，并同时改变图库覆盖，不叫新独立数据。独立标量插值实现对照测试通过。开发选定W1.6s/H1/邻域0.2s/epsilon0.01；主正确24/229与最强持平，严格4/172低于包络5/172。有界门槛失败，不增新模块、不调测试。SeqSLAM/STA-VPR/AdaptSeqVPR/SMR先例及原文访问限制已审计，不把速度/时间对齐或终点放宽声称首次提出。完整正负数值、候选覆盖、救回/误伤、8个实际图像例子均保留。
+
+## G4 一次独立测试
+
+源码、协议、模型/权重/载入状态、所有图像/时间/真值关联/ID、半径、速度/窗口/候选/约束/融合、种子及计时矩阵先冻结并推送，然后唯一一次对Long Office评测139基线和1候选。候选主半径34/48，高于开发选定融合32/48，但等于无精修时间基线34/48，并低于另一简单控制35/48；严格0/20对EigenPlaces11/20。仅主半径较旧弱基线提升不能写成方法创新或泛化。未按测试结果更改任何参数、阈值、图库/查询、分母或源代码内核。
+
+## G5 真实计时与结果
+
+| 序列 | 方法 | 0.5m R@1 | R@5 | R@10 | 真推理 mean/P95(ms) | 全合法查询误差 med/P90(m) |
+|---|---|---|---|---|---|---|
+'''+ '\n'.join(methods)+f'''
+
+实际 RGB 解码、冻结模型batch=1、CPU transfer、全库cosine、历史更新、时间路径、精修与完整排序计时；CUDA前后同步。两流、17预先固定策略、每策略预热20张并重置历史后跑3遍完整序列：共{timing['total_real_timed_queries']:,}个真实计时间隔。模型载入与图库batch16真实编码另计。CPU峰值RSS={timing['peak_RSS_bytes']:,} bytes，Torch GPU峰值分配={timing['torch_peak_allocated_cuda_bytes']:,} bytes。整个计时期间未并行执行其他图像实验/绘图等重负载。
+
+缓存(batch16)对实际batch1 Top1差异共{mismatches}、Top10差异{top10}；各遍Top10重复差异{repeat}，全部保存，实际batch1每遍R@1亦单列。不把缓存访问耗时写成模型速度；主表准确率明确来自batch16缓存，延迟独立来自batch1。组件、全部均值/中位/P95、分母、R@1/5/10、位置误差、开放集与拒绝、逐查询CSV有完整证据。
+
+## 离线诊断与论文迭代
+
+相机真值轨迹、候选距离、视角、连续块敏感性属于离线解释，不进入方法或筛选测试。视角仅说明位置正样本可能没有一致朝向，不能证明某一误差必然由视角造成。开发修复/误伤例子与真实contact sheet留本机；公开图表仅数值/轨迹。连续20/50查询块bootstrap是小规模探索性描述，不声称独立同分布显著性。候选既没有超过对应时间基线，也在严格位置口径失败，这是终点精修机制未受支持的证据。
+
+V4 r01保留独立结果的初稿（计时明确pending）；r02加入真实计时、完整表格、采样图及AI披露。源码单文件、应用内编译检查与远程一次性标准CI的精确PDF/字体/页数证据分别保存。≤6页含引用和声明。正式投稿格式尚需作者确认。当前打开的V3旧稿不覆盖；新旧源稿/PDF都有独立路径和SHA。
+
+## 可复现与归档
+
+run_config.yaml、parent Git SHA、argv/CWD、安全环境、原/最终stdout/stderr、真实退出码、数据/描述子行ID、模型指纹、所有负结果、逐查询台账、图表源码、源代码快照与SHA存于每次append-only run；公开压缩证据在artifacts/v4，失败登记FAILURE_REGISTER.json、阶段与执行登记RUN_REGISTER.json。原图/模型/大型数组不入Git，官方重建路径与SHA齐全。
+
+1. `.venv-p0/bin/python experiments/temporal_alignment_v4/replay.py` 从实际逐查询台账独立重算全部主指标。
+2. 同命令加 `--cached` 从本地指纹绑定的描述子重放所有固定方法，核对原始Top10；这是对已开结果的审计，不能称第二次盲测。不要再运行受first-open保护的run_g4_test.py。
+3. 从裸仓库恢复小型证据ZIP即可读取数值；图像与权重须由官方源获得并核对 SHA，按data/manifests及配置重建编码。新数据不同SHA应新建研究版本，不能沿用缓存。
+4. 不自动重复调参这条已见独立集。如果未来研究新表示/几何改进，另定新的独立测试并再冻结。
+
+## 图像输入—模型输出—检索排序
+
+图像先按RGB/224×224预处理，经冻结网络得到512维单位向量；这个向量不是XYZ坐标。与早于当前查询的固定图库单位向量做dot product，得到每张参考照片的相似度。单帧方法按分数排全部参考；时序方法仅按当前和过去照片/时间戳插值累积证据，再在有限端点池中按固定规则重排。最终输出参考照片ID的有序列表。独立评价器随后读取GT，判定前K是否含半径内参考、统计误伤/救回及位置距离。算法不输出几何验证后的6DoF位姿；相似度不是正确概率；较宽阈值命中也不是机器人精定位。匹配示例可从G3 real_cases.json及本地contact sheet复查。
+'''
+    (ROOT/'docs/research_v4/FINAL_RESEARCH_REPORT.md').write_text(report)
+    (ROOT/'docs/research_v4/REPRODUCE.md').write_text('# V4 reproduction\n\nUse pinned .venv-p0 and existing official model source commits/checkpoints in configs/model_sources.json. Raw sources and actual SHA in DATA_MANIFEST_r02.json. All arrays remain local; feature_manifest.json binds every row, image SHA, model state/adapter/preprocessing and descriptor SHA. Fixed protocol and grid are in configs/v4; immutable freeze binds the exact science.\n\n## Local already-run audit\n\n```bash\ncd /home/aaron/upinlbs_vpr/upinlbs_vpr_starter\n.venv-p0/bin/python experiments/temporal_alignment_v4/replay.py --cached\n```\n\n## Numeric evidence on a fresh checkout\n\nEvery evidence.zip under artifacts/v4 is a normal ZIP (LZMA). Check archive_manifest.json SHA256 first, then use Python zipfile to extract into a fresh separate evidence directory. Original relative outputs_v4 paths, per_query.csv, run_meta.json, run_config.yaml, source snapshots, stdout/stderr and SHA256SUMS are retained. Use independent evaluate.audit_csv with raw_metrics results. Large npy/npz arrays and raw images are not included in public ZIPs; rebuild with features.encode and the exact descriptor_rows/full image manifest, original frozen source/model/checkpoints and official image hashes. Rebuilt extraction must be labelled replay of a now-seen test, never a new blind test. Parent execution runs retain actual whole-process exit codes.\n\nDo not run run_g4_test.py again: its first-open guard prevents rewriting the blind-test record. New scientific changes require new protocol/version and independent collection. No driver/system/SSH/proxy reinstall is needed.\n')
+    print(json.dumps(dict(report='docs/research_v4/FINAL_RESEARCH_REPORT.md',run_register=len(register),failures=len(failures),timed_queries=timing['total_real_timed_queries'],mismatches=mismatches)),flush=True)
+if __name__=='__main__':
+    from pathlib import Path
+    main()

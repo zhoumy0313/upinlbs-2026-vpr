@@ -1,0 +1,29 @@
+name: V4 exact-source manuscript PDFs
+on:
+  push:
+    branches: [research/vpr-v4-temporal-alignment]
+    paths:
+      - 'paper/revisions/v4_*/main.tex'
+      - '.github/workflows/v4-paper-pdf.yml'
+permissions:
+  contents: write
+jobs:
+  compile:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Install compiler on disposable standard runner
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends texlive-latex-recommended texlive-fonts-recommended texlive-publishers texlive-pictures cm-super-minimal poppler-utils
+      - name: Compile exact new V4 sources and preserve checks
+        run: python3 experiments/temporal_alignment_v4/ci_build.py
+      - name: Preserve V4 PDFs and receipts only
+        if: always()
+        run: |
+          git add paper/revisions/v4_r*/main.pdf paper/revisions/v4_build_receipts
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'G5: preserve exact-source V4 PDFs and diagnostics'
+            git push origin HEAD:research/vpr-v4-temporal-alignment
+          fi

@@ -15,9 +15,9 @@
   "independent_retrieval_opened": true,
   "positive_method_claim": false,
   "formal_submission_ready": false,
-  "latest_run_id": "g4_independent_20261011T033546Z_444c50d3",
-  "updated_utc": "2026-10-11T03:36:25.727566+00:00",
-  "current_stage": "G5",
+  "latest_run_id": "g5_real_timing_20261011T033659Z_7f2fd755",
+  "updated_utc": "2026-10-11T03:44:58.765385+00:00",
+  "current_stage": "G5 paper",
   "stop_condition": "G0 official source unavailable after original retries and one bounded alternate route",
   "required_external_change": "Both official TUM tgz archives transferred to data/raw/v4/tum_rgbd/archives, or demonstrably restored official-host reachability. Do not repeat unchanged network retries.",
   "blocked_goal_turn_count": 0,
@@ -39,5 +39,6 @@
   "first_independent_test_run": "g4_independent_20261011T033546Z_444c50d3",
   "test_state": "single_blind_run_complete",
   "g4_run": "g4_independent_20261011T033546Z_444c50d3",
-  "test_positive_gate": false
+  "test_positive_gate": false,
+  "g5_timing_run": "g5_real_timing_20261011T033659Z_7f2fd755"
 }

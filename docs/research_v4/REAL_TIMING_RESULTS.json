@@ -1,0 +1,2066 @@
+{
+  "run_id": "g5_real_timing_20261011T033659Z_7f2fd755",
+  "results": [
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "method": "A",
+      "kind": "single",
+      "queries": 339,
+      "passes": 3,
+      "timed_intervals": 1017,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 14.695317176988073,
+      "median_ms": 14.665701994090341,
+      "P95_ms": 15.075481394887902,
+      "component_mean_ms": {
+        "decode_ms": 5.99479739018052,
+        "preprocess_ms": 5.480332765914248,
+        "encoding_transfer_ms": 2.913149473790332,
+        "similarity_ms": 0.14087471219499467,
+        "history_ranking_ms": 0.16616283490797806
+      },
+      "cached_top10_mismatches": 3,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 172,
+          "correct1_per_pass": [
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 229,
+          "correct1_per_pass": [
+            23,
+            23,
+            23
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 278,
+          "correct1_per_pass": [
+            44,
+            44,
+            44
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "method": "B",
+      "kind": "single",
+      "queries": 339,
+      "passes": 3,
+      "timed_intervals": 1017,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 17.821100719503516,
+      "median_ms": 17.82905300206039,
+      "P95_ms": 18.065701000159606,
+      "component_mean_ms": {
+        "decode_ms": 5.954849926352243,
+        "preprocess_ms": 5.51404956815045,
+        "encoding_transfer_ms": 6.051294585009267,
+        "similarity_ms": 0.1334952802042227,
+        "history_ranking_ms": 0.16741135978733346
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 172,
+          "correct1_per_pass": [
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 229,
+          "correct1_per_pass": [
+            24,
+            24,
+            24
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 278,
+          "correct1_per_pass": [
+            44,
+            44,
+            44
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "method": "RRF60",
+      "kind": "rrf",
+      "queries": 339,
+      "passes": 3,
+      "timed_intervals": 1017,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 26.35492480904216,
+      "median_ms": 26.367516999016516,
+      "P95_ms": 26.7737757996656,
+      "component_mean_ms": {
+        "decode_ms": 5.986598609812624,
+        "preprocess_ms": 10.922336317539296,
+        "encoding_transfer_ms": 8.90995073431268,
+        "similarity_ms": 0.27149142756691386,
+        "history_ranking_ms": 0.2645477198106452
+      },
+      "cached_top10_mismatches": 3,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 172,
+          "correct1_per_pass": [
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 229,
+          "correct1_per_pass": [
+            23,
+            23,
+            23
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 278,
+          "correct1_per_pass": [
+            45,
+            45,
+            45
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "method": "L3",
+      "kind": "index",
+      "queries": 339,
+      "passes": 3,
+      "timed_intervals": 1017,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.17642356819682,
+      "median_ms": 15.17778199922759,
+      "P95_ms": 15.539835000527091,
+      "component_mean_ms": {
+        "decode_ms": 5.963438443325353,
+        "preprocess_ms": 5.509943982306158,
+        "encoding_transfer_ms": 2.9436961297755566,
+        "similarity_ms": 0.1413007895828517,
+        "history_ranking_ms": 0.6180442232068998
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 172,
+          "correct1_per_pass": [
+            5,
+            5,
+            5
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 229,
+          "correct1_per_pass": [
+            21,
+            21,
+            21
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 278,
+          "correct1_per_pass": [
+            43,
+            43,
+            43
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "method": "L5",
+      "kind": "index",
+      "queries": 339,
+      "passes": 3,
+      "timed_intervals": 1017,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.307205762053545,
+      "median_ms": 15.293588992790319,
+      "P95_ms": 15.629530197475106,
+      "component_mean_ms": {
+        "decode_ms": 5.962109954512816,
+        "preprocess_ms": 5.512782107408968,
+        "encoding_transfer_ms": 2.9405733639309815,
+        "similarity_ms": 0.14142046793915272,
+        "history_ranking_ms": 0.7503198682616264
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 172,
+          "correct1_per_pass": [
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 229,
+          "correct1_per_pass": [
+            17,
+            17,
+            17
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 278,
+          "correct1_per_pass": [
+            40,
+            40,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "method": "L9",
+      "kind": "index",
+      "queries": 339,
+      "passes": 3,
+      "timed_intervals": 1017,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.546392424565749,
+      "median_ms": 15.55202501185704,
+      "P95_ms": 15.884026596904732,
+      "component_mean_ms": {
+        "decode_ms": 5.960799204313238,
+        "preprocess_ms": 5.502413032783517,
+        "encoding_transfer_ms": 2.9433301052085703,
+        "similarity_ms": 0.1408320019231567,
+        "history_ranking_ms": 0.9990180803372661
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 172,
+          "correct1_per_pass": [
+            5,
+            5,
+            5
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 229,
+          "correct1_per_pass": [
+            13,
+            13,
+            13
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 278,
+          "correct1_per_pass": [
+            36,
+            36,
+            36
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "method": "old_fixed_L9",
+      "kind": "index",
+      "queries": 339,
+      "passes": 3,
+      "timed_intervals": 1017,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.082210048316815,
+      "median_ms": 15.086754996445961,
+      "P95_ms": 15.39724939793814,
+      "component_mean_ms": {
+        "decode_ms": 5.955430192900583,
+        "preprocess_ms": 5.498667599686793,
+        "encoding_transfer_ms": 2.926772163536756,
+        "similarity_ms": 0.14020158778651706,
+        "history_ranking_ms": 0.5611385044061662
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 172,
+          "correct1_per_pass": [
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 229,
+          "correct1_per_pass": [
+            13,
+            13,
+            13
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 278,
+          "correct1_per_pass": [
+            34,
+            34,
+            34
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "method": "AB_0.75",
+      "kind": "AB",
+      "queries": 339,
+      "passes": 3,
+      "timed_intervals": 1017,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 26.38369693999527,
+      "median_ms": 26.362197007983923,
+      "P95_ms": 26.801162800984457,
+      "component_mean_ms": {
+        "decode_ms": 5.992405521894018,
+        "preprocess_ms": 10.981446963440396,
+        "encoding_transfer_ms": 8.94773200619279,
+        "similarity_ms": 0.278349349078573,
+        "history_ranking_ms": 0.18376309938949506
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 172,
+          "correct1_per_pass": [
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 229,
+          "correct1_per_pass": [
+            24,
+            24,
+            24
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 278,
+          "correct1_per_pass": [
+            46,
+            46,
+            46
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "method": "Proposed_W1.6_H1_r0.2_e0.01",
+      "kind": "time_P",
+      "queries": 339,
+      "passes": 3,
+      "timed_intervals": 1017,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 16.16720195782461,
+      "median_ms": 16.16282100440003,
+      "P95_ms": 16.5556255960837,
+      "component_mean_ms": {
+        "decode_ms": 5.975373222412736,
+        "preprocess_ms": 5.5415514620226345,
+        "encoding_transfer_ms": 2.9602739352123004,
+        "similarity_ms": 0.14360617985788662,
+        "history_ranking_ms": 1.5463971583190537
+      },
+      "cached_top10_mismatches": 3,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 172,
+          "correct1_per_pass": [
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 229,
+          "correct1_per_pass": [
+            24,
+            24,
+            24
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 278,
+          "correct1_per_pass": [
+            47,
+            47,
+            47
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "method": "L3_global_0.25",
+      "kind": "index_global",
+      "queries": 339,
+      "passes": 3,
+      "timed_intervals": 1017,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.131160016068039,
+      "median_ms": 15.122925993637182,
+      "P95_ms": 15.394371194997802,
+      "component_mean_ms": {
+        "decode_ms": 5.9541063205937235,
+        "preprocess_ms": 5.487236362124629,
+        "encoding_transfer_ms": 2.926804846394308,
+        "similarity_ms": 0.14021083678065313,
+        "history_ranking_ms": 0.6228016501747259
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 172,
+          "correct1_per_pass": [
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 229,
+          "correct1_per_pass": [
+            22,
+            22,
+            22
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 278,
+          "correct1_per_pass": [
+            43,
+            43,
+            43
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "method": "R1_L3_H3_r4",
+      "kind": "index_R1",
+      "queries": 339,
+      "passes": 3,
+      "timed_intervals": 1017,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 16.00314270092116,
+      "median_ms": 16.00425200012978,
+      "P95_ms": 16.23045079759322,
+      "component_mean_ms": {
+        "decode_ms": 5.958827499542001,
+        "preprocess_ms": 5.522570044045279,
+        "encoding_transfer_ms": 2.9390330001914,
+        "similarity_ms": 0.14127173148289748,
+        "history_ranking_ms": 1.4414404256595803
+      },
+      "cached_top10_mismatches": 3,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 172,
+          "correct1_per_pass": [
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 229,
+          "correct1_per_pass": [
+            23,
+            23,
+            23
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 278,
+          "correct1_per_pass": [
+            44,
+            44,
+            44
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "method": "R2_L3_H1_r1_g0.5",
+      "kind": "index_R2",
+      "queries": 339,
+      "passes": 3,
+      "timed_intervals": 1017,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.980717917601945,
+      "median_ms": 15.990782005246729,
+      "P95_ms": 16.256774807698093,
+      "component_mean_ms": {
+        "decode_ms": 5.965569766094444,
+        "preprocess_ms": 5.523476863369568,
+        "encoding_transfer_ms": 2.9465544464262594,
+        "similarity_ms": 0.1420285210333675,
+        "history_ranking_ms": 1.4030883206783051
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 172,
+          "correct1_per_pass": [
+            5,
+            5,
+            5
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 229,
+          "correct1_per_pass": [
+            21,
+            21,
+            21
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 278,
+          "correct1_per_pass": [
+            44,
+            44,
+            44
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "method": "Time_W1.6",
+      "kind": "time",
+      "queries": 339,
+      "passes": 3,
+      "timed_intervals": 1017,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.36500176486734,
+      "median_ms": 15.396634000353515,
+      "P95_ms": 15.729064593324438,
+      "component_mean_ms": {
+        "decode_ms": 5.9629104994545346,
+        "preprocess_ms": 5.519209224177843,
+        "encoding_transfer_ms": 2.9361640273749274,
+        "similarity_ms": 0.14134760692886433,
+        "history_ranking_ms": 0.8053704069311719
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 172,
+          "correct1_per_pass": [
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 229,
+          "correct1_per_pass": [
+            24,
+            24,
+            24
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 278,
+          "correct1_per_pass": [
+            47,
+            47,
+            47
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "method": "TimeGlobal_W1.6_g1.0",
+      "kind": "time_global",
+      "queries": 339,
+      "passes": 3,
+      "timed_intervals": 1017,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.291339542796068,
+      "median_ms": 15.320352991693653,
+      "P95_ms": 15.575216605793685,
+      "component_mean_ms": {
+        "decode_ms": 5.954956159325529,
+        "preprocess_ms": 5.4691294503642975,
+        "encoding_transfer_ms": 2.9226512967362988,
+        "similarity_ms": 0.13949207976955422,
+        "history_ranking_ms": 0.8051105566003892
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 172,
+          "correct1_per_pass": [
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 229,
+          "correct1_per_pass": [
+            24,
+            24,
+            24
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 278,
+          "correct1_per_pass": [
+            47,
+            47,
+            47
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "method": "TimeR1_W1.6_H1_r0.2",
+      "kind": "time_R1",
+      "queries": 339,
+      "passes": 3,
+      "timed_intervals": 1017,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 16.107137517972333,
+      "median_ms": 16.139499988639727,
+      "P95_ms": 16.40058279153891,
+      "component_mean_ms": {
+        "decode_ms": 5.96737697236723,
+        "preprocess_ms": 5.5285377863834855,
+        "encoding_transfer_ms": 2.95294135011494,
+        "similarity_ms": 0.1430304680733219,
+        "history_ranking_ms": 1.5152509410333552
+      },
+      "cached_top10_mismatches": 3,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 172,
+          "correct1_per_pass": [
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 229,
+          "correct1_per_pass": [
+            24,
+            24,
+            24
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 278,
+          "correct1_per_pass": [
+            48,
+            48,
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "method": "TimeR2_W1.6_H1_r0.2_g0.5",
+      "kind": "time_R2",
+      "queries": 339,
+      "passes": 3,
+      "timed_intervals": 1017,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 16.090999828043028,
+      "median_ms": 16.122732005896978,
+      "P95_ms": 16.37132680916693,
+      "component_mean_ms": {
+        "decode_ms": 5.964956448526527,
+        "preprocess_ms": 5.520958986171455,
+        "encoding_transfer_ms": 2.943706761258874,
+        "similarity_ms": 0.1416319998731194,
+        "history_ranking_ms": 1.5197456322130523
+      },
+      "cached_top10_mismatches": 3,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 172,
+          "correct1_per_pass": [
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 229,
+          "correct1_per_pass": [
+            24,
+            24,
+            24
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 278,
+          "correct1_per_pass": [
+            48,
+            48,
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "method": "TimeR2_W1.6_H1_r0.2_g1.0",
+      "kind": "time_R2",
+      "queries": 339,
+      "passes": 3,
+      "timed_intervals": 1017,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 16.10641121711674,
+      "median_ms": 16.119695996167138,
+      "P95_ms": 16.431043593911454,
+      "component_mean_ms": {
+        "decode_ms": 5.968250682221033,
+        "preprocess_ms": 5.532647931298461,
+        "encoding_transfer_ms": 2.9431401120980465,
+        "similarity_ms": 0.14208778348635065,
+        "history_ranking_ms": 1.5202847080128479
+      },
+      "cached_top10_mismatches": 3,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 172,
+          "correct1_per_pass": [
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 229,
+          "correct1_per_pass": [
+            24,
+            24,
+            24
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 278,
+          "correct1_per_pass": [
+            47,
+            47,
+            47
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "method": "A",
+      "kind": "single",
+      "queries": 168,
+      "passes": 3,
+      "timed_intervals": 504,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 14.687771919044382,
+      "median_ms": 14.684237998153549,
+      "P95_ms": 15.037415609549498,
+      "component_mean_ms": {
+        "decode_ms": 6.137095374830847,
+        "preprocess_ms": 5.442722250119827,
+        "encoding_transfer_ms": 2.8679315083926276,
+        "similarity_ms": 0.09822053762613833,
+        "history_ranking_ms": 0.14180224807494105
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 20,
+          "correct1_per_pass": [
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 48,
+          "correct1_per_pass": [
+            29,
+            29,
+            29
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 89,
+          "correct1_per_pass": [
+            73,
+            73,
+            73
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "method": "B",
+      "kind": "single",
+      "queries": 168,
+      "passes": 3,
+      "timed_intervals": 504,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 17.923162995921015,
+      "median_ms": 17.93176399951335,
+      "P95_ms": 18.20501040201634,
+      "component_mean_ms": {
+        "decode_ms": 6.161815984038792,
+        "preprocess_ms": 5.480844779773929,
+        "encoding_transfer_ms": 6.030186668823941,
+        "similarity_ms": 0.10675272402757342,
+        "history_ranking_ms": 0.1435628392567788
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 20,
+          "correct1_per_pass": [
+            11,
+            11,
+            11
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 48,
+          "correct1_per_pass": [
+            31,
+            31,
+            31
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 89,
+          "correct1_per_pass": [
+            79,
+            79,
+            79
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "method": "RRF60",
+      "kind": "rrf",
+      "queries": 168,
+      "passes": 3,
+      "timed_intervals": 504,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 26.339901401130074,
+      "median_ms": 26.30455300823087,
+      "P95_ms": 26.787450340634678,
+      "component_mean_ms": {
+        "decode_ms": 6.192460613145534,
+        "preprocess_ms": 10.858031885199745,
+        "encoding_transfer_ms": 8.862006630893337,
+        "similarity_ms": 0.20255498618228426,
+        "history_ranking_ms": 0.2248472857091757
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 20,
+          "correct1_per_pass": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 48,
+          "correct1_per_pass": [
+            31,
+            31,
+            31
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 89,
+          "correct1_per_pass": [
+            79,
+            79,
+            79
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "method": "L3",
+      "kind": "index",
+      "queries": 168,
+      "passes": 3,
+      "timed_intervals": 504,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.213160934171544,
+      "median_ms": 15.20527899992885,
+      "P95_ms": 15.566441649571061,
+      "component_mean_ms": {
+        "decode_ms": 6.162704694274691,
+        "preprocess_ms": 5.482627307448262,
+        "encoding_transfer_ms": 2.9054126326440066,
+        "similarity_ms": 0.09937346681360236,
+        "history_ranking_ms": 0.5630428329909808
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 20,
+          "correct1_per_pass": [
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 48,
+          "correct1_per_pass": [
+            21,
+            21,
+            21
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 89,
+          "correct1_per_pass": [
+            72,
+            72,
+            72
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "method": "L5",
+      "kind": "index",
+      "queries": 168,
+      "passes": 3,
+      "timed_intervals": 504,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.259592964318314,
+      "median_ms": 15.251461991283577,
+      "P95_ms": 15.629549996810965,
+      "component_mean_ms": {
+        "decode_ms": 6.149703091097532,
+        "preprocess_ms": 5.438515200564455,
+        "encoding_transfer_ms": 2.8930059266886454,
+        "similarity_ms": 0.09736686326274167,
+        "history_ranking_ms": 0.6810018827049394
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 20,
+          "correct1_per_pass": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 48,
+          "correct1_per_pass": [
+            20,
+            20,
+            20
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 89,
+          "correct1_per_pass": [
+            76,
+            76,
+            76
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "method": "L9",
+      "kind": "index",
+      "queries": 168,
+      "passes": 3,
+      "timed_intervals": 504,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.514604259661855,
+      "median_ms": 15.512921992922202,
+      "P95_ms": 15.904344848240726,
+      "component_mean_ms": {
+        "decode_ms": 6.153382648739757,
+        "preprocess_ms": 5.456482940529,
+        "encoding_transfer_ms": 2.8979434839187426,
+        "similarity_ms": 0.0982442406172003,
+        "history_ranking_ms": 0.9085509458571555
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 20,
+          "correct1_per_pass": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 48,
+          "correct1_per_pass": [
+            13,
+            13,
+            13
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 89,
+          "correct1_per_pass": [
+            78,
+            78,
+            78
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "method": "old_fixed_L9",
+      "kind": "index",
+      "queries": 168,
+      "passes": 3,
+      "timed_intervals": 504,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.148468535496956,
+      "median_ms": 15.166846504143905,
+      "P95_ms": 15.448273157380754,
+      "component_mean_ms": {
+        "decode_ms": 6.156608975923894,
+        "preprocess_ms": 5.48162779939178,
+        "encoding_transfer_ms": 2.904255143163489,
+        "similarity_ms": 0.09958335500587487,
+        "history_ranking_ms": 0.5063932620119193
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 20,
+          "correct1_per_pass": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 48,
+          "correct1_per_pass": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 89,
+          "correct1_per_pass": [
+            72,
+            72,
+            72
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "method": "AB_0.75",
+      "kind": "AB",
+      "queries": 168,
+      "passes": 3,
+      "timed_intervals": 504,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 26.32443543064703,
+      "median_ms": 26.321899000322446,
+      "P95_ms": 26.838242750091013,
+      "component_mean_ms": {
+        "decode_ms": 6.201866043406809,
+        "preprocess_ms": 10.875813678741531,
+        "encoding_transfer_ms": 8.884352228340013,
+        "similarity_ms": 0.20379355734644738,
+        "history_ranking_ms": 0.1586099228122279
+      },
+      "cached_top10_mismatches": 3,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 20,
+          "correct1_per_pass": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 48,
+          "correct1_per_pass": [
+            32,
+            32,
+            32
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 89,
+          "correct1_per_pass": [
+            79,
+            79,
+            79
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "method": "Proposed_W1.6_H1_r0.2_e0.01",
+      "kind": "time_P",
+      "queries": 168,
+      "passes": 3,
+      "timed_intervals": 504,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.904437742175928,
+      "median_ms": 15.91784900665516,
+      "P95_ms": 16.309893299330724,
+      "component_mean_ms": {
+        "decode_ms": 6.175174563482177,
+        "preprocess_ms": 5.486230640801498,
+        "encoding_transfer_ms": 2.930317335301966,
+        "similarity_ms": 0.09867875179759086,
+        "history_ranking_ms": 1.214036450792697
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 20,
+          "correct1_per_pass": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 48,
+          "correct1_per_pass": [
+            34,
+            34,
+            34
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 89,
+          "correct1_per_pass": [
+            75,
+            75,
+            75
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "method": "L3_global_0.25",
+      "kind": "index_global",
+      "queries": 168,
+      "passes": 3,
+      "timed_intervals": 504,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.235139972165122,
+      "median_ms": 15.2262920018984,
+      "P95_ms": 15.598923702782486,
+      "component_mean_ms": {
+        "decode_ms": 6.166122625140743,
+        "preprocess_ms": 5.487417289461721,
+        "encoding_transfer_ms": 2.911650119102209,
+        "similarity_ms": 0.09950176787415763,
+        "history_ranking_ms": 0.5704481705862914
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 20,
+          "correct1_per_pass": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 48,
+          "correct1_per_pass": [
+            29,
+            29,
+            29
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 89,
+          "correct1_per_pass": [
+            72,
+            72,
+            72
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "method": "R1_L3_H3_r4",
+      "kind": "index_R1",
+      "queries": 168,
+      "passes": 3,
+      "timed_intervals": 504,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.785531871202577,
+      "median_ms": 15.798554501088802,
+      "P95_ms": 16.13558519820799,
+      "component_mean_ms": {
+        "decode_ms": 6.174754156572384,
+        "preprocess_ms": 5.490557549458731,
+        "encoding_transfer_ms": 2.920908803865868,
+        "similarity_ms": 0.09885717669916745,
+        "history_ranking_ms": 1.1004541846064275
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 20,
+          "correct1_per_pass": [
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 48,
+          "correct1_per_pass": [
+            29,
+            29,
+            29
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 89,
+          "correct1_per_pass": [
+            73,
+            73,
+            73
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "method": "R2_L3_H1_r1_g0.5",
+      "kind": "index_R2",
+      "queries": 168,
+      "passes": 3,
+      "timed_intervals": 504,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.735548710273136,
+      "median_ms": 15.749298996524885,
+      "P95_ms": 16.071357645705575,
+      "component_mean_ms": {
+        "decode_ms": 6.168491460566801,
+        "preprocess_ms": 5.484232136517503,
+        "encoding_transfer_ms": 2.9128048317943467,
+        "similarity_ms": 0.09749871799338883,
+        "history_ranking_ms": 1.0725215634010965
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 20,
+          "correct1_per_pass": [
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 48,
+          "correct1_per_pass": [
+            23,
+            23,
+            23
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 89,
+          "correct1_per_pass": [
+            72,
+            72,
+            72
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "method": "Time_W1.6",
+      "kind": "time",
+      "queries": 168,
+      "passes": 3,
+      "timed_intervals": 504,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.355343105266146,
+      "median_ms": 15.343324994319119,
+      "P95_ms": 15.785640657850308,
+      "component_mean_ms": {
+        "decode_ms": 6.161284968310077,
+        "preprocess_ms": 5.452913583501377,
+        "encoding_transfer_ms": 2.8995975438206982,
+        "similarity_ms": 0.09728763432085832,
+        "history_ranking_ms": 0.7442593753131361
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 20,
+          "correct1_per_pass": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 48,
+          "correct1_per_pass": [
+            34,
+            34,
+            34
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 89,
+          "correct1_per_pass": [
+            76,
+            76,
+            76
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "method": "TimeGlobal_W1.6_g1.0",
+      "kind": "time_global",
+      "queries": 168,
+      "passes": 3,
+      "timed_intervals": 504,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.37027305759751,
+      "median_ms": 15.38071149843745,
+      "P95_ms": 15.73544794373447,
+      "component_mean_ms": {
+        "decode_ms": 6.152028134700173,
+        "preprocess_ms": 5.472992575902488,
+        "encoding_transfer_ms": 2.900869156638648,
+        "similarity_ms": 0.09700937262673434,
+        "history_ranking_ms": 0.7473738177294662
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 20,
+          "correct1_per_pass": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 48,
+          "correct1_per_pass": [
+            34,
+            34,
+            34
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 89,
+          "correct1_per_pass": [
+            76,
+            76,
+            76
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "method": "TimeR1_W1.6_H1_r0.2",
+      "kind": "time_R1",
+      "queries": 168,
+      "passes": 3,
+      "timed_intervals": 504,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.835131350964758,
+      "median_ms": 15.828487499675248,
+      "P95_ms": 16.26355644548312,
+      "component_mean_ms": {
+        "decode_ms": 6.165468674832179,
+        "preprocess_ms": 5.466962767275705,
+        "encoding_transfer_ms": 2.9063608136990324,
+        "similarity_ms": 0.09757121422028701,
+        "history_ranking_ms": 1.1987678809375557
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 20,
+          "correct1_per_pass": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 48,
+          "correct1_per_pass": [
+            33,
+            33,
+            33
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 89,
+          "correct1_per_pass": [
+            75,
+            75,
+            75
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "method": "TimeR2_W1.6_H1_r0.2_g0.5",
+      "kind": "time_R2",
+      "queries": 168,
+      "passes": 3,
+      "timed_intervals": 504,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.834345302960534,
+      "median_ms": 15.828773495741189,
+      "P95_ms": 16.260792203684105,
+      "component_mean_ms": {
+        "decode_ms": 6.159810172383524,
+        "preprocess_ms": 5.469149006251153,
+        "encoding_transfer_ms": 2.906903172414685,
+        "similarity_ms": 0.09806077945367656,
+        "history_ranking_ms": 1.2004221724574953
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 20,
+          "correct1_per_pass": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 48,
+          "correct1_per_pass": [
+            34,
+            34,
+            34
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 89,
+          "correct1_per_pass": [
+            75,
+            75,
+            75
+          ]
+        }
+      ]
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "method": "TimeR2_W1.6_H1_r0.2_g1.0",
+      "kind": "time_R2",
+      "queries": 168,
+      "passes": 3,
+      "timed_intervals": 504,
+      "warmup": 20,
+      "batch": 1,
+      "mean_ms": 15.922080269586923,
+      "median_ms": 15.940378500090446,
+      "P95_ms": 16.305486240889877,
+      "component_mean_ms": {
+        "decode_ms": 6.179120628855474,
+        "preprocess_ms": 5.5049725836267625,
+        "encoding_transfer_ms": 2.9288377773189005,
+        "similarity_ms": 0.10055488937290474,
+        "history_ranking_ms": 1.2085943904128813
+      },
+      "cached_top10_mismatches": 0,
+      "cached_top1_mismatches": 0,
+      "repeat_top10_mismatches": [
+        0,
+        0
+      ],
+      "actual_online_accuracy": [
+        {
+          "radius_m": 0.25,
+          "closed_queries": 20,
+          "correct1_per_pass": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "radius_m": 0.5,
+          "closed_queries": 48,
+          "correct1_per_pass": [
+            34,
+            34,
+            34
+          ]
+        },
+        {
+          "radius_m": 1.0,
+          "closed_queries": 89,
+          "correct1_per_pass": [
+            76,
+            76,
+            76
+          ]
+        }
+      ]
+    }
+  ],
+  "offline_gallery": [
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "encoder": "cosplace",
+      "batch": 16,
+      "images": 377,
+      "gallery_decode_preprocess_encode_seconds": 4.80559080200328,
+      "descriptor_bytes": 772096,
+      "array_sha256": "0dee7ea49512cf4aa071a20094d1852532812a008adf4fa163fff43e1ebb36dc"
+    },
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "encoder": "eigenplaces",
+      "batch": 16,
+      "images": 377,
+      "gallery_decode_preprocess_encode_seconds": 5.205516709989752,
+      "descriptor_bytes": 772096,
+      "array_sha256": "6280c70461e0193d1e8ee69baf5315a3ca2e2ada16da64f585c43cba40bd72de"
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "encoder": "cosplace",
+      "batch": 16,
+      "images": 217,
+      "gallery_decode_preprocess_encode_seconds": 2.711990441996022,
+      "descriptor_bytes": 444416,
+      "array_sha256": "294de2f3fe023ee87e0794f503f4a9ad8643c7cbae8aa55f79aee005f7ceed69"
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "encoder": "eigenplaces",
+      "batch": 16,
+      "images": 217,
+      "gallery_decode_preprocess_encode_seconds": 3.077239823003765,
+      "descriptor_bytes": 444416,
+      "array_sha256": "7ccd9f1712a01abc0117eeb7ad479e558420a68b8cba5a6c387bbf60b2665487"
+    }
+  ],
+  "model_load": [
+    {
+      "encoder": "cosplace",
+      "load_seconds": 0.3597105459921295
+    },
+    {
+      "encoder": "eigenplaces",
+      "load_seconds": 0.4915848290111171
+    }
+  ],
+  "freeze_sha256": "e3f4f42330112cb02d66d050afaf3230b0ae3ad6f3d6e0e285fbbb49a0f9c33e",
+  "numeric_csv_audit_passed": true,
+  "peak_RSS_bytes": 1253076992,
+  "torch_peak_allocated_cuda_bytes": 333489664,
+  "total_real_timed_queries": 25857,
+  "model_identity": {
+    "cosplace": {
+      "method": "cosplace",
+      "backbone": "ResNet18",
+      "dimension": 512,
+      "pooling": "L2 -> GeM -> Flatten -> Linear -> L2",
+      "dtype": "float32",
+      "source": {
+        "repository": "https://github.com/gmberton/CosPlace",
+        "local_directory": "third_party/CosPlace",
+        "commit": "52b56e95ea62245281281f3bafd7b9390d19a0fd",
+        "checkpoint": "weights/p0_torch/hub/checkpoints/ResNet18_512_cosplace.pth",
+        "checkpoint_sha256": "db09310a175e325fe25e7a460b41886ab9357b19c41d370a9ed3ed81bc9abf9f",
+        "checkpoint_url": "https://github.com/gmberton/CosPlace/releases/download/v1.0/ResNet18_512_cosplace.pth"
+      },
+      "source_python_sha256": {
+        "augmentations.py": "f7fc71bf7f48a149faf8a81b77255d25e2fe7b587184b411759d877e7ccea28e",
+        "commons.py": "68ed1c810869e6a1aeea6d993aad68c01e978e917ffeb297dc63993c0c5e7bbd",
+        "cosface_loss.py": "96c7beb349a7bc84321068a476dc53f1fc0d13938c4ce54c24e63a449832cca3",
+        "cosplace_model/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "cosplace_model/cosplace_network.py": "53c5c5e0d01bb705d2a94b7e029ea0cf819186bb1070f396abfb0522e782e523",
+        "cosplace_model/layers.py": "f11faa403f384a7e68c7abe24cdd2460727c9c89eceb00d2dfe107c312fe9005",
+        "datasets/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "datasets/dataset_utils.py": "347cd5f630c06f4510dafe8ab16ee89158345e55d9c22e59e807aa182e4765d1",
+        "datasets/test_dataset.py": "a9e64923e4eb931e50702662a56c57a078c9c48064977bc02735cb1321a3ed62",
+        "datasets/train_dataset.py": "ca91e25b2db9606dd823c8bccf94722b798f9cc6b721d47de80e6e3e5da2d72e",
+        "eval.py": "e643e52a8ba5cfcb2e1d811a57e9cc1c7715b598413e748d6d497edaca6aeb68",
+        "hubconf.py": "c7c6df40afade24d698ee1002765e4d73d9667f88bd3992757c00dba9e265173",
+        "parser.py": "f5d598e976108148bf75eda16e18a2c691c40c8b5d6c5abfb55907d7a625e7df",
+        "test.py": "2953460f26169a891074c1d9806ba2d7c526d5135ec47ea92f415270518ee8b2",
+        "train.py": "114b3828e712a80549277a93371afc67cf793cc8beeb77ae046206c9e8739388",
+        "util.py": "51cbc6c14a82ead97d6aa5cfa393e88a0630b952a9849d1b8271ee11f0c66853",
+        "visualizations.py": "c16a1ef350a4bda9ecd3a5c42056e8f1a3f21a2dd7da2797cc0022f4bce451d2"
+      },
+      "model_state_sha256": "0097d0508f1b5ab6c820906f3a99f53fdfbbe1c07ae3a4c2242dd8dfdebf9254",
+      "eval_mode": true,
+      "all_parameters_frozen": true,
+      "torch": "2.6.0+cu124",
+      "torchvision": "0.21.0+cu124",
+      "numerics": {
+        "cuda_matmul_tf32": false,
+        "cudnn_tf32": false,
+        "cudnn_benchmark": false
+      },
+      "adapter_source_sha256": "09812cf25f08235ae10575c8a6ba00317e0a12c7abf063b3ba041fc0a96cca3c",
+      "preprocessing": {
+        "RGB": true,
+        "resize_hw": [
+          224,
+          224
+        ],
+        "order": "ToTensor -> ImageNet Normalize -> tensor Resize",
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "interpolation": "bilinear",
+        "antialias": true,
+        "descriptor_l2_normalization": true,
+        "setting": "protocol full-image low-resolution warp; not original paper reproduction"
+      }
+    },
+    "eigenplaces": {
+      "method": "eigenplaces",
+      "backbone": "ResNet50",
+      "dimension": 512,
+      "pooling": "L2 -> GeM -> Flatten -> Linear -> L2",
+      "dtype": "float32",
+      "source": {
+        "repository": "https://github.com/gmberton/EigenPlaces",
+        "local_directory": "third_party/EigenPlaces",
+        "commit": "a2969f71d5ea31017443af490b15273ca4c50af1",
+        "checkpoint": "weights/p0_torch/hub/checkpoints/ResNet50_512_eigenplaces.pth",
+        "checkpoint_sha256": "886a2fbd910e961d02e5c74ccc5e11cc1fe9a049a4fe290b9514878c691ce491",
+        "checkpoint_url": "https://github.com/gmberton/EigenPlaces/releases/download/v1.0/ResNet50_512_eigenplaces.pth",
+        "initialization_adaptation": "Official GeoLocalizationNet_ and forward; bypass overwritten CosPlace initializer, strict-load every tensor from the complete official EigenPlaces checkpoint."
+      },
+      "source_python_sha256": {
+        "augmentations.py": "6edc203a4bc6e9b3c945f8d22134a61dee38b8cd84b22b918e94d8bccfda926c",
+        "commons.py": "c6868ad1106d7b006f284e207afda879fb3a0fbcbcc06053b7cfa03209217038",
+        "cosface_loss.py": "96c7beb349a7bc84321068a476dc53f1fc0d13938c4ce54c24e63a449832cca3",
+        "datasets/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "datasets/dataset_utils.py": "d60402da316938e4b24e4b2b4131ac7aeb747f2788f73f981569ae4ffba29392",
+        "datasets/eigenplaces_dataset.py": "85ac97e918dec7a5a4b5dd6c274418fbdeec4d950b0a33d1419e60d0e31f57af",
+        "datasets/map_utils.py": "1bb515008d44a47ad6b927ccbdc6a505829ee7dfb211cb0412863f59350a666b",
+        "datasets/test_dataset.py": "b2d87d800d1a98b2498eb675586f0bf708f477f098fbafcf24ae83b9a91d9f3c",
+        "eigenplaces_model/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "eigenplaces_model/eigenplaces_network.py": "53fb8bbaa170557c52d7527f05ca8658d54e825a91385ce40cb64b86c6cf53f2",
+        "eigenplaces_model/layers.py": "f11faa403f384a7e68c7abe24cdd2460727c9c89eceb00d2dfe107c312fe9005",
+        "eval.py": "dd27b182bc878ddbe72c993346db1508803ea8ae0a2c649c160a2079075917a9",
+        "hubconf.py": "deba6fe9354f1fab47c13b4ffada701e3a47ae7f21a0b2b785ed9a55d864fb97",
+        "parser.py": "4215d72518fb6f1abefad5d47043fc2f3df1628e6ca0e0d47f315c60e88a1774",
+        "test.py": "505686880b7c9ab57def0e790197e6402178b661f523b4322db1aa3fe556cfc1",
+        "train.py": "5a6207b0346bdb6d83efa4399b4d513befc02d97f79dad1319b59fa6396789ab",
+        "util.py": "7b082bb09cf8e7d51784bb65ff8680298cddf77071aab8ad01a05da63b115db0"
+      },
+      "model_state_sha256": "32a99ccdaf0b51fc028128e24e9198a40d41c728ba4c66e686b081c95dd53e7f",
+      "eval_mode": true,
+      "all_parameters_frozen": true,
+      "torch": "2.6.0+cu124",
+      "torchvision": "0.21.0+cu124",
+      "numerics": {
+        "cuda_matmul_tf32": false,
+        "cudnn_tf32": false,
+        "cudnn_benchmark": false
+      },
+      "adapter_source_sha256": "09812cf25f08235ae10575c8a6ba00317e0a12c7abf063b3ba041fc0a96cca3c",
+      "preprocessing": {
+        "RGB": true,
+        "resize_hw": [
+          224,
+          224
+        ],
+        "order": "ToTensor -> ImageNet Normalize -> tensor Resize",
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "interpolation": "bilinear",
+        "antialias": true,
+        "descriptor_l2_normalization": true,
+        "setting": "protocol full-image low-resolution warp; not original paper reproduction"
+      }
+    }
+  },
+  "no_retuning": true
+}
