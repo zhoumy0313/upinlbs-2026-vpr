@@ -1,0 +1,3 @@
+# V4 scope
+
+The user explicitly authorizes GOAL_V4_DATA_READY.md G0–G6 autonomous temporal research, downloads, new papers, checkpoints and pushes on research/vpr-v4-temporal-alignment. Earlier V1 single-frame/no-cross-phase restrictions apply to historical V1, not this directory. All honesty, provenance, label isolation, credential, system and copyright rules still apply. Do not modify any V1–V3 file. Only append .gitignore. No agents are requested. New raw RGB, weights and large arrays stay local. Independent test retrieval metrics are opened once after an immutable freeze; no tuning after opening.

@@ -50,3 +50,7 @@ paper/revisions/v3_*/**/*.log
 paper/revisions/v3_*/**/*.out
 # Oversized first G2 public ZIP retained locally; exact byte chunks backed up separately.
 artifacts/v3/g2/evidence.zip
+
+# V4: raw images, models and arrays stay local; public numeric evidence only.
+outputs_v4/
+!artifacts/v4/**/*.zip

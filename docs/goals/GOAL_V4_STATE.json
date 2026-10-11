@@ -1,0 +1,20 @@
+{
+  "goal_id": "VPR-GOAL-V4",
+  "status": "active",
+  "base_sha": "09e7fb0fc63489817a09901fda37ae9896a9c404",
+  "branch": "research/vpr-v4-temporal-alignment",
+  "stages": {
+    "g0": "passed",
+    "g1": "pending",
+    "g2": "pending",
+    "g3": "pending",
+    "g4": "pending",
+    "g5": "pending",
+    "g6": "pending"
+  },
+  "independent_retrieval_opened": false,
+  "positive_method_claim": false,
+  "formal_submission_ready": false,
+  "latest_run_id": "g0_bootstrap_20261011T022521Z_6633e6aa",
+  "updated_utc": "2026-10-11T02:25:25.235355+00:00"
+}
