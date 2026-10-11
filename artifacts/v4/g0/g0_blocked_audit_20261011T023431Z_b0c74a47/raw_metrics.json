@@ -1,0 +1,10 @@
+{
+  "consecutive_blocked_goal_turns": 3,
+  "previous_turn": "no_progress",
+  "official_archives_present": false,
+  "live_transfer_handle": null,
+  "blocked_audit_passed": true,
+  "goal_achieved": false,
+  "G1_G6": "not_run",
+  "next_required_input": "two exact official TUM archives"
+}
