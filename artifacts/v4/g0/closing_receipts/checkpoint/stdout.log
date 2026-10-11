@@ -1,0 +1,19 @@
+[research/vpr-v4-temporal-alignment 5c6ed6f] G0 official-download failure and safe stop: VPR-GOAL-V4 checkpoint
+ 18 files changed, 431 insertions(+), 15 deletions(-)
+ create mode 100644 artifacts/v4/g0/g0_close_20261011T023030Z_affd191e/archive_manifest.json
+ create mode 100644 artifacts/v4/g0/g0_close_20261011T023030Z_affd191e/evidence.zip
+ create mode 100644 artifacts/v4/g0/g0_close_20261011T023030Z_affd191e/raw_metrics.json
+ create mode 100644 artifacts/v4/g0/g0_import_20261011T023030Z_2feb7151/archive_manifest.json
+ create mode 100644 artifacts/v4/g0/g0_import_20261011T023030Z_2feb7151/evidence.zip
+ create mode 100644 artifacts/v4/g0/g0_import_20261011T023030Z_2feb7151/raw_metrics.json
+ create mode 100644 configs/v4/protocol_draft.yaml
+ create mode 100644 docs/research_v4/DATA_MANIFEST.json
+ create mode 100644 docs/research_v4/G0_ACCEPTANCE.md
+ create mode 100644 docs/research_v4/MAC_TRANSFER_RESUME.md
+ create mode 100644 docs/research_v4/RESEARCH_STATUS.md
+ create mode 100644 docs/research_v4/SOURCE_AUDIT.md
+ create mode 100644 experiments/temporal_alignment_v4/audit_data.py
+ create mode 100644 experiments/temporal_alignment_v4/close_g0.py
+ create mode 100644 experiments/temporal_alignment_v4/fallback_download.py
+ create mode 100644 experiments/temporal_alignment_v4/tests/test_v4_archive_security.py
+Branch 'research/vpr-v4-temporal-alignment' set up to track remote branch 'research/vpr-v4-temporal-alignment' from 'origin'.
