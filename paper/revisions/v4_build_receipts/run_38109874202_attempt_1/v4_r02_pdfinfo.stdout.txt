@@ -1,0 +1,18 @@
+Creator:         TeX
+Producer:        pdfTeX-1.40.25
+CreationDate:    Sun Oct 11 03:55:22 2026 UTC
+ModDate:         Sun Oct 11 03:55:22 2026 UTC
+Custom Metadata: yes
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           5
+Encrypted:       no
+Page size:       612 x 792 pts (letter)
+Page rot:        0
+File size:       177849 bytes
+Optimized:       no
+PDF version:     1.5

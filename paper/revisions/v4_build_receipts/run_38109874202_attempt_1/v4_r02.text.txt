@@ -1,0 +1,279 @@
+     Timestamp-Aware Temporal Matching on TUM
+                   Revisit Streams:
+            A Frozen Negative-Result Study
+                                                          Mingyang Zhou
+                                          University of Chinese Academy of Sciences
+                                   Empirical working draft; author list subject to confirmation
+
+
+   Abstract—Temporal place recognition can smooth errors while       not offset a collapse at the predeclared 0.25m sensitivity.
+shifting the selected reference away from the current camera         We therefore present a reproducible evaluation and failure
+location. We study this tradeoff using frozen CosPlace and           analysis, not a new state-of-the-art localization algorithm.
+EigenPlaces descriptors on two continuous TUM RGB-D se-
+quences, with camera-pose labels restricted to offline evaluation.   Our concrete outputs are a timestamp/pose manifest with
+A fixed first-half gallery, a ten-second query buffer, and nearest   explicit invalid/open cases, a finite and auditable compari-
+timestamp association define a reproducible 5Hz revisit protocol.    son, one frozen independent test, and image-based inference
+We predeclare 139 mature/simple baseline configurations and 36       measurements. Whether this limited empirical contribution is
+timestamp-alignment/endpoint-support configurations on Pioneer       appropriate for a conference requires human scientific review.
+SLAM, then freeze settings before one independent Long Office
+evaluation. The selected constrained refinement matches the                          II. P RIOR W ORK AND S COPE
+strongest development primary count (24/229 at 0.5m), but
+loses at 0.25m (4/172 versus an envelope of 5/172). On the              SeqSLAM and OpenSeqSLAM2 establish sequence tra-
+independent sequence it obtains 34/48 at 0.5m, below the frozen      jectory and speed-hypothesis matching [6], [7]. STA-VPR
+baseline envelope of 35/48, and 0/20 at 0.25m while single-          uses spatial feature alignment and local-matching dynamic
+frame EigenPlaces obtains 11/20. It also does not improve the        time warping, including relaxed endpoints [8]. AdaptSeqVPR
+selected time-alignment baseline. These results support a negative
+finding about this particular refinement mechanism, not a positive   describes dynamic sequence-step adjustment and a learned dis-
+method contribution. Small correlated closed-set subsets and         criminator [9]; our access to that work was limited to publisher
+substantial open-set coverage gaps limit generalization.             abstract/metadata, so we do not claim a full implementation
+   Index Terms—visual place recognition, causal temporal match-      or formula-level distinction. SMR predicts when sequence
+ing, timestamp sampling, reproducibility, negative results           matching is receptive using supervised score features [10].
+                                                                     Temporal alignment, speed handling and endpoint relaxation
+                      I. I NTRODUCTION                               are therefore established ideas.
+   Visual place recognition retrieves earlier images that depict        We use global CosPlace/EigenPlaces descriptors [4], [5];
+the current location; it supplies candidates for geometric local-    low-resolution full-image inference is our declared protocol
+ization rather than a complete six-degree-of-freedom camera          adaptation, not a reproduction of their original published
+pose [1]. Temporal consistency can reject isolated appearance        dataset scores. Cosine-score temporal aggregation is likewise
+errors, but aggregate sequence evidence need not place its           not an official reproduction of grayscale SeqSLAM, local-strip
+highest score at the most accurate current endpoint. This dis-       STA-VPR, AdaptSeqVPR or the supervised SMR predictor.
+tinction matters when a coarse retrieval hit is evaluated using      Our baselines include one-based reciprocal rank fusion with
+camera-position distances rather than broad frame tolerances.        constant 60 [11], fixed affine descriptor-score fusion, and
+   Previous project iterations used already explored outdoor         explicit simple local controls. We neither retrain visual models
+and ordinal datasets. They remain archived, but cannot con-          nor introduce a ground-truth-guided online module.
+stitute independent validation of a newly chosen mechanism.
+                                                                               III. DATA AND E VALUATION P ROTOCOL
+Here we obtain two real continuous RGB streams with pub-
+licly documented reference poses [2]. Pioneer is the sole            A. Acquisition and timestamp association
+development collection; Long Office is not used for algorithm           Official TUM archives were transferred to Ubuntu after
+or parameter selection. Our question is narrow: does physical-       proxy/direct downloads failed; both original network failures
+time score alignment followed by constrained visual endpoint         and the transferred archive SHA256 values are retained. Full
+refinement outperform strong short-window and naive local            gzip/tar readability, safe paths, mandatory lists, image decod-
+strategies under one fixed metric protocol?                          ing, pose finiteness and timestamp order were checked before
+   The answer for this bounded study is negative. A small            retrieval. Pioneer contains 2,921 RGB images and 44,212 pose
+improvement over an old long-window control is insufficient          rows; Long Office contains 2,585 RGB images and 8,710 pose
+when stronger single-frame, short-window, fusion or simple-          rows. RGB spans are 155.217s and 87.140s, respectively. The
+refinement comparators exist. Moreover, a gain at 0.5m does          raw depth streams are retained but not used.
+   TUM reference translations describe the RGB camera opti-         identities, physical speed or future query scores. Reference
+cal center in the motion-capture world frame; timestamps are        timestamps and indices are known prior-map metadata.
+Unix seconds [3]. Each RGB timestamp is associated with                The index control uses only current/past observations:
+its nearest reference pose within 0.03s; ties choose the earlier                                L−1
+pose. Pioneer has ten exact duplicate pose timestamps: we                                   1 X
+                                                                            TL (i, j) = max     S(i − ℓ, j − rint(vℓ)),           (2)
+retain all raw rows and differences, and use the first original                         v∈V L
+                                                                                                 ℓ=0
+row for each duplicated time. This deterministic many-to-one
+association is our evaluation policy, not the official greedy       with L ∈ {3, 5, 9} and V = {0.8, 1, 1.2}. Out-of-gallery paths
+one-to-one association utility. Original timestamps, association    are invalid; startup ranks current S. The historical fixed L9
+deltas, positions, unit quaternions, file hashes and roles are      uses v = 1.2. Ties-to-even rounding means L3’s three positive
+recorded. All 2,921/2,585 PNGs decode; 38/2 RGB rows lack           ratios can yield identical integer offsets; we do not interpret
+a pose within tolerance. Invalid rows are retained rather than      those as three different effective trajectories. Global blends and
+assigned fabricated coordinates.                                    local R1/R2 controls use declared fixed weights and identical
+                                                                    candidate pools.
+B. Causal revisit construction
+                                                                    B. Timestamp alignment and endpoint constraint
+    We retain the earliest RGB image in each floor-based bin           The timestamp baseline uses five uniformly spaced lags
+relative to the sequence’s first acquisition time. The primary      δ ∈ [0, W ], for W ∈ {0.4, 0.8, 1.6} seconds. It bilinearly
+rate is 5Hz; 1Hz and 3Hz are predeclared artificial develop-        interpolates the score surface using observed current/past
+ment conditions, not independent recordings. The midpoint           query times and known gallery times τj :
+of the full raw RGB time span separates the fixed gallery
+from the query period. Valid-pose sampled images before that                                    1Xe
+                                                                               TW (t, j) = max      S(t − δ, τj − vδ).      (3)
+midpoint form the gallery; queries start at least ten seconds                              v∈Vt 5
+                                                                                                       δ
+after it. This creates gallery/query counts 377/339 for Pioneer
+                                                                    Here Vt = {−1.2, −1, −0.8, 0, 0.8, 1, 1.2} contains clock-
+and 217/168 for Long Office; measured minimum time gaps
+                                                                    time ratios, not physical motion estimates. Reverse/stationary
+exceed ten seconds. The initial rule passed the predeclared
+                                                                    hypotheses are given to all timestamp controls as well as the
+development minimum of 100 closed queries at 0.5m without
+                                                                    candidate. No extrapolation or future query is used. Query
+adjustment. The rule was accepted before any retrieval, and
+                                                                    history retains the bracket before the oldest needed lag. Startup
+applied identically to the independent sequence.
+                                                                    uses current S until the physical-time span is available. An
+    Positives are all gallery camera centers within Euclidean
+                                                                    independent scalar implementation agrees with the vectorized
+3D distance r of the associated query camera center. We fix
+                                                                    interpolation on irregular synthetic clocks.
+r = 0.5m and sensitivity radii 0.25/1.0m. Orientation does not
+                                                                       The top H ∈ {1, 3} temporal endpoints supply a union
+filter positives. Recall is
+                                                                    of gallery timestamp neighborhoods with half-width b ∈
+                     1 X                                            {0.2, 0.4}s. Only finite temporal scores enter this common
+           R@K =              1[TopK(i) ∩ Pi (r) ̸= ∅],     (1)
+                     Nr                                             pool C. The candidate retains
+                       i∈Cr
+
+where Cr contains valid-pose queries with at least one pos-                 E = {j ∈ C : TW (t, j) ≥ max TW (t, k) − ϵ},          (4)
+                                                                                                           k
+itive. Every method shares Cr at each radius, including
+startup fallback; radii have different denominators, so their       for ϵ ∈ {0.01, 0.03, 0.06}, ranks E by current S, then ap-
+percentages are not interchangeable. Pioneer has 338 valid-         pends every remaining reference in stable current-score order.
+pose queries and one invalid-pose query. Its closed counts          Empty/startup cases fall back to S. Simple R1 removes the
+are 172/229/278; open counts are 166/109/60. Long Office            constraint in the same pool; R2 blends current and temporal
+has 168 valid queries; closed counts are 20/48/89 and open          scores with fixed weights. These controls separate alignment
+counts 148/120/79. Invalid-query images still update causal         from endpoint refinement. All outputs are complete gallery
+history. We attempt every query and reject none: open queries       permutations; the ledgers preserve their top ten IDs and
+are forced matches, not successful open-set recognition. No         candidate/eligible sets. The score threshold is not a probability
+calibrated rejection or full-coverage localization claim is made.   or confidence certification.
+                                                                    C. Bounded selection and independent freeze
+            IV. F ROZEN M ATCHING S TRATEGIES
+                                                                       We predeclare 139 baseline settings and 36 candidate set-
+A. Input, descriptors and index controls                            tings, execute each at developer rates 1/3/5Hz, and introduce
+   At query time the input is RGB plus a monotonically              no additional branch. Selection maximizes the sum of devel-
+increasing acquisition timestamp. A frozen network normal-          oper correct@1 at 0.25/0.5m, then primary correct@1, then
+izes and warps the image to 224×224 and produces an L2-             lexicographic name. The selected candidate is W = 1.6s,
+normalized 512-D descriptor. Cosine similarity against every        H = 1, b = 0.2s, ϵ = 0.01; fixed fusion assigns Eigen-
+earlier gallery descriptor gives current scores S(t, j). Online     Places weight 0.75. A positive claim requires exceeding the
+code cannot receive camera centers, quaternions, ground-truth       baseline envelope at both strict radii in development and
+                                                                                      The primary closed coverage is only 229/338 for Pioneer
+
+
+
+
+                  0.5m R@1 (percent)
+                                       15                              Single A    and 48/168 for Long Office. Forced rankings outside those
+                                                                       Index L9
+                                       10                              Time 1.6s   subsets are visible open-set failures. Position-only positives
+                                       5
+                                                                                   may depict different viewing directions; frozen global descrip-
+                                                                                   tors and a short temporal wrapper cannot be presumed to
+                                       0
+                                          1            3          5                recover missing visual evidence. Post-test offline orientation
+                                       Artificial developer sampling (Hz)
+                                                                                   diagnosis, without filtering or changing methods, finds that
+                                                                                   175/229 Pioneer primary closed queries have no positive ref-
+Fig. 1. Pioneer artificial sampling changes both history duration and gallery
+coverage. Fixed physical-time alignment is a baseline, not evidence of             erence within 60 degrees of camera rotation; 160 exceed 120
+endpoint-refinement improvement or a new independent collection.                   degrees. The median best-positive rotation is 136.95 degrees,
+                                                                                   compared with 8.70 degrees on Long Office, where 0 primary
+                                                                                   closed queries exceed 60 degrees. This exposes a position-only
+independent test. The envelope is a descriptive maximum                            protocol difficulty, but does not establish a causal explanation
+over frozen comparators, not a test-tuned deployable strat-                        for every retrieval error. We retain the accepted protocol and
+egy. Code, loaded-state/checkpoint identities, image manifests,                    all difficult queries. Our evaluation measures which earlier
+raw-archive hashes, clocks, association, radii, gallery/query                      camera center was retrieved, not a refined metric camera pose
+rules, methods and timing settings were published in an im-                        or a geometric correspondence check. Candidate-pool oracle
+mutable freeze before the first independent retrieval. A single                    coverage is offline diagnosis only, never an executable method.
+run evaluates all 139 baselines and the selected candidate. No
+test-dependent parameter change follows.                                           C. Actual image inference
+
+             V. R ESULTS AND FAILURE A NALYSIS                                        We measured 25,857 complete batch-one query intervals
+                                                                                   across both streams, 17 frozen representative strategies and
+A. Strong baselines change the apparent conclusion                                 three ordered passes per strategy. Each strategy used 20 warm-
+   At 0.5m the candidate obtains 24/229 developer hits, equal                      up images followed by a history reset. The independent CSV
+to fixed A/B fusion and several timestamp controls; at 0.25m                       aggregation reproduces every mean/P95 and per-pass correct
+it obtains 4/172 while the frozen baseline envelope reaches                        count. Batch-16 cached versus batch-one top-one mismatch
+5/172. The bounded developer gate fails. Long Office gives                         count was 0; repeat top-ten mismatches were 0. Batch-size
+34/48 primary hits versus 32/48 for the developer-selected                         differences are numerical discrepancies to report, not permis-
+fixed fusion, but the timestamp baseline also gives 34/48 and                      sion to select new methods. Tables show batch-16 cached
+a simple frozen control gives 35/48. Thus even the primary                         accuracy and independently measured batch-one latency; the
+count does not establish endpoint-refinement benefit over the                      repository includes every actual online pass accuracy. Gallery
+relevant controls. At 0.25m the candidate gives 0/20, versus                       decoding/encoding and model loading were measured sepa-
+11/20 for single-frame EigenPlaces. We preserve this negative                      rately. Timing assumes resident models and a cached prior
+sensitivity rather than change the radius or subset to obtain a                    gallery, warm OS file access, and a desktop laptop GPU; it is
+favorable method headline.                                                         not a cold-start, embedded-robot or full-SLAM benchmark.
+   Each table gives R@1/5/10 at all declared radii. On Long
+Office the candidate and timestamp baseline tie in primary                                     VI. L IMITATIONS AND C ONCLUSION
+R@1, but their primary R@5 counts are 41 and 44, respec-                              This study uses two short indoor collections with overlap-
+tively. Constrained reranking can harm candidate availability                      ping environments, frozen pretrained global descriptors, a full-
+near the top of the list. At 1m their top-one counts are 75                        image low-resolution warp, and a fixed first-half revisit adap-
+and 76; this wider tolerance cannot repair the failed strict-                      tation of an RGB-D SLAM benchmark. It does not reproduce
+radii gate. Paired rescue/harm against CosPlace is audited                         published descriptor benchmarks, use depth, optimize a visual
+using Nrescue − Nharm = Ncorrect − Ncorrect,A ; full query-                        model or demonstrate robustness across many independent
+level differences, candidate coverage and error quantiles are                      routes. Adjacent frames are correlated; the independent strict
+retained, not only selected successes.                                             subset has only twenty queries. Ratios, support thresholds and
+                                                                                   model choices were selected on the complete development
+B. Sampling, coverage and endpoint interpretation                                  sequence, so developer performance is exploratory rather than
+   Index L9 has developer primary counts 5/45 at 1Hz, 2/138                        another holdout. Translation-only positives do not guarantee
+at 3Hz and 13/229 at 5Hz; the timestamp W = 1.6s baseline                          matched orientation. Nearest pose association introduces a
+gives 5/45, 14/138 and 24/229. Frame-count windows change                          finite temporal tolerance; retaining duplicate/invalid evidence
+their physical duration with sampling, while the time baseline                     is more defensible than silently supplying perfect labels.
+fixes duration. These artificial conditions rebuild both gallery                      We find no support for a positive contribution from the
+and query and also change spatial reference coverage: they                         tested constrained endpoint refinement. Physical-time normal-
+do not isolate timing alone, and they are not independent                          ization can outperform an old long frame window, yet a
+generalization evidence. The main comparison uses the same                         stronger simple baseline and strict metric sensitivity defeat a
+5Hz inputs and common radius-specific query sets.                                  broader improvement claim. Future work requires a separately
+                                                                TABLE I
+P IONEER DEVELOPMENT (5H Z ): RADIUS - SPECIFIC CLOSED DENOMINATORS 172, 229, 278. E NTRIES ARE R@1/5/10 IN PERCENT. AT 0.5 M , 338 VALID
+    QUERIES INCLUDE 109 OPEN QUERIES . E RROR MEDIAN /P90 IS OVER ALL VALID QUERIES ( METRES ); TIME MEAN /P95 IS REAL BATCH - ONE ( MS ).
+
+                        Method                   0.25m R1/5/10     0.5m R1/5/10       1.0m R1/5/10      Error med/P90   Time mean/P95
+                        CosPlace                   1.7/4.1/5.8     10.0/11.4/11.8     15.8/16.5/19.1       2.25/4.17      14.70/15.08
+                        EigenPlaces                2.3/4.1/6.4     10.5/13.1/15.3     15.8/19.8/21.9       2.20/3.37      17.82/18.07
+                        RRF                        2.3/4.1/6.4     10.0/11.4/12.7     16.2/16.9/17.6       2.21/3.69      26.35/26.77
+                        Fixed A/B fusion           2.3/4.1/5.8     10.5/12.2/13.5     16.5/17.6/19.8       2.25/3.56      26.38/26.80
+                        Index L3                   2.9/4.1/5.2      9.2/10.9/11.8     15.5/16.5/19.1       2.25/4.17      15.18/15.54
+                        Index L5                   2.3/3.5/5.2      7.4/10.5/10.9     14.4/16.5/17.3       2.25/4.19      15.31/15.63
+                        Index L9                   2.9/3.5/4.1       5.7/6.6/10.0     12.9/16.2/16.9       2.22/4.09      15.55/15.88
+                        Old fixed L9               1.2/2.9/3.5        5.7/6.6/9.6     12.2/13.7/16.2       2.22/4.06      15.08/15.40
+                        Index global blend         2.3/4.1/5.2     9.6/11.4/11.8      15.5/16.9/18.0       2.25/4.17      15.13/15.39
+                        Index local R1             1.7/4.1/6.4     10.0/10.9/12.2     15.8/16.5/18.0       2.25/4.17      16.00/16.23
+                        Index local R2             2.9/4.1/5.8      9.2/10.9/11.8     15.8/16.2/19.1       2.25/4.18      15.98/16.26
+                        Time alignment             2.3/4.7/5.8     10.5/10.9/12.2     16.9/20.1/21.2       2.25/4.13      15.37/15.73
+                        Time local R1              2.3/4.1/5.8     10.5/10.9/11.8     17.3/19.8/22.3       2.25/4.13      16.11/16.40
+                        Time local R2              2.3/4.1/5.8     10.5/10.9/11.8     17.3/19.8/22.3       2.25/4.13      16.09/16.37
+                        Constrained refinement     2.3/4.1/5.8     10.5/11.4/11.8     16.9/19.8/22.3       2.25/4.13      16.17/16.56
+
+
+                                                                  TABLE II
+ F ROZEN INDEPENDENT L ONG O FFICE (5H Z ): RADIUS - SPECIFIC CLOSED DENOMINATORS 20, 48, 89. E NTRIES ARE R@1/5/10 IN PERCENT. AT 0.5 M ,
+168 VALID QUERIES INCLUDE 120 OPEN QUERIES . E RROR MEDIAN /P90 IS OVER ALL VALID QUERIES ( METRES ); TIME MEAN /P95 IS REAL BATCH - ONE
+                                                                    ( MS ).
+
+                        Method                   0.25m R1/5/10      0.5m R1/5/10       1.0m R1/5/10     Error med/P90   Time mean/P95
+                        CosPlace                  15.0/60.0/70.0   60.4/85.4/100.0     82.0/87.6/93.3      1.28/4.93      14.69/15.04
+                        EigenPlaces              55.0/90.0/100.0    64.6/93.8/97.9     88.8/94.4/97.8      1.20/4.55      17.92/18.21
+                        RRF                        0.0/75.0/95.0   64.6/87.5/100.0     88.8/92.1/96.6      1.22/4.95      26.34/26.79
+                        Fixed A/B fusion         5.0/100.0/100.0    66.7/93.8/97.9     88.8/93.3/96.6      1.22/4.79      26.32/26.84
+                        Index L3                  10.0/55.0/65.0    43.8/47.9/72.9     80.9/87.6/92.1      1.28/4.90      15.21/15.57
+                        Index L5                   0.0/40.0/55.0    41.7/45.8/50.0     85.4/87.6/92.1      1.24/4.88      15.26/15.63
+                        Index L9                    0.0/0.0/0.0     27.1/37.5/45.8     87.6/88.8/92.1      1.22/4.81      15.51/15.90
+                        Old fixed L9                0.0/0.0/0.0      0.0/6.2/39.6      80.9/89.9/93.3      1.20/4.49      15.15/15.45
+                        Index global blend        5.0/60.0/75.0     60.4/77.1/93.8     80.9/85.4/91.0      1.32/4.94      15.24/15.60
+                        Index local R1            15.0/60.0/70.0    60.4/81.2/93.8     82.0/85.4/87.6      1.25/4.94      15.79/16.14
+                        Index local R2            10.0/50.0/70.0    47.9/77.1/97.9     80.9/86.5/93.3      1.29/4.91      15.74/16.07
+                        Time alignment             0.0/60.0/75.0   70.8/91.7/100.0     85.4/86.5/92.1      1.22/4.58      15.36/15.79
+                        Time local R1              0.0/60.0/70.0    68.8/85.4/97.9     84.3/88.8/94.4      1.22/4.58      15.84/16.26
+                        Time local R2              0.0/60.0/70.0    70.8/85.4/97.9     84.3/88.8/94.4      1.22/4.58      15.83/16.26
+                        Constrained refinement    0.0/60.0/70.0     70.8/85.4/97.9     84.3/88.8/94.4      1.22/4.58      15.90/16.31
+
+
+
+justified representation/geometry mechanism and a new inde-                         acknowledgment does not assign authorship to an AI system
+pendent collection if it uses these test results for design. We do                  or imply approval of formal submission.
+not automatically add more weights or repeatedly retune this
+now-seen test. The present manuscript is an empirical working                                                      R EFERENCES
+draft; a method paper is not submission-ready on this evidence                       [1] S. Schubert, P. Neubert, S. Garg, M. Milford, and T. Fischer, “Visual
+alone.                                                                                   place recognition: A tutorial,” IEEE Robot. Autom. Mag., vol.31, no.3,
+                                                                                         pp.139–153, 2024.
+                                                                                     [2] J. Sturm, N. Engelhard, F. Endres, W. Burgard, and D. Cremers, “A
+          R EPRODUCIBILITY AND AI DISCLOSURE                                             benchmark for the evaluation of RGB-D SLAM systems,” in IROS, 2012,
+                                                                                         pp.573–580.
+   All V1–V3 originals, earlier negative runs, down-                                 [3] TUM Computer Vision Group, “RGB-D benchmark: File for-
+                                                                                         mats and download,” https://cvg.cit.tum.de/data/datasets/rgbd-dataset/
+load failures and manuscript versions are retained. V4                                   file formats, accessed Oct.11,2026.
+source/configuration, small numeric evidence and check-                              [4] G. Berton, C. Masone, and B. Caputo, “Rethinking visual geo-
+point history are available at https://github.com/zhoumy0313/                            localization for large-scale applications,” in CVPR, 2022, pp.4878–4888.
+                                                                                     [5] G. Berton, G. Trivigno, B. Caputo, and C. Masone, “EigenPlaces:
+upinlbs-2026-vpr on the V4 branch. Original images, weights                              Training viewpoint robust models for visual place recognition,” in ICCV,
+and large arrays remain local with official sources, SHA256                              2023, pp.11080–11090.
+identities and rebuild instructions. Per-query ledgers indepen-                      [6] M. J. Milford and G. F. Wyeth, “SeqSLAM: Visual route-based naviga-
+                                                                                         tion for sunny summer days and stormy winter nights,” in ICRA, 2012,
+dently reproduce counts; table cells are mapped to evidence                              pp.1643–1649.
+JSON. Formal authorship, template compliance, copyright,                             [7] B. Talbot, S. Garg, and M. Milford, “OpenSeqSLAM2.0: An open
+fees and submission remain human decisions.                                              source toolbox for visual place recognition under changing conditions,”
+                                                                                         arXiv:1804.02156, 2018.
+   OpenAI ChatGPT/Codex assisted implementation, com-                                [8] F. Lu, B. Chen, X.-D. Zhou, and D. Song, “STA-VPR: Spatio-temporal
+mand execution, analysis, figures and drafting throughout                                alignment for visual place recognition,” IEEE Robot. Autom. Lett., vol.6,
+Sections I–VI. Tool-generated code and prose require author                              no.3, pp.4297–4304, 2021.
+                                                                                     [9] H. Li, G. Peng, J. Zhang, S. Vaikundam, and D. Wang, “AdaptSeqVPR:
+review. Numerical statements here come from retained actual                              An adaptive sequence-based visual place recognition pipeline,” in IROS,
+runs; negative results and AI assistance are disclosed. This                             2023, pp.3284–3289.
+[10] S. Hussaini, T. Fischer, and M. Milford, “Improving visual place
+     recognition with sequence-matching receptiveness prediction,” in IROS,
+     2025, pp.11073–11080.
+[11] G. V. Cormack, C. L. A. Clarke, and S. Büttcher, “Reciprocal rank
+     fusion outperforms condorcet and individual rank learning methods,” in
+     SIGIR, 2009, pp.758–759.
+
