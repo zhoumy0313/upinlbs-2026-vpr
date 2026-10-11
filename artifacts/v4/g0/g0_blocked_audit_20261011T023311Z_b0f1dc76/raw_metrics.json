@@ -1,0 +1,7 @@
+{
+  "goal_turn": 2,
+  "archive_directory_empty": true,
+  "live_transfer_handle": null,
+  "goal_complete": false,
+  "next_action": "Receive the two official archives; resume G0 audit. Do not retry unchanged network or run later scientific stages."
+}

@@ -15,11 +15,12 @@
   "independent_retrieval_opened": false,
   "positive_method_claim": false,
   "formal_submission_ready": false,
-  "latest_run_id": "g0_close_20261011T023030Z_affd191e",
-  "updated_utc": "2026-10-11T02:30:41.201629+00:00",
+  "latest_run_id": "g0_blocked_audit_20261011T023311Z_b0f1dc76",
+  "updated_utc": "2026-10-11T02:33:11.537638+00:00",
   "current_stage": "G0",
   "stop_condition": "G0 official source unavailable after original retries and one bounded alternate route",
   "required_external_change": "Both official TUM tgz archives transferred to data/raw/v4/tum_rgbd/archives, or demonstrably restored official-host reachability. Do not repeat unchanged network retries.",
-  "blocked_goal_turn_count": 1,
-  "verified_scientific_checkpoint": "5c6ed6f4ca962258f0883c25345ff974f80ef9c3"
+  "blocked_goal_turn_count": 2,
+  "verified_scientific_checkpoint": "5c6ed6f4ca962258f0883c25345ff974f80ef9c3",
+  "last_blocker_audit_run": "g0_blocked_audit_20261011T023311Z_b0f1dc76"
 }
