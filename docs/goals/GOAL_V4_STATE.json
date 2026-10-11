@@ -6,7 +6,7 @@
   "stages": {
     "g0": "passed",
     "g1": "passed",
-    "g2": "not_run",
+    "g2": "passed",
     "g3": "not_run",
     "g4": "not_run",
     "g5": "not_run",
@@ -15,9 +15,9 @@
   "independent_retrieval_opened": false,
   "positive_method_claim": false,
   "formal_submission_ready": false,
-  "latest_run_id": "g2_predeclare_20261011T032631Z_610c139b",
-  "updated_utc": "2026-10-11T03:26:34.262945+00:00",
-  "current_stage": "G2",
+  "latest_run_id": "g2_baselines_20261011T032755Z_2db3b2a4",
+  "updated_utc": "2026-10-11T03:30:11.077636+00:00",
+  "current_stage": "G3",
   "stop_condition": "G0 official source unavailable after original retries and one bounded alternate route",
   "required_external_change": "Both official TUM tgz archives transferred to data/raw/v4/tum_rgbd/archives, or demonstrably restored official-host reachability. Do not repeat unchanged network retries.",
   "blocked_goal_turn_count": 0,
@@ -29,5 +29,7 @@
   "resumed_utc": "2026-10-11T03:24:22.272901+00:00",
   "resumed_by": "user supplied official archives and explicitly requested continuation",
   "g0_resume_run": "g0_metadata_audit_20261011T032422Z_f239f7f4",
-  "g1_run": "g1_protocol_20261011T032518Z_fb6daf5d"
+  "g1_run": "g1_protocol_20261011T032518Z_fb6daf5d",
+  "g2_run": "g2_baselines_20261011T032755Z_2db3b2a4",
+  "development_feature_run": "g2_baselines_20261011T032755Z_2db3b2a4"
 }
