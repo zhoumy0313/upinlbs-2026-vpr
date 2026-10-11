@@ -1,0 +1,182 @@
+[
+  {
+    "sequence": "freiburg2_pioneer_slam",
+    "hz": 1,
+    "gallery": 77,
+    "query": 68,
+    "midpoint": 1311878271.8828912,
+    "minimum_time_gap": 11.046140909194946,
+    "sampled": 155,
+    "excluded_buffer_or_invalid_gallery": 10,
+    "coverage": [
+      {
+        "radius_m": 0.25,
+        "total_queries": 68,
+        "valid_gt_queries": 67,
+        "invalid_gt_queries": 1,
+        "closed_queries": 32,
+        "open_queries": 35,
+        "closed_coverage": 0.47761194029850745,
+        "nearest_gallery_distance_median": 0.2556293019197915,
+        "nearest_gallery_distance_P90": 1.3809456633890789
+      },
+      {
+        "radius_m": 0.5,
+        "total_queries": 68,
+        "valid_gt_queries": 67,
+        "invalid_gt_queries": 1,
+        "closed_queries": 45,
+        "open_queries": 22,
+        "closed_coverage": 0.6716417910447762,
+        "nearest_gallery_distance_median": 0.2556293019197915,
+        "nearest_gallery_distance_P90": 1.3809456633890789
+      },
+      {
+        "radius_m": 1.0,
+        "total_queries": 68,
+        "valid_gt_queries": 67,
+        "invalid_gt_queries": 1,
+        "closed_queries": 55,
+        "open_queries": 12,
+        "closed_coverage": 0.8208955223880597,
+        "nearest_gallery_distance_median": 0.2556293019197915,
+        "nearest_gallery_distance_P90": 1.3809456633890789
+      }
+    ]
+  },
+  {
+    "sequence": "freiburg2_pioneer_slam",
+    "hz": 3,
+    "gallery": 227,
+    "query": 203,
+    "midpoint": 1311878271.8828912,
+    "minimum_time_gap": 10.343060970306396,
+    "sampled": 460,
+    "excluded_buffer_or_invalid_gallery": 30,
+    "coverage": [
+      {
+        "radius_m": 0.25,
+        "total_queries": 203,
+        "valid_gt_queries": 202,
+        "invalid_gt_queries": 1,
+        "closed_queries": 102,
+        "open_queries": 100,
+        "closed_coverage": 0.504950495049505,
+        "nearest_gallery_distance_median": 0.24276032961105706,
+        "nearest_gallery_distance_P90": 1.3895991632484104
+      },
+      {
+        "radius_m": 0.5,
+        "total_queries": 203,
+        "valid_gt_queries": 202,
+        "invalid_gt_queries": 1,
+        "closed_queries": 138,
+        "open_queries": 64,
+        "closed_coverage": 0.6831683168316832,
+        "nearest_gallery_distance_median": 0.24276032961105706,
+        "nearest_gallery_distance_P90": 1.3895991632484104
+      },
+      {
+        "radius_m": 1.0,
+        "total_queries": 203,
+        "valid_gt_queries": 202,
+        "invalid_gt_queries": 1,
+        "closed_queries": 166,
+        "open_queries": 36,
+        "closed_coverage": 0.8217821782178217,
+        "nearest_gallery_distance_median": 0.24276032961105706,
+        "nearest_gallery_distance_P90": 1.3895991632484104
+      }
+    ]
+  },
+  {
+    "sequence": "freiburg2_pioneer_slam",
+    "hz": 5,
+    "gallery": 377,
+    "query": 339,
+    "midpoint": 1311878271.8828912,
+    "minimum_time_gap": 10.040316104888916,
+    "sampled": 766,
+    "excluded_buffer_or_invalid_gallery": 50,
+    "coverage": [
+      {
+        "radius_m": 0.25,
+        "total_queries": 339,
+        "valid_gt_queries": 338,
+        "invalid_gt_queries": 1,
+        "closed_queries": 172,
+        "open_queries": 166,
+        "closed_coverage": 0.5088757396449705,
+        "nearest_gallery_distance_median": 0.24247552030668099,
+        "nearest_gallery_distance_P90": 1.3924895902677132
+      },
+      {
+        "radius_m": 0.5,
+        "total_queries": 339,
+        "valid_gt_queries": 338,
+        "invalid_gt_queries": 1,
+        "closed_queries": 229,
+        "open_queries": 109,
+        "closed_coverage": 0.6775147928994083,
+        "nearest_gallery_distance_median": 0.24247552030668099,
+        "nearest_gallery_distance_P90": 1.3924895902677132
+      },
+      {
+        "radius_m": 1.0,
+        "total_queries": 339,
+        "valid_gt_queries": 338,
+        "invalid_gt_queries": 1,
+        "closed_queries": 278,
+        "open_queries": 60,
+        "closed_coverage": 0.8224852071005917,
+        "nearest_gallery_distance_median": 0.24247552030668099,
+        "nearest_gallery_distance_P90": 1.3924895902677132
+      }
+    ]
+  },
+  {
+    "sequence": "freiburg3_long_office_household",
+    "hz": 5,
+    "gallery": 217,
+    "query": 168,
+    "midpoint": 1341848024.292898,
+    "minimum_time_gap": 10.19502305984497,
+    "sampled": 436,
+    "excluded_buffer_or_invalid_gallery": 51,
+    "coverage": [
+      {
+        "radius_m": 0.25,
+        "total_queries": 168,
+        "valid_gt_queries": 168,
+        "invalid_gt_queries": 0,
+        "closed_queries": 20,
+        "open_queries": 148,
+        "closed_coverage": 0.11904761904761904,
+        "nearest_gallery_distance_median": 0.9031419481605689,
+        "nearest_gallery_distance_P90": 2.678386418548029
+      },
+      {
+        "radius_m": 0.5,
+        "total_queries": 168,
+        "valid_gt_queries": 168,
+        "invalid_gt_queries": 0,
+        "closed_queries": 48,
+        "open_queries": 120,
+        "closed_coverage": 0.2857142857142857,
+        "nearest_gallery_distance_median": 0.9031419481605689,
+        "nearest_gallery_distance_P90": 2.678386418548029
+      },
+      {
+        "radius_m": 1.0,
+        "total_queries": 168,
+        "valid_gt_queries": 168,
+        "invalid_gt_queries": 0,
+        "closed_queries": 89,
+        "open_queries": 79,
+        "closed_coverage": 0.5297619047619048,
+        "nearest_gallery_distance_median": 0.9031419481605689,
+        "nearest_gallery_distance_P90": 2.678386418548029
+      }
+    ]
+  }
+]

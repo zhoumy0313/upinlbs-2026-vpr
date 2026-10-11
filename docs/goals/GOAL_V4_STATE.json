@@ -5,7 +5,7 @@
   "branch": "research/vpr-v4-temporal-alignment",
   "stages": {
     "g0": "passed",
-    "g1": "not_run",
+    "g1": "passed",
     "g2": "not_run",
     "g3": "not_run",
     "g4": "not_run",
@@ -15,9 +15,9 @@
   "independent_retrieval_opened": false,
   "positive_method_claim": false,
   "formal_submission_ready": false,
-  "latest_run_id": "g0_metadata_audit_20261011T032422Z_f239f7f4",
-  "updated_utc": "2026-10-11T03:25:05.369860+00:00",
-  "current_stage": "G0",
+  "latest_run_id": "g1_protocol_20261011T032518Z_fb6daf5d",
+  "updated_utc": "2026-10-11T03:25:18.713806+00:00",
+  "current_stage": "G2",
   "stop_condition": "G0 official source unavailable after original retries and one bounded alternate route",
   "required_external_change": "Both official TUM tgz archives transferred to data/raw/v4/tum_rgbd/archives, or demonstrably restored official-host reachability. Do not repeat unchanged network retries.",
   "blocked_goal_turn_count": 0,
@@ -27,5 +27,7 @@
   "goal_complete": false,
   "blocked_reason": "Same genuine official-data acquisition blocker verified across original turn and two continuations. No live transfer handle. Goal G0 stop rule prohibits further retries/experiments; both exact official archives or restored official connectivity required.",
   "resumed_utc": "2026-10-11T03:24:22.272901+00:00",
-  "resumed_by": "user supplied official archives and explicitly requested continuation"
+  "resumed_by": "user supplied official archives and explicitly requested continuation",
+  "g0_resume_run": "g0_metadata_audit_20261011T032422Z_f239f7f4",
+  "g1_run": "g1_protocol_20261011T032518Z_fb6daf5d"
 }
