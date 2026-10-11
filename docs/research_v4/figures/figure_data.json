@@ -1,0 +1,74 @@
+{
+  "sampling_coordinates": {
+    "A": [
+      [
+        1,
+        11.11111111111111
+      ],
+      [
+        3,
+        9.420289855072465
+      ],
+      [
+        5,
+        10.043668122270741
+      ]
+    ],
+    "L9": [
+      [
+        1,
+        11.11111111111111
+      ],
+      [
+        3,
+        1.4492753623188406
+      ],
+      [
+        5,
+        5.676855895196507
+      ]
+    ],
+    "Time_W1.6": [
+      [
+        1,
+        11.11111111111111
+      ],
+      [
+        3,
+        10.144927536231885
+      ],
+      [
+        5,
+        10.480349344978166
+      ]
+    ]
+  },
+  "orientation": [
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "role": "posthoc_offline_diagnosis_not_online_or_selection",
+      "radius": 0.5,
+      "closed_queries": 229,
+      "best_positive_rotation_degrees_median": 136.94762094048065,
+      "positive_rotation_above60deg": 175,
+      "positive_rotation_above120deg": 160,
+      "no_orientation_filter": true,
+      "no_protocol_or_algorithm_changes": true
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "role": "posthoc_offline_diagnosis_not_online_or_selection",
+      "radius": 0.5,
+      "closed_queries": 48,
+      "best_positive_rotation_degrees_median": 8.696445079105475,
+      "positive_rotation_above60deg": 0,
+      "positive_rotation_above120deg": 0,
+      "no_orientation_filter": true,
+      "no_protocol_or_algorithm_changes": true
+    }
+  ],
+  "source_sha256": {
+    "BASELINE_RESULTS.json": "0dce2e11826be38b20d0f4e1ecf1d3cbb482e85d140f91f7d184e92154d3aeac",
+    "PROTOCOL_METADATA.json": "bb06d72f0be66a9969cab8dd2bda52bf31d08be5a723aed4ee5e1d6b6ac63240"
+  }
+}

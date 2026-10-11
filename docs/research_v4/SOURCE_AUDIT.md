@@ -14,3 +14,7 @@ The scientific protocol in configs/v4/protocol_draft.yaml is an initial predecla
 ## Final observed acquisition outcome
 
 Both official proxy-route curl commands completed with exit 35 after five retries; sole IPv4 direct fallback completed with exit 28. Both archives have zero local bytes and no SHA. No tar extraction was possible. Exact final URLs/HTTP codes and logs are retained in G0 evidence; official-source descriptions above are not claimed as local measurements.
+
+## Resumed official-data audit
+
+User supplied both requested official archive files on Oct.11. Both complete tar/gzip streams and safe extraction passed; all 5,506 RGB PNGs decoded. Archive identities, pose/GT association counts and spans are in DATA_MANIFEST_r02.json, now also the canonical DATA_MANIFEST.json. First missing-data manifest remains byte-identical as DATA_MANIFEST_r01_failure.json; original network failures remain. Original upstream independent published checksums were not available; official source attribution and transferred-file provenance are declared rather than claiming external checksum certification.

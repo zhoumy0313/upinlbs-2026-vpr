@@ -1,0 +1,387 @@
+[
+  {
+    "run_id": "execution_20261011T032334Z_1fc69598",
+    "parent_git_sha": "29fd5da62d5c14d0be05270f40e8c3d357a8d218",
+    "argv": [
+      "experiments/temporal_alignment_v4/driver.py",
+      "run_g0_g1.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:23:34.867363+00:00",
+    "failed": true,
+    "whole_process_exit_code": 1,
+    "archive": "artifacts/v4/execution/execution_20261011T032334Z_1fc69598/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "execution_20261011T032422Z_6c763c3a",
+    "parent_git_sha": "29fd5da62d5c14d0be05270f40e8c3d357a8d218",
+    "argv": [
+      "experiments/temporal_alignment_v4/driver.py",
+      "run_g0_g1.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:24:22.180309+00:00",
+    "failed": false,
+    "whole_process_exit_code": 0,
+    "archive": "artifacts/v4/execution/execution_20261011T032422Z_6c763c3a/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "execution_20261011T032753Z_10b395c9",
+    "parent_git_sha": "08c27bfd9db87fe3a8192f46afb06f2ea28c0e97",
+    "argv": [
+      "experiments/temporal_alignment_v4/driver.py",
+      "run_g2.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:27:53.354174+00:00",
+    "failed": false,
+    "whole_process_exit_code": 0,
+    "archive": "artifacts/v4/execution/execution_20261011T032753Z_10b395c9/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "execution_20261011T033118Z_12278295",
+    "parent_git_sha": "a7398c2e265be4539661df0099d54a0d374430f3",
+    "argv": [
+      "experiments/temporal_alignment_v4/driver.py",
+      "run_g3.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:31:18.237854+00:00",
+    "failed": false,
+    "whole_process_exit_code": 0,
+    "archive": "artifacts/v4/execution/execution_20261011T033118Z_12278295/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "execution_20261011T033306Z_91464371",
+    "parent_git_sha": "9a4c05a738bb1cba079b809256a94aa86d38c3cb",
+    "argv": [
+      "experiments/temporal_alignment_v4/driver.py",
+      "run_g4_freeze.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:33:06.784191+00:00",
+    "failed": true,
+    "whole_process_exit_code": 1,
+    "archive": "artifacts/v4/execution/execution_20261011T033306Z_91464371/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "execution_20261011T033405Z_21c29ce9",
+    "parent_git_sha": "9a4c05a738bb1cba079b809256a94aa86d38c3cb",
+    "argv": [
+      "experiments/temporal_alignment_v4/driver.py",
+      "run_g4_freeze.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:34:05.566139+00:00",
+    "failed": false,
+    "whole_process_exit_code": 0,
+    "archive": "artifacts/v4/execution/execution_20261011T033405Z_21c29ce9/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "execution_20261011T033544Z_41ef735d",
+    "parent_git_sha": "d393fde44df189cb3f8c0ec2bdcd247ca6895541",
+    "argv": [
+      "experiments/temporal_alignment_v4/driver.py",
+      "run_g4_test.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:35:44.889675+00:00",
+    "failed": false,
+    "whole_process_exit_code": 0,
+    "archive": "artifacts/v4/execution/execution_20261011T033544Z_41ef735d/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "execution_20261011T033657Z_82473655",
+    "parent_git_sha": "f3294d74d6bd482f87922db2e792d12080486e39",
+    "argv": [
+      "experiments/temporal_alignment_v4/driver.py",
+      "run_g5.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:36:57.597355+00:00",
+    "failed": false,
+    "whole_process_exit_code": 0,
+    "archive": "artifacts/v4/execution/execution_20261011T033657Z_82473655/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "freeze_publication_20261011T033427Z_0d30c2ed",
+    "parent_git_sha": "cdea21d880236097d9e09265a067b771bb2392b1",
+    "argv": [
+      "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter/experiments/temporal_alignment_v4/run_g4_freeze.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:34:27.449659+00:00",
+    "failed": false,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/freeze/freeze_publication_20261011T033427Z_0d30c2ed/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "g0_blocked_audit_20261011T023311Z_b0f1dc76",
+    "parent_git_sha": "b03a7de0ff8075fef04db27dca8072801f8376e5",
+    "argv": [
+      "-"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T02:33:11.469492+00:00",
+    "failed": false,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g0/g0_blocked_audit_20261011T023311Z_b0f1dc76/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "g0_blocked_audit_20261011T023431Z_b0c74a47",
+    "parent_git_sha": "db03d60747c00f89fd2c7ecfc16ac9b4b285c9d9",
+    "argv": [
+      "-"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T02:34:31.004123+00:00",
+    "failed": false,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g0/g0_blocked_audit_20261011T023431Z_b0c74a47/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "g0_bootstrap_20261011T022521Z_6633e6aa",
+    "parent_git_sha": "09e7fb0fc63489817a09901fda37ae9896a9c404",
+    "argv": [
+      "experiments/temporal_alignment_v4/bootstrap.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T02:25:21.382756+00:00",
+    "failed": false,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g0/g0_bootstrap_20261011T022521Z_6633e6aa/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "g0_close_20261011T023030Z_affd191e",
+    "parent_git_sha": "15c7d8cff36c2e143a2805e9fc41fc40b52f97c0",
+    "argv": [
+      "experiments/temporal_alignment_v4/close_g0.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T02:30:30.381966+00:00",
+    "failed": true,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g0/g0_close_20261011T023030Z_affd191e/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "g0_download_20261011T022531Z_45f2ec89",
+    "parent_git_sha": "09e7fb0fc63489817a09901fda37ae9896a9c404",
+    "argv": [
+      "experiments/temporal_alignment_v4/download.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T02:25:31.099713+00:00",
+    "failed": true,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g0/g0_download_20261011T022531Z_45f2ec89/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "g0_download_20261011T022531Z_8a9737a4",
+    "parent_git_sha": "09e7fb0fc63489817a09901fda37ae9896a9c404",
+    "argv": [
+      "experiments/temporal_alignment_v4/download.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T02:25:31.100206+00:00",
+    "failed": true,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g0/g0_download_20261011T022531Z_8a9737a4/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "g0_fallback_20261011T022732Z_3fa6bc61",
+    "parent_git_sha": "15c7d8cff36c2e143a2805e9fc41fc40b52f97c0",
+    "argv": [
+      "experiments/temporal_alignment_v4/fallback_download.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T02:27:32.521201+00:00",
+    "failed": true,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g0/g0_fallback_20261011T022732Z_3fa6bc61/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "g0_fallback_20261011T022732Z_f07de4df",
+    "parent_git_sha": "15c7d8cff36c2e143a2805e9fc41fc40b52f97c0",
+    "argv": [
+      "experiments/temporal_alignment_v4/fallback_download.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T02:27:32.521657+00:00",
+    "failed": true,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g0/g0_fallback_20261011T022732Z_f07de4df/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "g0_import_20261011T023030Z_2feb7151",
+    "parent_git_sha": "15c7d8cff36c2e143a2805e9fc41fc40b52f97c0",
+    "argv": [
+      "experiments/temporal_alignment_v4/audit_data.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T02:30:30.607171+00:00",
+    "failed": false,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g0/g0_import_20261011T023030Z_2feb7151/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "g0_import_20261011T032146Z_0de0ebd8",
+    "parent_git_sha": "29fd5da62d5c14d0be05270f40e8c3d357a8d218",
+    "argv": [
+      "experiments/temporal_alignment_v4/audit_data.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:21:46.581338+00:00",
+    "failed": false,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g0/g0_import_20261011T032146Z_0de0ebd8/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "g0_metadata_audit_20261011T032334Z_de67e748",
+    "parent_git_sha": "29fd5da62d5c14d0be05270f40e8c3d357a8d218",
+    "argv": [
+      "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter/experiments/temporal_alignment_v4/run_g0_g1.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:23:34.986988+00:00",
+    "failed": true,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g0/g0_metadata_audit_20261011T032334Z_de67e748/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "g0_metadata_audit_20261011T032422Z_f239f7f4",
+    "parent_git_sha": "29fd5da62d5c14d0be05270f40e8c3d357a8d218",
+    "argv": [
+      "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter/experiments/temporal_alignment_v4/run_g0_g1.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:24:22.273452+00:00",
+    "failed": false,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g0/g0_metadata_audit_20261011T032422Z_f239f7f4/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "g1_protocol_20261011T032518Z_fb6daf5d",
+    "parent_git_sha": "c1fa131decf2a1e9ba1eb9547d3912a67d4b94b7",
+    "argv": [
+      "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter/experiments/temporal_alignment_v4/run_g0_g1.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:25:18.523280+00:00",
+    "failed": false,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g1/g1_protocol_20261011T032518Z_fb6daf5d/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "g2_baselines_20261011T032755Z_2db3b2a4",
+    "parent_git_sha": "08c27bfd9db87fe3a8192f46afb06f2ea28c0e97",
+    "argv": [
+      "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter/experiments/temporal_alignment_v4/run_g2.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:27:55.799743+00:00",
+    "failed": false,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g2/g2_baselines_20261011T032755Z_2db3b2a4/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "g2_predeclare_20261011T032631Z_610c139b",
+    "parent_git_sha": "8987489d45b3f7fcfb5c7c9b9014925af0f9ef42",
+    "argv": [
+      "experiments/temporal_alignment_v4/predeclare.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:26:31.988216+00:00",
+    "failed": false,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g2/g2_predeclare_20261011T032631Z_610c139b/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "g3_bounded_20261011T033120Z_63a26a28",
+    "parent_git_sha": "a7398c2e265be4539661df0099d54a0d374430f3",
+    "argv": [
+      "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter/experiments/temporal_alignment_v4/run_g3.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:31:20.304436+00:00",
+    "failed": false,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g3/g3_bounded_20261011T033120Z_63a26a28/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "g4_freeze_20261011T033308Z_e3a56d8e",
+    "parent_git_sha": "9a4c05a738bb1cba079b809256a94aa86d38c3cb",
+    "argv": [
+      "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter/experiments/temporal_alignment_v4/run_g4_freeze.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:33:08.818230+00:00",
+    "failed": true,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g4/g4_freeze_20261011T033308Z_e3a56d8e/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "g4_freeze_20261011T033407Z_b4f7845e",
+    "parent_git_sha": "9a4c05a738bb1cba079b809256a94aa86d38c3cb",
+    "argv": [
+      "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter/experiments/temporal_alignment_v4/run_g4_freeze.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:34:07.606525+00:00",
+    "failed": false,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g4/g4_freeze_20261011T033407Z_b4f7845e/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "g4_independent_20261011T033546Z_444c50d3",
+    "parent_git_sha": "d393fde44df189cb3f8c0ec2bdcd247ca6895541",
+    "argv": [
+      "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter/experiments/temporal_alignment_v4/run_g4_test.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:35:46.937518+00:00",
+    "failed": false,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g4/g4_independent_20261011T033546Z_444c50d3/evidence.zip",
+    "source_snapshot": true
+  },
+  {
+    "run_id": "g5_real_timing_20261011T033659Z_7f2fd755",
+    "parent_git_sha": "f3294d74d6bd482f87922db2e792d12080486e39",
+    "argv": [
+      "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter/experiments/temporal_alignment_v4/run_g5.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T03:36:59.631038+00:00",
+    "failed": false,
+    "whole_process_exit_code": null,
+    "archive": "artifacts/v4/g5/g5_real_timing_20261011T033659Z_7f2fd755/evidence.zip",
+    "source_snapshot": true
+  }
+]

@@ -1,0 +1,3 @@
+# G5 manuscript iteration
+
+V4 r01 preserves the independent-test negative draft with explicitly pending latency; r02 adds actual latency, all declared R@K/radii/denominators and 3D error quantiles, embedded sampling plot, posthoc orientation limits, and complete AI disclosure. Native editor compilation succeeded for both. Original V3 editor/source/PDF are retained; no local TeX installation. Separate disposable public-repo CI exports exact-source PDFs, pages, embedded fonts and unresolved-reference checks. Evidence cells are mapped to source JSON/hash, and the working draft does not assert positive method effectiveness. Human authors/template/formal submission remain outside autonomous scope. Final PDF/render acceptance is checked in G6 before completion.

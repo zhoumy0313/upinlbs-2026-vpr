@@ -1,0 +1,27 @@
+{
+  "orientation": [
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "role": "posthoc_offline_diagnosis_not_online_or_selection",
+      "radius": 0.5,
+      "closed_queries": 229,
+      "best_positive_rotation_degrees_median": 136.94762094048065,
+      "positive_rotation_above60deg": 175,
+      "positive_rotation_above120deg": 160,
+      "no_orientation_filter": true,
+      "no_protocol_or_algorithm_changes": true
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "role": "posthoc_offline_diagnosis_not_online_or_selection",
+      "radius": 0.5,
+      "closed_queries": 48,
+      "best_positive_rotation_degrees_median": 8.696445079105475,
+      "positive_rotation_above60deg": 0,
+      "positive_rotation_above120deg": 0,
+      "no_orientation_filter": true,
+      "no_protocol_or_algorithm_changes": true
+    }
+  ],
+  "interpretation": "Descriptive metadata diagnosis only; position-only positives can lack aligned views. Does not prove causal origin of model errors or permit test filtering."
+}

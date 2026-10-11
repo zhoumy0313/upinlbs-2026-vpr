@@ -1,0 +1,62 @@
+[
+  {
+    "sequence": "freiburg2_pioneer_slam",
+    "paired_comparator": "CosPlace single A",
+    "closed_queries": 229,
+    "rescue": 1,
+    "harm": 0,
+    "delta": 0.004366812227074236,
+    "bootstrap": [
+      {
+        "block_frames": 20,
+        "seed": 0,
+        "replicates": 1000,
+        "interval_quantiles_025_975": [
+          0.0,
+          0.013426614837984751
+        ],
+        "label": "exploratory circular consecutive-query blocks, conditional closed denominator; not independent scene significance"
+      },
+      {
+        "block_frames": 50,
+        "seed": 0,
+        "replicates": 1000,
+        "interval_quantiles_025_975": [
+          0.0,
+          0.012502626050420166
+        ],
+        "label": "exploratory circular consecutive-query blocks, conditional closed denominator; not independent scene significance"
+      }
+    ]
+  },
+  {
+    "sequence": "freiburg3_long_office_household",
+    "paired_comparator": "CosPlace single A",
+    "closed_queries": 48,
+    "rescue": 6,
+    "harm": 1,
+    "delta": 0.10416666666666667,
+    "bootstrap": [
+      {
+        "block_frames": 20,
+        "seed": 0,
+        "replicates": 1000,
+        "interval_quantiles_025_975": [
+          -0.04827380952380952,
+          0.2727272727272727
+        ],
+        "label": "exploratory circular consecutive-query blocks, conditional closed denominator; not independent scene significance"
+      },
+      {
+        "block_frames": 50,
+        "seed": 0,
+        "replicates": 1000,
+        "interval_quantiles_025_975": [
+          -0.0571031746031746,
+          0.3458333333333336
+        ],
+        "label": "exploratory circular consecutive-query blocks, conditional closed denominator; not independent scene significance"
+      }
+    ]
+  }
+]

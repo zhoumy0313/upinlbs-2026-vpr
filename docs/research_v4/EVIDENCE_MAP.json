@@ -1,0 +1,15 @@
+{
+  "protocol": "configs/v4/protocol_accepted.yaml; data/manifests/v4/*_protocol.json",
+  "data": "docs/research_v4/DATA_MANIFEST_r02.json",
+  "all_development_baselines": "docs/research_v4/BASELINE_RESULTS.json",
+  "all_candidate_development": "configs/v4/selected_methods.json; outputs_v4/g3_bounded_20261011T033120Z_63a26a28/per_query.csv",
+  "independent": "docs/research_v4/INDEPENDENT_RESULTS.json; outputs_v4/g4_independent_20261011T033546Z_444c50d3/per_query.csv",
+  "latency": "docs/research_v4/REAL_TIMING_RESULTS.json; outputs_v4/g5_real_timing_20261011T033659Z_7f2fd755/timing_per_query.csv",
+  "main_paper_cells": "paper/revisions/v4_r02/numeric_evidence_map.json",
+  "figures": "docs/research_v4/figures/figure_data.json; experiments/temporal_alignment_v4/report_assets.py",
+  "frozen_code_model_images": "freezes/v4_20261011T033425Z/freeze.json",
+  "failures": "docs/research_v4/FAILURE_REGISTER.json",
+  "old_preservation": "artifacts/v4/g0/old_files.json; each checkpoint/preservation.json",
+  "actual_commands": "outputs_v4/execution_*/commands.jsonl and stdout.log/stderr.log; individual run checkpoints",
+  "replay": "experiments/temporal_alignment_v4/replay.py"
+}

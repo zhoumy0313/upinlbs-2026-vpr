@@ -1,0 +1,1513 @@
+{
+  "table_cells": [
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "A",
+      "radius_m": 0.25,
+      "correct": [
+        3,
+        7,
+        10
+      ],
+      "denominator": 172,
+      "rendered": "1.7/4.1/5.8",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "A",
+      "radius_m": 0.5,
+      "correct": [
+        23,
+        26,
+        27
+      ],
+      "denominator": 229,
+      "rendered": "10.0/11.4/11.8",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "A",
+      "radius_m": 1.0,
+      "correct": [
+        44,
+        46,
+        53
+      ],
+      "denominator": 278,
+      "rendered": "15.8/16.5/19.1",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "A",
+      "mean_ms": 14.695317176988073,
+      "P95_ms": 15.075481394887902,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "B",
+      "radius_m": 0.25,
+      "correct": [
+        4,
+        7,
+        11
+      ],
+      "denominator": 172,
+      "rendered": "2.3/4.1/6.4",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "B",
+      "radius_m": 0.5,
+      "correct": [
+        24,
+        30,
+        35
+      ],
+      "denominator": 229,
+      "rendered": "10.5/13.1/15.3",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "B",
+      "radius_m": 1.0,
+      "correct": [
+        44,
+        55,
+        61
+      ],
+      "denominator": 278,
+      "rendered": "15.8/19.8/21.9",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "B",
+      "mean_ms": 17.821100719503516,
+      "P95_ms": 18.065701000159606,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "RRF60",
+      "radius_m": 0.25,
+      "correct": [
+        4,
+        7,
+        11
+      ],
+      "denominator": 172,
+      "rendered": "2.3/4.1/6.4",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "RRF60",
+      "radius_m": 0.5,
+      "correct": [
+        23,
+        26,
+        29
+      ],
+      "denominator": 229,
+      "rendered": "10.0/11.4/12.7",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "RRF60",
+      "radius_m": 1.0,
+      "correct": [
+        45,
+        47,
+        49
+      ],
+      "denominator": 278,
+      "rendered": "16.2/16.9/17.6",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "RRF60",
+      "mean_ms": 26.35492480904216,
+      "P95_ms": 26.7737757996656,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "AB_0.75",
+      "radius_m": 0.25,
+      "correct": [
+        4,
+        7,
+        10
+      ],
+      "denominator": 172,
+      "rendered": "2.3/4.1/5.8",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "AB_0.75",
+      "radius_m": 0.5,
+      "correct": [
+        24,
+        28,
+        31
+      ],
+      "denominator": 229,
+      "rendered": "10.5/12.2/13.5",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "AB_0.75",
+      "radius_m": 1.0,
+      "correct": [
+        46,
+        49,
+        55
+      ],
+      "denominator": 278,
+      "rendered": "16.5/17.6/19.8",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "AB_0.75",
+      "mean_ms": 26.38369693999527,
+      "P95_ms": 26.801162800984457,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "L3",
+      "radius_m": 0.25,
+      "correct": [
+        5,
+        7,
+        9
+      ],
+      "denominator": 172,
+      "rendered": "2.9/4.1/5.2",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "L3",
+      "radius_m": 0.5,
+      "correct": [
+        21,
+        25,
+        27
+      ],
+      "denominator": 229,
+      "rendered": "9.2/10.9/11.8",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "L3",
+      "radius_m": 1.0,
+      "correct": [
+        43,
+        46,
+        53
+      ],
+      "denominator": 278,
+      "rendered": "15.5/16.5/19.1",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "L3",
+      "mean_ms": 15.17642356819682,
+      "P95_ms": 15.539835000527091,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "L5",
+      "radius_m": 0.25,
+      "correct": [
+        4,
+        6,
+        9
+      ],
+      "denominator": 172,
+      "rendered": "2.3/3.5/5.2",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "L5",
+      "radius_m": 0.5,
+      "correct": [
+        17,
+        24,
+        25
+      ],
+      "denominator": 229,
+      "rendered": "7.4/10.5/10.9",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "L5",
+      "radius_m": 1.0,
+      "correct": [
+        40,
+        46,
+        48
+      ],
+      "denominator": 278,
+      "rendered": "14.4/16.5/17.3",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "L5",
+      "mean_ms": 15.307205762053545,
+      "P95_ms": 15.629530197475106,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "L9",
+      "radius_m": 0.25,
+      "correct": [
+        5,
+        6,
+        7
+      ],
+      "denominator": 172,
+      "rendered": "2.9/3.5/4.1",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "L9",
+      "radius_m": 0.5,
+      "correct": [
+        13,
+        15,
+        23
+      ],
+      "denominator": 229,
+      "rendered": "5.7/6.6/10.0",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "L9",
+      "radius_m": 1.0,
+      "correct": [
+        36,
+        45,
+        47
+      ],
+      "denominator": 278,
+      "rendered": "12.9/16.2/16.9",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "L9",
+      "mean_ms": 15.546392424565749,
+      "P95_ms": 15.884026596904732,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "old_fixed_L9",
+      "radius_m": 0.25,
+      "correct": [
+        2,
+        5,
+        6
+      ],
+      "denominator": 172,
+      "rendered": "1.2/2.9/3.5",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "old_fixed_L9",
+      "radius_m": 0.5,
+      "correct": [
+        13,
+        15,
+        22
+      ],
+      "denominator": 229,
+      "rendered": "5.7/6.6/9.6",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "old_fixed_L9",
+      "radius_m": 1.0,
+      "correct": [
+        34,
+        38,
+        45
+      ],
+      "denominator": 278,
+      "rendered": "12.2/13.7/16.2",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "old_fixed_L9",
+      "mean_ms": 15.082210048316815,
+      "P95_ms": 15.39724939793814,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "L3_global_0.25",
+      "radius_m": 0.25,
+      "correct": [
+        4,
+        7,
+        9
+      ],
+      "denominator": 172,
+      "rendered": "2.3/4.1/5.2",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "L3_global_0.25",
+      "radius_m": 0.5,
+      "correct": [
+        22,
+        26,
+        27
+      ],
+      "denominator": 229,
+      "rendered": "9.6/11.4/11.8",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "L3_global_0.25",
+      "radius_m": 1.0,
+      "correct": [
+        43,
+        47,
+        50
+      ],
+      "denominator": 278,
+      "rendered": "15.5/16.9/18.0",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "L3_global_0.25",
+      "mean_ms": 15.131160016068039,
+      "P95_ms": 15.394371194997802,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "R1_L3_H3_r4",
+      "radius_m": 0.25,
+      "correct": [
+        3,
+        7,
+        11
+      ],
+      "denominator": 172,
+      "rendered": "1.7/4.1/6.4",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "R1_L3_H3_r4",
+      "radius_m": 0.5,
+      "correct": [
+        23,
+        25,
+        28
+      ],
+      "denominator": 229,
+      "rendered": "10.0/10.9/12.2",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "R1_L3_H3_r4",
+      "radius_m": 1.0,
+      "correct": [
+        44,
+        46,
+        50
+      ],
+      "denominator": 278,
+      "rendered": "15.8/16.5/18.0",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "R1_L3_H3_r4",
+      "mean_ms": 16.00314270092116,
+      "P95_ms": 16.23045079759322,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "R2_L3_H1_r1_g0.5",
+      "radius_m": 0.25,
+      "correct": [
+        5,
+        7,
+        10
+      ],
+      "denominator": 172,
+      "rendered": "2.9/4.1/5.8",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "R2_L3_H1_r1_g0.5",
+      "radius_m": 0.5,
+      "correct": [
+        21,
+        25,
+        27
+      ],
+      "denominator": 229,
+      "rendered": "9.2/10.9/11.8",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "R2_L3_H1_r1_g0.5",
+      "radius_m": 1.0,
+      "correct": [
+        44,
+        45,
+        53
+      ],
+      "denominator": 278,
+      "rendered": "15.8/16.2/19.1",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "R2_L3_H1_r1_g0.5",
+      "mean_ms": 15.980717917601945,
+      "P95_ms": 16.256774807698093,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "Time_W1.6",
+      "radius_m": 0.25,
+      "correct": [
+        4,
+        8,
+        10
+      ],
+      "denominator": 172,
+      "rendered": "2.3/4.7/5.8",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "Time_W1.6",
+      "radius_m": 0.5,
+      "correct": [
+        24,
+        25,
+        28
+      ],
+      "denominator": 229,
+      "rendered": "10.5/10.9/12.2",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "Time_W1.6",
+      "radius_m": 1.0,
+      "correct": [
+        47,
+        56,
+        59
+      ],
+      "denominator": 278,
+      "rendered": "16.9/20.1/21.2",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "Time_W1.6",
+      "mean_ms": 15.36500176486734,
+      "P95_ms": 15.729064593324438,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "TimeR1_W1.6_H1_r0.2",
+      "radius_m": 0.25,
+      "correct": [
+        4,
+        7,
+        10
+      ],
+      "denominator": 172,
+      "rendered": "2.3/4.1/5.8",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "TimeR1_W1.6_H1_r0.2",
+      "radius_m": 0.5,
+      "correct": [
+        24,
+        25,
+        27
+      ],
+      "denominator": 229,
+      "rendered": "10.5/10.9/11.8",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "TimeR1_W1.6_H1_r0.2",
+      "radius_m": 1.0,
+      "correct": [
+        48,
+        55,
+        62
+      ],
+      "denominator": 278,
+      "rendered": "17.3/19.8/22.3",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "TimeR1_W1.6_H1_r0.2",
+      "mean_ms": 16.107137517972333,
+      "P95_ms": 16.40058279153891,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "TimeR2_W1.6_H1_r0.2_g0.5",
+      "radius_m": 0.25,
+      "correct": [
+        4,
+        7,
+        10
+      ],
+      "denominator": 172,
+      "rendered": "2.3/4.1/5.8",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "TimeR2_W1.6_H1_r0.2_g0.5",
+      "radius_m": 0.5,
+      "correct": [
+        24,
+        25,
+        27
+      ],
+      "denominator": 229,
+      "rendered": "10.5/10.9/11.8",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "TimeR2_W1.6_H1_r0.2_g0.5",
+      "radius_m": 1.0,
+      "correct": [
+        48,
+        55,
+        62
+      ],
+      "denominator": 278,
+      "rendered": "17.3/19.8/22.3",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "TimeR2_W1.6_H1_r0.2_g0.5",
+      "mean_ms": 16.090999828043028,
+      "P95_ms": 16.37132680916693,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "Proposed_W1.6_H1_r0.2_e0.01",
+      "radius_m": 0.25,
+      "correct": [
+        4,
+        7,
+        10
+      ],
+      "denominator": 172,
+      "rendered": "2.3/4.1/5.8",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "Proposed_W1.6_H1_r0.2_e0.01",
+      "radius_m": 0.5,
+      "correct": [
+        24,
+        26,
+        27
+      ],
+      "denominator": 229,
+      "rendered": "10.5/11.4/11.8",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "Proposed_W1.6_H1_r0.2_e0.01",
+      "radius_m": 1.0,
+      "correct": [
+        47,
+        55,
+        62
+      ],
+      "denominator": 278,
+      "rendered": "16.9/19.8/22.3",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Pioneer development",
+      "method": "Proposed_W1.6_H1_r0.2_e0.01",
+      "mean_ms": 16.16720195782461,
+      "P95_ms": 16.5556255960837,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "A",
+      "radius_m": 0.25,
+      "correct": [
+        3,
+        12,
+        14
+      ],
+      "denominator": 20,
+      "rendered": "15.0/60.0/70.0",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "A",
+      "radius_m": 0.5,
+      "correct": [
+        29,
+        41,
+        48
+      ],
+      "denominator": 48,
+      "rendered": "60.4/85.4/100.0",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "A",
+      "radius_m": 1.0,
+      "correct": [
+        73,
+        78,
+        83
+      ],
+      "denominator": 89,
+      "rendered": "82.0/87.6/93.3",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "A",
+      "mean_ms": 14.687771919044382,
+      "P95_ms": 15.037415609549498,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "B",
+      "radius_m": 0.25,
+      "correct": [
+        11,
+        18,
+        20
+      ],
+      "denominator": 20,
+      "rendered": "55.0/90.0/100.0",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "B",
+      "radius_m": 0.5,
+      "correct": [
+        31,
+        45,
+        47
+      ],
+      "denominator": 48,
+      "rendered": "64.6/93.8/97.9",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "B",
+      "radius_m": 1.0,
+      "correct": [
+        79,
+        84,
+        87
+      ],
+      "denominator": 89,
+      "rendered": "88.8/94.4/97.8",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "B",
+      "mean_ms": 17.923162995921015,
+      "P95_ms": 18.20501040201634,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "RRF60",
+      "radius_m": 0.25,
+      "correct": [
+        0,
+        15,
+        19
+      ],
+      "denominator": 20,
+      "rendered": "0.0/75.0/95.0",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "RRF60",
+      "radius_m": 0.5,
+      "correct": [
+        31,
+        42,
+        48
+      ],
+      "denominator": 48,
+      "rendered": "64.6/87.5/100.0",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "RRF60",
+      "radius_m": 1.0,
+      "correct": [
+        79,
+        82,
+        86
+      ],
+      "denominator": 89,
+      "rendered": "88.8/92.1/96.6",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "RRF60",
+      "mean_ms": 26.339901401130074,
+      "P95_ms": 26.787450340634678,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "AB_0.75",
+      "radius_m": 0.25,
+      "correct": [
+        1,
+        20,
+        20
+      ],
+      "denominator": 20,
+      "rendered": "5.0/100.0/100.0",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "AB_0.75",
+      "radius_m": 0.5,
+      "correct": [
+        32,
+        45,
+        47
+      ],
+      "denominator": 48,
+      "rendered": "66.7/93.8/97.9",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "AB_0.75",
+      "radius_m": 1.0,
+      "correct": [
+        79,
+        83,
+        86
+      ],
+      "denominator": 89,
+      "rendered": "88.8/93.3/96.6",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "AB_0.75",
+      "mean_ms": 26.32443543064703,
+      "P95_ms": 26.838242750091013,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "L3",
+      "radius_m": 0.25,
+      "correct": [
+        2,
+        11,
+        13
+      ],
+      "denominator": 20,
+      "rendered": "10.0/55.0/65.0",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "L3",
+      "radius_m": 0.5,
+      "correct": [
+        21,
+        23,
+        35
+      ],
+      "denominator": 48,
+      "rendered": "43.8/47.9/72.9",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "L3",
+      "radius_m": 1.0,
+      "correct": [
+        72,
+        78,
+        82
+      ],
+      "denominator": 89,
+      "rendered": "80.9/87.6/92.1",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "L3",
+      "mean_ms": 15.213160934171544,
+      "P95_ms": 15.566441649571061,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "L5",
+      "radius_m": 0.25,
+      "correct": [
+        0,
+        8,
+        11
+      ],
+      "denominator": 20,
+      "rendered": "0.0/40.0/55.0",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "L5",
+      "radius_m": 0.5,
+      "correct": [
+        20,
+        22,
+        24
+      ],
+      "denominator": 48,
+      "rendered": "41.7/45.8/50.0",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "L5",
+      "radius_m": 1.0,
+      "correct": [
+        76,
+        78,
+        82
+      ],
+      "denominator": 89,
+      "rendered": "85.4/87.6/92.1",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "L5",
+      "mean_ms": 15.259592964318314,
+      "P95_ms": 15.629549996810965,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "L9",
+      "radius_m": 0.25,
+      "correct": [
+        0,
+        0,
+        0
+      ],
+      "denominator": 20,
+      "rendered": "0.0/0.0/0.0",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "L9",
+      "radius_m": 0.5,
+      "correct": [
+        13,
+        18,
+        22
+      ],
+      "denominator": 48,
+      "rendered": "27.1/37.5/45.8",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "L9",
+      "radius_m": 1.0,
+      "correct": [
+        78,
+        79,
+        82
+      ],
+      "denominator": 89,
+      "rendered": "87.6/88.8/92.1",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "L9",
+      "mean_ms": 15.514604259661855,
+      "P95_ms": 15.904344848240726,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "old_fixed_L9",
+      "radius_m": 0.25,
+      "correct": [
+        0,
+        0,
+        0
+      ],
+      "denominator": 20,
+      "rendered": "0.0/0.0/0.0",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "old_fixed_L9",
+      "radius_m": 0.5,
+      "correct": [
+        0,
+        3,
+        19
+      ],
+      "denominator": 48,
+      "rendered": "0.0/6.2/39.6",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "old_fixed_L9",
+      "radius_m": 1.0,
+      "correct": [
+        72,
+        80,
+        83
+      ],
+      "denominator": 89,
+      "rendered": "80.9/89.9/93.3",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "old_fixed_L9",
+      "mean_ms": 15.148468535496956,
+      "P95_ms": 15.448273157380754,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "L3_global_0.25",
+      "radius_m": 0.25,
+      "correct": [
+        1,
+        12,
+        15
+      ],
+      "denominator": 20,
+      "rendered": "5.0/60.0/75.0",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "L3_global_0.25",
+      "radius_m": 0.5,
+      "correct": [
+        29,
+        37,
+        45
+      ],
+      "denominator": 48,
+      "rendered": "60.4/77.1/93.8",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "L3_global_0.25",
+      "radius_m": 1.0,
+      "correct": [
+        72,
+        76,
+        81
+      ],
+      "denominator": 89,
+      "rendered": "80.9/85.4/91.0",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "L3_global_0.25",
+      "mean_ms": 15.235139972165122,
+      "P95_ms": 15.598923702782486,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "R1_L3_H3_r4",
+      "radius_m": 0.25,
+      "correct": [
+        3,
+        12,
+        14
+      ],
+      "denominator": 20,
+      "rendered": "15.0/60.0/70.0",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "R1_L3_H3_r4",
+      "radius_m": 0.5,
+      "correct": [
+        29,
+        39,
+        45
+      ],
+      "denominator": 48,
+      "rendered": "60.4/81.2/93.8",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "R1_L3_H3_r4",
+      "radius_m": 1.0,
+      "correct": [
+        73,
+        76,
+        78
+      ],
+      "denominator": 89,
+      "rendered": "82.0/85.4/87.6",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "R1_L3_H3_r4",
+      "mean_ms": 15.785531871202577,
+      "P95_ms": 16.13558519820799,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "R2_L3_H1_r1_g0.5",
+      "radius_m": 0.25,
+      "correct": [
+        2,
+        10,
+        14
+      ],
+      "denominator": 20,
+      "rendered": "10.0/50.0/70.0",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "R2_L3_H1_r1_g0.5",
+      "radius_m": 0.5,
+      "correct": [
+        23,
+        37,
+        47
+      ],
+      "denominator": 48,
+      "rendered": "47.9/77.1/97.9",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "R2_L3_H1_r1_g0.5",
+      "radius_m": 1.0,
+      "correct": [
+        72,
+        77,
+        83
+      ],
+      "denominator": 89,
+      "rendered": "80.9/86.5/93.3",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "R2_L3_H1_r1_g0.5",
+      "mean_ms": 15.735548710273136,
+      "P95_ms": 16.071357645705575,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "Time_W1.6",
+      "radius_m": 0.25,
+      "correct": [
+        0,
+        12,
+        15
+      ],
+      "denominator": 20,
+      "rendered": "0.0/60.0/75.0",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "Time_W1.6",
+      "radius_m": 0.5,
+      "correct": [
+        34,
+        44,
+        48
+      ],
+      "denominator": 48,
+      "rendered": "70.8/91.7/100.0",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "Time_W1.6",
+      "radius_m": 1.0,
+      "correct": [
+        76,
+        77,
+        82
+      ],
+      "denominator": 89,
+      "rendered": "85.4/86.5/92.1",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "Time_W1.6",
+      "mean_ms": 15.355343105266146,
+      "P95_ms": 15.785640657850308,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "TimeR1_W1.6_H1_r0.2",
+      "radius_m": 0.25,
+      "correct": [
+        0,
+        12,
+        14
+      ],
+      "denominator": 20,
+      "rendered": "0.0/60.0/70.0",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "TimeR1_W1.6_H1_r0.2",
+      "radius_m": 0.5,
+      "correct": [
+        33,
+        41,
+        47
+      ],
+      "denominator": 48,
+      "rendered": "68.8/85.4/97.9",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "TimeR1_W1.6_H1_r0.2",
+      "radius_m": 1.0,
+      "correct": [
+        75,
+        79,
+        84
+      ],
+      "denominator": 89,
+      "rendered": "84.3/88.8/94.4",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "TimeR1_W1.6_H1_r0.2",
+      "mean_ms": 15.835131350964758,
+      "P95_ms": 16.26355644548312,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "TimeR2_W1.6_H1_r0.2_g0.5",
+      "radius_m": 0.25,
+      "correct": [
+        0,
+        12,
+        14
+      ],
+      "denominator": 20,
+      "rendered": "0.0/60.0/70.0",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "TimeR2_W1.6_H1_r0.2_g0.5",
+      "radius_m": 0.5,
+      "correct": [
+        34,
+        41,
+        47
+      ],
+      "denominator": 48,
+      "rendered": "70.8/85.4/97.9",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "TimeR2_W1.6_H1_r0.2_g0.5",
+      "radius_m": 1.0,
+      "correct": [
+        75,
+        79,
+        84
+      ],
+      "denominator": 89,
+      "rendered": "84.3/88.8/94.4",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "TimeR2_W1.6_H1_r0.2_g0.5",
+      "mean_ms": 15.834345302960534,
+      "P95_ms": 16.260792203684105,
+      "source": "REAL_TIMING_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "Proposed_W1.6_H1_r0.2_e0.01",
+      "radius_m": 0.25,
+      "correct": [
+        0,
+        12,
+        14
+      ],
+      "denominator": 20,
+      "rendered": "0.0/60.0/70.0",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "Proposed_W1.6_H1_r0.2_e0.01",
+      "radius_m": 0.5,
+      "correct": [
+        34,
+        41,
+        47
+      ],
+      "denominator": 48,
+      "rendered": "70.8/85.4/97.9",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "Proposed_W1.6_H1_r0.2_e0.01",
+      "radius_m": 1.0,
+      "correct": [
+        75,
+        79,
+        84
+      ],
+      "denominator": 89,
+      "rendered": "84.3/88.8/94.4",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "version": "v4_r02",
+      "table": "Frozen independent Long Office",
+      "method": "Proposed_W1.6_H1_r0.2_e0.01",
+      "mean_ms": 15.904437742175928,
+      "P95_ms": 16.309893299330724,
+      "source": "REAL_TIMING_RESULTS.json"
+    }
+  ],
+  "sources": {
+    "docs/research_v4/BASELINE_RESULTS.json": "0dce2e11826be38b20d0f4e1ecf1d3cbb482e85d140f91f7d184e92154d3aeac",
+    "configs/v4/selected_methods.json": "f07905c173f02137e58ecf149c3a34b2adc737130784c8ea5795cb23d8e3385a",
+    "docs/research_v4/INDEPENDENT_RESULTS.json": "303e0ff53c69bba62fd9d9cdebe35929b49ef448f8edb2afbde93e3c62fd01d7",
+    "docs/research_v4/REAL_TIMING_RESULTS.json": "0fdaaaed917c7aaaf6ecbb33eabab9754361db70061832267b418da7f3f1d929"
+  },
+  "manuscript_sha256": "9f8784b2b6e85e0d040bf1edb5008bd2740de288fb536a10679c1cd76612fabc",
+  "version": "v4_r02",
+  "final_timing_included": true
+}

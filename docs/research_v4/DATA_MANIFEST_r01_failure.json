@@ -1,0 +1,67 @@
+{
+  "status": "official_archives_unavailable",
+  "acquisition_passed": false,
+  "original_proxy": "existing FlClash HTTP/Mixed 127.0.0.1:7890; credentials absent; configuration unchanged",
+  "initial_attempt": [
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "role": "development",
+      "url": "https://cvg.cit.tum.de/rgbd/dataset/freiburg2/rgbd_dataset_freiburg2_pioneer_slam.tgz",
+      "curl_exit_code": 35,
+      "bytes": 0,
+      "archive_sha256": null
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "role": "independent",
+      "url": "https://cvg.cit.tum.de/rgbd/dataset/freiburg3/rgbd_dataset_freiburg3_long_office_household.tgz",
+      "curl_exit_code": 35,
+      "bytes": 0,
+      "archive_sha256": null
+    }
+  ],
+  "bounded_fallback": [
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "role": "development",
+      "curl_exit_code": 28,
+      "bytes": 0,
+      "archive_sha256": null
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "role": "independent",
+      "curl_exit_code": 28,
+      "bytes": 0,
+      "archive_sha256": null
+    }
+  ],
+  "sequences": [
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "role": "development",
+      "archive_local_bytes": 0,
+      "archive_sha256": null,
+      "tar_integrity": null,
+      "path_safety": null,
+      "rgb_count": null,
+      "gt_count": null,
+      "valid_gt_match_count": null,
+      "time_span_seconds": null
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "role": "independent",
+      "archive_local_bytes": 0,
+      "archive_sha256": null,
+      "tar_integrity": null,
+      "path_safety": null,
+      "rgb_count": null,
+      "gt_count": null,
+      "valid_gt_match_count": null,
+      "time_span_seconds": null
+    }
+  ],
+  "retrieval_evaluated": false,
+  "independent_test_opened": false
+}
