@@ -1,0 +1,2378 @@
+{
+  "freeze_id": "v4_20261011T033425Z",
+  "created_utc": "2026-10-11T03:34:25.152002+00:00",
+  "git_sha": "cdea21d880236097d9e09265a067b771bb2392b1",
+  "test_retrieval_not_opened": true,
+  "file_sha256": {
+    "configs/model_sources.json": "009208e30241baeb229220d7d1f04c81be4238f808ac912e9151d45f4330ca31",
+    "configs/v4/frozen_evaluation.yaml": "3796bc587210b2fe99beb4dca7fa73ec6bc2a28a85450133c7fdf302fec07dc9",
+    "configs/v4/protocol_accepted.yaml": "27e6d3c4f4e0c5cddca65eb1ec587b79e46f4ea8a04843801cb07d94ed099d1a",
+    "configs/v4/protocol_draft.yaml": "2ed0a3d2c97b6133af3c5fc229dd5a9c06edd73858fb5f2fd864d9a1f89960d5",
+    "configs/v4/search_grid.yaml": "91365332a401c4bff63d21d9e1ae193b186852359347c06ed5bf006542787327",
+    "configs/v4/selected_methods.json": "f07905c173f02137e58ecf149c3a34b2adc737130784c8ea5795cb23d8e3385a",
+    "data/manifests/v4/freiburg2_pioneer_slam_1Hz_protocol.json": "ec5d51a3851fecc8c62ef9a546b5bd4c93870d2fc2a95152507b7fefbb4aaeec",
+    "data/manifests/v4/freiburg2_pioneer_slam_3Hz_protocol.json": "095f6c58f2ce0199db26a7ccbe42e8dbc6c60a5d789bdc625e08dc296a4206c1",
+    "data/manifests/v4/freiburg2_pioneer_slam_5Hz_protocol.json": "1f61a4a225b7d1ab083dadd8985fa5d557bddc544595498a97a2c188038cf652",
+    "data/manifests/v4/freiburg2_pioneer_slam_all_rgb.json": "d31cf867e08e52c6a05168025605ff58a836cf5afe24eb540dbf3c2df2bf1822",
+    "data/manifests/v4/freiburg3_long_office_household_5Hz_protocol.json": "2a4849486bf84d40169d6d5895200bff5c66bfaebdd5ede8e509dcf42a8d99af",
+    "data/manifests/v4/freiburg3_long_office_household_all_rgb.json": "b5b21892fa5d2d13398df7e9c8e41ab695517d8797330ead54d4ddf1a61121f9",
+    "experiments/endpoint_vpr/core.py": "e8b929388e88a010964d1e63f6ea0cf34820e4a596d4219d322c9646a3a200a7",
+    "experiments/temporal_alignment_v4/algorithms.py": "aff449dd59e18ce94c4ad05016818dedcbb68f254bd558c4d600a05c05709e46",
+    "experiments/temporal_alignment_v4/audit_data.py": "ff94a855aa26037929a106e400de5e89030f6201fd9fbbf338831fd4d7f14cd4",
+    "experiments/temporal_alignment_v4/bootstrap.py": "a04401e63d31d1afdfde8b8f8a5df79c3e0e4d4f4a7fea65390c8ec3713f9de7",
+    "experiments/temporal_alignment_v4/close_g0.py": "e46fff6a914804445292f288ac7f13dbac2b3b38cbf9cd702eccabfe630f59b4",
+    "experiments/temporal_alignment_v4/download.py": "0ee361ad269fbdf6b8d843517ec82d3e961b6d0067b3269ba2b52a7ee4e06700",
+    "experiments/temporal_alignment_v4/driver.py": "297fdf716dddd1cbfea75713664bd5ee261173daa3cec7dac1cf8414df83df1f",
+    "experiments/temporal_alignment_v4/evaluation.py": "5601d13ca0c3103ee8af5dd1fa64a2bcec11e3d97eecff7f424966dfbdfc4d60",
+    "experiments/temporal_alignment_v4/fallback_download.py": "70003163cf730d6184a5a3dc39cac69eec52ddc1c1a1cdb9db71f3446949dedf",
+    "experiments/temporal_alignment_v4/features.py": "b89ba65ddec9988e9625cbd92225941d3fb0585099ebbf1c05ebcbe9c6169fa3",
+    "experiments/temporal_alignment_v4/predeclare.py": "5a44d037c6d55ae8e6f64916f9ef4470eebdbd2e6f6ffb83aa34e4dde898efc9",
+    "experiments/temporal_alignment_v4/protocol.py": "78759d57ad363d227419393545c86480a3e713a0544b465ad0ded229e3d6fc30",
+    "experiments/temporal_alignment_v4/run_g0_g1.py": "72eedb4df13ac3f0d40a723b88b8b2b0a995298d7e8d465b2c0828bba10cf918",
+    "experiments/temporal_alignment_v4/run_g2.py": "a871728036c57412f6374b91eb1c516438e580b6ddd082e4ce1aa0473b62771d",
+    "experiments/temporal_alignment_v4/run_g3.py": "48aed080cd6ccc6ac0c9b923bc7bef27a3174d21ea38b4221eb26a25a1b40750",
+    "experiments/temporal_alignment_v4/run_g4_freeze.py": "a8d92813fe1a3486dcbbd3bdcac5f497fd226470382764d2bf8915a397248121",
+    "experiments/temporal_alignment_v4/run_g4_test.py": "318e8dac0d0ecd7b30f03c856d8d6c79aed2386f8d71acea719ea4405667d98d",
+    "experiments/temporal_alignment_v4/run_g5.py": "b8f24ed47e77453a0f7571034dbde7222ffc20724172872dca7683755df93abb",
+    "experiments/temporal_alignment_v4/runtime.py": "89b5cafc7c7656a8ea7832548402507453b05dd4a8463bc9641e883e26461ff9",
+    "experiments/temporal_alignment_v4/tests/test_v4_archive_security.py": "b5d4e955db65e738e9e0863e3032de7a4e1e81363512de811d404a929d8b22a1",
+    "experiments/temporal_alignment_v4/tests/test_v4_timestamp.py": "84d96754418a5f83ea7bd9e191799d3869372bcf0710780af15b4dfc65b02509",
+    "outputs_v4/g2_baselines_20261011T032755Z_2db3b2a4/model_identity.json": "d3a2482babd23cc532c609f66d0ab85b48be55c9e9b84d96114472049b1900b8",
+    "src/vpr_research/encoders/frozen.py": "09812cf25f08235ae10575c8a6ba00317e0a12c7abf063b3ba041fc0a96cca3c"
+  },
+  "raw_archives": {
+    "data/raw/v4/tum_rgbd/archives/rgbd_dataset_freiburg2_pioneer_slam.tgz": "f05a702c9aa0379de7d14067adeade21af1f23939de7cf7e5affa6a9fb896bf6",
+    "data/raw/v4/tum_rgbd/archives/rgbd_dataset_freiburg3_long_office_household.tgz": "c7cd8e1afb87c80e5744a356214819b110fa09b4744fa4ba0cc2382f9ba59e9c"
+  },
+  "protocol": {
+    "status": "accepted_metadata_protocol_before_retrieval",
+    "development": "freiburg2_pioneer_slam",
+    "independent_test": "freiburg3_long_office_household",
+    "sampling_hz": 5,
+    "development_sampling_conditions_hz": [
+      1,
+      3,
+      5
+    ],
+    "sampling_rule": "earliest RGB in each epoch-relative floor((timestamp-first_rgb)*Hz) bin; do not remove source images",
+    "gt_association": "nearest pose, earlier pose tie break; offline evaluation only; no pose interpolation; many RGB may share one pose",
+    "max_association_seconds": 0.03,
+    "gallery_rule": "sampled valid-GT frames strictly before midpoint of full raw RGB time span",
+    "query_rule": "sampled frames at least 10 seconds after the raw time midpoint; retain all invalid GT and no-positive records",
+    "reference_query_min_gap_seconds": 10,
+    "radius_m": 0.5,
+    "sensitivity_radii_m": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "positive_rule": "Euclidean distance between nearest-associated optical camera centers <= radius; no orientation filter",
+    "min_development_closed_queries_at_0_5m": 100,
+    "allowed_protocol_adjustments_development_only": 1,
+    "online_allowed_inputs": [
+      "RGB",
+      "monotonic RGB timestamp",
+      "gallery RGB timestamps and indices",
+      "current and past image scores"
+    ],
+    "online_forbidden_inputs": [
+      "groundtruth",
+      "positions",
+      "orientations",
+      "physical speeds",
+      "future query images or scores"
+    ],
+    "common_evaluation_rule": "same query rows for all methods; startup remains in denominator with declared single-frame fallback; invalid GT counted separately",
+    "open_set_reporting": "radius-specific no-positive counts, total coverage, per-method rejection count; default no rejection and explicitly no calibrated open-set detector",
+    "input_hw": [
+      224,
+      224
+    ],
+    "visual_models": [
+      "cosplace",
+      "eigenplaces"
+    ],
+    "weights": "reuse existing frozen adapters/checkpoints with exact fingerprints",
+    "timing": {
+      "batch_size": 1,
+      "warmup": 20,
+      "full_passes": 3,
+      "cuda_sync": true
+    },
+    "protocol_adjustments": 0,
+    "gt_duplicate_policy": "use first original pose row for an exact duplicate timestamp; retain all original rows/evidence",
+    "development_gate": [
+      {
+        "radius_m": 0.25,
+        "total_queries": 339,
+        "valid_gt_queries": 338,
+        "invalid_gt_queries": 1,
+        "closed_queries": 172,
+        "open_queries": 166,
+        "closed_coverage": 0.5088757396449705,
+        "nearest_gallery_distance_median": 0.24247552030668099,
+        "nearest_gallery_distance_P90": 1.3924895902677132
+      },
+      {
+        "radius_m": 0.5,
+        "total_queries": 339,
+        "valid_gt_queries": 338,
+        "invalid_gt_queries": 1,
+        "closed_queries": 229,
+        "open_queries": 109,
+        "closed_coverage": 0.6775147928994083,
+        "nearest_gallery_distance_median": 0.24247552030668099,
+        "nearest_gallery_distance_P90": 1.3924895902677132
+      },
+      {
+        "radius_m": 1.0,
+        "total_queries": 339,
+        "valid_gt_queries": 338,
+        "invalid_gt_queries": 1,
+        "closed_queries": 278,
+        "open_queries": 60,
+        "closed_coverage": 0.8224852071005917,
+        "nearest_gallery_distance_median": 0.24247552030668099,
+        "nearest_gallery_distance_P90": 1.3924895902677132
+      }
+    ],
+    "gt_unit": "metres: optical camera center in TUM mocap world",
+    "rejection_policy": "no rejection; 100% valid query attempted; no open-set detection claim",
+    "invalid_query_history_policy": "all sampled queries processed including invalid-GT; metrics mask only invalid GT, not difficult/open queries"
+  },
+  "evaluation": {
+    "all_test_methods": [
+      {
+        "name": "A",
+        "kind": "single",
+        "encoder": "cosplace"
+      },
+      {
+        "name": "B",
+        "kind": "single",
+        "encoder": "eigenplaces"
+      },
+      {
+        "name": "RRF60",
+        "kind": "rrf"
+      },
+      {
+        "name": "AB_0.25",
+        "kind": "AB",
+        "weight": 0.25
+      },
+      {
+        "name": "AB_0.5",
+        "kind": "AB",
+        "weight": 0.5
+      },
+      {
+        "name": "AB_0.75",
+        "kind": "AB",
+        "weight": 0.75
+      },
+      {
+        "name": "L3",
+        "kind": "index",
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "L3_global_0.25",
+        "kind": "index_global",
+        "weight": 0.25,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "L3_global_0.5",
+        "kind": "index_global",
+        "weight": 0.5,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "L3_global_0.75",
+        "kind": "index_global",
+        "weight": 0.75,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R1_L3_H1_r1",
+        "kind": "index_R1",
+        "H": 1,
+        "r": 1,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L3_H1_r1_g0.5",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 1,
+        "gamma": 0.5,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L3_H1_r1_g1.0",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 1,
+        "gamma": 1.0,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R1_L3_H1_r2",
+        "kind": "index_R1",
+        "H": 1,
+        "r": 2,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L3_H1_r2_g0.5",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 2,
+        "gamma": 0.5,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L3_H1_r2_g1.0",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 2,
+        "gamma": 1.0,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R1_L3_H1_r4",
+        "kind": "index_R1",
+        "H": 1,
+        "r": 4,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L3_H1_r4_g0.5",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 4,
+        "gamma": 0.5,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L3_H1_r4_g1.0",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 4,
+        "gamma": 1.0,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R1_L3_H3_r1",
+        "kind": "index_R1",
+        "H": 3,
+        "r": 1,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L3_H3_r1_g0.5",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 1,
+        "gamma": 0.5,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L3_H3_r1_g1.0",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 1,
+        "gamma": 1.0,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R1_L3_H3_r2",
+        "kind": "index_R1",
+        "H": 3,
+        "r": 2,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L3_H3_r2_g0.5",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 2,
+        "gamma": 0.5,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L3_H3_r2_g1.0",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 2,
+        "gamma": 1.0,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R1_L3_H3_r4",
+        "kind": "index_R1",
+        "H": 3,
+        "r": 4,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L3_H3_r4_g0.5",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 4,
+        "gamma": 0.5,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L3_H3_r4_g1.0",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 4,
+        "gamma": 1.0,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "L5",
+        "kind": "index",
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "L5_global_0.25",
+        "kind": "index_global",
+        "weight": 0.25,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "L5_global_0.5",
+        "kind": "index_global",
+        "weight": 0.5,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "L5_global_0.75",
+        "kind": "index_global",
+        "weight": 0.75,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R1_L5_H1_r1",
+        "kind": "index_R1",
+        "H": 1,
+        "r": 1,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L5_H1_r1_g0.5",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 1,
+        "gamma": 0.5,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L5_H1_r1_g1.0",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 1,
+        "gamma": 1.0,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R1_L5_H1_r2",
+        "kind": "index_R1",
+        "H": 1,
+        "r": 2,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L5_H1_r2_g0.5",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 2,
+        "gamma": 0.5,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L5_H1_r2_g1.0",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 2,
+        "gamma": 1.0,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R1_L5_H1_r4",
+        "kind": "index_R1",
+        "H": 1,
+        "r": 4,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L5_H1_r4_g0.5",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 4,
+        "gamma": 0.5,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L5_H1_r4_g1.0",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 4,
+        "gamma": 1.0,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R1_L5_H3_r1",
+        "kind": "index_R1",
+        "H": 3,
+        "r": 1,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L5_H3_r1_g0.5",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 1,
+        "gamma": 0.5,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L5_H3_r1_g1.0",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 1,
+        "gamma": 1.0,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R1_L5_H3_r2",
+        "kind": "index_R1",
+        "H": 3,
+        "r": 2,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L5_H3_r2_g0.5",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 2,
+        "gamma": 0.5,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L5_H3_r2_g1.0",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 2,
+        "gamma": 1.0,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R1_L5_H3_r4",
+        "kind": "index_R1",
+        "H": 3,
+        "r": 4,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L5_H3_r4_g0.5",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 4,
+        "gamma": 0.5,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L5_H3_r4_g1.0",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 4,
+        "gamma": 1.0,
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "L9",
+        "kind": "index",
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "L9_global_0.25",
+        "kind": "index_global",
+        "weight": 0.25,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "L9_global_0.5",
+        "kind": "index_global",
+        "weight": 0.5,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "L9_global_0.75",
+        "kind": "index_global",
+        "weight": 0.75,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R1_L9_H1_r1",
+        "kind": "index_R1",
+        "H": 1,
+        "r": 1,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L9_H1_r1_g0.5",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 1,
+        "gamma": 0.5,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L9_H1_r1_g1.0",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 1,
+        "gamma": 1.0,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R1_L9_H1_r2",
+        "kind": "index_R1",
+        "H": 1,
+        "r": 2,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L9_H1_r2_g0.5",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 2,
+        "gamma": 0.5,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L9_H1_r2_g1.0",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 2,
+        "gamma": 1.0,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R1_L9_H1_r4",
+        "kind": "index_R1",
+        "H": 1,
+        "r": 4,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L9_H1_r4_g0.5",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 4,
+        "gamma": 0.5,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L9_H1_r4_g1.0",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 4,
+        "gamma": 1.0,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R1_L9_H3_r1",
+        "kind": "index_R1",
+        "H": 3,
+        "r": 1,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L9_H3_r1_g0.5",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 1,
+        "gamma": 0.5,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L9_H3_r1_g1.0",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 1,
+        "gamma": 1.0,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R1_L9_H3_r2",
+        "kind": "index_R1",
+        "H": 3,
+        "r": 2,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L9_H3_r2_g0.5",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 2,
+        "gamma": 0.5,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L9_H3_r2_g1.0",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 2,
+        "gamma": 1.0,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R1_L9_H3_r4",
+        "kind": "index_R1",
+        "H": 3,
+        "r": 4,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L9_H3_r4_g0.5",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 4,
+        "gamma": 0.5,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L9_H3_r4_g1.0",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 4,
+        "gamma": 1.0,
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "old_fixed_L9",
+        "kind": "index",
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "old_fixed_L9_global_0.25",
+        "kind": "index_global",
+        "weight": 0.25,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "old_fixed_L9_global_0.5",
+        "kind": "index_global",
+        "weight": 0.5,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "old_fixed_L9_global_0.75",
+        "kind": "index_global",
+        "weight": 0.75,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "R1_old_fixed_L9_H1_r1",
+        "kind": "index_R1",
+        "H": 1,
+        "r": 1,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "R2_old_fixed_L9_H1_r1_g0.5",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 1,
+        "gamma": 0.5,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "R2_old_fixed_L9_H1_r1_g1.0",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 1,
+        "gamma": 1.0,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "R1_old_fixed_L9_H1_r2",
+        "kind": "index_R1",
+        "H": 1,
+        "r": 2,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "R2_old_fixed_L9_H1_r2_g0.5",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 2,
+        "gamma": 0.5,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "R2_old_fixed_L9_H1_r2_g1.0",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 2,
+        "gamma": 1.0,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "R1_old_fixed_L9_H1_r4",
+        "kind": "index_R1",
+        "H": 1,
+        "r": 4,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "R2_old_fixed_L9_H1_r4_g0.5",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 4,
+        "gamma": 0.5,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "R2_old_fixed_L9_H1_r4_g1.0",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 4,
+        "gamma": 1.0,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "R1_old_fixed_L9_H3_r1",
+        "kind": "index_R1",
+        "H": 3,
+        "r": 1,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "R2_old_fixed_L9_H3_r1_g0.5",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 1,
+        "gamma": 0.5,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "R2_old_fixed_L9_H3_r1_g1.0",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 1,
+        "gamma": 1.0,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "R1_old_fixed_L9_H3_r2",
+        "kind": "index_R1",
+        "H": 3,
+        "r": 2,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "R2_old_fixed_L9_H3_r2_g0.5",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 2,
+        "gamma": 0.5,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "R2_old_fixed_L9_H3_r2_g1.0",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 2,
+        "gamma": 1.0,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "R1_old_fixed_L9_H3_r4",
+        "kind": "index_R1",
+        "H": 3,
+        "r": 4,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "R2_old_fixed_L9_H3_r4_g0.5",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 4,
+        "gamma": 0.5,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "R2_old_fixed_L9_H3_r4_g1.0",
+        "kind": "index_R2",
+        "H": 3,
+        "r": 4,
+        "gamma": 1.0,
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "Time_W0.4",
+        "kind": "time",
+        "W": 0.4,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeGlobal_W0.4_g0.5",
+        "kind": "time_global",
+        "weight": 0.5,
+        "W": 0.4,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeGlobal_W0.4_g1.0",
+        "kind": "time_global",
+        "weight": 1.0,
+        "W": 0.4,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR1_W0.4_H1_r0.2",
+        "kind": "time_R1",
+        "H": 1,
+        "r_seconds": 0.2,
+        "W": 0.4,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W0.4_H1_r0.2_g0.5",
+        "kind": "time_R2",
+        "H": 1,
+        "r_seconds": 0.2,
+        "gamma": 0.5,
+        "W": 0.4,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W0.4_H1_r0.2_g1.0",
+        "kind": "time_R2",
+        "H": 1,
+        "r_seconds": 0.2,
+        "gamma": 1.0,
+        "W": 0.4,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR1_W0.4_H1_r0.4",
+        "kind": "time_R1",
+        "H": 1,
+        "r_seconds": 0.4,
+        "W": 0.4,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W0.4_H1_r0.4_g0.5",
+        "kind": "time_R2",
+        "H": 1,
+        "r_seconds": 0.4,
+        "gamma": 0.5,
+        "W": 0.4,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W0.4_H1_r0.4_g1.0",
+        "kind": "time_R2",
+        "H": 1,
+        "r_seconds": 0.4,
+        "gamma": 1.0,
+        "W": 0.4,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR1_W0.4_H3_r0.2",
+        "kind": "time_R1",
+        "H": 3,
+        "r_seconds": 0.2,
+        "W": 0.4,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W0.4_H3_r0.2_g0.5",
+        "kind": "time_R2",
+        "H": 3,
+        "r_seconds": 0.2,
+        "gamma": 0.5,
+        "W": 0.4,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W0.4_H3_r0.2_g1.0",
+        "kind": "time_R2",
+        "H": 3,
+        "r_seconds": 0.2,
+        "gamma": 1.0,
+        "W": 0.4,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR1_W0.4_H3_r0.4",
+        "kind": "time_R1",
+        "H": 3,
+        "r_seconds": 0.4,
+        "W": 0.4,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W0.4_H3_r0.4_g0.5",
+        "kind": "time_R2",
+        "H": 3,
+        "r_seconds": 0.4,
+        "gamma": 0.5,
+        "W": 0.4,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W0.4_H3_r0.4_g1.0",
+        "kind": "time_R2",
+        "H": 3,
+        "r_seconds": 0.4,
+        "gamma": 1.0,
+        "W": 0.4,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "Time_W0.8",
+        "kind": "time",
+        "W": 0.8,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeGlobal_W0.8_g0.5",
+        "kind": "time_global",
+        "weight": 0.5,
+        "W": 0.8,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeGlobal_W0.8_g1.0",
+        "kind": "time_global",
+        "weight": 1.0,
+        "W": 0.8,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR1_W0.8_H1_r0.2",
+        "kind": "time_R1",
+        "H": 1,
+        "r_seconds": 0.2,
+        "W": 0.8,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W0.8_H1_r0.2_g0.5",
+        "kind": "time_R2",
+        "H": 1,
+        "r_seconds": 0.2,
+        "gamma": 0.5,
+        "W": 0.8,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W0.8_H1_r0.2_g1.0",
+        "kind": "time_R2",
+        "H": 1,
+        "r_seconds": 0.2,
+        "gamma": 1.0,
+        "W": 0.8,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR1_W0.8_H1_r0.4",
+        "kind": "time_R1",
+        "H": 1,
+        "r_seconds": 0.4,
+        "W": 0.8,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W0.8_H1_r0.4_g0.5",
+        "kind": "time_R2",
+        "H": 1,
+        "r_seconds": 0.4,
+        "gamma": 0.5,
+        "W": 0.8,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W0.8_H1_r0.4_g1.0",
+        "kind": "time_R2",
+        "H": 1,
+        "r_seconds": 0.4,
+        "gamma": 1.0,
+        "W": 0.8,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR1_W0.8_H3_r0.2",
+        "kind": "time_R1",
+        "H": 3,
+        "r_seconds": 0.2,
+        "W": 0.8,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W0.8_H3_r0.2_g0.5",
+        "kind": "time_R2",
+        "H": 3,
+        "r_seconds": 0.2,
+        "gamma": 0.5,
+        "W": 0.8,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W0.8_H3_r0.2_g1.0",
+        "kind": "time_R2",
+        "H": 3,
+        "r_seconds": 0.2,
+        "gamma": 1.0,
+        "W": 0.8,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR1_W0.8_H3_r0.4",
+        "kind": "time_R1",
+        "H": 3,
+        "r_seconds": 0.4,
+        "W": 0.8,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W0.8_H3_r0.4_g0.5",
+        "kind": "time_R2",
+        "H": 3,
+        "r_seconds": 0.4,
+        "gamma": 0.5,
+        "W": 0.8,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W0.8_H3_r0.4_g1.0",
+        "kind": "time_R2",
+        "H": 3,
+        "r_seconds": 0.4,
+        "gamma": 1.0,
+        "W": 0.8,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "Time_W1.6",
+        "kind": "time",
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeGlobal_W1.6_g0.5",
+        "kind": "time_global",
+        "weight": 0.5,
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeGlobal_W1.6_g1.0",
+        "kind": "time_global",
+        "weight": 1.0,
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR1_W1.6_H1_r0.2",
+        "kind": "time_R1",
+        "H": 1,
+        "r_seconds": 0.2,
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W1.6_H1_r0.2_g0.5",
+        "kind": "time_R2",
+        "H": 1,
+        "r_seconds": 0.2,
+        "gamma": 0.5,
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W1.6_H1_r0.2_g1.0",
+        "kind": "time_R2",
+        "H": 1,
+        "r_seconds": 0.2,
+        "gamma": 1.0,
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR1_W1.6_H1_r0.4",
+        "kind": "time_R1",
+        "H": 1,
+        "r_seconds": 0.4,
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W1.6_H1_r0.4_g0.5",
+        "kind": "time_R2",
+        "H": 1,
+        "r_seconds": 0.4,
+        "gamma": 0.5,
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W1.6_H1_r0.4_g1.0",
+        "kind": "time_R2",
+        "H": 1,
+        "r_seconds": 0.4,
+        "gamma": 1.0,
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR1_W1.6_H3_r0.2",
+        "kind": "time_R1",
+        "H": 3,
+        "r_seconds": 0.2,
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W1.6_H3_r0.2_g0.5",
+        "kind": "time_R2",
+        "H": 3,
+        "r_seconds": 0.2,
+        "gamma": 0.5,
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W1.6_H3_r0.2_g1.0",
+        "kind": "time_R2",
+        "H": 3,
+        "r_seconds": 0.2,
+        "gamma": 1.0,
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR1_W1.6_H3_r0.4",
+        "kind": "time_R1",
+        "H": 3,
+        "r_seconds": 0.4,
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W1.6_H3_r0.4_g0.5",
+        "kind": "time_R2",
+        "H": 3,
+        "r_seconds": 0.4,
+        "gamma": 0.5,
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W1.6_H3_r0.4_g1.0",
+        "kind": "time_R2",
+        "H": 3,
+        "r_seconds": 0.4,
+        "gamma": 1.0,
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "Proposed_W1.6_H1_r0.2_e0.01",
+        "kind": "time_P",
+        "H": 1,
+        "r_seconds": 0.2,
+        "epsilon": 0.01,
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      }
+    ],
+    "timing_methods": [
+      {
+        "name": "A",
+        "kind": "single",
+        "encoder": "cosplace"
+      },
+      {
+        "name": "B",
+        "kind": "single",
+        "encoder": "eigenplaces"
+      },
+      {
+        "name": "RRF60",
+        "kind": "rrf"
+      },
+      {
+        "name": "L3",
+        "kind": "index",
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "L5",
+        "kind": "index",
+        "L": 5,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "L9",
+        "kind": "index",
+        "L": 9,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "old_fixed_L9",
+        "kind": "index",
+        "L": 9,
+        "velocities": [
+          1.2
+        ]
+      },
+      {
+        "name": "AB_0.75",
+        "kind": "AB",
+        "weight": 0.75
+      },
+      {
+        "name": "Proposed_W1.6_H1_r0.2_e0.01",
+        "kind": "time_P",
+        "H": 1,
+        "r_seconds": 0.2,
+        "epsilon": 0.01,
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "L3_global_0.25",
+        "kind": "index_global",
+        "weight": 0.25,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R1_L3_H3_r4",
+        "kind": "index_R1",
+        "H": 3,
+        "r": 4,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "R2_L3_H1_r1_g0.5",
+        "kind": "index_R2",
+        "H": 1,
+        "r": 1,
+        "gamma": 0.5,
+        "L": 3,
+        "velocities": [
+          0.8,
+          1.0,
+          1.2
+        ]
+      },
+      {
+        "name": "Time_W1.6",
+        "kind": "time",
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeGlobal_W1.6_g1.0",
+        "kind": "time_global",
+        "weight": 1.0,
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR1_W1.6_H1_r0.2",
+        "kind": "time_R1",
+        "H": 1,
+        "r_seconds": 0.2,
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W1.6_H1_r0.2_g0.5",
+        "kind": "time_R2",
+        "H": 1,
+        "r_seconds": 0.2,
+        "gamma": 0.5,
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      },
+      {
+        "name": "TimeR2_W1.6_H1_r0.2_g1.0",
+        "kind": "time_R2",
+        "H": 1,
+        "r_seconds": 0.2,
+        "gamma": 1.0,
+        "W": 1.6,
+        "velocities": [
+          -1.2,
+          -1.0,
+          -0.8,
+          0.0,
+          0.8,
+          1.0,
+          1.2
+        ],
+        "lag_points": 5
+      }
+    ],
+    "test_hz": 5,
+    "all_radii": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "seed": 0,
+    "rejection_policy": "none",
+    "timing": {
+      "batch_size": 1,
+      "warmup": 20,
+      "passes": 3,
+      "decode": true,
+      "CPU_transfer": true,
+      "full_gallery_cosine": true,
+      "history": true,
+      "alignment": true,
+      "refinement": true,
+      "full_ranking": true,
+      "cuda_synchronization": true
+    },
+    "timing_selection": "all mandatory families plus developer-selected strongest and matched-pool controls; no test-derived method selection",
+    "selection_sha256": "f07905c173f02137e58ecf149c3a34b2adc737130784c8ea5795cb23d8e3385a",
+    "protocol_sha256": "27e6d3c4f4e0c5cddca65eb1ec587b79e46f4ea8a04843801cb07d94ed099d1a",
+    "development_feature_run": "g2_baselines_20261011T032755Z_2db3b2a4",
+    "primary_accuracy_encoding_batch": 16,
+    "online_timing_encoding_batch": 1,
+    "online_accuracy_audit": "report all cached/batch-one differences, no claim of equality unless measured"
+  },
+  "model_identity": {
+    "cosplace": {
+      "method": "cosplace",
+      "backbone": "ResNet18",
+      "dimension": 512,
+      "pooling": "L2 -> GeM -> Flatten -> Linear -> L2",
+      "dtype": "float32",
+      "source": {
+        "repository": "https://github.com/gmberton/CosPlace",
+        "local_directory": "third_party/CosPlace",
+        "commit": "52b56e95ea62245281281f3bafd7b9390d19a0fd",
+        "checkpoint": "weights/p0_torch/hub/checkpoints/ResNet18_512_cosplace.pth",
+        "checkpoint_sha256": "db09310a175e325fe25e7a460b41886ab9357b19c41d370a9ed3ed81bc9abf9f",
+        "checkpoint_url": "https://github.com/gmberton/CosPlace/releases/download/v1.0/ResNet18_512_cosplace.pth"
+      },
+      "source_python_sha256": {
+        "augmentations.py": "f7fc71bf7f48a149faf8a81b77255d25e2fe7b587184b411759d877e7ccea28e",
+        "commons.py": "68ed1c810869e6a1aeea6d993aad68c01e978e917ffeb297dc63993c0c5e7bbd",
+        "cosface_loss.py": "96c7beb349a7bc84321068a476dc53f1fc0d13938c4ce54c24e63a449832cca3",
+        "cosplace_model/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "cosplace_model/cosplace_network.py": "53c5c5e0d01bb705d2a94b7e029ea0cf819186bb1070f396abfb0522e782e523",
+        "cosplace_model/layers.py": "f11faa403f384a7e68c7abe24cdd2460727c9c89eceb00d2dfe107c312fe9005",
+        "datasets/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "datasets/dataset_utils.py": "347cd5f630c06f4510dafe8ab16ee89158345e55d9c22e59e807aa182e4765d1",
+        "datasets/test_dataset.py": "a9e64923e4eb931e50702662a56c57a078c9c48064977bc02735cb1321a3ed62",
+        "datasets/train_dataset.py": "ca91e25b2db9606dd823c8bccf94722b798f9cc6b721d47de80e6e3e5da2d72e",
+        "eval.py": "e643e52a8ba5cfcb2e1d811a57e9cc1c7715b598413e748d6d497edaca6aeb68",
+        "hubconf.py": "c7c6df40afade24d698ee1002765e4d73d9667f88bd3992757c00dba9e265173",
+        "parser.py": "f5d598e976108148bf75eda16e18a2c691c40c8b5d6c5abfb55907d7a625e7df",
+        "test.py": "2953460f26169a891074c1d9806ba2d7c526d5135ec47ea92f415270518ee8b2",
+        "train.py": "114b3828e712a80549277a93371afc67cf793cc8beeb77ae046206c9e8739388",
+        "util.py": "51cbc6c14a82ead97d6aa5cfa393e88a0630b952a9849d1b8271ee11f0c66853",
+        "visualizations.py": "c16a1ef350a4bda9ecd3a5c42056e8f1a3f21a2dd7da2797cc0022f4bce451d2"
+      },
+      "model_state_sha256": "0097d0508f1b5ab6c820906f3a99f53fdfbbe1c07ae3a4c2242dd8dfdebf9254",
+      "eval_mode": true,
+      "all_parameters_frozen": true,
+      "torch": "2.6.0+cu124",
+      "torchvision": "0.21.0+cu124",
+      "numerics": {
+        "cuda_matmul_tf32": false,
+        "cudnn_tf32": false,
+        "cudnn_benchmark": false
+      },
+      "adapter_source_sha256": "09812cf25f08235ae10575c8a6ba00317e0a12c7abf063b3ba041fc0a96cca3c",
+      "preprocessing": {
+        "RGB": true,
+        "resize_hw": [
+          224,
+          224
+        ],
+        "order": "ToTensor -> ImageNet Normalize -> tensor Resize",
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "interpolation": "bilinear",
+        "antialias": true,
+        "descriptor_l2_normalization": true,
+        "setting": "protocol full-image low-resolution warp; not original paper reproduction"
+      }
+    },
+    "eigenplaces": {
+      "method": "eigenplaces",
+      "backbone": "ResNet50",
+      "dimension": 512,
+      "pooling": "L2 -> GeM -> Flatten -> Linear -> L2",
+      "dtype": "float32",
+      "source": {
+        "repository": "https://github.com/gmberton/EigenPlaces",
+        "local_directory": "third_party/EigenPlaces",
+        "commit": "a2969f71d5ea31017443af490b15273ca4c50af1",
+        "checkpoint": "weights/p0_torch/hub/checkpoints/ResNet50_512_eigenplaces.pth",
+        "checkpoint_sha256": "886a2fbd910e961d02e5c74ccc5e11cc1fe9a049a4fe290b9514878c691ce491",
+        "checkpoint_url": "https://github.com/gmberton/EigenPlaces/releases/download/v1.0/ResNet50_512_eigenplaces.pth",
+        "initialization_adaptation": "Official GeoLocalizationNet_ and forward; bypass overwritten CosPlace initializer, strict-load every tensor from the complete official EigenPlaces checkpoint."
+      },
+      "source_python_sha256": {
+        "augmentations.py": "6edc203a4bc6e9b3c945f8d22134a61dee38b8cd84b22b918e94d8bccfda926c",
+        "commons.py": "c6868ad1106d7b006f284e207afda879fb3a0fbcbcc06053b7cfa03209217038",
+        "cosface_loss.py": "96c7beb349a7bc84321068a476dc53f1fc0d13938c4ce54c24e63a449832cca3",
+        "datasets/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "datasets/dataset_utils.py": "d60402da316938e4b24e4b2b4131ac7aeb747f2788f73f981569ae4ffba29392",
+        "datasets/eigenplaces_dataset.py": "85ac97e918dec7a5a4b5dd6c274418fbdeec4d950b0a33d1419e60d0e31f57af",
+        "datasets/map_utils.py": "1bb515008d44a47ad6b927ccbdc6a505829ee7dfb211cb0412863f59350a666b",
+        "datasets/test_dataset.py": "b2d87d800d1a98b2498eb675586f0bf708f477f098fbafcf24ae83b9a91d9f3c",
+        "eigenplaces_model/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "eigenplaces_model/eigenplaces_network.py": "53fb8bbaa170557c52d7527f05ca8658d54e825a91385ce40cb64b86c6cf53f2",
+        "eigenplaces_model/layers.py": "f11faa403f384a7e68c7abe24cdd2460727c9c89eceb00d2dfe107c312fe9005",
+        "eval.py": "dd27b182bc878ddbe72c993346db1508803ea8ae0a2c649c160a2079075917a9",
+        "hubconf.py": "deba6fe9354f1fab47c13b4ffada701e3a47ae7f21a0b2b785ed9a55d864fb97",
+        "parser.py": "4215d72518fb6f1abefad5d47043fc2f3df1628e6ca0e0d47f315c60e88a1774",
+        "test.py": "505686880b7c9ab57def0e790197e6402178b661f523b4322db1aa3fe556cfc1",
+        "train.py": "5a6207b0346bdb6d83efa4399b4d513befc02d97f79dad1319b59fa6396789ab",
+        "util.py": "7b082bb09cf8e7d51784bb65ff8680298cddf77071aab8ad01a05da63b115db0"
+      },
+      "model_state_sha256": "32a99ccdaf0b51fc028128e24e9198a40d41c728ba4c66e686b081c95dd53e7f",
+      "eval_mode": true,
+      "all_parameters_frozen": true,
+      "torch": "2.6.0+cu124",
+      "torchvision": "0.21.0+cu124",
+      "numerics": {
+        "cuda_matmul_tf32": false,
+        "cudnn_tf32": false,
+        "cudnn_benchmark": false
+      },
+      "adapter_source_sha256": "09812cf25f08235ae10575c8a6ba00317e0a12c7abf063b3ba041fc0a96cca3c",
+      "preprocessing": {
+        "RGB": true,
+        "resize_hw": [
+          224,
+          224
+        ],
+        "order": "ToTensor -> ImageNet Normalize -> tensor Resize",
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "interpolation": "bilinear",
+        "antialias": true,
+        "descriptor_l2_normalization": true,
+        "setting": "protocol full-image low-resolution warp; not original paper reproduction"
+      }
+    }
+  },
+  "roles": {
+    "development": "freiburg2_pioneer_slam",
+    "test": "freiburg3_long_office_household"
+  },
+  "no_GT_online": true
+}
