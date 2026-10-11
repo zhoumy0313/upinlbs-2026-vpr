@@ -1,0 +1,43 @@
+{
+  "old_files_preserved": 14482,
+  "legacy_tests": 75,
+  "synthetic_archive_safety_tests": 10,
+  "download_original": [
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "role": "development",
+      "url": "https://cvg.cit.tum.de/rgbd/dataset/freiburg2/rgbd_dataset_freiburg2_pioneer_slam.tgz",
+      "curl_exit_code": 35,
+      "bytes": 0,
+      "archive_sha256": null
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "role": "independent",
+      "url": "https://cvg.cit.tum.de/rgbd/dataset/freiburg3/rgbd_dataset_freiburg3_long_office_household.tgz",
+      "curl_exit_code": 35,
+      "bytes": 0,
+      "archive_sha256": null
+    }
+  ],
+  "download_fallback": [
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "role": "development",
+      "curl_exit_code": 28,
+      "bytes": 0,
+      "archive_sha256": null
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "role": "independent",
+      "curl_exit_code": 28,
+      "bytes": 0,
+      "archive_sha256": null
+    }
+  ],
+  "local_import_exit_code": 2,
+  "scientific_G0_accepted": false,
+  "independent_test_opened": false,
+  "next_stage": "G0 data import after external file availability"
+}

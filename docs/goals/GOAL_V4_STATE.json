@@ -1,20 +1,24 @@
 {
   "goal_id": "VPR-GOAL-V4",
-  "status": "active",
+  "status": "waiting_for_official_data",
   "base_sha": "09e7fb0fc63489817a09901fda37ae9896a9c404",
   "branch": "research/vpr-v4-temporal-alignment",
   "stages": {
-    "g0": "passed",
-    "g1": "pending",
-    "g2": "pending",
-    "g3": "pending",
-    "g4": "pending",
-    "g5": "pending",
-    "g6": "pending"
+    "g0": "not_accepted_data_unavailable",
+    "g1": "not_run",
+    "g2": "not_run",
+    "g3": "not_run",
+    "g4": "not_run",
+    "g5": "not_run",
+    "g6": "not_run"
   },
   "independent_retrieval_opened": false,
   "positive_method_claim": false,
   "formal_submission_ready": false,
-  "latest_run_id": "g0_bootstrap_20261011T022521Z_6633e6aa",
-  "updated_utc": "2026-10-11T02:25:25.235355+00:00"
+  "latest_run_id": "g0_close_20261011T023030Z_affd191e",
+  "updated_utc": "2026-10-11T02:30:41.201629+00:00",
+  "current_stage": "G0",
+  "stop_condition": "G0 official source unavailable after original retries and one bounded alternate route",
+  "required_external_change": "Both official TUM tgz archives transferred to data/raw/v4/tum_rgbd/archives, or demonstrably restored official-host reachability. Do not repeat unchanged network retries.",
+  "blocked_goal_turn_count": 1
 }

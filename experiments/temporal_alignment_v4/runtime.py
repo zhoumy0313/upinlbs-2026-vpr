@@ -65,16 +65,24 @@ class Run:
         write(st,s)
     def checkpoint(self,label):
         assert subprocess.check_output(['git','branch','--show-current'],cwd=ROOT,text=True).strip()==BRANCH
-        count=preserve();write(self.path/'preservation_before_checkpoint.json',dict(old_files=count,passed=True))
+        count=preserve();cp=self.path/'checkpoint';cp.mkdir(exist_ok=False)
+        write(cp/'preservation.json',dict(old_files=count,passed=True))
+        def command(argv):
+            row=dict(argv=list(map(str,argv)),cwd=str(ROOT),started_utc=utc())
+            with (cp/'stdout.log').open('a') as out,(cp/'stderr.log').open('a') as err:p=subprocess.run(row['argv'],cwd=ROOT,stdout=out,stderr=err)
+            row.update(exit_code=p.returncode,ended_utc=utc())
+            with (cp/'commands.jsonl').open('a') as f:f.write(json.dumps(row)+'\n')
+            if p.returncode and argv[1]!='push':raise subprocess.CalledProcessError(p.returncode,argv)
+            return p.returncode
         paths=['experiments/temporal_alignment_v4','configs/v4','docs/research_v4','docs/goals/GOAL_V4_DATA_READY.md','docs/goals/GOAL_V4_STATE.json','artifacts/v4','data/manifests/v4','.gitignore']
         paths += [str(p.relative_to(ROOT)) for p in (ROOT/'paper/revisions').glob('v4_*')]
         paths += [str(p.relative_to(ROOT)) for p in (ROOT/'freezes').glob('v4_*')]
         paths += [str(p.relative_to(ROOT)) for p in (ROOT/'.github/workflows').glob('v4*')]
-        self.command(['git','add',*paths])
+        command(['git','add',*paths])
         for f in subprocess.check_output(['git','diff','--cached','--name-only','-z'],cwd=ROOT).split(b'\0'):
             if f:assert (ROOT/f.decode()).stat().st_size<100*1024**2,f
-        self.command(['git','-c','user.name=Codex','-c','user.email=codex@localhost','commit','-m',label+': VPR-GOAL-V4 checkpoint'])
+        command(['git','-c','user.name=Codex','-c','user.email=codex@localhost','commit','-m',label+': VPR-GOAL-V4 checkpoint'])
         commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
-        code=self.command(['git','push','-u','origin',BRANCH],allow_failure=True)
-        write(self.path/'checkpoint_receipt.json',dict(commit=commit,push_exit_code=code,old_files_preserved=count))
+        code=command(['git','push','-u','origin',BRANCH])
+        write(cp/'receipt.json',dict(commit=commit,push_exit_code=code,old_files_preserved=count))
         if code:raise RuntimeError('Push failed; preserved receipt')

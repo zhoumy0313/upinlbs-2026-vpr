@@ -1,0 +1,18 @@
+{
+  "sequences": [
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "role": "development",
+      "status": "missing_official_archive",
+      "path": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter/data/raw/v4/tum_rgbd/archives/rgbd_dataset_freiburg2_pioneer_slam.tgz"
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "role": "independent",
+      "status": "missing_official_archive",
+      "path": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter/data/raw/v4/tum_rgbd/archives/rgbd_dataset_freiburg3_long_office_household.tgz"
+    }
+  ],
+  "archives_extracted": false,
+  "G0_scientific_acceptance": false
+}
