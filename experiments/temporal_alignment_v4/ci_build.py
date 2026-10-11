@@ -11,7 +11,16 @@ def main():
         start=datetime.now(timezone.utc).isoformat();p=subprocess.run(argv,cwd=cwd,text=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE);(out/(name+'.stdout.txt')).write_text(p.stdout);(out/(name+'.stderr.txt')).write_text(p.stderr);commands.append(dict(argv=argv,cwd=str(cwd.relative_to(ROOT)),started_utc=start,ended_utc=datetime.now(timezone.utc).isoformat(),exit_code=p.returncode));return p
     for folder in sorted((ROOT/'paper/revisions').glob('v4_r[0-9][0-9]')):
         source=folder/'main.tex';pdf=folder/'main.pdf'
-        if pdf.exists():versions[folder.name]=dict(preserved_existing_PDF=True,pdf_sha256=sha(pdf),source_sha256=sha(source));continue
+        # An existing PDF is reusable only with a retained exact-source receipt.
+        # Earlier review bytes remain archived when a manuscript is corrected.
+        existing_matches=False
+        if pdf.exists():
+            for old in (ROOT/'paper/revisions/v4_build_receipts').glob('*/receipt.json'):
+                if old.parent==out:continue
+                item=json.loads(old.read_text()).get('versions',{}).get(folder.name,{})
+                if item.get('source_sha256')==sha(source) and item.get('pdf_sha256')==sha(pdf):
+                    existing_matches=True;break
+        if existing_matches:versions[folder.name]=dict(preserved_existing_PDF=True,pdf_sha256=sha(pdf),source_sha256=sha(source));continue
         ok=True
         for k in [1,2]:
             p=call(['pdflatex','-interaction=nonstopmode','-halt-on-error','-file-line-error','main.tex'],folder,folder.name+f'_pass{k}')

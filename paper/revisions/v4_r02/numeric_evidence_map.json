@@ -1507,7 +1507,288 @@
     "docs/research_v4/INDEPENDENT_RESULTS.json": "303e0ff53c69bba62fd9d9cdebe35929b49ef448f8edb2afbde93e3c62fd01d7",
     "docs/research_v4/REAL_TIMING_RESULTS.json": "0fdaaaed917c7aaaf6ecbb33eabab9754361db70061832267b418da7f3f1d929"
   },
-  "manuscript_sha256": "9f8784b2b6e85e0d040bf1edb5008bd2740de288fb536a10679c1cd76612fabc",
+  "manuscript_sha256": "c3af5256f7572cce93963a9903224dab964a58299a3ebcc7307307ddcf871c78",
   "version": "v4_r02",
-  "final_timing_included": true
+  "final_timing_included": true,
+  "errata": [
+    {
+      "old": "38/0 RGB rows",
+      "new": "38/2 RGB rows",
+      "source": "docs/research_v4/DATA_MANIFEST_r02.json",
+      "preserved_review": "paper/revisions/v4_review_snapshots/r02_pre_g6_correction",
+      "affects_frozen_results": false
+    }
+  ],
+  "distance_error_cells": [
+    {
+      "table": "Pioneer development",
+      "method": "A",
+      "valid_denominator": 338,
+      "median_m": 2.2470804728123426,
+      "P90_m": 4.165950953800367,
+      "rendered": "2.25/4.17",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "table": "Pioneer development",
+      "method": "B",
+      "valid_denominator": 338,
+      "median_m": 2.1982780802306525,
+      "P90_m": 3.366485193713964,
+      "rendered": "2.20/3.37",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "table": "Pioneer development",
+      "method": "RRF60",
+      "valid_denominator": 338,
+      "median_m": 2.2088807918811835,
+      "P90_m": 3.693424300593049,
+      "rendered": "2.21/3.69",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "table": "Pioneer development",
+      "method": "AB_0.75",
+      "valid_denominator": 338,
+      "median_m": 2.2514453632981253,
+      "P90_m": 3.5556823905023043,
+      "rendered": "2.25/3.56",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "table": "Pioneer development",
+      "method": "L3",
+      "valid_denominator": 338,
+      "median_m": 2.2509059418054465,
+      "P90_m": 4.171447679111464,
+      "rendered": "2.25/4.17",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "table": "Pioneer development",
+      "method": "L5",
+      "valid_denominator": 338,
+      "median_m": 2.24543528088931,
+      "P90_m": 4.18626099062588,
+      "rendered": "2.25/4.19",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "table": "Pioneer development",
+      "method": "L9",
+      "valid_denominator": 338,
+      "median_m": 2.2193898676175605,
+      "P90_m": 4.08548382393344,
+      "rendered": "2.22/4.09",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "table": "Pioneer development",
+      "method": "old_fixed_L9",
+      "valid_denominator": 338,
+      "median_m": 2.222677073456409,
+      "P90_m": 4.056643137128861,
+      "rendered": "2.22/4.06",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "table": "Pioneer development",
+      "method": "L3_global_0.25",
+      "valid_denominator": 338,
+      "median_m": 2.2526454767453217,
+      "P90_m": 4.167864947645818,
+      "rendered": "2.25/4.17",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "table": "Pioneer development",
+      "method": "R1_L3_H3_r4",
+      "valid_denominator": 338,
+      "median_m": 2.249230501594057,
+      "P90_m": 4.167864947645818,
+      "rendered": "2.25/4.17",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "table": "Pioneer development",
+      "method": "R2_L3_H1_r1_g0.5",
+      "valid_denominator": 338,
+      "median_m": 2.2521638954311864,
+      "P90_m": 4.175847106406001,
+      "rendered": "2.25/4.18",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "table": "Pioneer development",
+      "method": "Time_W1.6",
+      "valid_denominator": 338,
+      "median_m": 2.247155964185895,
+      "P90_m": 4.127965795296619,
+      "rendered": "2.25/4.13",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "table": "Pioneer development",
+      "method": "TimeR1_W1.6_H1_r0.2",
+      "valid_denominator": 338,
+      "median_m": 2.247155964185895,
+      "P90_m": 4.127965795296619,
+      "rendered": "2.25/4.13",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "table": "Pioneer development",
+      "method": "TimeR2_W1.6_H1_r0.2_g0.5",
+      "valid_denominator": 338,
+      "median_m": 2.247155964185895,
+      "P90_m": 4.127965795296619,
+      "rendered": "2.25/4.13",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "table": "Pioneer development",
+      "method": "Proposed_W1.6_H1_r0.2_e0.01",
+      "valid_denominator": 338,
+      "median_m": 2.247155964185895,
+      "P90_m": 4.127965795296619,
+      "rendered": "2.25/4.13",
+      "source": "BASELINE_RESULTS.json or selected_methods.json"
+    },
+    {
+      "table": "Frozen independent Long Office",
+      "method": "A",
+      "valid_denominator": 168,
+      "median_m": 1.2818630709932828,
+      "P90_m": 4.932406503563099,
+      "rendered": "1.28/4.93",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "table": "Frozen independent Long Office",
+      "method": "B",
+      "valid_denominator": 168,
+      "median_m": 1.2014527572294142,
+      "P90_m": 4.551862721920812,
+      "rendered": "1.20/4.55",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "table": "Frozen independent Long Office",
+      "method": "RRF60",
+      "valid_denominator": 168,
+      "median_m": 1.2242660700357266,
+      "P90_m": 4.9502292707453535,
+      "rendered": "1.22/4.95",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "table": "Frozen independent Long Office",
+      "method": "AB_0.75",
+      "valid_denominator": 168,
+      "median_m": 1.2242660700357266,
+      "P90_m": 4.790585137620954,
+      "rendered": "1.22/4.79",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "table": "Frozen independent Long Office",
+      "method": "L3",
+      "valid_denominator": 168,
+      "median_m": 1.2808035922837107,
+      "P90_m": 4.9035635364084476,
+      "rendered": "1.28/4.90",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "table": "Frozen independent Long Office",
+      "method": "L5",
+      "valid_denominator": 168,
+      "median_m": 1.2432089292075825,
+      "P90_m": 4.875053891466729,
+      "rendered": "1.24/4.88",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "table": "Frozen independent Long Office",
+      "method": "L9",
+      "valid_denominator": 168,
+      "median_m": 1.222837772941367,
+      "P90_m": 4.805165536102877,
+      "rendered": "1.22/4.81",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "table": "Frozen independent Long Office",
+      "method": "old_fixed_L9",
+      "valid_denominator": 168,
+      "median_m": 1.1958689794301796,
+      "P90_m": 4.485232116849658,
+      "rendered": "1.20/4.49",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "table": "Frozen independent Long Office",
+      "method": "L3_global_0.25",
+      "valid_denominator": 168,
+      "median_m": 1.3157179438389326,
+      "P90_m": 4.938593066220685,
+      "rendered": "1.32/4.94",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "table": "Frozen independent Long Office",
+      "method": "R1_L3_H3_r4",
+      "valid_denominator": 168,
+      "median_m": 1.2497677714894695,
+      "P90_m": 4.943465412011207,
+      "rendered": "1.25/4.94",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "table": "Frozen independent Long Office",
+      "method": "R2_L3_H1_r1_g0.5",
+      "valid_denominator": 168,
+      "median_m": 1.285106314385039,
+      "P90_m": 4.907247618684661,
+      "rendered": "1.29/4.91",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "table": "Frozen independent Long Office",
+      "method": "Time_W1.6",
+      "valid_denominator": 168,
+      "median_m": 1.2174402245362188,
+      "P90_m": 4.5831936184937545,
+      "rendered": "1.22/4.58",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "table": "Frozen independent Long Office",
+      "method": "TimeR1_W1.6_H1_r0.2",
+      "valid_denominator": 168,
+      "median_m": 1.2174402245362188,
+      "P90_m": 4.5831936184937545,
+      "rendered": "1.22/4.58",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "table": "Frozen independent Long Office",
+      "method": "TimeR2_W1.6_H1_r0.2_g0.5",
+      "valid_denominator": 168,
+      "median_m": 1.2174402245362188,
+      "P90_m": 4.5831936184937545,
+      "rendered": "1.22/4.58",
+      "source": "INDEPENDENT_RESULTS.json"
+    },
+    {
+      "table": "Frozen independent Long Office",
+      "method": "Proposed_W1.6_H1_r0.2_e0.01",
+      "valid_denominator": 168,
+      "median_m": 1.2174402245362188,
+      "P90_m": 4.5831936184937545,
+      "rendered": "1.22/4.58",
+      "source": "INDEPENDENT_RESULTS.json"
+    }
+  ]
 }
