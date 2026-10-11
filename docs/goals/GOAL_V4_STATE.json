@@ -8,16 +8,16 @@
     "g1": "passed",
     "g2": "passed",
     "g3": "passed",
-    "g4": "not_run",
+    "g4": "passed",
     "g5": "not_run",
     "g6": "not_run"
   },
-  "independent_retrieval_opened": false,
+  "independent_retrieval_opened": true,
   "positive_method_claim": false,
   "formal_submission_ready": false,
-  "latest_run_id": "freeze_publication_20261011T033427Z_0d30c2ed",
-  "updated_utc": "2026-10-11T03:34:27.504903+00:00",
-  "current_stage": "G4",
+  "latest_run_id": "g4_independent_20261011T033546Z_444c50d3",
+  "updated_utc": "2026-10-11T03:36:25.727566+00:00",
+  "current_stage": "G5",
   "stop_condition": "G0 official source unavailable after original retries and one bounded alternate route",
   "required_external_change": "Both official TUM tgz archives transferred to data/raw/v4/tum_rgbd/archives, or demonstrably restored official-host reachability. Do not repeat unchanged network retries.",
   "blocked_goal_turn_count": 0,
@@ -35,5 +35,9 @@
   "g3_run": "g3_bounded_20261011T033120Z_63a26a28",
   "development_positive_gate": false,
   "freeze_folder": "freezes/v4_20261011T033425Z",
-  "g4_freeze_run": "g4_freeze_20261011T033407Z_b4f7845e"
+  "g4_freeze_run": "g4_freeze_20261011T033407Z_b4f7845e",
+  "first_independent_test_run": "g4_independent_20261011T033546Z_444c50d3",
+  "test_state": "single_blind_run_complete",
+  "g4_run": "g4_independent_20261011T033546Z_444c50d3",
+  "test_positive_gate": false
 }
