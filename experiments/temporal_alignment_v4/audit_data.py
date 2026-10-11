@@ -1,7 +1,9 @@
 """Resume G0 only after actual official files exist. Never evaluates retrieval."""
 import tarfile
-from pathlib import PurePosixPath
-from runtime import *
+from pathlib import PurePosixPath,Path
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+from experiments.temporal_alignment_v4.runtime import *
 from download import SEQUENCES
 def safe_members(members,expected_root):
     names=set()

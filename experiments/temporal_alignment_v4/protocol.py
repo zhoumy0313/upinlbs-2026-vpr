@@ -1,9 +1,10 @@
 """Offline-only RGB/pose metadata adapter. Never imported by online matcher."""
-import csv,json
+import csv,json,sys
 from pathlib import Path
 import numpy as np
 from PIL import Image
-from runtime import ROOT,sha,write
+sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+from experiments.temporal_alignment_v4.runtime import ROOT,sha,write
 RADII=[.25,.5,1.]
 def lines(path):
     return [x.split() for x in Path(path).read_text().splitlines() if x.strip() and not x.lstrip().startswith('#')]

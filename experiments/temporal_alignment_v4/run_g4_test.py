@@ -12,7 +12,7 @@ def main():
     run=Run('g4_independent',dict(freeze_sha256=sha(ROOT/s['freeze_folder']/'freeze.json'),first_and_only_blind_retrieval=True,methods=len(config['all_test_methods']),test='freiburg3_long_office_household'))
     # Mark opened BEFORE extraction/evaluation to retain honest failed-first-run history.
     s.update(independent_retrieval_opened=True,first_independent_test_run=run.id,test_state='opened_run_in_progress');write(ROOT/'docs/goals/GOAL_V4_STATE.json',s)
-    cost=encode('freiburg3_long_office_household',[5],run);d=with_scores('freiburg3_long_office_household',5,run.path);a,_=predict(d,config['all_test_methods'][0]);metrics=[];preds={}
+    cost=encode('freiburg3_long_office_household',[5],run);assert json.loads((run.path/'model_identity.json').read_text())==freeze['model_identity'];d=with_scores('freiburg3_long_office_household',5,run.path);a,_=predict(d,config['all_test_methods'][0]);metrics=[];preds={}
     with (run.path/'per_query.csv').open('w',newline='') as f:
         writer=csv.DictWriter(f,fieldnames=FIELDS);writer.writeheader()
         for spec in config['all_test_methods']:

@@ -1,0 +1,2093 @@
+{
+  "all_test_methods": [
+    {
+      "name": "A",
+      "kind": "single",
+      "encoder": "cosplace"
+    },
+    {
+      "name": "B",
+      "kind": "single",
+      "encoder": "eigenplaces"
+    },
+    {
+      "name": "RRF60",
+      "kind": "rrf"
+    },
+    {
+      "name": "AB_0.25",
+      "kind": "AB",
+      "weight": 0.25
+    },
+    {
+      "name": "AB_0.5",
+      "kind": "AB",
+      "weight": 0.5
+    },
+    {
+      "name": "AB_0.75",
+      "kind": "AB",
+      "weight": 0.75
+    },
+    {
+      "name": "L3",
+      "kind": "index",
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "L3_global_0.25",
+      "kind": "index_global",
+      "weight": 0.25,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "L3_global_0.5",
+      "kind": "index_global",
+      "weight": 0.5,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "L3_global_0.75",
+      "kind": "index_global",
+      "weight": 0.75,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R1_L3_H1_r1",
+      "kind": "index_R1",
+      "H": 1,
+      "r": 1,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L3_H1_r1_g0.5",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 1,
+      "gamma": 0.5,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L3_H1_r1_g1.0",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 1,
+      "gamma": 1.0,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R1_L3_H1_r2",
+      "kind": "index_R1",
+      "H": 1,
+      "r": 2,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L3_H1_r2_g0.5",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 2,
+      "gamma": 0.5,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L3_H1_r2_g1.0",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 2,
+      "gamma": 1.0,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R1_L3_H1_r4",
+      "kind": "index_R1",
+      "H": 1,
+      "r": 4,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L3_H1_r4_g0.5",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 4,
+      "gamma": 0.5,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L3_H1_r4_g1.0",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 4,
+      "gamma": 1.0,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R1_L3_H3_r1",
+      "kind": "index_R1",
+      "H": 3,
+      "r": 1,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L3_H3_r1_g0.5",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 1,
+      "gamma": 0.5,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L3_H3_r1_g1.0",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 1,
+      "gamma": 1.0,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R1_L3_H3_r2",
+      "kind": "index_R1",
+      "H": 3,
+      "r": 2,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L3_H3_r2_g0.5",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 2,
+      "gamma": 0.5,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L3_H3_r2_g1.0",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 2,
+      "gamma": 1.0,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R1_L3_H3_r4",
+      "kind": "index_R1",
+      "H": 3,
+      "r": 4,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L3_H3_r4_g0.5",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 4,
+      "gamma": 0.5,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L3_H3_r4_g1.0",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 4,
+      "gamma": 1.0,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "L5",
+      "kind": "index",
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "L5_global_0.25",
+      "kind": "index_global",
+      "weight": 0.25,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "L5_global_0.5",
+      "kind": "index_global",
+      "weight": 0.5,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "L5_global_0.75",
+      "kind": "index_global",
+      "weight": 0.75,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R1_L5_H1_r1",
+      "kind": "index_R1",
+      "H": 1,
+      "r": 1,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L5_H1_r1_g0.5",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 1,
+      "gamma": 0.5,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L5_H1_r1_g1.0",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 1,
+      "gamma": 1.0,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R1_L5_H1_r2",
+      "kind": "index_R1",
+      "H": 1,
+      "r": 2,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L5_H1_r2_g0.5",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 2,
+      "gamma": 0.5,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L5_H1_r2_g1.0",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 2,
+      "gamma": 1.0,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R1_L5_H1_r4",
+      "kind": "index_R1",
+      "H": 1,
+      "r": 4,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L5_H1_r4_g0.5",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 4,
+      "gamma": 0.5,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L5_H1_r4_g1.0",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 4,
+      "gamma": 1.0,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R1_L5_H3_r1",
+      "kind": "index_R1",
+      "H": 3,
+      "r": 1,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L5_H3_r1_g0.5",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 1,
+      "gamma": 0.5,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L5_H3_r1_g1.0",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 1,
+      "gamma": 1.0,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R1_L5_H3_r2",
+      "kind": "index_R1",
+      "H": 3,
+      "r": 2,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L5_H3_r2_g0.5",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 2,
+      "gamma": 0.5,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L5_H3_r2_g1.0",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 2,
+      "gamma": 1.0,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R1_L5_H3_r4",
+      "kind": "index_R1",
+      "H": 3,
+      "r": 4,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L5_H3_r4_g0.5",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 4,
+      "gamma": 0.5,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L5_H3_r4_g1.0",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 4,
+      "gamma": 1.0,
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "L9",
+      "kind": "index",
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "L9_global_0.25",
+      "kind": "index_global",
+      "weight": 0.25,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "L9_global_0.5",
+      "kind": "index_global",
+      "weight": 0.5,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "L9_global_0.75",
+      "kind": "index_global",
+      "weight": 0.75,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R1_L9_H1_r1",
+      "kind": "index_R1",
+      "H": 1,
+      "r": 1,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L9_H1_r1_g0.5",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 1,
+      "gamma": 0.5,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L9_H1_r1_g1.0",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 1,
+      "gamma": 1.0,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R1_L9_H1_r2",
+      "kind": "index_R1",
+      "H": 1,
+      "r": 2,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L9_H1_r2_g0.5",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 2,
+      "gamma": 0.5,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L9_H1_r2_g1.0",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 2,
+      "gamma": 1.0,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R1_L9_H1_r4",
+      "kind": "index_R1",
+      "H": 1,
+      "r": 4,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L9_H1_r4_g0.5",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 4,
+      "gamma": 0.5,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L9_H1_r4_g1.0",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 4,
+      "gamma": 1.0,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R1_L9_H3_r1",
+      "kind": "index_R1",
+      "H": 3,
+      "r": 1,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L9_H3_r1_g0.5",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 1,
+      "gamma": 0.5,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L9_H3_r1_g1.0",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 1,
+      "gamma": 1.0,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R1_L9_H3_r2",
+      "kind": "index_R1",
+      "H": 3,
+      "r": 2,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L9_H3_r2_g0.5",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 2,
+      "gamma": 0.5,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L9_H3_r2_g1.0",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 2,
+      "gamma": 1.0,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R1_L9_H3_r4",
+      "kind": "index_R1",
+      "H": 3,
+      "r": 4,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L9_H3_r4_g0.5",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 4,
+      "gamma": 0.5,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L9_H3_r4_g1.0",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 4,
+      "gamma": 1.0,
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "old_fixed_L9",
+      "kind": "index",
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "old_fixed_L9_global_0.25",
+      "kind": "index_global",
+      "weight": 0.25,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "old_fixed_L9_global_0.5",
+      "kind": "index_global",
+      "weight": 0.5,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "old_fixed_L9_global_0.75",
+      "kind": "index_global",
+      "weight": 0.75,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "R1_old_fixed_L9_H1_r1",
+      "kind": "index_R1",
+      "H": 1,
+      "r": 1,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "R2_old_fixed_L9_H1_r1_g0.5",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 1,
+      "gamma": 0.5,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "R2_old_fixed_L9_H1_r1_g1.0",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 1,
+      "gamma": 1.0,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "R1_old_fixed_L9_H1_r2",
+      "kind": "index_R1",
+      "H": 1,
+      "r": 2,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "R2_old_fixed_L9_H1_r2_g0.5",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 2,
+      "gamma": 0.5,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "R2_old_fixed_L9_H1_r2_g1.0",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 2,
+      "gamma": 1.0,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "R1_old_fixed_L9_H1_r4",
+      "kind": "index_R1",
+      "H": 1,
+      "r": 4,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "R2_old_fixed_L9_H1_r4_g0.5",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 4,
+      "gamma": 0.5,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "R2_old_fixed_L9_H1_r4_g1.0",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 4,
+      "gamma": 1.0,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "R1_old_fixed_L9_H3_r1",
+      "kind": "index_R1",
+      "H": 3,
+      "r": 1,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "R2_old_fixed_L9_H3_r1_g0.5",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 1,
+      "gamma": 0.5,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "R2_old_fixed_L9_H3_r1_g1.0",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 1,
+      "gamma": 1.0,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "R1_old_fixed_L9_H3_r2",
+      "kind": "index_R1",
+      "H": 3,
+      "r": 2,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "R2_old_fixed_L9_H3_r2_g0.5",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 2,
+      "gamma": 0.5,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "R2_old_fixed_L9_H3_r2_g1.0",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 2,
+      "gamma": 1.0,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "R1_old_fixed_L9_H3_r4",
+      "kind": "index_R1",
+      "H": 3,
+      "r": 4,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "R2_old_fixed_L9_H3_r4_g0.5",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 4,
+      "gamma": 0.5,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "R2_old_fixed_L9_H3_r4_g1.0",
+      "kind": "index_R2",
+      "H": 3,
+      "r": 4,
+      "gamma": 1.0,
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "Time_W0.4",
+      "kind": "time",
+      "W": 0.4,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeGlobal_W0.4_g0.5",
+      "kind": "time_global",
+      "weight": 0.5,
+      "W": 0.4,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeGlobal_W0.4_g1.0",
+      "kind": "time_global",
+      "weight": 1.0,
+      "W": 0.4,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR1_W0.4_H1_r0.2",
+      "kind": "time_R1",
+      "H": 1,
+      "r_seconds": 0.2,
+      "W": 0.4,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W0.4_H1_r0.2_g0.5",
+      "kind": "time_R2",
+      "H": 1,
+      "r_seconds": 0.2,
+      "gamma": 0.5,
+      "W": 0.4,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W0.4_H1_r0.2_g1.0",
+      "kind": "time_R2",
+      "H": 1,
+      "r_seconds": 0.2,
+      "gamma": 1.0,
+      "W": 0.4,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR1_W0.4_H1_r0.4",
+      "kind": "time_R1",
+      "H": 1,
+      "r_seconds": 0.4,
+      "W": 0.4,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W0.4_H1_r0.4_g0.5",
+      "kind": "time_R2",
+      "H": 1,
+      "r_seconds": 0.4,
+      "gamma": 0.5,
+      "W": 0.4,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W0.4_H1_r0.4_g1.0",
+      "kind": "time_R2",
+      "H": 1,
+      "r_seconds": 0.4,
+      "gamma": 1.0,
+      "W": 0.4,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR1_W0.4_H3_r0.2",
+      "kind": "time_R1",
+      "H": 3,
+      "r_seconds": 0.2,
+      "W": 0.4,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W0.4_H3_r0.2_g0.5",
+      "kind": "time_R2",
+      "H": 3,
+      "r_seconds": 0.2,
+      "gamma": 0.5,
+      "W": 0.4,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W0.4_H3_r0.2_g1.0",
+      "kind": "time_R2",
+      "H": 3,
+      "r_seconds": 0.2,
+      "gamma": 1.0,
+      "W": 0.4,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR1_W0.4_H3_r0.4",
+      "kind": "time_R1",
+      "H": 3,
+      "r_seconds": 0.4,
+      "W": 0.4,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W0.4_H3_r0.4_g0.5",
+      "kind": "time_R2",
+      "H": 3,
+      "r_seconds": 0.4,
+      "gamma": 0.5,
+      "W": 0.4,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W0.4_H3_r0.4_g1.0",
+      "kind": "time_R2",
+      "H": 3,
+      "r_seconds": 0.4,
+      "gamma": 1.0,
+      "W": 0.4,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "Time_W0.8",
+      "kind": "time",
+      "W": 0.8,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeGlobal_W0.8_g0.5",
+      "kind": "time_global",
+      "weight": 0.5,
+      "W": 0.8,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeGlobal_W0.8_g1.0",
+      "kind": "time_global",
+      "weight": 1.0,
+      "W": 0.8,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR1_W0.8_H1_r0.2",
+      "kind": "time_R1",
+      "H": 1,
+      "r_seconds": 0.2,
+      "W": 0.8,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W0.8_H1_r0.2_g0.5",
+      "kind": "time_R2",
+      "H": 1,
+      "r_seconds": 0.2,
+      "gamma": 0.5,
+      "W": 0.8,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W0.8_H1_r0.2_g1.0",
+      "kind": "time_R2",
+      "H": 1,
+      "r_seconds": 0.2,
+      "gamma": 1.0,
+      "W": 0.8,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR1_W0.8_H1_r0.4",
+      "kind": "time_R1",
+      "H": 1,
+      "r_seconds": 0.4,
+      "W": 0.8,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W0.8_H1_r0.4_g0.5",
+      "kind": "time_R2",
+      "H": 1,
+      "r_seconds": 0.4,
+      "gamma": 0.5,
+      "W": 0.8,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W0.8_H1_r0.4_g1.0",
+      "kind": "time_R2",
+      "H": 1,
+      "r_seconds": 0.4,
+      "gamma": 1.0,
+      "W": 0.8,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR1_W0.8_H3_r0.2",
+      "kind": "time_R1",
+      "H": 3,
+      "r_seconds": 0.2,
+      "W": 0.8,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W0.8_H3_r0.2_g0.5",
+      "kind": "time_R2",
+      "H": 3,
+      "r_seconds": 0.2,
+      "gamma": 0.5,
+      "W": 0.8,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W0.8_H3_r0.2_g1.0",
+      "kind": "time_R2",
+      "H": 3,
+      "r_seconds": 0.2,
+      "gamma": 1.0,
+      "W": 0.8,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR1_W0.8_H3_r0.4",
+      "kind": "time_R1",
+      "H": 3,
+      "r_seconds": 0.4,
+      "W": 0.8,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W0.8_H3_r0.4_g0.5",
+      "kind": "time_R2",
+      "H": 3,
+      "r_seconds": 0.4,
+      "gamma": 0.5,
+      "W": 0.8,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W0.8_H3_r0.4_g1.0",
+      "kind": "time_R2",
+      "H": 3,
+      "r_seconds": 0.4,
+      "gamma": 1.0,
+      "W": 0.8,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "Time_W1.6",
+      "kind": "time",
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeGlobal_W1.6_g0.5",
+      "kind": "time_global",
+      "weight": 0.5,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeGlobal_W1.6_g1.0",
+      "kind": "time_global",
+      "weight": 1.0,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR1_W1.6_H1_r0.2",
+      "kind": "time_R1",
+      "H": 1,
+      "r_seconds": 0.2,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W1.6_H1_r0.2_g0.5",
+      "kind": "time_R2",
+      "H": 1,
+      "r_seconds": 0.2,
+      "gamma": 0.5,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W1.6_H1_r0.2_g1.0",
+      "kind": "time_R2",
+      "H": 1,
+      "r_seconds": 0.2,
+      "gamma": 1.0,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR1_W1.6_H1_r0.4",
+      "kind": "time_R1",
+      "H": 1,
+      "r_seconds": 0.4,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W1.6_H1_r0.4_g0.5",
+      "kind": "time_R2",
+      "H": 1,
+      "r_seconds": 0.4,
+      "gamma": 0.5,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W1.6_H1_r0.4_g1.0",
+      "kind": "time_R2",
+      "H": 1,
+      "r_seconds": 0.4,
+      "gamma": 1.0,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR1_W1.6_H3_r0.2",
+      "kind": "time_R1",
+      "H": 3,
+      "r_seconds": 0.2,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W1.6_H3_r0.2_g0.5",
+      "kind": "time_R2",
+      "H": 3,
+      "r_seconds": 0.2,
+      "gamma": 0.5,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W1.6_H3_r0.2_g1.0",
+      "kind": "time_R2",
+      "H": 3,
+      "r_seconds": 0.2,
+      "gamma": 1.0,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR1_W1.6_H3_r0.4",
+      "kind": "time_R1",
+      "H": 3,
+      "r_seconds": 0.4,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W1.6_H3_r0.4_g0.5",
+      "kind": "time_R2",
+      "H": 3,
+      "r_seconds": 0.4,
+      "gamma": 0.5,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W1.6_H3_r0.4_g1.0",
+      "kind": "time_R2",
+      "H": 3,
+      "r_seconds": 0.4,
+      "gamma": 1.0,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "Proposed_W1.6_H1_r0.2_e0.01",
+      "kind": "time_P",
+      "H": 1,
+      "r_seconds": 0.2,
+      "epsilon": 0.01,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    }
+  ],
+  "timing_methods": [
+    {
+      "name": "A",
+      "kind": "single",
+      "encoder": "cosplace"
+    },
+    {
+      "name": "B",
+      "kind": "single",
+      "encoder": "eigenplaces"
+    },
+    {
+      "name": "RRF60",
+      "kind": "rrf"
+    },
+    {
+      "name": "L3",
+      "kind": "index",
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "L5",
+      "kind": "index",
+      "L": 5,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "L9",
+      "kind": "index",
+      "L": 9,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "old_fixed_L9",
+      "kind": "index",
+      "L": 9,
+      "velocities": [
+        1.2
+      ]
+    },
+    {
+      "name": "AB_0.75",
+      "kind": "AB",
+      "weight": 0.75
+    },
+    {
+      "name": "Proposed_W1.6_H1_r0.2_e0.01",
+      "kind": "time_P",
+      "H": 1,
+      "r_seconds": 0.2,
+      "epsilon": 0.01,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "L3_global_0.25",
+      "kind": "index_global",
+      "weight": 0.25,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R1_L3_H3_r4",
+      "kind": "index_R1",
+      "H": 3,
+      "r": 4,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "R2_L3_H1_r1_g0.5",
+      "kind": "index_R2",
+      "H": 1,
+      "r": 1,
+      "gamma": 0.5,
+      "L": 3,
+      "velocities": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    {
+      "name": "Time_W1.6",
+      "kind": "time",
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeGlobal_W1.6_g1.0",
+      "kind": "time_global",
+      "weight": 1.0,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR1_W1.6_H1_r0.2",
+      "kind": "time_R1",
+      "H": 1,
+      "r_seconds": 0.2,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W1.6_H1_r0.2_g0.5",
+      "kind": "time_R2",
+      "H": 1,
+      "r_seconds": 0.2,
+      "gamma": 0.5,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    },
+    {
+      "name": "TimeR2_W1.6_H1_r0.2_g1.0",
+      "kind": "time_R2",
+      "H": 1,
+      "r_seconds": 0.2,
+      "gamma": 1.0,
+      "W": 1.6,
+      "velocities": [
+        -1.2,
+        -1.0,
+        -0.8,
+        0.0,
+        0.8,
+        1.0,
+        1.2
+      ],
+      "lag_points": 5
+    }
+  ],
+  "test_hz": 5,
+  "all_radii": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "seed": 0,
+  "rejection_policy": "none",
+  "timing": {
+    "batch_size": 1,
+    "warmup": 20,
+    "passes": 3,
+    "decode": true,
+    "CPU_transfer": true,
+    "full_gallery_cosine": true,
+    "history": true,
+    "alignment": true,
+    "refinement": true,
+    "full_ranking": true,
+    "cuda_synchronization": true
+  },
+  "timing_selection": "all mandatory families plus developer-selected strongest and matched-pool controls; no test-derived method selection",
+  "selection_sha256": "f07905c173f02137e58ecf149c3a34b2adc737130784c8ea5795cb23d8e3385a",
+  "protocol_sha256": "27e6d3c4f4e0c5cddca65eb1ec587b79e46f4ea8a04843801cb07d94ed099d1a",
+  "development_feature_run": "g2_baselines_20261011T032755Z_2db3b2a4",
+  "primary_accuracy_encoding_batch": 16,
+  "online_timing_encoding_batch": 1,
+  "online_accuracy_audit": "report all cached/batch-one differences, no claim of equality unless measured"
+}
