@@ -15,11 +15,11 @@
   "independent_retrieval_opened": true,
   "positive_method_claim": false,
   "formal_submission_ready": false,
-  "latest_run_id": "g6_archive_20261011T035815Z_18d45654",
-  "updated_utc": "2026-10-11T03:59:11.315420+00:00",
+  "latest_run_id": "publication_final_20261011T040043Z_b58826f6",
+  "updated_utc": "2026-10-11T04:00:48.351952+00:00",
   "current_stage": "complete",
   "blocked_goal_turn_count": 0,
-  "verified_scientific_checkpoint": "168966b6da1688eb8d39ae63cf812f57f433788e",
+  "verified_scientific_checkpoint": "8fb6b3aa287d63e8f763f7318019824be9a954c0",
   "goal_complete": true,
   "resumed_utc": "2026-10-11T03:24:22.272901+00:00",
   "resumed_by": "user supplied official archives and explicitly requested continuation",
@@ -44,5 +44,6 @@
     "blocked_reason": "Same genuine official-data acquisition blocker verified across original turn and two continuations. No live transfer handle. Goal G0 stop rule prohibits further retries/experiments; both exact official archives or restored official connectivity required."
   },
   "g6_run": "g6_archive_20261011T035815Z_18d45654",
-  "completed_utc": "2026-10-11T03:59:11.176200+00:00"
+  "completed_utc": "2026-10-11T03:59:11.176200+00:00",
+  "final_publication_run": "publication_final_20261011T040043Z_b58826f6"
 }

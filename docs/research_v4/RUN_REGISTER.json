@@ -159,8 +159,8 @@
     "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
     "started_utc": "2026-10-11T03:58:15.647309+00:00",
     "failed": false,
-    "whole_process_exit_code": null,
-    "archive": null,
+    "whole_process_exit_code": 0,
+    "archive": "artifacts/v4/execution/execution_20261011T035815Z_0c4ef4da/evidence.zip",
     "source_snapshot": true,
     "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
@@ -482,7 +482,7 @@
     "started_utc": "2026-10-11T03:58:15.685875+00:00",
     "failed": false,
     "whole_process_exit_code": null,
-    "archive": null,
+    "archive": "artifacts/v4/g6/g6_archive_20261011T035815Z_18d45654/evidence.zip",
     "source_snapshot": true,
     "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   },
@@ -497,6 +497,20 @@
     "failed": false,
     "whole_process_exit_code": null,
     "archive": "artifacts/v4/publication/publication_correction_20261011T035407Z_9c926e1f/evidence.zip",
+    "source_snapshot": true,
+    "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
+  },
+  {
+    "run_id": "publication_final_20261011T040043Z_b58826f6",
+    "parent_git_sha": "8fb6b3aa287d63e8f763f7318019824be9a954c0",
+    "argv": [
+      "experiments/temporal_alignment_v4/publish_final.py"
+    ],
+    "cwd": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter",
+    "started_utc": "2026-10-11T04:00:43.927656+00:00",
+    "failed": false,
+    "whole_process_exit_code": null,
+    "archive": null,
     "source_snapshot": true,
     "closing_snapshot": "G6 closing history archive; preserves unfinished/failed runs and checkpoint logs"
   }

@@ -1,0 +1,32 @@
+{
+  "goal_id": "VPR-GOAL-V4",
+  "completed": true,
+  "stages": {
+    "g0": "passed",
+    "g1": "passed",
+    "g2": "passed",
+    "g3": "passed",
+    "g4": "passed",
+    "g5": "passed",
+    "g6": "passed"
+  },
+  "scientific_checkpoint": "8fb6b3aa287d63e8f763f7318019824be9a954c0",
+  "branch": "research/vpr-v4-temporal-alignment",
+  "base_sha": "09e7fb0fc63489817a09901fda37ae9896a9c404",
+  "independent_test_runs": 1,
+  "positive_method_claim": false,
+  "formal_submission_ready": false,
+  "current_paper": "paper/revisions/v4_r02/main.tex",
+  "current_pdf": "paper/revisions/v4_r02/main.pdf",
+  "pages": 5,
+  "source_sha256": "c3af5256f7572cce93963a9903224dab964a58299a3ebcc7307307ddcf871c78",
+  "pdf_sha256": "15b2de447f6179c9256a637e086f561f13f31bc19193735b943687652c2971d1",
+  "g6_whole_process_exit_code": 0,
+  "old_files_preserved": 14482,
+  "metric_groups": 1995,
+  "geometric_query_rows": 390810,
+  "real_timed_query_intervals": 25857,
+  "publication_run": "publication_final_20261011T040043Z_b58826f6",
+  "utc": "2026-10-11T04:00:48.255758+00:00",
+  "signed_or_submitted": false
+}
