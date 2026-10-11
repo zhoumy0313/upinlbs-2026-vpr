@@ -1,0 +1,22 @@
+{
+  "source_commit": "e5d713f6873bde0a6a090368be2463af213429f2",
+  "versions": {
+    "v4_r01": {
+      "preserved_existing_PDF": true,
+      "pdf_sha256": "78924dc3a08c68491125c966d95fc9646d0320197c1703a0070fe0f23479aaa0",
+      "source_sha256": "14a88e0af44c92714bdf62ea05079c69bf9d159f6cee312d2e714427dd6e6543"
+    },
+    "v4_r02": {
+      "source_sha256": "9f8784b2b6e85e0d040bf1edb5008bd2740de288fb536a10679c1cd76612fabc",
+      "compiled": true,
+      "pdf_sha256": "8133a1ede5f4307368956cf1d6b951d9bd7c57ab0b67efb1854e13f65e854b2e",
+      "pages": 5,
+      "unresolved_references": false,
+      "overfull_boxes": [],
+      "all_fonts_embedded": true
+    }
+  },
+  "passed": true,
+  "runner": "standard ubuntu-24.04",
+  "old_V1_V3_files_untouched": true
+}
