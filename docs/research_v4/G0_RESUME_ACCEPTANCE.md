@@ -1,0 +1,3 @@
+# G0 resumed — passed
+
+User-supplied official archives passed full tar/gzip listing and restrictive safe extraction. All RGB PNGs fully decoded; timestamps strictly monotonic; pose columns finite and quaternion norms checked; nearest GT association includes every valid/invalid row with SHA. See DATA_MANIFEST_r02.json for measured archive bytes, SHA, counts, spans and provenance limits. All old failures/G0 stop reports retained unchanged. No retrieval score or test metric computed. Exact import/audit commands and source snapshots are archived. Next: accept the common development-derived revisit protocol before any retrieval.

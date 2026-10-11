@@ -1,0 +1,34 @@
+{
+  "sequences": [
+    {
+      "sequence": "freiburg2_pioneer_slam",
+      "role": "development",
+      "status": "archive_extracted_safely",
+      "sha256": "f05a702c9aa0379de7d14067adeade21af1f23939de7cf7e5affa6a9fb896bf6",
+      "archive_bytes": 1626343043,
+      "members": 5818,
+      "rgb_png_files": 2921,
+      "depth_png_files": 2890,
+      "extracted_root": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter/data/raw/v4/tum_rgbd/extracted/g0_import_20261011T032146Z_0de0ebd8/freiburg2_pioneer_slam/rgbd_dataset_freiburg2_pioneer_slam",
+      "rgb_txt_sha256": "043b1cf51595ab401f6ed8fae5ed6351cc45472ba559a2325fc97738e0c22162",
+      "groundtruth_txt_sha256": "fd69e4a8d9d2646130c47acea9a32d22f80aca0d32b6feed5b3caee57048ff5a",
+      "note": "RGB decode/timestamp/GT association validation still required; G0 not accepted automatically"
+    },
+    {
+      "sequence": "freiburg3_long_office_household",
+      "role": "independent",
+      "status": "archive_extracted_safely",
+      "sha256": "c7cd8e1afb87c80e5744a356214819b110fa09b4744fa4ba0cc2382f9ba59e9c",
+      "archive_bytes": 1483556251,
+      "members": 5101,
+      "rgb_png_files": 2585,
+      "depth_png_files": 2509,
+      "extracted_root": "/home/aaron/upinlbs_vpr/upinlbs_vpr_starter/data/raw/v4/tum_rgbd/extracted/g0_import_20261011T032146Z_0de0ebd8/freiburg3_long_office_household/rgbd_dataset_freiburg3_long_office_household",
+      "rgb_txt_sha256": "9bc53b49d65090bf7fe519123a7c1d0561c53672576d781a81b63088765c15dd",
+      "groundtruth_txt_sha256": "e255d5d9c5bab915132c7ac5ec4e23f9f1efe98f765b0c9b26ac74e40b02533f",
+      "note": "RGB decode/timestamp/GT association validation still required; G0 not accepted automatically"
+    }
+  ],
+  "archives_extracted": true,
+  "G0_scientific_acceptance": false
+}
